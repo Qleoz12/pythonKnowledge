@@ -11,18 +11,16 @@
 
 
 #Schema
-# CREATE TABLE testdb.Tweets (
-# 	id VARCHAR(32) null,
-# 	fecha DATE NULL,
-# 	url VARCHAR(100) NULL,
-# 	lenguaje varchar(100) NULL,
-# 	`re-tweets` VARCHAR(100) NULL,
-# 	`tweet ID` varchar(100) NULL,
-# 	contenido varchar(100) NULL
-# )
-# ENGINE=InnoDB
-# DEFAULT CHARSET=utf8
-# COLLATE=utf8_spanish_ci;
+# CREATE TABLE `tweets` (
+#   `id` varchar(64) COLLATE utf8_spanish_ci DEFAULT NULL,
+#   `fecha` datetime DEFAULT NULL,
+#   `url` varchar(500) COLLATE utf8_spanish_ci DEFAULT NULL,
+#   `lenguaje` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
+#   `re-tweets` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
+#   `tweet ID` varchar(256) COLLATE utf8_spanish_ci DEFAULT NULL,
+#   `contenido` varchar(1024) COLLATE utf8_spanish_ci DEFAULT NULL,
+#   `usuario` varchar(256) COLLATE utf8_spanish_ci DEFAULT NULL
+# ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci
 
 #ALTER TABLE testdb.tweets ADD usuario varchar(256) NULL;
 # Imports
@@ -99,7 +97,6 @@ def transform():
             if (spamreader.line_num > 1):
                 row[0] = datetime.datetime.fromisoformat(row[0])
                 row[5] = row[5].format("utf-8")
-
                 if(row[2]!='es' ):
                     translation=ts.google(row[5],to_language="es")
                     row[5]=translation
@@ -109,7 +106,27 @@ def transform():
     return data
 
 
-def load():
+def load(dataclean):
+    cur = dbconn.cursor()
+    arraySize = len(dataclean)
+    for r in range(0, arraySize):
+        try:
+            # Merge the titles with a ,)
+            print(get_localzone())
+            print()
+            uuidstr = uuid.uuid4()
+            # Enforce UTF-8 for the connection.
+            cur.execute('SET NAMES utf8mb4')
+            cur.execute("SET CHARACTER SET utf8mb4")
+            cur.execute("SET character_set_connection=utf8mb4")
+            cur.execute(
+                """INSERT INTO tweets(id,fecha,url, lenguaje,`re-tweets`, `tweet ID`, contenido, usuario) VALUES( %s,%s,%s,%s,%s,%s,%s,%s)""",
+                (str(uuidstr), dataclean[r][0], dataclean[r][1], dataclean[r][2], dataclean[r][3], dataclean[r][4],
+                 dataclean[r][5], dataclean[r][6]))
+            dbconn.commit()
+        except ValueError:
+            print("Error")
+            print(ValueError)
     pass
 
 # Press the green button in the gutter to run the script.
@@ -134,23 +151,6 @@ if __name__ == '__main__':
     for x in cur:
         print(x)
 
-    sql_insert_query = """INSERT INTO `tweets` (url)""" \
-                       """ VALUES(%s) """
-    print(sql_insert_query)
-    arraySize = len(dataclean)
-    for r in range(0, arraySize):
-        try:
-            # Merge the titles with a ,)
-            print(get_localzone())
-            print()
-            uuidstr=uuid.uuid4()
-            # Enforce UTF-8 for the connection.
-            cur.execute('SET NAMES utf8mb4')
-            cur.execute("SET CHARACTER SET utf8mb4")
-            cur.execute("SET character_set_connection=utf8mb4")
-            cur.execute("""INSERT INTO tweets(id,fecha,url, lenguaje,`re-tweets`, `tweet ID`, contenido, usuario) VALUES( %s,%s,%s,%s,%s,%s,%s,%s)""",
-                        (str(uuidstr),dataclean[r][0],dataclean[r][1],dataclean[r][2],dataclean[r][3],dataclean[r][4],dataclean[r][5],dataclean[r][6]))
-            dbconn.commit()
-        except ValueError:
-            print("Error")
-            print(ValueError)
+    print('realizando carga dedatos')
+    load(dataclean)
+
