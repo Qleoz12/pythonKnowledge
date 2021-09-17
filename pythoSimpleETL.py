@@ -112,8 +112,8 @@ def load(dataclean):
     for r in range(0, arraySize):
         try:
             # Merge the titles with a ,)
-            print(get_localzone())
-            print()
+            #print(get_localzone())
+            #print()
             uuidstr = uuid.uuid4()
             # Enforce UTF-8 for the connection.
             cur.execute('SET NAMES utf8mb4')
@@ -151,6 +151,6 @@ if __name__ == '__main__':
     for x in cur:
         print(x)
 
-    print('realizando carga dedatos')
+    print('realizando carga de datos')
     load(dataclean)
 
