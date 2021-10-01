@@ -13,27 +13,22 @@ Ejemplo 2.
 from collections import deque
 
 
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(n - i - 1):
+            if arr[j] > arr[j + 1]:
+                # sorting by using simultaneous assignment in python
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+
 def ejemplo3(palabra):
     '''
     @autor @qleoz12
-    @descripcion: algoritmo voraz que ordena lexicograficamente de menor a mayor los caractes del conjunt {a,b}
+    @descripcion: algoritmo voraz que ordena lexicograficamente de mayor a menor los caractes del conjunt {a,b}
     :param palabra: valor de la palabra a procesar
     :return: exponeciación de la base al exponente
     '''
-    _deque = deque() #colecion para operar el ingros por izquierda o derecha
-    _set= set (''.join (palabra).replace (',', '') ) #se quita duplicadad de caracteres en la palabra
-    _list = list(_set) # se conviere en lista para poder operar
-    if len(_list)>2: #validación de conjunto binario
-        return "no operable"
-    max = (ord(_list[0]) >ord(_list[1])) and ord(_list[0]) or ord(_list[1]) #comparación de cual caracter tiene mayor jerarquía en la palabra
-    #print("adfsad",max)
-    for letra in palabra: #iteración de cada caracter para comparar con el maximo de jerarquia en caracter
-        #print(ord(letra))
-        if max==ord(letra): #comparación de maximo con valor de caracter en iteracion
-            _deque.appendleft(letra) #agregación a la izquierda mayor jerarqía
-        else:
-            _deque.append(letra) #agregación a la derecha menor jerarqía
-    return ''.join(_deque) #retorno de coleccion como string
+    return bubble_sort(list(palabra))
 
 
 def ejemplo2(cambio):
@@ -53,16 +48,16 @@ def ejemplo2(cambio):
     }
     residuo=cambio
     while residuo>0: #ejecuación hasta que se alcance un valor de cero
-        if residuo>20:
+        if residuo>=20:
             residuo=divremanider(20,residuo,tbt_cabmio) # ejecución de validación de punto de corte y respectivo residuo
             continue # se rompe con el ciclo para reiniciarlo
-        if residuo>18:
+        if residuo>=18:
             residuo=divremanider(18,residuo,tbt_cabmio) # ejecución de validación de punto de corte y respectivo residuo
             continue # se rompe con el ciclo para reiniciarlo
-        if residuo>10:
+        if residuo>=10:
             residuo=divremanider(10,residuo,tbt_cabmio) # ejecución de validación de punto de corte y respectivo residuo
             continue # se rompe con el ciclo para reiniciarlo
-        if residuo>5:
+        if residuo>=5:
             residuo=divremanider(5,residuo,tbt_cabmio) # ejecución de validación de punto de corte y respectivo residuo
             continue # se rompe con el ciclo para reiniciarlo
         if residuo>=1:
@@ -80,7 +75,7 @@ def divremanider(puntodecorte,valor,diccionario):
        :param valor: valor a comparar contra el punto de corte que es sustraido en caso de ser superio al punto de corte
        :param diccionario: tabla donde se almacena el detalle de afectar o no los puntos de corte para el detalle del cambio
        :return: residuo restante de la operación
-       '''
+    '''
     if valor >= puntodecorte: #compara punto de corte
         diccionario[puntodecorte] += 1 #busca en el diccionario y actualiza numero de coincidencia
         valor -= puntodecorte #sustrae el valor de punto de corte
@@ -90,9 +85,11 @@ def divremanider(puntodecorte,valor,diccionario):
 if __name__ == "__main__":
     print(ejemplo3('abababbababa'))
     print(ejemplo3('azzazaza'))
+    print(ejemplo3('rssrsrsrsrs'))
     print(ejemplo3('abc'))
 
     print(36,ejemplo2(36))
+    print(98, ejemplo2(98))
     print(96,ejemplo2(96))
     print(69,ejemplo2(69))
     print(46,ejemplo2(46))

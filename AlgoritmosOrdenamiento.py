@@ -61,6 +61,7 @@ def leeLista():
 if __name__ == '__main__':
     start_time = time.time()
     A=leeLista()
+    print(A)
     BubbleSort(A, len(A))
     #imprimeLista(A, len(A))
     print("BubbleSort")
@@ -68,12 +69,14 @@ if __name__ == '__main__':
 
     start_time = time.time()
     A = leeLista()
+    print(A)
     quicksort(A, 0,len(A)-1)
     print("quicksort")
     print("--- %s seconds ---" % (time.time() - start_time))
 
     start_time = time.time()
     A = leeLista()
+    print(A)
     insertionSort(A)
     print("insertionSort")
     print("--- %s seconds ---" % (time.time() - start_time))
