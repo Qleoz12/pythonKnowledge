@@ -12,14 +12,21 @@ Ejemplo 2.
 '''
 from collections import deque
 
-
+'''
+    @autor @qleoz12
+    @descripcion: algoritmo de ordenamiento de burbuja que cumple con idea de colocar en caso de menor al lado derecho o en cazo de mayor al lado derecho
+    :param arr: array a ordenar
+    :return: array ordenado
+    '''
 def bubble_sort(arr):
-    n = len(arr)
-    for i in range(n):
-        for j in range(n - i - 1):
-            if arr[j] > arr[j + 1]:
+    n = len(arr)  # se toma largo de palabra
+    for i in range(n): # se itera cada posición para ordenar
+        for j in range(n - i - 1): #itera contra toda la palabra
+            if arr[j] < arr[j + 1]:  #comparacion
                 # sorting by using simultaneous assignment in python
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                arr[j], arr[j + 1] = arr[j + 1], arr[j] #orden  de cada caracter vs la posición actual
+
+    return arr #retorno
 
 def ejemplo3(palabra):
     '''
@@ -28,7 +35,7 @@ def ejemplo3(palabra):
     :param palabra: valor de la palabra a procesar
     :return: exponeciación de la base al exponente
     '''
-    return bubble_sort(list(palabra))
+    return bubble_sort(list(palabra)) #se hace llamado de metodo de ordenamiento bubble_sort
 
 
 def ejemplo2(cambio):
@@ -87,6 +94,10 @@ if __name__ == "__main__":
     print(ejemplo3('azzazaza'))
     print(ejemplo3('rssrsrsrsrs'))
     print(ejemplo3('abc'))
+    print(ejemplo3('Electrocardiograma'))
+    print(ejemplo3('juanvera'))
+
+    print('===========================================')
 
     print(36,ejemplo2(36))
     print(98, ejemplo2(98))

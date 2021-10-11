@@ -9,6 +9,8 @@ def BubbleSort(lista, tam):
                 lista[j + 1] = lista[j]
                 lista[j] = k;
 
+    return lista
+
 
 def quicksort(lista, izq, der):
     i = izq
@@ -32,6 +34,8 @@ def quicksort(lista, izq, der):
     if i < der:
         quicksort(lista, i, der);
 
+    return lista
+
 def insertionSort(lista):
     n = len(lista)
     global comparaciones
@@ -46,6 +50,8 @@ def insertionSort(lista):
             comparaciones += 1
 
         lista[j] = val
+
+    return lista
 
 def imprimeLista(lista, tam):
     for i in range(0, tam):
@@ -62,7 +68,7 @@ if __name__ == '__main__':
     start_time = time.time()
     A=leeLista()
     print(A)
-    BubbleSort(A, len(A))
+    print(BubbleSort(A, len(A)))
     #imprimeLista(A, len(A))
     print("BubbleSort")
     print("--- %s seconds ---" % (time.time() - start_time))
@@ -70,13 +76,13 @@ if __name__ == '__main__':
     start_time = time.time()
     A = leeLista()
     print(A)
-    quicksort(A, 0,len(A)-1)
+    print(quicksort(A, 0,len(A)-1))
     print("quicksort")
     print("--- %s seconds ---" % (time.time() - start_time))
 
     start_time = time.time()
     A = leeLista()
     print(A)
-    insertionSort(A)
+    print(insertionSort(A))
     print("insertionSort")
     print("--- %s seconds ---" % (time.time() - start_time))
