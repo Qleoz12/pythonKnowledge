@@ -17,6 +17,7 @@ Faker = "^9.2.0"
 pyodbc = "^4.0.32"
 mimesis = "^4.1.3"
 pandas = "^1.3.3"
+SQLAlchemy = "^1.4.25"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
