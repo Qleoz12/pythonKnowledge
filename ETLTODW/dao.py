@@ -1,11 +1,15 @@
+import datetime
+import uuid
 from datetime import datetime as dt
+
+from mimesis import Person, Address, Datetime
 
 import dao
 import pyodbc
 import configparser
 
 #target
-# CREATE TABLE resourcesDW.dbo.cliente (
+# CREATE TABLE DW.dbo.clientes(
 # 	id varchar(256) COLLATE Modern_Spanish_CI_AS NOT NULL,
 # 	nombre nchar(128) COLLATE Modern_Spanish_CI_AS NULL,
 # 	direccion nchar(128) COLLATE Modern_Spanish_CI_AS NULL,
@@ -18,7 +22,7 @@ import configparser
 # );
 
 
-# CREATE TABLE resourcesDW.dbo.tiempo (
+# CREATE TABLE DW.dbo.tiempo (
 # 	id varchar(256) COLLATE Modern_Spanish_CI_AS NOT NULL,
 # 	dia varchar(2) COLLATE Modern_Spanish_CI_AS NOT NULL,
 # 	mes varchar(2) COLLATE Modern_Spanish_CI_AS NOT NULL,
@@ -32,7 +36,7 @@ import configparser
 # );
 
 
-# CREATE TABLE resourcesDW.dbo.ventas (
+# CREATE TABLE DW.dbo.ventas (
 # 	fechaID varchar(256) COLLATE Modern_Spanish_CI_AS NULL,
 # 	clienteID varchar(256) COLLATE Modern_Spanish_CI_AS NULL,
 # 	vehiculoID varchar(100) COLLATE Modern_Spanish_CI_AS NULL,
@@ -40,7 +44,38 @@ import configparser
 # 	empleadoID varchar(100) COLLATE Modern_Spanish_CI_AS NULL,
 # 	precio varchar(100) COLLATE Modern_Spanish_CI_AS NULL
 # );
+from ETLTODW.database import SessionLocal
+from ETLTODW.databaseResouce import SessionLocalResource
+from ETLTODW.models.OLAP.cliente import cliente
+from ETLTODW.models.OLAP.tiempo import tiempo
 
+person = Person('ES')
+addess = Address()
+datetimemimesis = Datetime()
+
+def create_rows_mimesis(num=1,province=None,city=None,country=None):
+    output = [cliente(uuid.uuid4(), person.name(), addess.address(), province or addess.province(),city or addess.city(),country or addess.country(), addess.postal_code(), person.telephone()) for x in range(num)]
+    return output
+
+def create_rows_mimesis2(num=1,day=None,month=None,ano=None,weekday=None,diadelano=None,holyday=None,weekend=None,weekeYear=None):
+    output = []
+
+    for x in range(num):
+        if ano and month and day:
+            datetime_obj = datetime.datetime(year=ano, month=month, day=day)
+        else:
+            datetime_obj = datetimemimesis.datetime()
+        pivot=tiempo(uuid.uuid4(),
+                     day or datetime_obj.day,
+                     month or datetime_obj.month,
+                     ano or datetime_obj.year,
+                     weekday or datetime_obj.weekday(),
+                     diadelano or datetime_obj.strftime('%j'),
+                     holyday or False,
+                     weekend or datetime_obj.weekday() in [5,6] or False,
+                     weekeYear or datetime_obj.isocalendar().week)
+        output.append(pivot)
+    return output
 
 
 
@@ -125,3 +160,17 @@ def getTargetConnection():
                             "Trusted_Connection=yes;")
 
     return cnxn
+
+def get_db():
+    db = SessionLocalResource()
+    try:
+        yield db
+    finally:
+        db.close()
+
+def get_dbDW():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
