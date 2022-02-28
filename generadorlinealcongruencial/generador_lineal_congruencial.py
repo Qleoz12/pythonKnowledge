@@ -1,8 +1,4 @@
-import cairo
-
 import pandas as pd
-
-
 import matplotlib.pyplot as plt
 
 
@@ -20,7 +16,7 @@ class LGC_generator:
         a = _a
         c = _c  # Our "c" base value
         m = _m  # Our "m" base value
-        d = []
+        d = []  #arreglo de valores calculados
 
         # counter for how many iterations we've run
         counter = 0
@@ -35,7 +31,7 @@ class LGC_generator:
         if _a<1 or _a>=_m :
           raise Exception('_a', 'el parametro debe ser menor al valor modulo de control')
 
-        if _c<1 or _c>=_m-1:
+        if _c<0 or _c>=_m-1:
           raise Exception('_c', 'el parametro debe ser menor al valor modulo de control menos 1 o superior a 0')
 
         # Perfom number of iterations requested by user
@@ -52,49 +48,49 @@ class LGC_generator:
                 'c': c,
                 'm': m,
             })
-            df=pd.DataFrame(d)
-
             # write to output file
             outFile.write((writeValue + "\n").encode())
             # print "num: " + " " + str(counter) +":: " + str(x_value)
-
             counter = counter + 1
 
         outFile.close()
+        df = pd.DataFrame(d)
         print("Successfully stored " + str(num_iterations) + " random numbers in file named: 'lgc_output.txt'.")
-        print(df)
-        # ax2 = df.plot.scatter(x='i',y = 'x',colormap = 'viridis')
-        df.sort_values('x')
-        print(df.sort_values('x'))
+        # print(df)
+        df = df.sort_values('x') # se ordena la columna
+        ax2 = df.plot.scatter(x='i',y = 'x',colormap = 'viridis')
+        fig = ax2.get_figure()
+        fig.set_size_inches(16.5, 16)  # ajustar tamaño de grafica
+        plt.savefig("test", dpi=300)
+        plt.close()
 
-        df.sort_values('x').plot(x='i', y='x', kind='scatter')
-        fig = plt.gcf()
-        fig.set_size_inches(16.5, 16)
-        plt.savefig("test",dpi=300)
+        fig, ax = plt.subplots()
+        ax.axis('tight')
+        ax.axis('off')
+        plt.tight_layout()
+        df = df.sort_values('i')  # se ordena la columna
+        fig.set_size_inches(5, 18)  # ajustar tamaño de grafica
+        ax.table(cellText=df.values, colLabels=df.columns, loc='center')
+        plt.savefig("table", dpi=300)
+        plt.close()
+
 
 
 
     if __name__ == "__main__":
-        repeticiones=100
-        seed = 1
-        a = 21
-        c = 1
-        M = 100
+
+        #LGC
+        repeticiones=99
+        seed = 59        # semilla dentro del rango entre 0  y la variable de control modulo ->M
+        a = 21              #multiplicados
+        c = 13               #incremento
+        M = 100             # variable de control
         generate_lcg(repeticiones,seed,a,c,M)
 
-        with cairo.SVGSurface("example.svg", 200, 200) as surface:
-            context = cairo.Context(surface)
-            x, y, x1, y1 = 0.1, 0.5, 0.4, 0.9
-            x2, y2, x3, y3 = 0.6, 0.1, 0.9, 0.5
-            context.scale(200, 200)
-            context.set_line_width(0.04)
-            context.move_to(x, y)
-            context.curve_to(x1, y1, x2, y2, x3, y3)
-            context.stroke()
-            context.set_source_rgba(1, 0.2, 0.2, 0.6)
-            context.set_line_width(0.02)
-            context.move_to(x, y)
-            context.line_to(x1, y1)
-            context.move_to(x2, y2)
-            context.line_to(x3, y3)
-            context.stroke()
+        # LGC multiplicativo
+        # repeticiones = 99
+        # seed = 12  # semilla dentro del rango entre 0  y la variable de control modulo ->M
+        # a = 21  # multiplicados
+        # c = 0  # incremento
+        # M = 100  # variable de control
+        # generate_lcg(repeticiones, seed, a, c, M)
