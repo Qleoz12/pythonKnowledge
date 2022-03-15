@@ -36,11 +36,10 @@ if __name__ == '__main__':
     # dao.insertFakedata(DATA6, "resourcesDW", "tiempo", "job_run_id")
     # dao.insertFakedata(DATA7, "resourcesDW", "tiempo", "job_run_id")
 
-    # dataFakerLoad.loaddatafake()
+     #dataFakerLoad.loaddatafake()
     myetl=ETL(db=next(dao.get_db()))
     datatotrasnform=myetl.processDBsResource()
     datatrasnformed=myetl.transform(datatotrasnform)
-
     myetl.load(datatrasnformed)
     # dataFakerLoad.removedatafake()
 

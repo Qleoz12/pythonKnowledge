@@ -9,6 +9,20 @@ import pyodbc
 import configparser
 
 #target
+
+# CREATE TABLE DW.dbo.sucursal(
+# 	id varchar(256) COLLATE Modern_Spanish_CI_AS NOT NULL,
+# 	nombre nchar(128) COLLATE Modern_Spanish_CI_AS NULL,
+# 	provincia nchar(32) COLLATE Modern_Spanish_CI_AS NULL,
+# 	ciudad nchar(32) COLLATE Modern_Spanish_CI_AS NULL,
+# 	director nchar(128) COLLATE Modern_Spanish_CI_AS NULL,
+# 	direccion nchar(128) COLLATE Modern_Spanish_CI_AS NULL,
+# 	codigo_postal nchar(16) COLLATE Modern_Spanish_CI_AS NULL,
+# 	telefono nchar(32) COLLATE Modern_Spanish_CI_AS NULL,
+# 	direccion_web nchar(256) COLLATE Modern_Spanish_CI_AS NULL,
+# 	CONSTRAINT PK_sucursal PRIMARY KEY (id)
+# );
+
 # CREATE TABLE DW.dbo.clientes(
 # 	id varchar(256) COLLATE Modern_Spanish_CI_AS NOT NULL,
 # 	nombre nchar(128) COLLATE Modern_Spanish_CI_AS NULL,
@@ -54,7 +68,14 @@ addess = Address()
 datetimemimesis = Datetime()
 
 def create_rows_mimesis(num=1,province=None,city=None,country=None):
-    output = [cliente(uuid.uuid4(), person.name(), addess.address(), province or addess.province(),city or addess.city(),country or addess.country(), addess.postal_code(), person.telephone()) for x in range(num)]
+    output = [cliente(uuid.uuid4(),
+                      person.name(),
+                      addess.address(),
+                      province or addess.province(),
+                      city or addess.city(),
+                      country or addess.country(),
+                      addess.postal_code(),
+                      person.telephone()) for x in range(num)]
     return output
 
 def create_rows_mimesis2(num=1,day=None,month=None,ano=None,weekday=None,diadelano=None,holyday=None,weekend=None,weekeYear=None):

@@ -54,6 +54,8 @@ def fakeDataVentas(num=1,_clienteID=None,_vehiculoID=None,fecha=None,referencia=
               for x in range(num)]
     return output
 
+
+
 def insertFakedata(data, db,tableName, job_run_id):
     rows_processed = 0
     cols_processed = 0
@@ -145,7 +147,11 @@ def loaddatafake():
 
     data = fakeDataVentas(300)
     insertFakedataResources(data=data, db=next(get_db()))
+
     data = fakeDataVentas(100,_vehiculoID='3C0CCF30-8C41-45B6-912D-B7B50E114863',fecha='2021-01-01')
+    insertFakedataResources(data=data, db=next(get_db()))
+
+    data = fakeDataVentas(100, _vehiculoID='3C0CCF30-8C41-45B6-912D-B7B50E114863', fecha='2021-01-01')
     insertFakedataResources(data=data, db=next(get_db()))
 
 def removedatafake():

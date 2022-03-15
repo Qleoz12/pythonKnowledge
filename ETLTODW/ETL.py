@@ -4,9 +4,12 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from ETLTODW.dataFakerLoad import insertFakedata
+from ETLTODW.models.OLAP.cliente import cliente
+
 from ETLTODW.models.OLAP.tiempo import tiempo
 from ETLTODW.models.OLTP import Models
-from ETLTODW.models.OLTP.ventas import ventas
+from ETLTODW.models.OLTP.Models import ciudadesDB, provinciasDB, paisesDB
+
 
 
 class ETL:
@@ -22,7 +25,7 @@ class ETL:
         print (db.query(Models.ventasDB).count())
         clientes = db.query(Models.clientesDB).all()
         print(db.query(Models.clientesDB).count())
-        clientes = db.query(Models.clientesDB).all()
+        clientes = db.query(Models.clientesDB).join(ciudadesDB).join(provinciasDB).join(paisesDB).all()
         print(db.query(Models.clientesDB).count())
         return {'ventas' :tiempo,'clientes':clientes}
 
@@ -34,10 +37,15 @@ class ETL:
         :desc: la transformación se hace del lenguaje de origen a normalización requerida
         :return:
         '''
-        clientes           =dataTotransform['clientes']
-        ventasdata:ventas  =dataTotransform['ventas']
-        tiempos=[]
-        for  ventadata in ventasdata:
+        clientesdata =dataTotransform['clientes']
+        ventasdata   =dataTotransform['ventas']
+        '''
+            dimensiones
+        '''
+        tiemposDim=[]
+        clientesDim = []
+
+        for ventadata in ventasdata:
             current=tiempo(uuid.uuid4(),
                ventadata.fecha.day,
                ventadata.fecha.month,
@@ -47,9 +55,24 @@ class ETL:
                False,
                ventadata.fecha.weekday() in [5, 6],
                ventadata.fecha.isocalendar().week)
-            tiempos.append(current)
+            tiemposDim.append(current)
 
-        return {'tiempo' :tiempos,'clientes':clientes}
+        # se limpian tiempos repetidos
+        tiemposDim = list(set(tiemposDim))
+
+        for _clientedata in clientesdata:
+            current=cliente(_clientedata.id,
+                          _clientedata.nombres,
+                          None,
+                          _clientedata.ciudadesDB.nombre,
+                          _clientedata.ciudadesDB.provinciasDB.nombre,
+                          _clientedata.ciudadesDB.provinciasDB.paisesDB.nombre,
+                          _clientedata.codigoPostal,
+                          _clientedata.telefono)
+            clientesDim.append(current)
+
+
+        return {'tiempo' :tiemposDim,'clientes':clientesDim}
 
 
 
@@ -66,22 +89,3 @@ class ETL:
     def processDBsResource(self):
         print('realizando extracción')
         return self.extraccion(self.db)
-
-        # print('realizando transformación')
-        # dataclean=transform()
-        # dataclean.pop(0)
-        # an_array = numpy.array(dataclean)
-        # print(an_array)
-        #
-        # '''
-        #     mostrar base de datos existentes
-        # '''
-        # show_db_query = "use testdb"
-        # dbconn=connection()
-        # cur = dbconn.cursor() 
-        # cur.execute(show_db_query)
-        # for x in cur:
-        #     print(x)
-        #
-        # print('realizando carga de datos')
-        # load(dataclean)
