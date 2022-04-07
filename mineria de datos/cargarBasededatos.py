@@ -2,8 +2,10 @@ import pandas as pd
 import openpyxl as xl
 
 from sqlalchemy import MetaData,Table,Column,Integer,ForeignKey,String
+from sqlalchemy.orm import Session
 
 from DBmanager import getConnection
+from crear_db_model_from_orm import crearMoldeloRelacional, Profesor
 
 
 def cargarInfo(file_name,sheet):
@@ -29,22 +31,26 @@ def infoExcel(file_name):
     return res
 
 if __name__ == '__main__':
+
+    crearMoldeloRelacional()
+    engine = getConnection()
+    session = Session(engine, future=True)
+
     counsheets=infoExcel("PROMEDIOprofesor.xlsx")
     profesores = set()
     for x in range(counsheets):
         profesor=cargarInfo("PROMEDIOprofesor.xlsx", "Table {}".format(x+1))
         profesores.add(profesor)
+        profesorEntity = Profesor(name=profesor)
+        session.add(profesorEntity)
+        session.commit()
+
+
 
     print(len(profesores))
 
-    metadata_obj = MetaData()
-    engine=getConnection()
-    user = Table('profesores', metadata_obj,
-                 Column('id', Integer, primary_key=True),
-                 Column('name', String(16), nullable=False),
-                 Column('nickname', String(50), nullable=True)
-                 )
 
 
 
-    metadata_obj.create_all(engine)
+
+
