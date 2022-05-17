@@ -175,15 +175,15 @@ if __name__ == '__main__':
 
     text64 = base64.b64encode(textmodificado.encode("utf8"))
     #simulaciones
-    # for n in range(0, 2):
-    #     dataencrypt = encrypt(text, "")
-    #     # print(dataencrypt)
-    #     pretty(dataencrypt)
-    #     decrypt(dataencrypt["message"], dataencrypt["encrypt"], dataencrypt["sha"], dataencrypt["dsa_data"],dataencrypt["iv"])
+    for n in range(0, 2):
+        dataencrypt = encrypt(text, "")
+        # print(dataencrypt)
+        pretty(dataencrypt)
+        decrypt(dataencrypt["message"], dataencrypt["encrypt"], dataencrypt["sha"], dataencrypt["dsa_data"],dataencrypt["iv"])
 
     # ataque modificacion de mensaje original
-    dataencrypt = encrypt(text, "")
-    decrypt(text64, dataencrypt["encrypt"], dataencrypt["sha"], dataencrypt["dsa_data"],dataencrypt["iv"])
+    # dataencrypt = encrypt(text, "")
+    # decrypt(text64, dataencrypt["encrypt"], dataencrypt["sha"], dataencrypt["dsa_data"],dataencrypt["iv"])
 
 
 
