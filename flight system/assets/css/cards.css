@@ -1,0 +1,89 @@
+.team-card-body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-card{
+  border-color: #800020;
+  background-color: #e6e6e6 !important;
+  text-align: center;
+}
+
+.team-card:hover{
+  border-color: #0000A0;
+}
+
+.collab-card{
+  border-color: #800020;
+  border-width: medium !important;
+}
+.collab-card:hover{
+  border-color: #0000A0 !important;
+}
+
+
+.home-card{
+  border-color: #800020 !important;
+  border-width: medium !important;
+}
+
+.home-card-body{
+    border-color: #800020;
+}
+
+.home-card:hover{
+  border-color: #0000A0 !important;
+}
+
+.home-card:hover .home-card-body h4 {
+  color: #0000A0 !important;
+}
+
+.feat-options-body{
+  display: flex;
+  align-items: center;
+  padding-bottom: 40;
+}
+
+.feat-options{
+  border-color: #800020 !important;
+  height: 10rem;
+  padding-bottom: 40;
+}
+
+.score-calculator-card-content-infection{
+  color: white;
+  text-align: center;
+}
+
+.score-calculator-card-content{
+  color: white;
+  text-align: center;
+}
+
+#calc-multidrop-0-mort-wrapper{
+  width:100%;
+}
+#calc-multidrop-0-infec-wrapper{
+  width:100%;
+}
+
+.projections-general-card{
+  border-color: #800020 !important;
+}
+
+#us-stats-cards{
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.press-card{
+  border-color: #800020 !important;
+  border-width: medium !important;
+}
+.press-card:hover{
+  border-color: #0000A0 !important;
+}

@@ -1,0 +1,91 @@
+
+h2 {
+    line-height: 60px;
+    color: black;
+    margin-bottom: 40px;
+}
+
+h4 {
+    color: black;
+}
+
+h5 {
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+h6 {
+     margin-top: 5px;
+     color: black;
+}
+
+P {
+    color: black;
+}
+
+
+#date-projections{
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+.card-title{
+  color: #800020;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.team-name{
+  text-align: center;
+  color: #800020;
+}
+.team-name:hover{
+  color: #0000A0;
+  text-decoration: none;
+}
+
+.press-source{
+  font-style: italic;
+}
+
+.press-title{
+  color: #800020;
+  font-style: bold;
+}
+
+.collab-name{
+  text-align: center;
+  color: black;
+}
+.collab-name:hover{
+  color: black;
+  text-decoration: none;
+}
+
+#imputed-text-infection{
+  text-align: center;
+}
+
+#imputed-text-mortality{
+  text-align: center;
+}
+
+#policy-header-0{
+  color: #000004;
+}
+#policy-header-1{
+  color: #a52c60;
+}
+#policy-header-2{
+  color: #ed6925;
+}
+
+
+
+#page-content .row
+{
+    padding:1rem;
+}
+

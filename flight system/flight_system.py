@@ -1,3 +1,4 @@
+import uuid
 from random import randrange
 
 import numpy as np
@@ -16,6 +17,7 @@ def calcularVuelo(pais_origen,pais_destino,precio_directo,tiempo_estimado_total,
     valor_escalada = 0
     valor_beneficio=0
     Matrix = [[0 for x in range(3)] for y in range(escalas)]
+    viaje=[]
     if escalas==0 :
         return  {
             "pais_origen": pais_origen,
@@ -47,6 +49,16 @@ def calcularVuelo(pais_origen,pais_destino,precio_directo,tiempo_estimado_total,
             print(tiempo_estimado_total)
             tiempo_estimado_total+=tiempo_escala #sumo tiempo de escala
 
+            viaje.append(
+                {
+                    "escala": str(x + 1),
+                    "precio hasta escalada ": str(valor_escalada),
+                    "beneficio " : str((valor_escalada - (costonicial / escalas))),
+                    "tiempo trayecto  " : str(tiempo_estimado_total / (escalas - x)),
+                    "tiempo escala  ": str(tiempo_estimado_total / (escalas - x)),
+
+                }
+            )
             print("---------------------------------------------------------------------------------------------------")
 
     print("valor final de vuelo "+str(valor_total_vuelo))
@@ -63,9 +75,12 @@ def calcularVuelo(pais_origen,pais_destino,precio_directo,tiempo_estimado_total,
         ax.bar(x + dx[i], data[:, i], width=d, label=labels[i])
 
     fig.set_size_inches(18.5, 10.5)
+    name="assets/images/flight_"+str(uuid.uuid4())+".png"
     plt.legend(framealpha=1)
-    plt.savefig("flight", dpi=300)
+    plt.savefig(name, dpi=300)
     plt.close()
+
+    return viaje,fig,name
 
 
 
