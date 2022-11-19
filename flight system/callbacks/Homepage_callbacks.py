@@ -1,4 +1,4 @@
-from dash import Input, Output, html
+from dash import Input, Output, html, State, dash
 
 from flight_system import calcularVuelo
 
@@ -18,12 +18,17 @@ def register_callbacks(app):
     @app.callback(
         [Output('table-container', 'data'),
         Output('example-img', 'src')],
-        [Input('example-button', 'n_clicks')]
+        [Input('example-button', 'n_clicks'),],
+        [State('origen', 'value'),
+         State('destino', 'value'),
+         State('pasajeros', 'value'),
+         State('escaladas', 'value'),]
     )
-    def calcular(n):
+    def calcular(n,origen,destino,pasajeros,escaladas):
         if n is not None:
-            viaje,fig,name = calcularVuelo("bogota", "paris", 2000000, 12, 10, 100)
+            viaje,fig,name = calcularVuelo(origen, destino, 2000000, 12, escaladas, pasajeros)
             return viaje,name#,fig
 
+    return dash.no_update
 
 
