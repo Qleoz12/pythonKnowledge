@@ -41,7 +41,7 @@ def calcularVuelo(pais_origen,pais_destino,precio_directo,tiempo_estimado_total,
             Matrix[x][2] = costonicial
             print("precio hasta escalada "+str(valor_escalada))
             print("beneficio " + str((valor_escalada-(costonicial/escalas))))
-            _, _, cantidad_actual, tiempo_escala = calcular_escala(tiempo_estimado_total, cantidad_total,cantidad_actual)
+            pasajeros_suben, pasajeros_bajan, cantidad_actual, tiempo_escala = calcular_escala(tiempo_estimado_total, cantidad_total,cantidad_actual)
             print("tiempo trayecto  " +str(tiempo_estimado_total/(escalas-x)))
             print("tiempo escala  " + str(tiempo_escala))
             print(tiempo_estimado_total)
@@ -55,7 +55,9 @@ def calcularVuelo(pais_origen,pais_destino,precio_directo,tiempo_estimado_total,
                     "precio hasta escalada ": str(valor_escalada),
                     "beneficio " : str((valor_escalada - (costonicial / escalas))),
                     "tiempo trayecto  " : str(tiempo_estimado_total / (escalas - x)),
-                    "tiempo escala  ": str(tiempo_estimado_total / (escalas - x)),
+                    "tiempo escala  ": str(tiempo_escala),
+                    "pasajeros_suben": str(pasajeros_suben),
+                    "pasajeros_bajan": str(pasajeros_bajan),
 
                 }
             )

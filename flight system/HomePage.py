@@ -1,5 +1,4 @@
 ### Data
-import datetime
 
 ### Graphing
 import dash_bootstrap_components as dbc
@@ -125,29 +124,34 @@ def Homepage():
                 dbc.Col(
                     dcc.Markdown(
                         '''
-                         We are a group of researchers from the [MIT](http://mit.edu/) [Operations Research Center](https://orc.mit.edu/), \
-                         led by Professor [Dimitris Bertsimas](https://www.mit.edu/~dbertsim/). \
-                         We aim to quickly develop and deliver tools for hospitals and policymakers in the US to combat the spread of COVID-19. \
-                         This work represents a collaborative effort with [multiple hospitals](/collaborators) which have been providing us with \
-                         data and support throughout the model creation process.
+                        El Sistema de Control de Partidas o DCS (sistema de facturación) es el sistema utilizado por las
+                         aerolíneas y aeropuertos para facturar los pasajeros y su equipaje así como las mercancías. 
+                         El sistema verifica si un supuesto pasajero tiene una reserva válida, asigna asiento y emite 
+                         tarjeta de embarque. Además el sistema es responsable de la transmisión de datos de los 
+                         pasajeros (Advanced Passenger Information o APIS) a las autoridades previo al vuelo. 
+                         El DCS también incluye componentes que permiten calcular el emplazamiento óptimo de 
+                         mercancías en el bodegón del avión en función de criterios de equilibrio, consumo de carburante,
+                          carga y descarga de contenedores etc.
                          '''
                     ),
                 ),
             ),
             dbc.Row([
                 dbc.Col(
-                    dbc.DropdownMenu(
-                        label="Lugar de origen",
-                        children=[
-                            dbc.DropdownMenuItem(x) for x in Paises
+                    dbc.Select(
+                        # label="Lugar de origen",
+                        id="origen",
+                        options=[
+                            {"label": x, "value": x} for x in Paises
                         ],
                     )
                 ),
                 dbc.Col(
-                    dbc.DropdownMenu(
-                        label="Lugar de destino",
-                        children=[
-                            dbc.DropdownMenuItem(x) for x in Paises
+                    dbc.Select(
+                        # label="Lugar de destino",
+                        id="destino",
+                        options=[
+                            {"label": x, "value": x} for x in Paises
                         ],
                     )
                 ),
@@ -155,47 +159,33 @@ def Homepage():
             ]),
 
             dbc.Row([
+                html.Div(
+                    [
+                        html.P("numero de pasajeros"),
+                        dbc.Input(type="number", min=0, max=200, step=1, id="pasajeros"),
+                    ], ),
+
+                html.Div(
+                    [
+                        html.P("numero de escaladas"),
+                        dbc.Input(type="number", min=0, max=10, step=1, id="escaladas"),
+                    ], ),
+                html.Span(style={"verticalAlign": "middle"}),
                 dbc.Button(
                     "calcular Viaje",
-                    id="example-button",href='/'
+                    id="example-button", href='/'
                 ),
                 html.Span(id="example-output", style={"verticalAlign": "middle"}),
                 dt.DataTable(
-                    id='table-container',)
+                    id='table-container', )
 
             ]),
             dbc.Row([
-                html.Img(id="example-img",  height="1000px")
+                html.Img(id="example-img", height="1000px")
                 # dcc.Graph(
                 #     id='example-img',
                 # )
             ]),
-            dbc.Row(
-                [
-                    build_card(False, cards[0]["titles"], cards[0]["text"], cards[0]["image"], cards[0]["links"]),
-                    build_card(True, cards[1]["titles"], cards[1]["text"], cards[1]["image"], cards[1]["links"]),
-                    build_card(False, cards[2]["titles"], cards[2]["text"], cards[2]["image"], cards[2]["links"]),
-                    build_card(True, cards[3]["titles"], cards[3]["text"], cards[3]["image"], cards[3]["links"]),
-                    build_card(False, cards[4]["titles"], cards[4]["text"], cards[4]["image"], cards[4]["links"]),
-                ],
-                justify="around",
-                # no_gutters=True,
-            ),
-            dbc.Row(
-                [
-                    dbc.Col(
-                        [
-                            html.Div(
-                                id='us_map_homepage',
-
-                            ),
-                            html.P(
-                                style={'color': 'gray'},
-                            ),
-                        ]
-                    )
-                ],
-            )
         ],
         className="page-body"
     )
