@@ -170,7 +170,13 @@ def Homepage():
                         html.P("numero de escaladas"),
                         dbc.Input(type="number", min=1, max=10, step=1, id="escaladas"),
                     ], ),
+                html.Div(
+                    [
+                        html.P("valor viaje"),
+                        dbc.Input(type="number", min=100000, max=10000000, step=1, id="viaje_valor"),
+                    ], ),
                 html.Span(style={"verticalAlign": "middle"}),
+
                 dbc.Button(
                     "calcular Viaje",
                     id="example-button", href='/'

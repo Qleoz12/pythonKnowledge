@@ -22,11 +22,12 @@ def register_callbacks(app):
         [State('origen', 'value'),
          State('destino', 'value'),
          State('pasajeros', 'value'),
-         State('escaladas', 'value'),]
+         State('escaladas', 'value'),
+         State('viaje_valor', 'value'),]
     )
-    def calcular(n,origen,destino,pasajeros,escaladas):
+    def calcular(n,origen,destino,pasajeros,escaladas,viaje_valor):
         if n is not None:
-            viaje,fig,name = calcularVuelo(origen, destino, 2000000, 12, escaladas, pasajeros)
+            viaje,fig,name = calcularVuelo(origen, destino, viaje_valor, 12, escaladas, pasajeros)
             return viaje,name#,fig
 
     return dash.no_update
