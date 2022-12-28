@@ -1,5 +1,6 @@
 import random
 
+from fundamentals.encapsulation import CuentaFacebook, CuentaInstagram
 from fundamentals.inhetirance import Policia, Enfermero, Person, Auxiliar
 
 
@@ -14,21 +15,36 @@ if __name__ == '__main__':
     # bombero
     # policia
     # mesero
-    lorenzo = Person("lorenzo", 12)
-    lorenzo.salario=10
-    lorenzo.saludar()
+    # lorenzo = Person("lorenzo", 12)
+    # lorenzo.salario=10
+    # lorenzo.saludar()
+    #
+    # carlos = Policia("carlos manrique", 25,50)
+    # carlos.saludar()
+    #
+    # pedro = Enfermero("pedro",20,30)
+    #
+    # auxiliar1 = Auxiliar("pedro", 20,30)
+    #
+    # ## todos son personas
+    # lista_personas = [lorenzo,carlos,pedro,auxiliar1]
+    #
+    # for i in lista_personas:
+    #     deudas(i)
 
-    carlos = Policia("carlos manrique", 25,50)
-    carlos.saludar()
+    lorenzo_facebook=CuentaFacebook("lorenzo","COL","lorenzoENZO","123")
 
-    pedro = Enfermero("pedro",20,30)
+    lorenzo_Insta = CuentaInstagram("lorenzo", "COL", "lorenzoENZO")
 
-    auxiliar1 = Auxiliar("pedro", 20,30)
+    # print(lorenzo_facebook.__password)
 
-    ## todos son personas
-    lista_personas = [lorenzo,carlos,pedro,auxiliar1]
+    print(lorenzo_facebook.obtenerCuenta())
 
-    for i in lista_personas:
-        deudas(i)
+    print(lorenzo_Insta._username)
+    lorenzo_Insta.configurarClave("321")
+    print(lorenzo_Insta.mostrarClave())
+
+    lorenzo_Insta.getMarca()
+    print(lorenzo_Insta._marca)
 
 
