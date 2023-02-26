@@ -35,3 +35,6 @@ if __name__ == '__main__':
     for i in np.arange(x):
         if is_prime(i):
             print(i)
+
+
+arreglo=[1,2,3,4]
