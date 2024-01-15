@@ -25,7 +25,94 @@ Output the maximum number of consecutive occurrences of d that can appear at the
 given that the price of the bundle cannot exceed a.
 
 """
+"""
+#include <iostream>
 
+constexpr int moduloInverse(int a, int m) {
+    int m0 = m;
+    int x0 = 0;
+    int x1 = 1;
+
+    if (m == 1) {
+        return 0;
+    }
+
+    while (a > 1) {
+        const int q = a / m;
+        int t = m;
+
+        m = a % m;
+        a = t;
+        t = x0;
+
+        x0 = x1 - q * x0;
+        x1 = t;
+    }
+
+    while (x1 < 0) {
+        x1 += m0;
+    }
+    return x1;
+}
+
+constexpr std::size_t log10_up(int n) {
+    std::size_t res = 0;
+    while (n > 0) {
+        ++res;
+        n /= 10;
+    }
+    return res;
+}
+
+constexpr std::size_t pow10(int n) {
+    std::size_t res = 1;
+    while (n > 0) {
+        res *= 10;
+        --n;
+    }
+    return res;
+}
+
+constexpr std::size_t n_digit(int count, int digit)
+{
+    std::size_t res = 0;
+
+    for (int i = 0; i != count; ++i) {
+        res *= 10;
+        res += digit;
+    }
+    return res;
+}
+
+int solution(int a, int digit, std::size_t max_number)
+{
+    std::cout << a << " " << digit << " " << max_number << ":\n";
+    if (digit == 0) {return 0; } // TODO
+    const auto max_res = log10_up(max_number);
+
+    for (int res = max_res; res != 0; --res) {
+        const int modulo = pow10(res);
+        const auto inverse = moduloInverse(a, modulo);
+        if (inverse == 0) { continue; } // Error? `a` and `modulo` are not co-prime
+        const auto sum = a * (n_digit(res, digit) * inverse % modulo);
+
+        std::cout << a << " * ((" << n_digit(res, digit) << " * " << inverse << ") % " << modulo << ") == " << sum << std::endl;
+        if (sum < max_number) {
+            std::cout << "res = " << res << std::endl;
+            return res;
+        }
+    }
+    std::cout << "No" << std::endl;
+    return 0;
+}
+
+int main() {
+    solution(57, 9, 1000);
+    solution(57, 4, 39000);
+    solution(57, 4, 40000);
+    return 0;
+}
+"""
 
 # b = int(input("\nEnter price of one doodad between range 1 to 100000: "))
 
@@ -249,89 +336,113 @@ given that the price of the bundle cannot exceed a.
 
 
 
-def reverse_iteration(a, b, d):
-    k = a // b  # Start with the maximum possible value of k
-    # print("max iterations",k)
-
-    max_repetition = 0
-    result_with_max_repetition = None
-    factors=[]
-    reducer = []
-    iterations=0
-    #determine relevan factors
-    for i in range(1, 11):  # Iterar sobre los números del 1 al 10
-        resultado = b * i
-        if resultado % 10 == d:  # Verificar si el último dígito es el buscado
-            factors.append(i)
-    # print("factors",factors)
-    # print(k * b)
-    for i in factors:
-        if i != k % 10:
-            if k % 10 <i:
-                reducer.append((k % 10) + 10 - i)
-            else:
-                reducer.append((k % 10) - i)
-        else:
-            reducer.append(0)
-
-    #last conection
-    if reducer[0]==0 and len(reducer)>1:
-        reducer[0]=(factors[len(factors)-1] - factors[0])
-    #single reducer
-    if len(reducer)==1:
-        k=k-reducer[0]
-        reducer[0]=10
-
-    # print("reducer",reducer)
-    iteratorReducer=0
-    while k > 0:
-        iterations+=1
-        # print(iterations)
-        total_cost = k * b
-        bestresult = len(total_cost.__str__())
-
-        if total_cost <= a:
-            # print("k:", k, "Total Cost:", total_cost)
-            # repetition = total_cost % b
-
-            number_str = str(total_cost)
-            count = 0
-            last_digit = None
-
-            for digit in reversed(number_str):
-                if digit == str(d) and (digit == last_digit or last_digit is None):
-                    count += 1
-                    last_digit = digit
-                else:
-                    break
-            # print(count)
-            if count > max_repetition:
-                max_repetition = count
-
-            if count == bestresult \
-                    or (int(total_cost.__str__()[0])<d and max_repetition==bestresult-1):
-                k=-1
-                continue
-
-        iteratorReducer += 1
-        currenreducer=0
-        if len(reducer)==1:
-            currenreducer=reducer[0]
-        else:
-            currenreducer=reducer[iteratorReducer % len(reducer)]
-
-        k = k -currenreducer
-
-    print("iterations",iterations)
-    print(max_repetition)
+# def reverse_iteration(a, b, d):
+#     k = a // b  # Start with the maximum possible value of k
+#     # print("max iterations",k)
+#
+#     max_repetition = 0
+#     result_with_max_repetition = None
+#     factors=[]
+#     reducer = []
+#     iterations=0
+#     #determine relevan factors
+#     for i in range(1, 11):  # Iterar sobre los números del 1 al 10
+#         resultado = b * i
+#         if resultado % 10 == d:  # Verificar si el último dígito es el buscado
+#             factors.append(i)
+#     print("factors",factors)
+#     # print(k * b)
+#     for i in factors:
+#         if i != k % 10:
+#             if k % 10 <i:
+#                 reducer.append((k % 10) + 10 - i)
+#             else:
+#                 reducer.append((k % 10) - i)
+#         else:
+#             reducer.append(0)
+#
+#     #last conection
+#     if reducer[0]==0 and len(reducer)>1:
+#         reducer[0]=(factors[len(factors)-1] - factors[0])
+#     #single reducer
+#     if len(reducer)==1:
+#         k=k-reducer[0]
+#         reducer[0]=10
+#
+#     print("reducer",reducer)
+#     iteratorReducer=0
+#     while k > 0:
+#         iterations+=1
+#         # print(iterations)
+#         total_cost = k * b
+#         bestresult = len(total_cost.__str__())
+#
+#         if total_cost <= a:
+#             print("k:", k, "Total Cost:", total_cost)
+#             # repetition = total_cost % b
+#
+#             number_str = str(total_cost)
+#             count = 0
+#             last_digit = None
+#
+#             for digit in reversed(number_str):
+#                 if digit == str(d) and (digit == last_digit or last_digit is None):
+#                     count += 1
+#                     last_digit = digit
+#                 else:
+#                     break
+#             # print(count)
+#             if count > max_repetition:
+#                 max_repetition = count
+#
+#             if count == bestresult \
+#                     or (int(total_cost.__str__()[0])<d and max_repetition==bestresult-1):
+#                 k=-1
+#                 continue
+#
+#         iteratorReducer += 1
+#         currenreducer=0
+#         if len(reducer)==1:
+#             currenreducer=reducer[0]
+#         else:
+#             currenreducer=reducer[iteratorReducer % len(reducer)]
+#
+#         k = k -currenreducer
+#
+#     print("iterations",iterations)
+#     print(max_repetition)
 
 
 # # Example usage:
 # reverse_iteration(100, 17, 7)
 
 ## tests
-reverse_iteration(1000, 57, 9)
-reverse_iteration(1000, 57, 5)
-reverse_iteration(40000, 56, 4)
-reverse_iteration(40000, 57, 4)
-reverse_iteration(39000, 57, 4)
+# reverse_iteration(1000, 57, 9)
+# reverse_iteration(1000, 57, 5)
+# reverse_iteration(40000, 56, 4)
+# reverse_iteration(40000, 57, 4)
+# reverse_iteration(39000, 57, 4)
+
+b, d, a = input().strip().split()
+m = 0; n = 1; p = 1; b = int(b); d = int(d); best = 0
+
+def gcd(a, b):
+    while b: a, b = b, a % b
+    return a
+
+for l in range(len(a)): # O(log10 a)
+    # 10**l * x + d * (10**l-1)//9 = 0 (mod k) for all k that divides b
+    # p*x + d*m = 0 (mod b) -> need to find this in O(log2 b)
+    # p*x = -d*m (mod b) but gcd(p, b) might not be 1
+    g = gcd(p, b) # O(log b)
+    if -d*m%b%g == 0:
+        x = -d*m//g*pow(p//g, -1, b//g)%(b//g)
+        if x == 0: x += b//g # edge case: b//g is optimal rather than b
+        t = 10**len(str(x))
+        while x < t:
+            r = f'{x}{str(d)*l}'; l2 = l; x2 = x
+            while x2 % 10 == d: x2 //= 10; l2 += 1 # edge case if x also ends with some d's
+            if len(r) < len(a) or (len(r) == len(a) and r <= a): best = max(best, l2)
+            x += b//g
+    m += p; p *= 10; p %= b; m %= b
+print(best)
