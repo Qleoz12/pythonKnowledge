@@ -1,0 +1,87 @@
+{
+  "acceder": "Sartu",
+  "aceptar": "Onartu",
+  "areaPersonal": "Eremu pertsonala",
+  "areaProfesional": "Eremu profesionala",
+  "aviso": "Abisua",
+  "avisos": "abisuak",
+  "campana": "Kanpaia",
+  "cerrar": "Itxi",
+  "estrella": "Izarra",
+  "favoritos": "gustokoenak",
+  "importante": "Garrantzitsua",
+  "inicio": "Hasiera",
+  "irAvisos": "Joan nire abisuetara",
+  "irFavoritos": "Joan nire gogokoenetara",
+  "lupa": "Lupa",
+  "misAvisos": "Nire abisuak",
+  "misFavoritos": "Nire gustokoenak",
+  "noTieneFavoritos": "Ez daukazu gordetako izapide gustokoenik",
+  "quejasysugerencias": "Kontsultak, kexak eta iradokizunak",
+  "quieresrealizarunaconsulta": "Esaiguzu zertan lagun zaitzakegun",
+  "tepuedeinteresar": "Interesatu ahal zaizu",
+  "buscador": {
+    "tramite": {
+      "titulo": "IZAPIDEEN BILATZAILEA",
+      "solo-electronico": "Soilik elektronikoa",
+      "placeholder": "Idatzi bilatu nahi duzun izapidea",
+      "boton": "Bilatu",
+      "busqueda-avanzada": "Bilatzaile aurreratua",
+      "tributario": {
+        "h2": "ZERGA-IZAPIDEAK EGOITZA ELEKTRONIKOAN",
+        "a": {
+          "url": "https://{{dominio}}/eu/zerga-izapideak-profesionala",
+          "text": "JOAN IZAPIDEEN KATALOGORA"
+        }
+      }
+    }
+  },
+  "error": {
+    "cabecera": {
+      "titulo": "ERROREA",
+      "descripcion": "Errore bat gertatu da eskatutako orrian."
+    },
+    "explicacion": "Sentitzen dugu baina ustekabeko errore bat gertatu da zure eskaera egitean.",
+    "tarjeta-principal": {
+      "titulo": "Orri nagusia",
+      "text": "<abbr title='Bizkaiko Foru Aldundia' lang='eu'>BFAren</abbr> orri nagusirako sarbidea."
+    },
+    "tarjeta-telefono": {
+      "titulo": "Telefono zerbitzua",
+      "text": "Erabiltzailearen arretarako zentroa.",
+      "telefono": "944 468 444",
+      "horario": "Ordutegia: 07:30-19:00 (AL-OG) eta 07:30-15:00 (OR); eta 07:30-14:30 uztailean eta abuztuan."
+    },
+    "tarjeta-atencion": {
+      "titulo": "Lineakoa",
+      "texto": "Kontsultak, kexak eta iradokizunak."
+    },
+    "boton": {
+      "volver": "ITZULTZERA SARBIDE ORRIARA"
+    },
+    "img": {
+      "pagenotfound": {
+        "alt": "Ez da orria aurkitu"
+      }
+    }
+  },
+  "url": {
+    "avisos": "https://{{dominio}}/eu/nire-abisuak",
+    "area-personal": "https://{{dominio}}/eu/eremu-pertsonala",
+    "area-profesional": "https://{{dominio}}/eu/eremu-profesionala",
+    "bide": {
+      "catalogo": "https://{{dominio}}/eu/izapideen-katalogoa",
+      "tramites": "https://{{dominio}}/eu/zerga-izapideak-profesionala"
+    },
+    "favoritos": "https://{{dominio}}/eu/nire-gustokoenak",
+    "inicio": "https://{{dominio}}/eu/hasiera",
+    "profile": "https://{{dominio}}/eu/nire-profila",
+    "profile_prof": "https://{{dominio}}/eu/nireDatuProfesionalak",
+    "formulario_contacto": "https://www.bizkaia.eus/eu/harremanetarako-inprimakia?departamento=07&tipoDemanda=S&tema_biz=199&Idioma=EU",
+    "contacto": "https://{{dominio}}/eu/harremana"
+  },
+  "rutas": {
+    "area-personal": "eremu-pertsonala",
+    "area-profesional": "eremu-profesionala"
+  }
+}
