@@ -1,0 +1,430 @@
+ I think you are finished, right?
+ Or do you want me to go over this problem?
+ So, okay, okay.
+ As I said, right, in this case, we know all people use iPhone and one does not use.
+ But which one uses iPhone? Which one does not use iPhone? I don't know.
+ That's why we use all possible cases and get the probability.
+ In the first case, the first four people use iPhone, is that right?
+ So the probability that the first four people use iPhone is given by P times P times P times P, right?
+ The last person does not use, right? It will be 1 minus P.
+ And then time together, right?
+ So what's so good?
+ So it's given by P power 4 times 1 minus P.
+ Does it make sense to you?
+ Alright, in the second case, the first three person use iPhone.
+ I use back cover, right? I put a check mark here, okay?
+ Me, they use iPhone.
+ Use iPhone, okay?
+ And the last person also use iPhone.
+ Who does not use iPhone?
+ Which is the fourth person, is that okay?
+ Are you caused to denote the person that does not use iPhone?
+ Does it make sense?
+ And what's the probability?
+ The probability that the first person use iPhone is P, is that right?
+ Second person also P.
+ Third person also P.
+ The fourth person is 1 minus P, right?
+ The last person, the probability is iPhone is P, right?
+ And then time together, we have 1, 2, 3, 4.
+ Time 1 minus P.
+ So what's so good?
+ In the next case, the first person, second person,
+ the fourth person, and the third person use iPhone.
+ And the third one does not use it.
+ And what's the probability for this case?
+ Again, it's P times P times 1 minus P
+ times P times P, which is P power of 4, times 1 minus P.
+ Does that make sense?
+ In the next case, the first person, the third person,
+ the fourth, the fifth use iPhone.
+ And the second does not use.
+ What's the probability for this case?
+ P times 1 minus P times P times P and times P equal to P power of 4 times 1 minus P.
+ So far so good.
+ Okay, look at the fifth case.
+ Who does not use iPhone?
+ First one, good.
+ And then the other four use iPhone, right?
+ What's the probability?
+ It's given by 1 minus P times P times P and times P.
+ That is P power of 4 again, times 1 minus P.
+ So far so good.
+ Do you have any questions?
+ Now, we haven't done yet.
+ Now, we only have the probability of each case, is that right?
+ How can I combine together?
+ Should I times again or add this time?
+ Now, there are five different cases in which four people use iPhone
+ and one does not use it, is that right?
+ So case 1, or case 2, or case 3, or case 4.
+ When you see OR, you add up.
+ We're going to add all the probability, right?
+ So what's the sum?
+ Now, we add the same probability, is that right?
+ Five times.
+ So this is 5 times P power of 4 times 1 minus P power of 1.
+ And that is the probability of producing our data.
+ Is that right?
+ In case 3, four use iPhone and one does not use it.
+ Does that make sense to you?
+ Now, this is a function of P, right?
+ That is the likelihood function.
+ So P at 5 times P to power of 4 times 1 minus P.
+ So far so good.
+ Now, this time, the likelihood function is a little bit different from previous, right?
+ When the constant multiplies P to power of something, right?
+ But the constant should not affect the location of maximum.
+ Does that make sense to you?
+ Anyway, now from here, we can get the log likelihood function.
+ So far so good.
+ So now what I want to do, I want to find the value of P that maximize the likelihood function.
+ Is that clear?
+ To do that, I need to take derivative, right?
+ But before I do that, I want to make the math easier.
+ How?
+ Convert to log likelihood.
+ Is that okay?
+ Now I want to convert the log likelihood function.
+ So the log likelihood function is given by log of the likelihood function.
+ Is that okay?
+ That is log of 5 times P to power of 4 times 1 minus P.
+ Is that okay?
+ Now, this is the product of three terms.
+ I can break it down into log of 5 plus log of P to power of 4 plus log of 1 minus P.
+ So far so good.
+ Now this term is a constant.
+ Who cares?
+ But this term we can further simplify, right?
+ The power can bring it down beside the log, is that right?
+ So we have log of 5 plus 4 times log of P plus log of 1 minus P.
+ So far so good?
+ Is she okay?
+ Alright, what next?
+ Now one way of taking the log likelihood function is a time to take derivative.
+ Does that make sense to you?
+ Can you see it?
+ Can you erase?
+ Where did I put it?
+ Okay.
+ Which one?
+ Anyway, just take the derivative, right?
+ So the derivative of the function.
+ First of all, I have to take the derivative of constant, right?
+ And then take the derivative of 4 times the derivative of long P.
+ Is that right?
+ Plus the derivative of long of 1 minus P.
+ Procline here, right?
+ Now the derivative of constant is just 0, is that right?
+ Constant.
+ This is 0, right?
+ Now what is the derivative of long of P?
+ Remember?
+ It's 1 over P.
+ Okay, so 4 times log of P.
+ Next term.
+ What is the derivative of long of 1 minus P?
+ It's 1 over 1 minus P, right?
+ Because with the negative sign, beside P, right?
+ We have negative 1 in the front.
+ Make sense?
+ So all together become 4 over P minus 1 over 1 minus P.
+ That is the derivative.
+ Of the line rule function.
+ Is that right?
+ I mean, log line rule function.
+ Any questions so far?
+ Now we have to set the derivative to 0, right?
+ And then solve for P.
+ Does that make sense?
+ Then we know the locate the value of P that maximize the line rule function.
+ Okay, you listen.
+ Alright, so what's P far, right?
+ Okay, not P far.
+ Let me do this, okay?
+ So let's solve P, right?
+ Okay.
+ P far such that the derivative of the line rule is 0.
+ So now we're going to solve for P far, right?
+ Okay, as is 4 over P far minus 1 over P far.
+ How to solve this function?
+ Okay, first of all, we're going to find the denominator, right?
+ This time we need 1 minus P far, right?
+ This time we need P far, right?
+ So we have 4 minus 4 P far, right?
+ And that minus 1 P far, right?
+ Over P far times 1 minus P far.
+ Now, minus 4 P far and 1 P far give you negative 5 P far, right?
+ Okay, now to make this one to be 0, it's important to make the denominator to be 0.
+ So what's so good?
+ Because the denominator never be 0, right?
+ So we need 0 equal to 4 minus 5 times P far.
+ Therefore P far is, you tell me it's 4 over 5.
+ So what's so good?
+ Which is point A.
+ This is the proportion of people who use iPhone in the sample.
+ Is that right?
+ And this value maximize the probability of the observed data, right?
+ This is the maximum probability of the data we have.
+ Is that right?
+ Does this make sense to you?
+ It's amazing, right?
+ No matter how we do, we just get P bar.
+ We still get the sample proportion.
+ So this is the number.
+ Maximize the likelihood function.
+ Maximize the probability of producing our data.
+ What's your data?
+ So like 5 people use iPhone and 1 does not use.
+ So that's the most reasonable estimate of P, is that right?
+ Because it maximize the probability of producing our data.
+ Let me give you a final summary, right?
+ I'll let you go on the question, okay?
+ Alright, so let me give you a final summary, okay?
+ And then I'll let you go on the question.
+ You want to meet 5 minutes?
+ Alright, let me give you a general result of the maximum likelihood estimation for a proportion.
+ In a population, P times 100% of all individuals fall in the category of interest.
+ Let's say 60% of all people use iPhone.
+ Suppose we take a random sample of an individual and observe X individual fall into the category of interest.
+ And the remaining N minus X individual does not fall into the category of interest.
+ The likelihood function that the probability of producing our data,
+ we assume our data with two categories.
+ Does that make sense?
+ It's given by a constant times the P to the power of X times one minus P to the power of N minus X.
+ This is a general result, right?
+ In a function, the data N and X are fixed.
+ They are just a constant.
+ Once the data has been obtained, N and X are just a constant, right?
+ For example, if we take 5 people, we use iPhone, those are the fixed numbers, is that right?
+ The variable is P.
+ We need to find the P that maximizes the probability of producing our data, right?
+ Is that okay?
+ So P is the variable.
+ By the way, the constants basically have no contribution to the value of P that maximizes the likelihood function.
+ You can drop that out if you want.
+ Does that make sense to you?
+ Now, in fact, this constant is given by the binomial coefficient, if you want on the probability view, right?
+ But this constant pays no role.
+ It's completely useless.
+ It doesn't affect the value of P that maximizes the likelihood function, okay?
+ But you can include it if you want on the probability view.
+ So the corresponding log likelihood function is given by
+ Now, log of the constant plus X times log of P plus N times minus X times log of 1 minus P.
+ The derivative of the log likelihood function is given by
+ X over P minus N minus X over 1 minus P.
+ If you simplify, right?
+ It will be X times N minus P over P times 1 minus P.
+ Is that clear?
+ That's the general result.
+ And clearly, when you set the derivative to be zero, P is equal to X over N, is that right?
+ Therefore, the therapy that maximizes the likelihood function is given by X over N, which is the sample proportion, right?
+ This is exactly what we learned before, right?
+ Does this make sense to you?
+ That's why we always use the sample proportion to estimate a population proportion.
+ That's the reason behind it.
+ Because the sample proportion always maximizes the likelihood function, which is the probability of producing our data.
+ Alright, key takeaway.
+ The maximum likelihood estimator of a population proportion is the sample proportion.
+ This explains why we use sample proportion to estimate or test a population proportion.
+ That's it.
+ Alright, now I'm not going to give you more content, right?
+ We'll just stop here.
+ Next slide, we're going to show you how to test a population proportion using the likelihood function.
+ Is that clear?
+ Now, in the rest of the class, we have lots of time, right?
+ I want you to at least finish.
+ Problem one, question A, B, C, D.
+ Now, if you have time, you can continue to work on the other part, but we haven't covered it yet.
+ Let's deal with maximization test.
+ You'll learn next day.
+ You still feel boring?
+ That's out of problem two, right?
+ You can work on problem two, as well as problem three and four.
+ I post on Brice May.
+ This is assignment three.
+ You also have to do, okay?
+ Let me show you.
+ Go on Brice May.
+ Under assessment, assignment.
+ Okay, assignment three, maximum likelihood estimator.
+ Can you give me one?
+ You have it?
+ Yeah.
+ Okay, you will be happy.
+ Now, by the end of today, by the end of today's class, you have to complete problem one, A, B, C, D.
+ That's it, alright?
+ So to me, then you get marked, and then you go home.
+ If you see a lot of free time, continue to work on the other problems.
+ Lots of problems.
+ That's assignment three, okay?
+ Don't do this week, don't worry.
+ This is next Friday.
+ Have you finished?
+ Come here, come here.
+ Okay, let me just...
+ Problem one, A, B, C, U, K.
+ Okay.
+ You can write one more file, and then set it to be right.
+ Or you can write a paper.
+ I'm not sure if writing is a good idea.
+ Okay, what was the name?
+ A, B, C, K.
+ What again?
+ I don't think this is right.
+ Because we will not take it in one page.
+ These numbers?
+ Let's take it in one page.
+ Now, I give you notes first.
+ Now, why do you have to do this?
+ Okay, remember?
+ You select Y, R, student, and Y.
+ This is the right way.
+ See here?
+ This is almost right.
+ So that's why it's not right.
+ Okay?
+ Okay?
+ Okay.
+ You're right, you're right.
+ This one is right.
+ I'm sorry, you're right.
+ You don't need to ask me.
+ You know who wrote this, right?
+ The content is one.
+ That's good to me.
+ Thank you.
+ Okay.
+ Shh.
+ Yeah, almost. So now you're right. You did a lot of work on that, right? A lot of expression, right?
+ Yeah, you're right. Absolutely. That's what we were doing.
+ 1 minus, right? Yeah, not 1 over 2. This is 1 minus 2 over 2 is 1 over 2.
+ Hi, okay. Good.
+ All right.
+ Yeah, you're right, right? Just right under P, right? You did your P, right? And then you combined together.
+ Yeah, because the purpose of that is 5 R squared in 5 P squared, right? So it's going to multiply all the properties together.
+ Yeah, and that's going to multiply. Exactly. And then we have the P sub 1 minus 2 over 2.
+ But what about P over 2 here? You see P over 2, right? Remember, for business students, right?
+ Something here. For business students, right? There is about P over 2 probability.
+ That's why we have like P by 2. Exactly right.
+ Does that make sense?
+ Okay, now for our students on the right.
+ No, no, no, no, no. This is not that's not.
+ Okay, so we're going here right now. You don't need the combination, right? You don't need this part here.
+ You do want to do that, but you don't need that. You know which use MacBook, which do not use MacBook, right?
+ So this concept is just one. This makes sense, right? You don't know of course, you have to look up all quantum pieces, right?
+ So we need the combination, but you know who use MacBook, right? You know who don't use MacBook, right?
+ Yeah, or the concept is just one. Does that make sense to you?
+ But again, the concept does not affect the value of P that maximize the lucky function.
+ You're right, you're right. It doesn't matter, right?
+ If you want, there's a problem.
+ It doesn't even matter.
+ You can talk it out, right? It doesn't even matter.
+ The tricky part is that, you know, the problem of students using MacBook is different between parts of business.
+ So you have to adjust the P, right? Accordingly.
+ You're right, it's tricky.
+ Okay.
+ So.
+ Don't be here again. But this is not, what's the problem?
+ But the first business student use MacBook.
+ P.
+ That's it.
+ Okay.
+ We select five art students and five business students.
+ Five art students and five business students.
+ You see, and what do you want to do?
+ You use multiple cases, right?
+ There's only one case, right? Five art students and five business students.
+ But this is okay. P is different, right? For individual students.
+ Doesn't matter, right? You want the first art student use a MacBook and the first business student use a MacBook, right?
+ The problem can be different. The individual problem can be different.
+ But we need to combine together.
+ That's it.
+ You know binomial, right?
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ This is your presentation, right?
+ 4, 6, 16.
+ Okay.
+ If you want.
+ Okay.
+ I think you're great.
+ Okay.
+ Okay.
+ Frank, is that right?
+ Okay.
+ Okay.
+ Okay.
+ Anyone want to show me your work?
+ This is a format.

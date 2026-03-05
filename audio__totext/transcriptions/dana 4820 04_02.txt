@@ -1,0 +1,2064 @@
+ I don't know if you guys are comfortable with this.
+ You can try to just, you can just hold it.
+ What you have to do.
+ I have really thought about
+ what you can do from like
+ two to four years.
+ I know we want you to have to
+ call people and move the bar to you,
+ but I don't know.
+ Yeah, just don't worry.
+ Just like, I don't think we're talking
+ on the computer.
+ Yeah, it's pretty straightforward, isn't it?
+ We have to
+ I don't know.
+ I don't know.
+ I don't know.
+ There you go.
+ I've never said coffee at home.
+ I don't know.
+ Never.
+ Actually, I thought Canadian coffee
+ is better than Colombian coffee.
+ It's a bit crispy.
+ Really?
+ It's really good.
+ It's good.
+ This one is good too.
+ Why do you say that?
+ It's good.
+ It's good.
+ It's good.
+ You look very excited today.
+ It was good on Sunday, right?
+ Yeah.
+ I was at my house testing.
+ I went to pay for the hospital bill.
+ The hospital bill.
+ What happened?
+ Nothing.
+ Nothing.
+ Are you okay?
+ Yeah.
+ I'm okay.
+ I'm okay.
+ I'm okay.
+ I'm okay.
+ I think I had
+ low
+ happiness.
+ I think so too.
+ I had a headache.
+ I was in a bad mood.
+ I had a headache.
+ I thought it was a leg.
+ I had a stress test.
+ Do you have a stress?
+ Well, did you have a stress?
+ Okay.
+ Now.
+ In this model, right?
+ P
+ represent property
+ of P.
+ Success.
+ Success.
+ Okay.
+ All right.
+ Imagine, right? You want to, let's say for example, right?
+ You want model property
+ of passing the class.
+ Passing this class, okay?
+ So you take this class,
+ you have either pass or fail, is that right?
+ So I want to model the property of
+ passing the class
+ given
+ based on the number of hours
+ you study in this class.
+ Is that okay? Right? You spend more
+ time studying, the chance of passing
+ this class should be go up, is that right?
+ Makes sense to you?
+ So how do you model
+ the property of the set
+ or for example, right? Passing
+ this class
+ based on
+ some predictor, right?
+ For example, X
+ is the predictor.
+ For example,
+ power, right?
+ All right.
+ Now, first of all, a couple of things, okay?
+ The property P is
+ always between 0 and 1, is that
+ right?
+ Therefore, if you simply
+ model P
+ with A plus BX,
+ remember,
+ this is the linear function
+ of the predictor, right?
+ What's the problem?
+ What's the problem?
+ If I fit the reversal model, you did
+ it in the previous class. What's the problem?
+ You're right.
+ Now, there's no guarantee
+ that the linear function
+ returns any value
+ greater than 1 or less than 0, right?
+ Because linear function of X
+ is like this.
+ Okay, go up.
+ Keep going up or keep going down,
+ right? There's no guarantee
+ that the linear function returns
+ the value between
+ 0 and 1.
+ Makes sense to you?
+ Okay.
+ The asset, right, P
+ is always between
+ 0 and 1.
+ But on this side, right,
+ there's no
+ we can
+ not
+ guarantee, right,
+ that
+ the linear function
+ returns
+ that
+ returns
+ any
+ value
+ of
+ 0, question,
+ and 1. Does that make sense?
+ That's the problem, right?
+ If you're trying to model the property
+ with the linear function,
+ right, the linear model, as you
+ learned in the previous class, right, it will cause a huge problem.
+ Does that make sense to you?
+ I mean, you can still restrict
+ the value of A and B, so
+ the linear function returns
+ number between 0 and 1, but that's not a good idea, right?
+ Okay? It potentially
+ can go beyond 1 or below 0.
+ Does that make sense to you?
+ So how can you fix the problem?
+ We can introduce
+ a function
+ of the property.
+ Say a function
+ of the property, right?
+ So that this function
+ returns any number
+ between 0 and infinity.
+ Does that make sense to you?
+ You will find a function
+ of P so that
+ this will return any number
+ between negative infinity and
+ positive infinity, which are all real numbers,
+ right? That's aligned
+ with the linear function.
+ Remember, the linear function also
+ returns anything, any number
+ between negative infinity and positive infinity, right?
+ Is that clear or not?
+ And a function
+ we're talking about
+ we're going to use is called
+ log of P, 1 over P.
+ This function
+ of P.
+ Does that make sense to you?
+ So far so good.
+ Now
+ this transformation
+ has a couple of nice properties, right?
+ First, what inside?
+ It's called fourth
+ of the seed
+ of the set, right?
+ It's odd. Remember we talked about odd
+ last day, right?
+ We have a nice
+ interpretation, easy to tell
+ a story about the data
+ based on this model. Does that make sense to you?
+ Right?
+ And then we can
+ determine the odd of the sets
+ by taking the
+ e-words of this function, right?
+ This equivalent to say
+ the odd
+ the odd, right? The odd of an event
+ of a set is given by e
+ to A plus
+ Vx. We can
+ characterize the function
+ in terms of odds
+ of a set. So far so good.
+ So now is the identity.
+ This is one of the rows on this sheet, right?
+ You guys see that?
+ Odds is given by
+ e to A plus Vx.
+ Clear? Does that make sense to you?
+ Alright.
+ Now from this relationship
+ from this relationship, we can draw
+ we can solve for
+ P, right? In terms of
+ x, it will give
+ P equal to
+ e to A plus
+ Vx over
+ 1 plus e to A plus
+ Vx.
+ This is the identity
+ we're talking about, right?
+ Right here.
+ You guys see that? So far so good.
+ From here, we can
+ calculate
+ or estimate the probability
+ of a set.
+ Does that make sense to you?
+ And the most important property
+ is
+ the function of P
+ always returns any number
+ between
+ positive and positive infinity.
+ So the left side
+ is aligned with the right side.
+ Is it clear?
+ Does that make sense to you?
+ Okay.
+ That's what we
+ learned last day, right?
+ Alright. If no problem, let's get
+ back to the example.
+ Alright.
+ So let's begin the topic from an example.
+ A random sample
+ of student is selected from
+ a large statistic class.
+ The following variables are recorded.
+ First,
+ is the number of hours
+ a student spends studying.
+ How many hours they study on the exam.
+ Second,
+ is the exam outcome, either pass
+ or fail. Alright?
+ The information
+ has been saved in the file
+ called
+ hours and grades.
+ You can download it from the price page.
+ Do you find this file
+ on the price page?
+ Under the channels?
+ So what's the objective
+ of using the data?
+ The objective
+ of using the data is to use
+ the number of hours studied
+ as a predictor
+ to model the property of
+ passing
+ the exam.
+ If you spend more time
+ studying, you should get a higher chance
+ of passing
+ the exam, is that right?
+ More hours studied, higher
+ chance of passing the exam, is that right?
+ So we want to model
+ this relationship.
+ So this is the model we're going to use.
+ The model described
+ is our adjustment regression model
+ which related to
+ the log odds
+ of passing.
+ The log odds of passing now.
+ This is called log.
+ Or log, you're going to say, right?
+ Log odds of passing
+ to our
+ linear function of study hours.
+ So that's good.
+ That's the model we're going to use.
+ Alright, the next step, we're going to fit the model
+ to the data.
+ How to do that?
+ To fit the model to the data,
+ we have to estimate the unknown
+ parameter in this model, right?
+ In this case, the unknown
+ parameter is A and B.
+ A is the intercept
+ and B is the slope, is that right?
+ We talk about linear model,
+ right, you know? A is the
+ constant term, it's the intercept, B is the slope,
+ right?
+ Now, we're going
+ to skip the detail of estimating
+ A and B. In fact,
+ the detail is in assignment
+ 3, problem 4.
+ Have you guys done assignment 3, problem 4?
+ It's a bonus question.
+ Alright, we're going to use
+ maximum likelihood
+ estimation.
+ We'll get it formally, the
+ likelihood function,
+ and use the likelihood function to
+ estimate the unknown value
+ of A and B based on
+ our sample data. So,
+ what's good?
+ Of course,
+ in this one, I'm not going to show you
+ the detail, right?
+ And I'm not going to ask you the detail.
+ In this one, I'm going to ask your best friend
+ to do it for you. And who's your best friend?
+ It's not me. It's R.
+ We're going to use R to fit the model.
+ Are you ready? Alright,
+ now, first and foremost, under the file,
+ on the right side,
+ do you know
+ where's the file?
+ I'm here, I'm listening.
+ Alright.
+ And also, download the
+ file that contains all the
+ R code. It's on
+ the right side, right? Did you find that?
+ Did you find that?
+ Do you want me to show you how to basically find it?
+ Alright, first,
+ download the file on your computer
+ and download the R file.
+ Raise your hand if you need help.
+ Open,
+ download,
+ first of all, right,
+ go into price bay, under content,
+ under cost content,
+ let's turn off.
+ Alright, you see the dataset
+ called hours and grades.
+ Yes, and then download the R file.
+ We're going to run, execute the command
+ line by line.
+ Are you ready? Yes or no?
+ Should be okay.
+ First of all, right,
+ to load,
+ first we need to load the data
+ into R, is that right?
+ To load the data, we need to
+ find the location
+ of the file, right?
+ I use
+ app.choose function to do that
+ and then set the file address
+ into file location.
+ Does that make sense to you?
+ Does that make sense to you?
+ Alright, that's my file.
+ Let's just go first.
+ I don't know where my file is too, right?
+ Over here.
+ Hours and grades is my file, okay?
+ Should be same as yours.
+ Alright, if you type the file location.
+ Okay, now,
+ once I find
+ the file
+ location,
+ I'm going to use read.csv
+ function to get the data
+ from this file. Are you ready for that?
+ Are you ready?
+ Okay, so I'm going to use
+ read.csv function
+ that takes the address of the file
+ with the data
+ and save it into
+ my data.
+ So my data,
+ here we go. I got a whole bunch of data, right?
+ Now, once the data
+ have been saved
+ into an object,
+ the first thing to do is to get the name
+ of the file.
+ Get the name of the variables.
+ Okay? How do you do that?
+ I'm going to use name function.
+ Names of
+ my data
+ is an object that contains
+ the data.
+ Here we go. I got hours and grades.
+ So what's so good?
+ Do you have the same thing?
+ Okay.
+ Alright, now I need to
+ define the predictor,
+ right? The predictor
+ is denoted by x.
+ What's the predictor?
+ We use the number
+ of hours studying
+ to predict the probability, right?
+ To estimate the probability of
+ a student passing the class, right?
+ So in this case,
+ x is the hours
+ and hours come from
+ my data, right?
+ So we use Dorsa operator
+ to get the hours from my data
+ and then save it into x.
+ So for now, I'm going to use x instead of hours, right?
+ By the way, this is the file on your computer.
+ Did you see that?
+ Okay. You don't need to copy anything.
+ Actually, you can execute the command.
+ So those are the hours.
+ So far, so good?
+ Alright, next, we're going to define
+ the respond
+ variable.
+ Now what is the respond variable?
+ The respond variable
+ is the one, is a variable
+ we want to predict its outcome, is that right?
+ We want to predict the
+ great outcome, either pass or fail,
+ is that right?
+ We want to model the probability
+ of a student passing the exam,
+ right?
+ Therefore, the respond variable
+ is
+ the exam outcome, is the grade,
+ is that right?
+ So let's get
+ the grade from my data
+ using Dorsa operator
+ and then save it into y.
+ Here we go.
+ When you type y, you're going to see
+ all the grades, either F or P.
+ F means fail, P means pass.
+ So far, so good.
+ Alright.
+ But it's not done yet.
+ Okay, now we got
+ our list of labels.
+ Do you see a double code surrounding the letter?
+ Now in R,
+ in programming, this is
+ just a label. It's called
+ a string, or called tags, okay?
+ Now, to
+ fit the logistic model,
+ we need to convert
+ our list of labels
+ to a categorical variable.
+ Now,
+ it's not quite the same, I agree, okay?
+ But there's a difference
+ between a list of labels
+ and a categorical variable.
+ That makes sense to you, okay?
+ Don't ask me why. This is what R gets, okay?
+ You have to accept the fact.
+ You have to accept the fact.
+ Now, the y variable
+ currently contains labels,
+ either fail or pass, right?
+ We need to convert these into
+ a categorical variable with two levels,
+ pass or fail.
+ To do that, we can use the
+ factor function.
+ Now, let's apply
+ the factor function to
+ gray, and see what you get.
+ Okay? We're going to do one more step.
+ First, extract the gray
+ from line data,
+ using the logistic operator, and then
+ apply the factor function
+ on gray,
+ and then save it into white again.
+ Let's see what's different.
+ Now, this time I apply
+ the factor function on gray.
+ You see some sort of difference?
+ First of all, all the labels have no
+ double code, okay?
+ That's important, right? In the k,
+ now y becomes
+ a categorical variable
+ with two levels,
+ either F
+ and P. So that's good.
+ F is fail, P is pass.
+ Now, make
+ sure to check
+ the order of the levels, okay?
+ Now, by default, R
+ uses alphabetical order.
+ F goes first, and
+ F like P, right?
+ More importantly, when you fit
+ the logistic regression model,
+ okay?
+ R always
+ models the property of
+ the last level, is it really
+ not? R
+ always models the property
+ of the last level.
+ Okay, let me say it again right now.
+ We want to,
+ back to the objective, right? We want to
+ model the property of
+ passing the exam, is that right?
+ Passing, right?
+ But when you select a student, the two possible
+ outcomes, either fail or
+ pass, is that right? How do we
+ tell R, I want to
+ model the property of
+ passing, not the property
+ of failing? How do we
+ tell R,
+ when we look at the level,
+ okay? In this case, right,
+ the last item of level
+ is P,
+ means passing, right?
+ R, we're going to model the property
+ of P,
+ when you fit the logistic
+ regression model. Does that make sense
+ to you? Okay, now of course
+ we can change the level, okay?
+ If the order is not right,
+ but I don't want to use too many
+ commands, okay? In this case, we're lucky,
+ okay? The last level
+ is P.
+ So R, we're going to model the property
+ of P,
+ of passing, when
+ filling the regression model to the
+ data. So that's good?
+ Okay.
+ Okay.
+ I think I explained it here, right?
+ Now, from
+ the output, we can, okay,
+ now I'm going to fit
+ logistic regression model.
+ Now, to fit
+ the logistic regression model,
+ we use a command called
+ glm.
+ G stands for generalize,
+ L stands for linear,
+ and M stands for
+ model, glm.
+ Generalize linear
+ model. Now, that's a big course
+ in statistics,
+ okay? Generalize linear model.
+ Alright, why generalize?
+ Well,
+ culprit is still recall, the regression
+ model you learned in the previous class, right?
+ Basically, Y is M plus
+ BX, is that right? That's
+ a standard one, okay?
+ But you can modify
+ the model, right?
+ For example, I can
+ use a function
+ of
+ of a respond,
+ right? Model, the function
+ respond as a linear function. That's a generalization,
+ right? You can see that?
+ Alright, that's why I call generalize
+ linear model,
+ glm, okay?
+ We don't say it as
+ usual, right? Y
+ tilde X, it means
+ I want to see how
+ Y
+ is related
+ with X. I want to predict Y
+ from X, so it must look good.
+ In this case, I want to model
+ a binary
+ categorical
+ variables, right?
+ Respond variable.
+ Using the predictor,
+ X, does that make sense to you?
+ Okay, and Y, of course, is your
+ pass or fail, right?
+ Alright, the last part is very important,
+ right? Called family.
+ Family, right?
+ I'll explain in more detail, okay?
+ Now, when you model
+ a binary
+ respond variable,
+ okay? What's a binary respond
+ variable? As a respond
+ variable takes on two possible
+ outcomes, just like pass or fail, right?
+ This is called binary.
+ When you model a binary
+ respond variable,
+ we always use binomial distribution.
+ Okay?
+ Do you remember binomial distribution?
+ Okay, so you don't
+ know what's binomial, that's okay, right?
+ In a binomial model,
+ there's a parameter called P.
+ That is the property of success, right?
+ We want to
+ predict, well, estimate the property
+ of success.
+ Is that clear? Okay?
+ Makes sense to you,
+ so far so good. Now,
+ under binomial, also there are
+ many other models, right? Not just
+ logistic, but by default,
+ it's logistic, okay? So you don't need
+ to specify logistic.
+ But you have to specify
+ binomial, because
+ we model
+ a binomial respond variable.
+ It's the variable
+ will take two outcomes, either pass or fail.
+ Does this make sense to you?
+ Okay.
+ So far so good.
+ Alright, now we're going to run this command.
+ Okay, glm
+ y2.x
+ family is binomial.
+ Run this command, fit
+ the logistic model to the data,
+ and then
+ say that the result is the fitted model.
+ Here we go.
+ Here we go.
+ Alright, now you will type
+ filler model.
+ You're going to see two things.
+ The intercept and the slope.
+ So we estimate
+ the intercept
+ to be negative
+ negative
+ 0.8984
+ and the slope is estimated
+ to be 0.6734.
+ I fit the model, right?
+ And of course there are lots of details here.
+ I'm not going over the details, okay?
+ You want to get more detailed information about
+ the results, you're going to use
+ the summary function.
+ Summary of
+ the fitted model. We're going to give you more details.
+ So far so good.
+ Alright, we've got a coefficient table.
+ Okay, and a couple of
+ numbers here, right? We're going to explain them
+ in more detail. Does it make
+ sense to you?
+ For today's lecture, next
+ week, we're going to focus on
+ the coefficient table.
+ In fact, the question numbers are garbage.
+ You don't need to look at them.
+ It's completely
+ incorrect, okay?
+ You're going to find out later. Not now.
+ Focus on the coefficient
+ table, okay?
+ Any questions so far?
+ Now on the midterm exam,
+ on the final exam, I will give you the
+ coefficient table, and you have to answer
+ the question based on the coefficient table.
+ Is that clear enough?
+ Show no problem?
+ No problem. You sure okay?
+ Unfortunately. So far so good, right?
+ Okay.
+ Hopefully my pass is not that bad.
+ Alright, today we're going to spend lots of time
+ on this coefficient table.
+ Are you ready?
+ Alright, back to the
+ top right-hand notes.
+ The one we're talking about is
+ the philodendron model.
+ Number three, right?
+ Under the nodastic regression model.
+ Do you see that?
+ Confirm.
+ Confirm.
+ So right here is number
+ number two
+ and number four. Is that okay?
+ We'll talk about number two first, and then number four.
+ Next time to you.
+ Okay, we're number two.
+ Okay, no problem.
+ Finish a logistic regression model
+ and assess the significance of
+ the predictor in a model.
+ Alright, after
+ filling the logistic regression model,
+ it's important to assess
+ whether the model is significantly
+ useful
+ for predicting our student's
+ probability of passing the exam.
+ Now, remember,
+ our goal, our
+ objective, is to
+ predict the probability of
+ passing
+ the exam based
+ on the number of
+ hours studying. Is that right?
+ Okay?
+ So the first thing to do is to
+ determine whether the model is
+ useful in predicting
+ the probability of
+ passing the exam. Is that right?
+ In this
+ model, the number of hours
+ studied is used to
+ as a predictor.
+ In other words, we need to test whether
+ the number of hours studied
+ is our
+ significant predictor
+ of the probability of passing the exam.
+ Remember, we
+ use the hour to predict
+ the probability of passing the exam.
+ So that's it,
+ or there should be a connection, a relationship
+ between these two variables, right?
+ Okay?
+ So we have to test whether
+ the hours is our
+ significant predictor of the probability
+ of passing the exam,
+ or I can say,
+ is significantly
+ related to the probability of
+ passing the exam,
+ or has
+ a significant effect
+ on the probability of passing
+ the exam.
+ All the verdict are the same.
+ Is that clear?
+ All right, let's conduct
+ a hypothesis test.
+ First, we're going to state the now
+ and the alternative hypothesis.
+ Now, let's start
+ with the hypothesis.
+ The now hypothesis begins with
+ oh, oh,
+ no, oh, no.
+ The number of
+ hours studied
+ is not
+ our significant predictor
+ of the probability of passing
+ the exam, or I can say
+ the number of hours studied
+ has no
+ relationship
+ with
+ the probability of passing
+ the exam, okay?
+ Or the number of hours studied
+ has no
+ effect, no
+ effect on the probability of
+ passing the exam.
+ All verdicts are the same, but the
+ keyword is oh.
+ Oh? No.
+ Right, right? You've heard that before,
+ right? No surprise.
+ Now, under the
+ now hypothesis, all right?
+ Now, look at that
+ empty, right? We know the
+ property is written as
+ e to a plus b
+ times the hour, over
+ 1 to e to the power of a plus b
+ times the hour, is that right?
+ Now, if
+ the hour
+ has no
+ relationship, has no
+ effect, or
+ not our significant predictor,
+ the
+ coefficient should be
+ zero, is that right? Hour
+ should not be in the model, let's make sense to you.
+ So if hour is not
+ our significant predictor
+ of the probability,
+ hour should
+ not be in the model, does this make sense to you?
+ And how can we make
+ the hour out
+ of the model?
+ With the set,
+ the slope coefficient to be
+ zero, does this make sense to you?
+ Right?
+ If hour has no relationship,
+ what's the probability, right?
+ This model
+ does not need
+ hour, right?
+ To do that, with the set, the coefficient
+ beside hour to be zero,
+ with the set, the slope
+ to be zero,
+ therefore, the model,
+ the logistic model,
+ only contain the intercept.
+ So far so good.
+ Which is a constant here too.
+ Now this is another way,
+ this is another way to estimate the probability
+ without any predictor.
+ So far so good?
+ Okay.
+ Alright.
+ Let's talk about
+ the alternative hypothesis.
+ Now
+ the alternative hypothesis begins with
+ A. What does A mean?
+ The hour
+ is a significant
+ predictor of the
+ probability.
+ Now if hour
+ is our significant predictor
+ of the probability, we have to
+ the model must contain
+ the hour, is that right?
+ Therefore, the slope coefficient
+ cannot be zero.
+ So far so good. You have to keep
+ the hour in the model, right?
+ To do that, make sure
+ the slope coefficient
+ B does not equal
+ to zero. So far so good.
+ Okay.
+ So in other words,
+ we want to test when the slope
+ is zero or not.
+ I mean B is zero
+ or not.
+ Right, to assess the significance
+ of the predictor,
+ this is equivalent to test
+ whether the slope coefficient
+ B is zero or
+ not. Does it make sense to you?
+ Is it hard to do that?
+ Now
+ no calculation, very simple, right?
+ Look at the coefficient table.
+ Okay.
+ In the second
+ row, we have detailed
+ information about
+ the hour, right?
+ About the slope.
+ In this row,
+ we look for two numbers.
+ Which two numbers?
+ The test statistic and the value.
+ Remember, when you
+ perform any hypothesis
+ test, we assume
+ the null hypothesis be true,
+ right? In the
+ next second, we have to find
+ evidence against the null hypothesis.
+ Okay?
+ The amount of evidence is given by
+ p-value. Smaller p-value,
+ stronger evidence
+ against the null hypothesis.
+ Okay?
+ So, when you perform
+ any test, what you need is
+ p-value. It's the same, right?
+ You count the p-value from data,
+ we get something strong.
+ Test the statistic.
+ Now, for testing
+ the significance of a predictor
+ in a regression
+ model, will you
+ see statistics?
+ Now, it's a C, right? By the way,
+ it's not T. Now, I know
+ in the other class, right?
+ You can learn 410, right?
+ You want to test the
+ significance of a predictor,
+ right? Will you see statistics, right?
+ But, when you get to
+ GLM,
+ just like in the model, right?
+ It's all dealing with
+ C statistics. No more T.
+ Always C. Is that clear?
+ Okay? No more T. Only C.
+ Therefore, the
+ p-value is
+ calculated based on the normal
+ distribution.
+ But, anyway,
+ don't worry about it.
+ All you need is the p-value in the output.
+ I'm not going to ask you to calculate
+ the p-value. Does it make sense to you?
+ Alright, what's the p-value?
+ 0, 0, 0, 294.
+ Is that
+ small p-value?
+ Is that small p-value? Yes.
+ Yeah, right? Smaller p-value?
+ Stronger evidence against the hypothesis.
+ Is that small? Absolutely.
+ How small? Smaller than
+ something like that.
+ Therefore,
+ we check the hypothesis.
+ Does it make sense to you?
+ Let me say it again, right?
+ The p-values labeled by
+ C and P, right?
+ Are the
+ test statistics and p-value we're
+ looking for. Is that clear enough?
+ We're going to use the p-value
+ to assess the
+ significance of the predictor.
+ Sound so good?
+ Now, this method
+ is called
+ wall test.
+ W-A-L-E, wall test.
+ We simply look at the p-value
+ of the regression coefficient.
+ If the p-value is
+ small, that means
+ there's strong evidence against
+ a null hypothesis.
+ In other words, we have strong evidence
+ to support the alternative
+ that this
+ predictor is
+ significant.
+ It's significantly useful
+ in predicting
+ the response, which the response
+ is the property of passing
+ the exam.
+ Does it make sense to you?
+ It's simple, straightforward, right?
+ You don't need to do any calculation.
+ Look at the p-value
+ from the output. That's it.
+ Alright, based on the p-value,
+ we can
+ make a conclusion, right?
+ Now, since p-value is small, how small?
+ Smaller than a significant level,
+ the sample data will find
+ sufficient evidence to support
+ the alternative,
+ is that right? What's the alternative?
+ The hours
+ is our significant
+ predictor
+ of the probability
+ of passing the
+ exam.
+ Sound so good?
+ Any questions so far?
+ Any questions so far?
+ Now, I don't want to say we check it
+ too, right? You already did that
+ in the previous class, right? I don't care, okay?
+ Remember,
+ smaller p-value, stronger
+ evidence against a null hypothesis, is that
+ right? Now, once the null is rejected,
+ we go for the alternative.
+ That's the rule, right? That's why I just
+ say
+ smaller p-value, smaller than a significant
+ level, therefore, the
+ evidence is strong enough
+ to support the alternative, is that right?
+ Okay, what's the alternative?
+ The number of hours studying
+ is our significant
+ predictor of the probability
+ of a student passing
+ the exam. So we have to
+ keep the hour in
+ the model, right? Okay?
+ You find it
+ okay?
+ No problem? All right.
+ May we move on?
+ Pretty sure, right?
+ The course is like that, by the way.
+ Seriously.
+ All right, let me introduce
+ the other approach, the alternative
+ method, called
+ likelihood racial
+ test. You got to know it before,
+ right? Right?
+ You got to know it last
+ week, right? You like this test,
+ by the way? No?
+ Okay.
+ All right, let me remind you, what is
+ likelihood racial test?
+ In general,
+ the likelihood racial test
+ compares the ratio to number.
+ It's the likelihood
+ okay?
+ Under
+ the null hypothesis
+ defined
+ by the
+ maximum
+ likelihood
+ under XA.
+ Is that clear?
+ Now, what is the purpose
+ of the likelihood function?
+ We won't find the value
+ of the unknown parameter
+ that maximizes
+ the probability of producing
+ our data, is that right? We're looking
+ for the value of a parameter
+ that maximizes the probability
+ of producing our data, is that right?
+ Now, under the null hypothesis,
+ we believe
+ the true value
+ of a parameter equals to a certain
+ number, is that right?
+ Now, even though
+ this value may not maximize
+ the likelihood function,
+ maximize the likelihood,
+ maximize the probability
+ of producing our data,
+ that should be
+ pretty close to the maximum, is that right?
+ Okay? That's why
+ we compare the ratio of
+ these two likelihoods.
+ If the likelihood is close
+ to one,
+ close to one, right?
+ We know
+ that data we observe,
+ right,
+ are consistent
+ with the null hypothesis.
+ Is that okay?
+ Now, otherwise,
+ yet the ratio is
+ very small. Now, why small?
+ Now, you have to know, right,
+ we want to compare quantity
+ with the maximum
+ quality, right?
+ This ratio must be less than one,
+ is that right?
+ Now, yet the value
+ under the null hypothesis
+ does not provide
+ a good bit of data,
+ okay?
+ It will not, well, it will
+ give a low probability
+ of producing our data, right?
+ So the ratio of
+ these two likelihoods
+ must be small, is that right?
+ Now,
+ if R
+ is close to zero,
+ indicate, right, the data
+ are not
+ consistent
+ with the null hypothesis.
+ There's a strong
+ disagreement.
+ Strong disagreement.
+ Okay?
+ Between
+ the data
+ we observe
+ and the expectation
+ under the null hypothesis.
+ So far, so good.
+ All right?
+ At the end of our day, right,
+ you know, to tell whether
+ R, the ratio
+ is close to one or close to zero,
+ we have to
+ estimate the
+ ratio is close to one or close to zero,
+ we have to convert
+ R,
+ we have to convert
+ R
+ to a chi-square statistic,
+ then
+ get
+ the p-value
+ from the chi-square statistic.
+ Remember the step?
+ Remember the step about
+ likelihood ratio test?
+ First of all, get the ratio
+ of two likelihoods.
+ The likelihood under the null hypothesis
+ over the maximum
+ likelihood under the alternative,
+ right? Get the ratio first,
+ then convert the ratio
+ into a chi-square statistic,
+ then get the p-value
+ then get the p-value
+ from the chi-square statistic,
+ we'll fix it to you.
+ Now, sounds common, right?
+ The question is, how can I get
+ the likelihood under
+ the null hypothesis and get the
+ maximum likelihood under the alternative?
+ I'll show you in a moment,
+ okay?
+ All right, we call
+ under the null hypothesis,
+ the logistic regression model
+ only contains
+ the intercept, is that right?
+ No R, okay?
+ Now, under
+ the alternative hypothesis,
+ the logistic regression model
+ contains the intercept and
+ the predicted term,
+ which is B times the R, is that right?
+ Okay.
+ Now, from the null hypothesis,
+ okay,
+ we can get the estimate
+ of the intercept, is that right?
+ And use it to calculate
+ the likelihoods
+ under the null hypothesis,
+ is that clear or not?
+ Now, don't worry about the calculation,
+ okay?
+ Let me say it again, right?
+ Now, under the null hypothesis,
+ this is the logistic regression model.
+ It's just a constant.
+ Okay, we can use the data
+ to estimate
+ the intercept.
+ So what should we do?
+ And use it
+ to calculate the likelihood
+ function that, of course,
+ you have no idea what likelihood is, right?
+ Don't worry, be happy.
+ You don't need to know the likelihood function.
+ R would deal with that,
+ okay?
+ This makes sense to you.
+ Okay, right?
+ If the model does not contain
+ any predictor term,
+ just an intercept, right?
+ We can use the data
+ to estimate the intercept,
+ okay?
+ And use it to calculate
+ the likelihood under the null hypothesis.
+ So what's so good?
+ Get the number, right?
+ Now, under the alternative,
+ the model contains
+ the intercept and the slope, right?
+ Okay, again, we can use the data
+ to estimate
+ the intercept
+ and the slope.
+ After, we can get the
+ maximum likelihood under HA.
+ We have to find the value
+ of A and B
+ that maximize
+ the likelihood, that maximize
+ the probability
+ of producing our data,
+ okay?
+ All right?
+ Finally, we're going to
+ calculate the ratio,
+ convert to Keiser statistic, and get the
+ B value. Now, science
+ comedy, right? Don't worry, be happy.
+ R can deal with that
+ really quick. Does it make sense to you?
+ All right. Now, we fit
+ both models to the data
+ and compute their log likelihood.
+ Now, I
+ hope you still remember the log likelihood, right?
+ Right, that's what we mentioned, right? R, ratio.
+ It's the likelihood
+ under HO,
+ over the max likelihood.
+ Under the J, right?
+ Now, and then,
+ we're going to convert R to the Keiser
+ statistics, all right?
+ I'll call it D for the moment, okay?
+ Let's call it D for the moment.
+ You can say,
+ we have Keiser statistics.
+ It's given by
+ negative 2 times log
+ of the ratio.
+ So far so good?
+ Now, let's talk about this part, right?
+ Okay, negative 2,
+ times log
+ of
+ likelihood
+ under HO,
+ divided by the max likelihood
+ under HO, right?
+ Happy with that?
+ Now, we can further simplify this expression here.
+ Okay?
+ It's given by
+ negative 2 times
+ the log rule, right?
+ Now, hopefully you still remember about log, right?
+ You've got log of two expressions.
+ A over B, right?
+ It's the equivalent.
+ Say log A
+ minus log B.
+ So far so good?
+ So you can bring in two terms, right?
+ It's log
+ of likelihood
+ under HO
+ under HO
+ minus log
+ of likelihood
+ under HO, is that right?
+ So far so good.
+ Does that make sense to you?
+ Now, this is
+ called
+ log of likelihood.
+ Does that make sense to you?
+ This is the log of
+ likelihood under
+ HO.
+ And this term
+ is the log
+ of likelihood
+ under HO.
+ So far so good?
+ Does that make sense to you?
+ Now,
+ when you're doing calculations,
+ R can take care of all the calculations
+ including R.
+ When you fit both models
+ to the data,
+ we can get
+ the log likelihood
+ for both models, and then
+ take a difference.
+ So far so good.
+ Let's say the concept here, right?
+ Alright.
+ So let me say again, right?
+ Now, there are two models here.
+ Now, under the null hypothesis,
+ the model
+ only contains the index step, that's it.
+ It's a constant, right?
+ Under the alternative,
+ the model contains index step
+ and the predicted term.
+ Does that make sense to you?
+ Now, we can fit both models
+ to the data separately,
+ and obtain
+ the log likelihood
+ after we calculate
+ the likelihood ratio
+ chi-square statistic,
+ called G-square.
+ As I said, right,
+ they do some algebra, right?
+ Two times the log likelihood
+ of the model under
+ the alternative,
+ minus the log likelihood
+ of the model under the null hypothesis.
+ Now, I multiply negative sign into
+ the term here, right?
+ We're going to fit the
+ negative sign here, right?
+ We're going to multiply inside
+ the two terms, right?
+ We're going to fit the term here.
+ As default.
+ Right? That's why I don't have a
+ I only have two not negative, right?
+ The order also fit them.
+ But that doesn't really matter, right?
+ When you fit the model to data,
+ okay?
+ You can tell.
+ Now, one thing to
+ your mind, the alternative model
+ with the predictor
+ will always have the
+ larger log likelihood than the null model
+ with the intercept only.
+ Why? This is because
+ adding predictors
+ give the model more flexibility
+ to fit the data.
+ So it can never
+ fit worse than the simple model.
+ So, simple speaking, right?
+ We add more predictor, right?
+ To the model,
+ we're going to fit the model better.
+ Okay? Obtain a higher
+ value.
+ That's what I'm going to say, right?
+ Now, if the null model
+ without the predictor
+ predict the property
+ near as well as the
+ alternative model with predictor?
+ Alright.
+ Then, this
+ chi-square mistake will be small.
+ As I said, right?
+ If the null model
+ fits as near as
+ well as the alternative model,
+ right?
+ These two, their front
+ should be small, right?
+ When the chi-square is small, right?
+ Indicates a little evidence against
+ null hypothesis.
+ On the other hand,
+ if the alternative model predicts
+ the property,
+ better than the null model,
+ better than the different,
+ the chi-square statistic should be big
+ indicates strong evidence
+ against null hypothesis.
+ Alright?
+ So, to assess
+ the chi-square statistic,
+ provide evidence
+ against null hypothesis,
+ when to confer a chi-square statistic
+ to the p-value.
+ How to do that?
+ Now, as I said, the chi-square statistic, right?
+ It must follow the chi-square distribution.
+ Now, and the degree of freedom
+ is given by the number of
+ regression coefficients being
+ test, minus one.
+ Oh, actually, only the number
+ of regression coefficients being test,
+ no minus one, okay?
+ Alright, now,
+ we saw a lot of concepts, right?
+ Now, we're going to fit the model
+ and get a lot of likelihood.
+ Are you ready?
+ Now, get back to the
+ R file, right?
+ Now,
+ previously, right,
+ we fit the model
+ with the intercept and the slope.
+ We did that already, right?
+ Right? Previously, right, we fit the model
+ that contains
+ the intercept and the slope.
+ So, what's good?
+ Now, we're going to fit the model
+ to the data, right?
+ Where the model has only
+ intercept.
+ Right, you see that? Now,
+ how to do that?
+ Now, if you only want
+ the intercept in the model, right?
+ When you fit the Gm function,
+ we say y tilde one,
+ okay?
+ Don't put the hour,
+ just say y tilde one,
+ okay? One means intercept.
+ That's it, only intercept, right?
+ And then
+ set the result into
+ fit the model with no
+ predictor. Is that clear enough?
+ Alright?
+ Let's do that.
+ Here we go.
+ Now, as you can see, right,
+ now the model only contains
+ the intercept.
+ So, what's good?
+ Okay?
+ In fact, this is the
+ the odds
+ of the positive, okay?
+ You get the positive,
+ you get the negative,
+ you get the positive,
+ you get the negative,
+ you get the positive,
+ of the positive, okay?
+ You get the double check, right?
+ Now we got the intercept, right?
+ So what's good?
+ Does that make sense to you?
+ Alright.
+ Now,
+ we can compare two models
+ with what we call
+ ANOVA command.
+ Have you heard ANOVA?
+ In the previous class?
+ You do, right?
+ We used to compare two models.
+ The first one is the alternative model.
+ Now, to run the ANOVA command, right,
+ first we have to specify
+ the two models. We start from
+ the null model first.
+ The final model with no predictor.
+ Is that clear?
+ Followed by the model
+ that contains the intercept
+ and
+ the predictor terms.
+ Alright?
+ I want to compare the two models
+ with the chi-square statistic,
+ right?
+ Okay?
+ Run this command.
+ Here we go.
+ Now you know the output, right?
+ Now you don't need to do things
+ one step by step, right?
+ All the numbers have been
+ shown in this output.
+ May I move on?
+ Okay, no problem? Okay.
+ Did you get this output, by the way?
+ Alright, first of all, right, look at the
+ residual
+ dividend.
+ It's called residual dividend, right?
+ Now in R,
+ residual dividend is negative
+ two times log likelihood.
+ That's why I call this dividend, right?
+ And negative two times log
+ likelihood. Remember, right?
+ When you convert
+ the random ratio into
+ chi-square statistic,
+ right?
+ Two times log of
+ the likelihood is the dividend.
+ Is it my turn here?
+ Now, in the output, right,
+ we have two
+ residual dividends.
+ One is 64.104,
+ one is 36.354.
+ Now, question for you.
+ Which one is for the down model?
+ Which one is for the alternative model?
+ If I don't tell you.
+ Which one is
+ for the down model?
+ Which one is for the alternative
+ model?
+ Remember,
+ remember, the
+ alternative model fits the data
+ always better than the down model, right?
+ Because we got additional predictor,
+ right? It should get the bigger
+ log likelihood, is that right?
+ So in this case,
+ right?
+ Now, the log
+ under down
+ model, right, it got 64.104.
+ The reason is
+ you see negative two here, right?
+ Now, the log likelihood
+ is always bigger
+ for the alternative model, right?
+ But we got negative two,
+ right? That's become
+ bigger, right?
+ We got a bigger sign.
+ So the bigger number here, right,
+ for the down model.
+ And the other one is the
+ alternative model.
+ I will say it one more time, right?
+ Now, the alternative
+ models always fit better than the
+ down model, always.
+ Because the alternative models always
+ contain the predictor, right?
+ They give more flexibility.
+ Okay, so the log likelihood
+ should be bigger when you
+ fit the alternative model,
+ okay?
+ But when you multiply negative two, right,
+ this is a negative number, right?
+ It will turn the likelihood
+ become smaller.
+ Is that clear or not?
+ But anyway,
+ so you got the
+ log likelihood, right?
+ Now we're going to get to
+ the dependence.
+ It's the difference between two
+ log likelihoods here. It's the difference between
+ two residual
+ dependence, okay?
+ Now we can use
+ the dependence, right, which is the chi stress of this leg
+ to get the p value.
+ The p value is
+ a very small number, right? You get 7, 0
+ before 1, 3, 8, 1.
+ So what's so good?
+ So this in the k, right?
+ Okay, now
+ as you can see, d value
+ is provide strong evidence
+ against the null hypothesis,
+ okay?
+ Which means
+ this provides strong evidence
+ support the alternative
+ that the hours is a
+ significant predictor of an
+ alternative.
+ Any questions so far?
+ Now basically
+ this side, right?
+ The figure is different, right?
+ In the k,
+ the alternative
+ model
+ provides significant benefit
+ to the null model.
+ So it's necessary to keep the hour
+ in the model
+ in order to provide benefit
+ to the data.
+ Any questions?
+ Any questions so far?
+ So based on d value, we end up seeing
+ the conclusion, right?
+ Okay, so
+ the hours
+ is a significant predictor
+ of the
+ probability
+ of a student passing the exam.
+ So far so good.
+ The next question I want to ask is
+ we have two approach, right?
+ To test the significance of a predictor.
+ What is the war test?
+ One is the wider ratio test.
+ Which one is better?
+ Which one should be preferable?
+ Now, the wider ratio test
+ is usually preferable
+ over the war test.
+ Two reasons. First of all, right?
+ The wider ratio test always gives
+ more accurate p-value
+ and more robust.
+ What about robust, right?
+ There are some conditions
+ the data must satisfy in order to get the final conclusion.
+ Right?
+ But sometimes there's no guarantee
+ the assumption is correct, is that right?
+ Now, for example, you want to test
+ you want the z-task, right?
+ You have to make sure
+ the distribution
+ follows normal, right?
+ Or a sample size big enough.
+ But if a sample size small
+ and the publish is not normal
+ would that get the correct result?
+ Probably.
+ But it depends on the original population.
+ If the original publish
+ is not that skewed, right?
+ You should still get the correct result.
+ That's why we call it robust.
+ Robust being more stable.
+ Even though there's some assumption
+ may not satisfy, right?
+ You still get the correct result.
+ The other problem is
+ language test can extend to
+ more than one parameter.
+ Now, later on, right?
+ When you test multiple predictors at the same time
+ more than one, right?
+ You cannot use more tests.
+ You have to use the language test.
+ Okay, well, let's take a break, right?
+ Let's come back and do something.
+ Come back and do something, right?
+ Come back and do something, right?
+ Come back and do something, right?
+ Okay.
+ Okay.
+ Is it open here?
+ I'm sure this is better.
+ Is this a phone call or a computer?
+ No.
+ Okay, it's off.
+ Okay.
+ Okay.
+ Okay.
+ So I'm going to call you guys.
+ It's okay.
+ It's okay to work me happy.
+ Okay.
+ Is there a problem?
+ No.
+ No.
+ No.
+ No.
+ No.
+ No.
+ No.
+ No.
+ No.
+ No.
+ No.
+ No.
+ No.
+ No.
+ No.
+ Okay, in the rest of my class, I'm not going to do any teaching, so relax, okay?
+ So what I'm going to do now is I'm going to do some exercise before the class today.
+ All right, look at this right here now, right?
+ This is assignment four, assignment four, right?
+ You're going to do the overall impression, but not today, okay?
+ So the loan default data set contains information on 240 individuals,
+ including their annual income and loan default status, either default or no default.
+ When you get a loan, you have to pay back the loan, is that right?
+ But at some point, you may not be able to pay back the loan, is that right?
+ Now you've got a problem, this is called default, right?
+ You cannot pay back the loan, you've got a problem, right?
+ This is called default.
+ You may not successfully pay the loan, no more debt, you're going to get a default, is that right?
+ All right, the objective of this analysis is to model the relationship
+ between a borne alert annual income and the likelihood of the loan default.
+ Now with the data set, now the data set can be saved on price pay.
+ Okay, now on assignment four, right?
+ On assignment four, you'll see the link to download the data set right here.
+ That's the link, right?
+ Let me click the link.
+ Now this is the data set, okay?
+ Now this data set contains two columns, right?
+ Or two variables.
+ One is the income, it's the annual income of the individual, the one who borrowed money, okay?
+ The other one is called loan default indicator.
+ Now a value of one indicates that the borrower are default on the loans.
+ That means the person are not able to pay back the loan.
+ At some point, it discontinues.
+ Just like you get a mortgage from a bank, right?
+ At some point, oh my god, I cannot afford the mortgage, I cannot pay the payment.
+ That's the default, is that right?
+ All right?
+ And zero indicate no default.
+ Use the set to make all the payments, okay?
+ No more debt, you're good to go.
+ Okay, so what we want to do, we want to relate the probability of a loan on default with the person income.
+ Does that make sense to you?
+ Now, by the end of this class, we're going to complete question A and B, that's it.
+ All right?
+ So the formal way, the logistic model, we have to describe the relationship between the two variables.
+ And B, estimate the parameter of the logistic regression model.
+ So that means you have to fit the logistic model to the data.
+ Is that clear enough?
+ Fitting these two questions, okay?
+ You can do the rest by yourself at home, okay?
+ But we're going to go over next class, okay?
+ So at least today, complete question A and B, get the correct output, and you can move on.
+ Does that make sense to you?
+ Now, again, you can work in the group.
+ You don't need to work by yourself, okay?
+ What's your partner?
+ I'm sick today.
+ Okay, I thought, okay.
+ Anyway.
+ Now, I encourage you to work in the group, right, okay?
+ Finish some of your work with me, and you can get along.
+ Okay.
+ Oh, one thing I want to say, okay?
+ Now, the first quiz will take place next week, before the reading break, okay?
+ I want to have some quiz, right, you know?
+ Before the reading break, right?
+ Otherwise, you're so free.
+ Honestly, I don't want to have a quiz queue.
+ Honestly, I don't want to have a quiz, I don't want to do any marketing, right?
+ I'll just let you go find the problem, okay, you know?
+ But I have to follow the development policy, right, you know?
+ Okay, so the first quiz will take place on next Wednesday.
+ I mean, it's the last day of class before the reading break, okay?
+ It's number two topic.
+ Compare multiple proportion, right?
+ Remember, we compare multiple proportion with chi-square test, right?
+ And then you can multiply multiple comparisons using common interval, right?
+ Okay?
+ This is related to assignment two, I think, is that right?
+ The second topic is maximum likelihood estimation and likelihood ratio test, all right?
+ Now, again, I'm not going to ask you to take your word for it.
+ Don't worry, I'll be happy, right?
+ But you should be able to formulate the likelihood function
+ and understand the concept of maximum likelihood.
+ We have to choose the value of the parameter
+ that maximizes the probability of producing our data, is that right?
+ Any questions about the first quiz?
+ Is this a big quiz?
+ It's not a big quiz, about half an hour, done.
+ All right, just like assignment two question, that's it, you're good to go.
+ Is it all on paper?
+ We'll find enough information, right?
+ For example, formula sheet, you need to do a calculation, right?
+ Or some out command, right?
+ You need to...
+ You need it for the question.
+ Say how to get a chi-square p-value, right?
+ There's a function called p chi-square, right?
+ You know?
+ I will give you this function, don't worry, I'll be happy.
+ You need to memorize.
+ Something like that, or function, you need to get the p-value, right?
+ You know?
+ Don't worry about it.
+ Be able to do that, okay?
+ So it's all on paper, okay?
+ We'll be happy, okay?
+ I'm going to give you one more sheet next day, okay?
+ We're going to do that after the break.
+ Yeah.
+ You need two meters, right?
+ Or you can do one if you like.
+ You want to do one meter or two meters?
+ What about the other class?
+ Two or one?
+ On the same day.
+ On the same day.
+ Probably one question before the midterm.
+ So that would be two questions, right?
+ And two midterm.
+ If the other class only has one midterm,
+ they only have one midterm.
+ Two midterms and two midterms.
+ Okay, so two midterms.
+ Okay, so if the other class has two midterms,
+ and then two midterms, one final, and what else?
+ And what else?
+ Okay, I don't want to do a project.
+ I don't want to do a project.
+ I don't want to do a project.
+ When you're finished, you can bring your laptop to me
+ or show me your output.
+ That's it.
+ Okay?
+ So in question A, you have to write on the paper, right?
+ Form the logistic regression model.
+ Lay out the relationship between the two variables, right?
+ Income and the probability of move on default, right?
+ Okay?
+ With the model B, fit the model to the data.
+ That's all you need.
+ You finished?
+ This is just a fit of model, right?
+ You fit the model.
+ Well, this is not the right model, right?
+ Logistic model, right?
+ This is not a logistic linear model.
+ This is what I'm saying, right?
+ Logistic model.
+ Do you have a paper?
+ Right here.
+ This is all the rest of the world.
+ When you do this, you don't want to sign it.
+ Lay out the relationship between the model B and the predictor, right?
+ Thank you very much.
+ If you have time, you can do question C, right?
+ No problem.
+ If you don't do it, you're going to do it the next day too.
+ Please bring your essay worksheet, right?
+ Bring your worksheet on Wednesday, right?
+ Yeah, we're going to do a few more questions in the class, right?
+ So today, I'm going to make sure you got the right output.
+ You know what I'm saying, right?
+ First you get the right output, right?
+ If you get the right output, you answer the rest of the question.
+ Can I have a question?
+ Yes.
+ Just to clarify, these are actually the A's?
+ A, you're right.
+ You're right on the paper or whatever, right?
+ So you have to lay out the model.
+ Lay out the relationship between the income and the probability of alerting people, right?
+ So let's say, you're right on this one.
+ This is, you don't want to have a model, right?
+ You lay out the relationship between the probability and the predictor, right?
+ It will take more than five seconds to write it all out.
+ You have to be more, this is not, what were the long lines?
+ Yeah, is she?
+ What is the long line?
+ This is not line.
+ This is art.
+ Art of an event.
+ Art of an event.
+ Can you come here, okay?
+ Can you come down here?
+ Okay, good.
+ Next one, right?
+ Oh, okay.
+ I want to see the model.
+ GM, right?
+ Binomial, right?
+ Okay, so I want to see the answer one of these two, right?
+ The answer one of the, yeah, looks good.
+ So I don't need to write the number, right?
+ Just ask someone.
+ Just write the model.
+ Lay out the relationship.
+ That's the number, right?
+ You don't need to say number.
+ Okay.
+ Okay.
+ Okay.
+ Yeah, that's good.
+ Okay.
+ I think you used gray.
+ Okay.
+ How do you think?
+ How do you think?
+ All right.
+ Next question.
+ Do you have time?
+ Continue the work.
+ We have a problem, right?
+ Yeah, this part is a lot of work, right?
+ But you don't have to go, right?
+ You want to relate the problem, right?
+ Yeah, but what's the problem?
+ You need to relate the problem, right?
+ So what's the problem?
+ Okay.
+ Okay.
+ Okay.
+ What was the model?
+ What model?
+ It doesn't need the data.
+ It's a model, right?
+ This is not the model.
+ It's a linear model.
+ This is a model, right?
+ This is a linear model, right?
+ But what problem is?
+ When you get it 3D, right?
+ This is 3D, right?
+ The model, right?
+ The model.
+ It has to be the model.
+ When we get the model, it's not a problem, right?
+ That's why we need the logistic regression model.
+ No, I think you need the sheet.
+ I have a running sheet.
+ You, right?
+ Yeah, this is the model.
+ We don't have to find it right.
+ This is the model right?
+ And now you get this model.
+ You need a base model.
+ This is the model.
+ Yeah, this is the model, right?
+ And also, we find the model.
+ So, it's 3D.
+ All that problem, the data is in the middle, yeah?
+ Yeah.
+ It has to be, it has to be.
+ It has to be, it has to be.
+ All right.
+ It might be the first problem.
+ It's the primary problem.
+ In question A, when you give it a model, you define all the symbols. What does P represent?
+ What do you model? You have to be more precise.
+ Okay, good. That's fine. That's fine, right?
+ That's the formula for that. But you have to put the name of the X.
+ Okay, that's fine.
+ Now, if you don't want to go home and stay here, continue the question.
+ In question three. In question C.
+ What was the name?
+ You have to load the model.
+ And when you have to load the model, you pass the question.
+ Now, you don't have to reallocate the function, right?
+ No, no, no. We're using the COF.
+ Good.
+ What are the symbols?
+ For example, I define this because I know I can inject the formula.
+ This is the general formula.
+ The Y should be there.
+ The factor for the hold.
+ And then fit the model. And that's it?
+ Okay, thank you.
+ Same as in the tutorial?
+ The same, the same.
+ Thank you.
+ What is the name of the data?
+ D is not.
+ I hope you don't want to.
+ Okay, thank you.
+ Okay, thank you.
+ What's next?
+ I'll type your name.
+ You have time. You should do problem C, right?
+ Yeah, yeah, yeah. You want five or one?
+ Five.
+ Okay, five, okay.
+ What's Y?
+ Write it down.
+ Make sure you put an L here, right?
+ Okay, this is not the model.
+ I know.
+ Okay, thank you.
+ Okay, what's the model?
+ Do you state the model? This is part A, right?
+ Do you state the model?
+ Yeah, you have to write the model on the paper, right?
+ Did you do that?
+ I'm going to break in here with the model.
+ Okay, okay, okay.
+ Okay, thank you.

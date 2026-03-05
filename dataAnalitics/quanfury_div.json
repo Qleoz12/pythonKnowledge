@@ -1,0 +1,3902 @@
+{
+    "code": "Success",
+    "data": [
+        {
+            "id": "a4555b1d-b743-4ea0-acdb-bd214f115c7c",
+            "shortName": "ALLY",
+            "amount": 0.3,
+            "date": 1769990400000,
+            "yield": 2.94,
+            "currency": "USD"
+        },
+        {
+            "id": "a96778bc-fc0e-40fd-8b0d-f817b6a8a139",
+            "shortName": "AON",
+            "amount": 0.745,
+            "date": 1769990400000,
+            "yield": 0.93,
+            "currency": "USD"
+        },
+        {
+            "id": "c9868222-e9db-4a00-b610-39f0df136dc7",
+            "shortName": "AYI",
+            "amount": 0.2,
+            "date": 1769990400000,
+            "yield": 0.23,
+            "currency": "USD"
+        },
+        {
+            "id": "f4140da8-04c4-47e0-b43f-dac9fa9dea6d",
+            "shortName": "BCO.N",
+            "amount": 0.255,
+            "date": 1769990400000,
+            "yield": 0.78,
+            "currency": "USD"
+        },
+        {
+            "id": "5ac55feb-92c4-428c-ab71-e9b948d8d74e",
+            "shortName": "C",
+            "amount": 0.6,
+            "date": 1769990400000,
+            "yield": 2.13,
+            "currency": "USD"
+        },
+        {
+            "id": "112431e7-3a3d-41ae-8fd8-a32cc1aaa2bc",
+            "shortName": "EWBC",
+            "amount": 0.8,
+            "date": 1769990400000,
+            "yield": 2.21,
+            "currency": "USD"
+        },
+        {
+            "id": "44c06188-62f3-4bd4-a772-0bd5111d21b3",
+            "shortName": "GGAL.OQ",
+            "amount": 0.145521,
+            "date": 1769990400000,
+            "yield": 2.77,
+            "currency": "USD"
+        },
+        {
+            "id": "40ff8990-32a7-4bea-8ec5-ac663a2e1ded",
+            "shortName": "ITUB4",
+            "amount": 0.018182,
+            "date": 1769990400000,
+            "yield": 6.29,
+            "currency": "BRL"
+        },
+        {
+            "id": "179b7f5a-ccce-4d2c-9875-178f82d07dca",
+            "shortName": "KMI",
+            "amount": 0.2925,
+            "date": 1769990400000,
+            "yield": 3.62,
+            "currency": "USD"
+        },
+        {
+            "id": "d80a65ef-2b5c-48ce-b33a-966ca415b6d6",
+            "shortName": "NRG",
+            "amount": 0.475,
+            "date": 1769990400000,
+            "yield": 1.04,
+            "currency": "USD"
+        },
+        {
+            "id": "ada49825-8bab-41f5-881d-9fe87633189d",
+            "shortName": "OKE",
+            "amount": 1.07,
+            "date": 1769990400000,
+            "yield": 4.83,
+            "currency": "USD"
+        },
+        {
+            "id": "9e0e428d-62a5-4086-8cd2-5def0f98a480",
+            "shortName": "TKAd.BS",
+            "amount": 0.15,
+            "date": 1769990400000,
+            "yield": 1.42,
+            "currency": "EUR"
+        },
+        {
+            "id": "0931ddf0-125a-4fdb-9f84-c46a66316339",
+            "shortName": "BANR",
+            "amount": 0.5,
+            "date": 1770076800000,
+            "yield": 3.05,
+            "currency": "USD"
+        },
+        {
+            "id": "ca36ba70-5594-465b-9671-39cd7c383db6",
+            "shortName": "BBDC4",
+            "amount": 0.018975,
+            "date": 1770076800000,
+            "yield": 5.49,
+            "currency": "BRL"
+        },
+        {
+            "id": "31d287ae-360b-4e28-a981-ffba90d3926a",
+            "shortName": "ITUB.K",
+            "amount": 0.003355,
+            "date": 1770076800000,
+            "yield": 5.98,
+            "currency": "USD"
+        },
+        {
+            "id": "7eb4742c-fba1-4409-8c0d-a022ad7cddac",
+            "shortName": "MET",
+            "amount": 0.5675,
+            "date": 1770076800000,
+            "yield": 2.94,
+            "currency": "USD"
+        },
+        {
+            "id": "1fc5aec6-aa2c-449f-a672-7fc9e23f7d38",
+            "shortName": "NI.N",
+            "amount": 0.3,
+            "date": 1770076800000,
+            "yield": 2.46,
+            "currency": "USD"
+        },
+        {
+            "id": "c1dd81f5-47a6-40a9-8533-70cf9f813031",
+            "shortName": "NOK",
+            "amount": 0.035642,
+            "date": 1770076800000,
+            "yield": 2.29,
+            "currency": "USD"
+        },
+        {
+            "id": "3e398119-c025-4747-a1ad-ae110ec3e364",
+            "shortName": "SXT",
+            "amount": 0.41,
+            "date": 1770076800000,
+            "yield": 1.76,
+            "currency": "USD"
+        },
+        {
+            "id": "0d2d2ca1-2699-4556-91ff-bf2f5c3ab415",
+            "shortName": "ATR",
+            "amount": 0.48,
+            "date": 1770163200000,
+            "yield": 1.3,
+            "currency": "USD"
+        },
+        {
+            "id": "04fe02be-91af-4496-b6d2-29fcf8dcdb38",
+            "shortName": "BBD",
+            "amount": 0.003527,
+            "date": 1770163200000,
+            "yield": 5.38,
+            "currency": "USD"
+        },
+        {
+            "id": "38e51c4e-a2cf-4ecf-9745-ba22b073170d",
+            "shortName": "BRO",
+            "amount": 0.165,
+            "date": 1770163200000,
+            "yield": 0.92,
+            "currency": "USD"
+        },
+        {
+            "id": "7c336cad-bce7-4e6e-9d1f-369ca3f22f56",
+            "shortName": "CFG",
+            "amount": 0.46,
+            "date": 1770163200000,
+            "yield": 2.7,
+            "currency": "USD"
+        },
+        {
+            "id": "c4aad563-826d-4c10-9cef-f7353df8a67b",
+            "shortName": "GHC",
+            "amount": 1.88,
+            "date": 1770163200000,
+            "yield": 0.69,
+            "currency": "USD"
+        },
+        {
+            "id": "f46bf059-1cab-41b1-8e85-9457592fb8cb",
+            "shortName": "LEN.N",
+            "amount": 0.5,
+            "date": 1770163200000,
+            "yield": 1.64,
+            "currency": "USD"
+        },
+        {
+            "id": "ad566e7c-2c91-4dfe-942d-a07e32405a1a",
+            "shortName": "AZZ",
+            "amount": 0.2,
+            "date": 1770249600000,
+            "yield": 0.55,
+            "currency": "USD"
+        },
+        {
+            "id": "5841affe-c0aa-4f3e-90c5-6ad3ac35a5df",
+            "shortName": "DHI",
+            "amount": 0.45,
+            "date": 1770249600000,
+            "yield": 1.01,
+            "currency": "USD"
+        },
+        {
+            "id": "9e9c04f6-0561-4d1c-93e2-1181755fa120",
+            "shortName": "FUL",
+            "amount": 0.235,
+            "date": 1770249600000,
+            "yield": 1.39,
+            "currency": "USD"
+        },
+        {
+            "id": "efb5b128-5c02-492f-97ec-0bf4d4874a4e",
+            "shortName": "HESM",
+            "amount": 0.7641,
+            "date": 1770249600000,
+            "yield": 8.09,
+            "currency": "USD"
+        },
+        {
+            "id": "7962e4e2-0946-4745-92fd-de8f96750056",
+            "shortName": "IDA",
+            "amount": 0.88,
+            "date": 1770249600000,
+            "yield": 2.41,
+            "currency": "USD"
+        },
+        {
+            "id": "4cd37c50-7ae0-4c3a-bc40-85ff5587cae5",
+            "shortName": "KBH.N",
+            "amount": 0.25,
+            "date": 1770249600000,
+            "yield": 1.51,
+            "currency": "USD"
+        },
+        {
+            "id": "bbc37e95-4152-46c8-b29f-a90962d0cff2",
+            "shortName": "VLO",
+            "amount": 1.2,
+            "date": 1770249600000,
+            "yield": 2.29,
+            "currency": "USD"
+        },
+        {
+            "id": "44503ab5-fd3f-4c52-aa42-f897542912dd",
+            "shortName": "WTFC",
+            "amount": 0.55,
+            "date": 1770249600000,
+            "yield": 1.33,
+            "currency": "USD"
+        },
+        {
+            "id": "b9bf330e-cd5a-4914-9b25-e6fa4059200e",
+            "shortName": "ET.N",
+            "amount": 0.335,
+            "date": 1770336000000,
+            "yield": 7.07,
+            "currency": "USD"
+        },
+        {
+            "id": "c787572c-5763-4766-bef4-f8ab6998cda3",
+            "shortName": "FHI.N",
+            "amount": 0.34,
+            "date": 1770336000000,
+            "yield": 2.45,
+            "currency": "USD"
+        },
+        {
+            "id": "b0f643d2-2358-4b56-aacd-3e964b42db5e",
+            "shortName": "HWM",
+            "amount": 0.12,
+            "date": 1770336000000,
+            "yield": 0.18,
+            "currency": "USD"
+        },
+        {
+            "id": "648e8eff-3a91-44a2-a764-412086a1e6c1",
+            "shortName": "JBHT",
+            "amount": 0.45,
+            "date": 1770336000000,
+            "yield": 0.8,
+            "currency": "USD"
+        },
+        {
+            "id": "e28bcffb-e1ae-4e68-84df-f33edf08b3f4",
+            "shortName": "LNG.N",
+            "amount": 0.555,
+            "date": 1770336000000,
+            "yield": 0.96,
+            "currency": "USD"
+        },
+        {
+            "id": "b585cb69-d8f5-4582-81f0-ca7dafb34b14",
+            "shortName": "MAIN",
+            "amount": 0.26,
+            "date": 1770336000000,
+            "yield": 7.15,
+            "currency": "USD"
+        },
+        {
+            "id": "f9a9f1c5-91b1-4ce1-849b-eba88ad56d0e",
+            "shortName": "NSC",
+            "amount": 1.35,
+            "date": 1770336000000,
+            "yield": 1.71,
+            "currency": "USD"
+        },
+        {
+            "id": "f487a287-7b1a-46e4-b001-cb50a8ee1175",
+            "shortName": "PH",
+            "amount": 1.8,
+            "date": 1770336000000,
+            "yield": 0.72,
+            "currency": "USD"
+        },
+        {
+            "id": "a86788e7-96c7-46f4-a17a-c62f9ba506a9",
+            "shortName": "PNFP",
+            "amount": 0.5,
+            "date": 1770336000000,
+            "yield": 1.27,
+            "currency": "USD"
+        },
+        {
+            "id": "878d86ae-5db4-45ed-9f4e-08c69245cef4",
+            "shortName": "SHL",
+            "amount": 1.0,
+            "date": 1770336000000,
+            "yield": 2.46,
+            "currency": "EUR"
+        },
+        {
+            "id": "4057eb71-f2b7-4a88-944e-ab2da3931435",
+            "shortName": "SSB",
+            "amount": 0.6,
+            "date": 1770336000000,
+            "yield": 2.25,
+            "currency": "USD"
+        },
+        {
+            "id": "ccc369b6-4540-452a-9385-8cf13ea2e22f",
+            "shortName": "SYF",
+            "amount": 0.3,
+            "date": 1770336000000,
+            "yield": 1.68,
+            "currency": "USD"
+        },
+        {
+            "id": "d88ff64c-28b1-404a-8152-c7883d99928e",
+            "shortName": "WFC",
+            "amount": 0.45,
+            "date": 1770336000000,
+            "yield": 2.01,
+            "currency": "USD"
+        },
+        {
+            "id": "8f360c52-cb32-413c-9438-0e1773b8e203",
+            "shortName": "WFRD.OQ",
+            "amount": 0.275,
+            "date": 1770336000000,
+            "yield": 1.01,
+            "currency": "USD"
+        },
+        {
+            "id": "12f0c024-f00b-446a-8edd-1871e4da37e4",
+            "shortName": "AAPL.OQ",
+            "amount": 0.26,
+            "date": 1770595200000,
+            "yield": 0.41,
+            "currency": "USD"
+        },
+        {
+            "id": "ae4d400d-8bd6-4dad-bf26-346207d6dd5d",
+            "shortName": "AMP",
+            "amount": 1.6,
+            "date": 1770595200000,
+            "yield": 1.35,
+            "currency": "USD"
+        },
+        {
+            "id": "25f86b9d-b81b-49cb-b3b3-a127ba818397",
+            "shortName": "ASMLa.CHI",
+            "amount": 1.6,
+            "date": 1770595200000,
+            "yield": 0.56,
+            "currency": "EUR"
+        },
+        {
+            "id": "b7d6f8cd-9558-49ae-baae-f1e938b3eea7",
+            "shortName": "BX",
+            "amount": 1.49,
+            "date": 1770595200000,
+            "yield": 3.65,
+            "currency": "USD"
+        },
+        {
+            "id": "70012def-dca4-4f93-ab09-01eced15860a",
+            "shortName": "CQP",
+            "amount": 0.83,
+            "date": 1770595200000,
+            "yield": 5.53,
+            "currency": "USD"
+        },
+        {
+            "id": "a8b99c65-48dd-4cb4-9145-fe28f28f3262",
+            "shortName": "CWT",
+            "amount": 0.335,
+            "date": 1770595200000,
+            "yield": 2.65,
+            "currency": "USD"
+        },
+        {
+            "id": "128437e2-6b9c-466e-b45b-c47966f9ad61",
+            "shortName": "GWW",
+            "amount": 2.26,
+            "date": 1770595200000,
+            "yield": 0.8,
+            "currency": "USD"
+        },
+        {
+            "id": "303fc904-e55d-4982-9107-ffac12e5d619",
+            "shortName": "HXL",
+            "amount": 0.18,
+            "date": 1770595200000,
+            "yield": 0.77,
+            "currency": "USD"
+        },
+        {
+            "id": "e2274f2f-6f61-4084-8497-fdfd77129833",
+            "shortName": "LAZ",
+            "amount": 0.5,
+            "date": 1770595200000,
+            "yield": 3.82,
+            "currency": "USD"
+        },
+        {
+            "id": "45e4e1cf-e468-4c10-abd4-32ebe6c1f0c1",
+            "shortName": "LPG",
+            "amount": 0.7,
+            "date": 1770595200000,
+            "yield": 7.32,
+            "currency": "USD"
+        },
+        {
+            "id": "bbe6a9fa-f083-4636-8170-01e447415efa",
+            "shortName": "LVS",
+            "amount": 0.3,
+            "date": 1770595200000,
+            "yield": 1.84,
+            "currency": "USD"
+        },
+        {
+            "id": "de424225-5168-4057-ac95-cf3df6f00413",
+            "shortName": "MPLX.N",
+            "amount": 1.0765,
+            "date": 1770595200000,
+            "yield": 7.15,
+            "currency": "USD"
+        },
+        {
+            "id": "dcf1020a-843a-4b31-bd4d-c7f07ee377a6",
+            "shortName": "OHI",
+            "amount": 0.67,
+            "date": 1770595200000,
+            "yield": 5.65,
+            "currency": "USD"
+        },
+        {
+            "id": "e93734ac-5849-4320-88b3-246631aa777c",
+            "shortName": "PZZA.OQ",
+            "amount": 0.46,
+            "date": 1770595200000,
+            "yield": 5.79,
+            "currency": "USD"
+        },
+        {
+            "id": "41960b3c-3092-4ef2-90ce-492fb70d9afa",
+            "shortName": "RBA",
+            "amount": 0.31,
+            "date": 1770595200000,
+            "yield": 1.2,
+            "currency": "USD"
+        },
+        {
+            "id": "52bf535a-477c-4ea4-b4e6-8dc2418d16cd",
+            "shortName": "WBS",
+            "amount": 0.4,
+            "date": 1770595200000,
+            "yield": 2.25,
+            "currency": "USD"
+        },
+        {
+            "id": "b7bd0c3d-5462-4c57-8e9b-911ca1e3f89b",
+            "shortName": "WTRG.N",
+            "amount": 0.3426,
+            "date": 1770595200000,
+            "yield": 3.41,
+            "currency": "USD"
+        },
+        {
+            "id": "06927354-42fc-42e6-9bce-8e5d45aa8518",
+            "shortName": "AEP",
+            "amount": 0.95,
+            "date": 1770681600000,
+            "yield": 2.89,
+            "currency": "USD"
+        },
+        {
+            "id": "349edcee-f380-4460-80ac-5a8e6572b113",
+            "shortName": "AWK",
+            "amount": 0.8275,
+            "date": 1770681600000,
+            "yield": 2.48,
+            "currency": "USD"
+        },
+        {
+            "id": "6a58133b-3226-4e09-b572-be651338d793",
+            "shortName": "DLB",
+            "amount": 0.36,
+            "date": 1770681600000,
+            "yield": 2.09,
+            "currency": "USD"
+        },
+        {
+            "id": "ce60d277-dd89-4d70-a0f5-f321d3f4d497",
+            "shortName": "IBM",
+            "amount": 1.68,
+            "date": 1770681600000,
+            "yield": 2.56,
+            "currency": "USD"
+        },
+        {
+            "id": "3b3ab55e-03b5-4507-ac17-33c646dbb7e6",
+            "shortName": "KMT.N",
+            "amount": 0.2,
+            "date": 1770681600000,
+            "yield": 2.02,
+            "currency": "USD"
+        },
+        {
+            "id": "35a830b1-3c39-4ec0-90ba-b63dc69f3c17",
+            "shortName": "LEVI",
+            "amount": 0.14,
+            "date": 1770681600000,
+            "yield": 2.51,
+            "currency": "USD"
+        },
+        {
+            "id": "13ebff05-08d4-46e5-a3b2-ce9f6d4a8b00",
+            "shortName": "MGY",
+            "amount": 0.165,
+            "date": 1770681600000,
+            "yield": 2.3,
+            "currency": "USD"
+        },
+        {
+            "id": "1adc9e35-883e-400d-9139-ba011bdb0603",
+            "shortName": "RES.N",
+            "amount": 0.04,
+            "date": 1770681600000,
+            "yield": 2.75,
+            "currency": "USD"
+        },
+        {
+            "id": "ff15b478-cf3d-47ab-b661-a9550b394195",
+            "shortName": "SCCO",
+            "amount": 1.0,
+            "date": 1770681600000,
+            "yield": 1.7,
+            "currency": "USD"
+        },
+        {
+            "id": "809de4b7-cccf-4311-ba4a-4beec9c6bdd2",
+            "shortName": "V",
+            "amount": 0.67,
+            "date": 1770681600000,
+            "yield": 0.8,
+            "currency": "USD"
+        },
+        {
+            "id": "93432118-af19-467a-b1a8-a622bf5e7083",
+            "shortName": "HOMB.K",
+            "amount": 0.21,
+            "date": 1770768000000,
+            "yield": 2.79,
+            "currency": "USD"
+        },
+        {
+            "id": "ca05d626-5440-476f-bb07-007c0ab9a894",
+            "shortName": "KVUE",
+            "amount": 0.2075,
+            "date": 1770768000000,
+            "yield": 4.43,
+            "currency": "USD"
+        },
+        {
+            "id": "17eaa05b-8e68-44ce-ab8e-dd7c327733f4",
+            "shortName": "NOMD",
+            "amount": 0.17,
+            "date": 1770768000000,
+            "yield": 5.27,
+            "currency": "USD"
+        },
+        {
+            "id": "7ded4554-a06e-48f2-9d65-fade719674c1",
+            "shortName": "PCAR.OQ",
+            "amount": 0.33,
+            "date": 1770768000000,
+            "yield": 1.04,
+            "currency": "USD"
+        },
+        {
+            "id": "8e28ecc6-f0f1-4138-b93d-06d8002117fe",
+            "shortName": "SIRI.OQ",
+            "amount": 0.27,
+            "date": 1770768000000,
+            "yield": 5.07,
+            "currency": "USD"
+        },
+        {
+            "id": "9d48e19f-9ff4-46a5-880e-baa777a379be",
+            "shortName": "SLB",
+            "amount": 0.295,
+            "date": 1770768000000,
+            "yield": 2.28,
+            "currency": "USD"
+        },
+        {
+            "id": "a78c973d-d7ce-4855-a2af-cd2609305266",
+            "shortName": "ST",
+            "amount": 0.12,
+            "date": 1770768000000,
+            "yield": 1.3,
+            "currency": "USD"
+        },
+        {
+            "id": "79e4f77b-a733-47f7-a5eb-f436b89073b4",
+            "shortName": "TGT",
+            "amount": 1.14,
+            "date": 1770768000000,
+            "yield": 3.92,
+            "currency": "USD"
+        },
+        {
+            "id": "a861da04-9bc0-43bd-949d-806a7d12d8b9",
+            "shortName": "URI",
+            "amount": 1.97,
+            "date": 1770768000000,
+            "yield": 0.84,
+            "currency": "USD"
+        },
+        {
+            "id": "42023b87-e79f-4abe-ab00-7546161f160f",
+            "shortName": "VID",
+            "amount": 1.2318,
+            "date": 1770768000000,
+            "yield": 1.89,
+            "currency": "EUR"
+        },
+        {
+            "id": "c9521f04-a4da-4a53-87dc-a516792f1c94",
+            "shortName": "DCI",
+            "amount": 0.3,
+            "date": 1770854400000,
+            "yield": 1.1,
+            "currency": "USD"
+        },
+        {
+            "id": "2b7a1a09-0187-410b-9e93-2c0cf8d9c7ad",
+            "shortName": "MTa.BS",
+            "amount": 0.126329,
+            "date": 1770854400000,
+            "yield": 1.18,
+            "currency": "EUR"
+        },
+        {
+            "id": "4df50e1c-4151-4f60-a7f0-5376ca86af4e",
+            "shortName": "RMD.N",
+            "amount": 0.6,
+            "date": 1770854400000,
+            "yield": 0.92,
+            "currency": "USD"
+        },
+        {
+            "id": "5490950a-f6b9-4e30-84f4-e0050d59dfb5",
+            "shortName": "TJX",
+            "amount": 0.425,
+            "date": 1770854400000,
+            "yield": 1.1,
+            "currency": "USD"
+        },
+        {
+            "id": "b38d7f6a-3d26-45b7-9a93-c47a666e3c71",
+            "shortName": "TTEK",
+            "amount": 0.065,
+            "date": 1770854400000,
+            "yield": 0.71,
+            "currency": "USD"
+        },
+        {
+            "id": "94c31c89-64d9-43ae-9625-03d732af747e",
+            "shortName": "XOM",
+            "amount": 1.03,
+            "date": 1770854400000,
+            "yield": 2.72,
+            "currency": "USD"
+        },
+        {
+            "id": "15469765-9216-49b9-a034-e11435369f41",
+            "shortName": "ZION.OQ",
+            "amount": 0.45,
+            "date": 1770854400000,
+            "yield": 2.91,
+            "currency": "USD"
+        },
+        {
+            "id": "3937ea48-7712-4fe2-b9e0-a64bada1b24c",
+            "shortName": "AFG.N",
+            "amount": 1.5,
+            "date": 1770940800000,
+            "yield": 2.61,
+            "currency": "USD"
+        },
+        {
+            "id": "83c3c22b-6498-4f79-93fa-bcff9930c4f3",
+            "shortName": "AIT",
+            "amount": 0.51,
+            "date": 1770940800000,
+            "yield": 0.68,
+            "currency": "USD"
+        },
+        {
+            "id": "31b56026-f6b8-4330-9654-f028ac5fa883",
+            "shortName": "AMGN.OQ",
+            "amount": 2.52,
+            "date": 1770940800000,
+            "yield": 2.62,
+            "currency": "USD"
+        },
+        {
+            "id": "e7794f1d-e509-4232-b87b-edc66f4f68f3",
+            "shortName": "BAH",
+            "amount": 0.59,
+            "date": 1770940800000,
+            "yield": 2.82,
+            "currency": "USD"
+        },
+        {
+            "id": "93233148-643e-46d4-a60b-80df481bc894",
+            "shortName": "BBSE3",
+            "amount": 2.592479,
+            "date": 1770940800000,
+            "yield": 13.41,
+            "currency": "BRL"
+        },
+        {
+            "id": "98e3b254-1ec5-40c9-8ee4-373c69a726f0",
+            "shortName": "CCL",
+            "amount": 0.15,
+            "date": 1770940800000,
+            "yield": 0.47,
+            "currency": "USD"
+        },
+        {
+            "id": "64f46b02-5d07-43f5-a14d-fafdc8d715e2",
+            "shortName": "CF",
+            "amount": 0.5,
+            "date": 1770940800000,
+            "yield": 2.11,
+            "currency": "USD"
+        },
+        {
+            "id": "26fc204f-4b17-4f4c-aa95-448932015f02",
+            "shortName": "CG.OQ",
+            "amount": 0.35,
+            "date": 1770940800000,
+            "yield": 2.57,
+            "currency": "USD"
+        },
+        {
+            "id": "80615166-9fe8-4a9a-a984-26e5bae327d8",
+            "shortName": "CHD",
+            "amount": 0.3075,
+            "date": 1770940800000,
+            "yield": 1.18,
+            "currency": "USD"
+        },
+        {
+            "id": "a7c5b0f8-088d-4bbe-85af-6ffbc79caf98",
+            "shortName": "ABC",
+            "amount": 0.6,
+            "date": 1770940800000,
+            "yield": 0.64,
+            "currency": "USD"
+        },
+        {
+            "id": "2e0c1f22-2645-41a4-98e6-4a7db14c093e",
+            "shortName": "CTAS",
+            "amount": 0.45,
+            "date": 1770940800000,
+            "yield": 0.9,
+            "currency": "USD"
+        },
+        {
+            "id": "94833de0-387b-4c8c-b8f9-c11069082368",
+            "shortName": "CUK.N",
+            "amount": 0.15,
+            "date": 1770940800000,
+            "yield": 0.48,
+            "currency": "USD"
+        },
+        {
+            "id": "895773ed-ca4f-4e22-a727-1c1b77c951da",
+            "shortName": "DUK",
+            "amount": 1.065,
+            "date": 1770940800000,
+            "yield": 3.31,
+            "currency": "USD"
+        },
+        {
+            "id": "7f4544b0-91f0-4d0d-93cc-7be337cfef9c",
+            "shortName": "EMR",
+            "amount": 0.555,
+            "date": 1770940800000,
+            "yield": 1.46,
+            "currency": "USD"
+        },
+        {
+            "id": "82ffe497-2c2c-4abc-bc81-9593a27fd358",
+            "shortName": "F",
+            "amount": 0.15,
+            "date": 1770940800000,
+            "yield": 4.25,
+            "currency": "USD"
+        },
+        {
+            "id": "6fe4381d-0e36-439e-bef5-3d4c0eff3628",
+            "shortName": "FHB.OQ",
+            "amount": 0.26,
+            "date": 1770940800000,
+            "yield": 3.95,
+            "currency": "USD"
+        },
+        {
+            "id": "7ffc18fb-8dd8-4014-b1e7-05d6a0326607",
+            "shortName": "HP",
+            "amount": 0.25,
+            "date": 1770940800000,
+            "yield": 3.01,
+            "currency": "USD"
+        },
+        {
+            "id": "3462e2cf-9060-4d96-bf6b-080fa6d98e77",
+            "shortName": "IBOC",
+            "amount": 0.73,
+            "date": 1770940800000,
+            "yield": 1.98,
+            "currency": "USD"
+        },
+        {
+            "id": "a0c49a1b-40fd-4859-b189-2b64826ea7a9",
+            "shortName": "IVZ",
+            "amount": 0.21,
+            "date": 1770940800000,
+            "yield": 3.17,
+            "currency": "USD"
+        },
+        {
+            "id": "814777be-b1ff-4b53-931c-3247fedf8ea1",
+            "shortName": "KR",
+            "amount": 0.35,
+            "date": 1770940800000,
+            "yield": 1.92,
+            "currency": "USD"
+        },
+        {
+            "id": "1f5b534a-8183-40be-8833-1f0c6655d627",
+            "shortName": "LLY",
+            "amount": 1.73,
+            "date": 1770940800000,
+            "yield": 0.6,
+            "currency": "USD"
+        },
+        {
+            "id": "f87e82b3-561e-4aa6-b84f-a883eaea7f4b",
+            "shortName": "LNN",
+            "amount": 0.37,
+            "date": 1770940800000,
+            "yield": 1.09,
+            "currency": "USD"
+        },
+        {
+            "id": "d5e71f59-fbf9-47b8-bdf1-cb01b5e9db8d",
+            "shortName": "MMM",
+            "amount": 0.78,
+            "date": 1770940800000,
+            "yield": 1.73,
+            "currency": "USD"
+        },
+        {
+            "id": "08f98923-514d-45f9-90e9-69ef47454d69",
+            "shortName": "MMS",
+            "amount": 0.33,
+            "date": 1770940800000,
+            "yield": 1.65,
+            "currency": "USD"
+        },
+        {
+            "id": "5c76a74e-f74d-4c6c-9a46-1910d1ed26bb",
+            "shortName": "MSA",
+            "amount": 0.53,
+            "date": 1770940800000,
+            "yield": 1.05,
+            "currency": "USD"
+        },
+        {
+            "id": "44e85e5b-c8f7-4dc9-b230-35d6dfbc67e0",
+            "shortName": "MSCI.N",
+            "amount": 2.05,
+            "date": 1770940800000,
+            "yield": 1.42,
+            "currency": "USD"
+        },
+        {
+            "id": "2aaffa61-4c04-475d-83db-f704d8596f23",
+            "shortName": "NDA.DE",
+            "amount": 1.6,
+            "date": 1770940800000,
+            "yield": 0.93,
+            "currency": "EUR"
+        },
+        {
+            "id": "3263c3a9-c24a-491c-90d2-e312759188e1",
+            "shortName": "NXST",
+            "amount": 1.86,
+            "date": 1770940800000,
+            "yield": 3.22,
+            "currency": "USD"
+        },
+        {
+            "id": "153e64ed-a5be-4591-b26b-b60ee223ce83",
+            "shortName": "OTIS.N",
+            "amount": 0.42,
+            "date": 1770940800000,
+            "yield": 1.87,
+            "currency": "USD"
+        },
+        {
+            "id": "57b0e75d-9974-43a8-a53e-2a5faf122797",
+            "shortName": "REYN",
+            "amount": 0.23,
+            "date": 1770940800000,
+            "yield": 3.88,
+            "currency": "USD"
+        },
+        {
+            "id": "d5582f80-2050-4707-8341-a9aeba9d1085",
+            "shortName": "SBUX.OQ",
+            "amount": 0.62,
+            "date": 1770940800000,
+            "yield": 2.62,
+            "currency": "USD"
+        },
+        {
+            "id": "4464dcd4-9771-4063-b4f1-e2e336f71f89",
+            "shortName": "SCHW.K",
+            "amount": 0.32,
+            "date": 1770940800000,
+            "yield": 1.21,
+            "currency": "USD"
+        },
+        {
+            "id": "c7d5f070-c1ca-45b0-bddc-7381aeeedcec",
+            "shortName": "SIEd.CHI",
+            "amount": 5.35,
+            "date": 1770940800000,
+            "yield": 2.13,
+            "currency": "EUR"
+        },
+        {
+            "id": "fda0a581-f97e-47ef-a6ec-bde3cd9b6727",
+            "shortName": "SIGI",
+            "amount": 0.43,
+            "date": 1770940800000,
+            "yield": 1.87,
+            "currency": "USD"
+        },
+        {
+            "id": "b5d3e34f-b33a-414b-b512-480f72fd7a52",
+            "shortName": "SJM",
+            "amount": 1.1,
+            "date": 1770940800000,
+            "yield": 3.96,
+            "currency": "USD"
+        },
+        {
+            "id": "02220313-a2fc-4b27-ad6e-1bbdbcad0e69",
+            "shortName": "TECH.OQ",
+            "amount": 0.08,
+            "date": 1770940800000,
+            "yield": 0.53,
+            "currency": "USD"
+        },
+        {
+            "id": "424762b4-0bda-4f83-8375-4503a4bef5c4",
+            "shortName": "TER",
+            "amount": 0.13,
+            "date": 1770940800000,
+            "yield": 0.16,
+            "currency": "USD"
+        },
+        {
+            "id": "1d27e6a4-3fcf-45ca-bd00-f5494abf0d7e",
+            "shortName": "TFC",
+            "amount": 0.52,
+            "date": 1770940800000,
+            "yield": 4.01,
+            "currency": "USD"
+        },
+        {
+            "id": "12d73e51-b454-4df3-88c1-a04f76556c23",
+            "shortName": "WEC",
+            "amount": 0.9525,
+            "date": 1770940800000,
+            "yield": 3.13,
+            "currency": "USD"
+        },
+        {
+            "id": "8d0fd8f6-3ce2-4bd5-8d80-7199e75ea592",
+            "shortName": "WSFS",
+            "amount": 0.17,
+            "date": 1770940800000,
+            "yield": 1.02,
+            "currency": "USD"
+        },
+        {
+            "id": "46d9138d-f242-47a2-a3ff-b31b24bf7a0c",
+            "shortName": "RMSp.BS",
+            "amount": 5.0,
+            "date": 1771200000000,
+            "yield": 0.73,
+            "currency": "EUR"
+        },
+        {
+            "id": "0657fb7f-fb9b-454f-bf53-ee92b5b558bd",
+            "shortName": "ADM",
+            "amount": 0.52,
+            "date": 1771286400000,
+            "yield": 2.93,
+            "currency": "USD"
+        },
+        {
+            "id": "eff9e4a2-e7b2-430f-88b8-240a9055b392",
+            "shortName": "AIZ",
+            "amount": 0.88,
+            "date": 1771286400000,
+            "yield": 1.51,
+            "currency": "USD"
+        },
+        {
+            "id": "56d05f60-6dc4-4841-8df2-72e516c228bb",
+            "shortName": "ATKR",
+            "amount": 0.33,
+            "date": 1771286400000,
+            "yield": 1.97,
+            "currency": "USD"
+        },
+        {
+            "id": "1c718cd3-fce8-46c2-b872-9c701000369d",
+            "shortName": "BKH",
+            "amount": 0.703,
+            "date": 1771286400000,
+            "yield": 3.65,
+            "currency": "USD"
+        },
+        {
+            "id": "f0f327ae-6fa7-4621-81c1-9ec318d40e4a",
+            "shortName": "BHGE.K",
+            "amount": 0.23,
+            "date": 1771286400000,
+            "yield": 1.5,
+            "currency": "USD"
+        },
+        {
+            "id": "2d9dbea2-616e-4cd4-8940-2976fe57f792",
+            "shortName": "CMS",
+            "amount": 0.57,
+            "date": 1771286400000,
+            "yield": 2.83,
+            "currency": "USD"
+        },
+        {
+            "id": "248afb53-b872-404b-a064-172268e35559",
+            "shortName": "CSL",
+            "amount": 1.1,
+            "date": 1771286400000,
+            "yield": 1.03,
+            "currency": "USD"
+        },
+        {
+            "id": "ece067cf-9818-47d0-b4b0-713024cec6f7",
+            "shortName": "CVX",
+            "amount": 1.78,
+            "date": 1771286400000,
+            "yield": 3.72,
+            "currency": "USD"
+        },
+        {
+            "id": "753a9ab4-b9ec-49f7-8a97-cf5de0eea429",
+            "shortName": "ENB",
+            "amount": 0.712261,
+            "date": 1771286400000,
+            "yield": 5.01,
+            "currency": "USD"
+        },
+        {
+            "id": "55e590fe-b64a-4dc8-b719-6a0f2f209699",
+            "shortName": "EQNR",
+            "amount": 0.37,
+            "date": 1771286400000,
+            "yield": 5.2,
+            "currency": "USD"
+        },
+        {
+            "id": "2ea92c3b-ab37-4feb-aab3-382478a4e111",
+            "shortName": "FTS",
+            "amount": 0.469946,
+            "date": 1771286400000,
+            "yield": 3.13,
+            "currency": "USD"
+        },
+        {
+            "id": "d1e242a1-f3a7-471f-9389-d8ef9686c9a9",
+            "shortName": "HSY",
+            "amount": 1.452,
+            "date": 1771286400000,
+            "yield": 2.46,
+            "currency": "USD"
+        },
+        {
+            "id": "4aa1e5c1-a236-4631-9711-9c09e7c6968e",
+            "shortName": "JBL",
+            "amount": 0.08,
+            "date": 1771286400000,
+            "yield": 0.13,
+            "currency": "USD"
+        },
+        {
+            "id": "2b50460e-5cb7-4649-a30d-01501f69caee",
+            "shortName": "JEF",
+            "amount": 0.4,
+            "date": 1771286400000,
+            "yield": 2.98,
+            "currency": "USD"
+        },
+        {
+            "id": "9a955823-6b19-47ad-939c-1f445de28058",
+            "shortName": "KLAC.OQ",
+            "amount": 1.9,
+            "date": 1771286400000,
+            "yield": 0.51,
+            "currency": "USD"
+        },
+        {
+            "id": "2875c9b5-3faf-4c12-9249-15a470b3f676",
+            "shortName": "KMPR",
+            "amount": 0.32,
+            "date": 1771286400000,
+            "yield": 3.99,
+            "currency": "USD"
+        },
+        {
+            "id": "67da87fd-860e-4ded-801f-32a537ef1bcb",
+            "shortName": "MC.N",
+            "amount": 0.65,
+            "date": 1771286400000,
+            "yield": 3.94,
+            "currency": "USD"
+        },
+        {
+            "id": "5d5d87be-7806-4792-8928-fecf0434f24a",
+            "shortName": "MUR",
+            "amount": 0.35,
+            "date": 1771286400000,
+            "yield": 3.87,
+            "currency": "USD"
+        },
+        {
+            "id": "0926b7cd-b0ce-46ee-8486-6a634546f24e",
+            "shortName": "OSK",
+            "amount": 0.57,
+            "date": 1771286400000,
+            "yield": 1.19,
+            "currency": "USD"
+        },
+        {
+            "id": "cb2c8e35-e007-4936-bd86-d066f1e7a6a0",
+            "shortName": "PECO",
+            "amount": 0.1083,
+            "date": 1771286400000,
+            "yield": 3.3,
+            "currency": "USD"
+        },
+        {
+            "id": "f8af024c-ac6b-4be7-a1b5-ca4e91dcdf5e",
+            "shortName": "PRU",
+            "amount": 1.4,
+            "date": 1771286400000,
+            "yield": 5.16,
+            "currency": "USD"
+        },
+        {
+            "id": "deda03ac-6fae-4f88-bdc4-abffa428bd77",
+            "shortName": "PSMT",
+            "amount": 0.7,
+            "date": 1771286400000,
+            "yield": 0.81,
+            "currency": "USD"
+        },
+        {
+            "id": "a070137c-aea0-43ca-a824-fd45d6b54038",
+            "shortName": "R",
+            "amount": 0.91,
+            "date": 1771286400000,
+            "yield": 1.61,
+            "currency": "USD"
+        },
+        {
+            "id": "9f0332fd-7a3c-4e64-9da5-dd4e3f177d34",
+            "shortName": "RGA",
+            "amount": 0.93,
+            "date": 1771286400000,
+            "yield": 1.66,
+            "currency": "USD"
+        },
+        {
+            "id": "8a1ded1b-0a6a-4b99-9edc-cc82e4cdfa17",
+            "shortName": "SO",
+            "amount": 0.74,
+            "date": 1771286400000,
+            "yield": 3.1,
+            "currency": "USD"
+        },
+        {
+            "id": "3457340f-aae8-41e4-8a7b-3933adfc8e1f",
+            "shortName": "STE",
+            "amount": 0.63,
+            "date": 1771286400000,
+            "yield": 0.97,
+            "currency": "USD"
+        },
+        {
+            "id": "bae6d255-952e-48e9-bdec-b409293f02fa",
+            "shortName": "SWX",
+            "amount": 0.62,
+            "date": 1771286400000,
+            "yield": 2.82,
+            "currency": "USD"
+        },
+        {
+            "id": "07ff3e84-4113-489d-b20a-298936f51881",
+            "shortName": "TRI",
+            "amount": 0.655,
+            "date": 1771286400000,
+            "yield": 2.74,
+            "currency": "USD"
+        },
+        {
+            "id": "9a610d39-1e8d-4b4d-88e0-89e72c88f8d9",
+            "shortName": "UI",
+            "amount": 0.8,
+            "date": 1771286400000,
+            "yield": 0.39,
+            "currency": "USD"
+        },
+        {
+            "id": "f9c89b25-330e-4972-ac8b-bb5fddbe58a4",
+            "shortName": "UPS",
+            "amount": 1.64,
+            "date": 1771286400000,
+            "yield": 5.5,
+            "currency": "USD"
+        },
+        {
+            "id": "1231809d-d07a-4750-98a0-721a20cfdd82",
+            "shortName": "WAB",
+            "amount": 0.31,
+            "date": 1771286400000,
+            "yield": 0.39,
+            "currency": "USD"
+        },
+        {
+            "id": "60b7a772-56e3-43ec-b0f0-7206c17df50b",
+            "shortName": "AFL",
+            "amount": 0.61,
+            "date": 1771372800000,
+            "yield": 2.02,
+            "currency": "USD"
+        },
+        {
+            "id": "79a1da19-7f90-4dab-a9d5-0ccf21e728c1",
+            "shortName": "ARMK",
+            "amount": 0.12,
+            "date": 1771372800000,
+            "yield": 1.12,
+            "currency": "USD"
+        },
+        {
+            "id": "36ceb4cb-87ee-4997-9160-643381ae5e6a",
+            "shortName": "COP",
+            "amount": 0.84,
+            "date": 1771372800000,
+            "yield": 2.85,
+            "currency": "USD"
+        },
+        {
+            "id": "23e0fcad-06c6-4b30-9cb8-473a453aa2e1",
+            "shortName": "CTSH.OQ",
+            "amount": 0.33,
+            "date": 1771372800000,
+            "yield": 1.86,
+            "currency": "USD"
+        },
+        {
+            "id": "e8459f27-caa4-4385-98cf-f1100dba6933",
+            "shortName": "ED",
+            "amount": 0.8875,
+            "date": 1771372800000,
+            "yield": 2.99,
+            "currency": "USD"
+        },
+        {
+            "id": "1decd041-e4dd-4377-86ff-881b96e24160",
+            "shortName": "GIB",
+            "amount": 0.124829,
+            "date": 1771372800000,
+            "yield": 0.6,
+            "currency": "USD"
+        },
+        {
+            "id": "16cfa926-2e01-48f3-9ecd-44596c6e2535",
+            "shortName": "HAS.OQ",
+            "amount": 0.7,
+            "date": 1771372800000,
+            "yield": 2.73,
+            "currency": "USD"
+        },
+        {
+            "id": "8d7d689d-f7cf-46cf-9f40-57e91e52ab9a",
+            "shortName": "LSTR",
+            "amount": 0.4,
+            "date": 1771372800000,
+            "yield": 1.1,
+            "currency": "USD"
+        },
+        {
+            "id": "8779c370-9215-47a4-984c-a7c0ef4df333",
+            "shortName": "MPC",
+            "amount": 1.0,
+            "date": 1771372800000,
+            "yield": 1.84,
+            "currency": "USD"
+        },
+        {
+            "id": "65b67895-e2c1-4b7f-9fc1-96c2e51915c7",
+            "shortName": "POWL",
+            "amount": 0.27,
+            "date": 1771372800000,
+            "yield": 0.18,
+            "currency": "USD"
+        },
+        {
+            "id": "d6996760-c39f-4e7b-b5ad-ffd999984511",
+            "shortName": "WMG",
+            "amount": 0.19,
+            "date": 1771372800000,
+            "yield": 2.51,
+            "currency": "USD"
+        },
+        {
+            "id": "95cd8d95-3029-4188-8a8a-0fda11eb38c1",
+            "shortName": "AMAT.OQ",
+            "amount": 0.46,
+            "date": 1771459200000,
+            "yield": 0.5,
+            "currency": "USD"
+        },
+        {
+            "id": "2309bfdc-fe89-4a4b-999c-cba1022b1a3d",
+            "shortName": "APO",
+            "amount": 0.51,
+            "date": 1771459200000,
+            "yield": 1.59,
+            "currency": "USD"
+        },
+        {
+            "id": "cab72e07-a387-4850-99f5-3bf0688cba83",
+            "shortName": "BBAR",
+            "amount": 0.035656,
+            "date": 1771459200000,
+            "yield": 1.16,
+            "currency": "USD"
+        },
+        {
+            "id": "8abf54d7-a459-4f41-808e-e00512b4f6b7",
+            "shortName": "BMA",
+            "amount": 0.382214,
+            "date": 1771459200000,
+            "yield": 2.89,
+            "currency": "USD"
+        },
+        {
+            "id": "1b9d8aa1-9d9b-4cec-b7bd-61a4da42e372",
+            "shortName": "BOKF",
+            "amount": 0.63,
+            "date": 1771459200000,
+            "yield": 1.74,
+            "currency": "USD"
+        },
+        {
+            "id": "170afe6a-644f-48d0-a2a7-f0ab1ea9b228",
+            "shortName": "CNP",
+            "amount": 0.23,
+            "date": 1771459200000,
+            "yield": 2.07,
+            "currency": "USD"
+        },
+        {
+            "id": "359690b8-372b-49c0-b2e2-cd584def7dc9",
+            "shortName": "COF",
+            "amount": 0.8,
+            "date": 1771459200000,
+            "yield": 1.25,
+            "currency": "USD"
+        },
+        {
+            "id": "d373d1ea-361c-4a00-943e-5a001f2febe6",
+            "shortName": "LFUS",
+            "amount": 0.75,
+            "date": 1771459200000,
+            "yield": 0.81,
+            "currency": "USD"
+        },
+        {
+            "id": "203862dc-ad50-4a7e-94b4-6ee7020a9d53",
+            "shortName": "MSFT.OQ",
+            "amount": 0.91,
+            "date": 1771459200000,
+            "yield": 0.85,
+            "currency": "USD"
+        },
+        {
+            "id": "318a5a78-2767-4845-9c2a-c04a4e259560",
+            "shortName": "RDSAa.CHI",
+            "amount": 0.313295,
+            "date": 1771459200000,
+            "yield": 3.74,
+            "currency": "EUR"
+        },
+        {
+            "id": "675e9cd7-d81a-4979-9f0d-7ebcbc775d5a",
+            "shortName": "TPG.OQ",
+            "amount": 0.61,
+            "date": 1771459200000,
+            "yield": 4.0,
+            "currency": "USD"
+        },
+        {
+            "id": "6568f32c-308f-44d5-a07d-2cff7e296ecd",
+            "shortName": "VRSN.OQ",
+            "amount": 0.81,
+            "date": 1771459200000,
+            "yield": 1.05,
+            "currency": "USD"
+        },
+        {
+            "id": "c1becc3c-8082-499a-87cf-2ada30f2ffa2",
+            "shortName": "WWD",
+            "amount": 0.32,
+            "date": 1771459200000,
+            "yield": 0.3,
+            "currency": "USD"
+        },
+        {
+            "id": "6d45b2cb-31de-493a-bd8f-65fe42d750d6",
+            "shortName": "AB",
+            "amount": 0.96,
+            "date": 1771545600000,
+            "yield": 8.5,
+            "currency": "USD"
+        },
+        {
+            "id": "de96a420-90b4-48b3-a829-2a71bae1ebf1",
+            "shortName": "ALOS3",
+            "amount": 0.292479,
+            "date": 1771545600000,
+            "yield": 5.82,
+            "currency": "BRL"
+        },
+        {
+            "id": "d168951e-a25e-40ad-b270-f7fe39226de4",
+            "shortName": "AZN",
+            "amount": 2.177813,
+            "date": 1771545600000,
+            "yield": 1.56,
+            "currency": "USD"
+        },
+        {
+            "id": "eb7bab95-d99b-4dd0-9bdb-b908a70b3466",
+            "shortName": "BBWI",
+            "amount": 0.2,
+            "date": 1771545600000,
+            "yield": 3.32,
+            "currency": "USD"
+        },
+        {
+            "id": "66f01a40-9085-4832-b0df-96e8bf3413fa",
+            "shortName": "BCS",
+            "amount": 0.306857,
+            "date": 1771545600000,
+            "yield": 1.77,
+            "currency": "USD"
+        },
+        {
+            "id": "07941f9a-2e0c-4a08-bbfb-ec6098c65be6",
+            "shortName": "BP",
+            "amount": 0.4992,
+            "date": 1771545600000,
+            "yield": 5.2,
+            "currency": "USD"
+        },
+        {
+            "id": "9e7a82c4-c412-4e78-b96f-8e082f2f988f",
+            "shortName": "CMI",
+            "amount": 2.0,
+            "date": 1771545600000,
+            "yield": 1.27,
+            "currency": "USD"
+        },
+        {
+            "id": "4055a5e6-5ebc-4191-aaa6-f8e011709206",
+            "shortName": "GSK",
+            "amount": 0.485604,
+            "date": 1771545600000,
+            "yield": 2.89,
+            "currency": "USD"
+        },
+        {
+            "id": "a129a08b-7435-4621-8159-1a833da2ef11",
+            "shortName": "IFXd.CHI",
+            "amount": 0.35,
+            "date": 1771545600000,
+            "yield": 0.8,
+            "currency": "EUR"
+        },
+        {
+            "id": "3f2cbb1f-7fc2-4f71-a0bd-c5884f1c8c05",
+            "shortName": "IGTI11",
+            "amount": 0.16852,
+            "date": 1771545600000,
+            "yield": 2.66,
+            "currency": "BRL"
+        },
+        {
+            "id": "df9f5c7c-4955-4c38-844f-bf899df7fbac",
+            "shortName": "INTR",
+            "amount": 0.113102,
+            "date": 1771545600000,
+            "yield": 0.92,
+            "currency": "USD"
+        },
+        {
+            "id": "da258802-b033-44a3-9979-bb90771e34fd",
+            "shortName": "J",
+            "amount": 0.36,
+            "date": 1771545600000,
+            "yield": 0.96,
+            "currency": "USD"
+        },
+        {
+            "id": "6e8e39e8-ef9f-4867-a776-113aaff3ec2e",
+            "shortName": "MAS.N",
+            "amount": 0.32,
+            "date": 1771545600000,
+            "yield": 1.63,
+            "currency": "USD"
+        },
+        {
+            "id": "5c679a89-62d7-4e2d-8b0c-ee8c3d300aa9",
+            "shortName": "OGS",
+            "amount": 0.68,
+            "date": 1771545600000,
+            "yield": 3.11,
+            "currency": "USD"
+        },
+        {
+            "id": "b750a2b3-d517-46cb-97ba-955d1ac92ee6",
+            "shortName": "PPG",
+            "amount": 0.71,
+            "date": 1771545600000,
+            "yield": 2.12,
+            "currency": "USD"
+        },
+        {
+            "id": "f3aaf2c1-6d8f-4b15-a696-c1f62b5e4b1a",
+            "shortName": "REGN",
+            "amount": 0.94,
+            "date": 1771545600000,
+            "yield": 0.44,
+            "currency": "USD"
+        },
+        {
+            "id": "bf68f692-4158-41eb-90e2-33d757d169bc",
+            "shortName": "RPRX",
+            "amount": 0.235,
+            "date": 1771545600000,
+            "yield": 1.95,
+            "currency": "USD"
+        },
+        {
+            "id": "4b361801-2acb-4209-9ed7-1fbbf4a40f97",
+            "shortName": "RTX",
+            "amount": 0.68,
+            "date": 1771545600000,
+            "yield": 1.33,
+            "currency": "USD"
+        },
+        {
+            "id": "1f0889f8-0797-4696-972f-63d9d446fdcd",
+            "shortName": "SMG.N",
+            "amount": 0.66,
+            "date": 1771545600000,
+            "yield": 3.86,
+            "currency": "USD"
+        },
+        {
+            "id": "9cc2d6a0-ba79-4a15-8faf-407a080a05a6",
+            "shortName": "TEL.N",
+            "amount": 0.71,
+            "date": 1771545600000,
+            "yield": 1.18,
+            "currency": "USD"
+        },
+        {
+            "id": "e4b3498b-b9a7-43e5-9eda-601bb8617a5a",
+            "shortName": "YUM",
+            "amount": 0.75,
+            "date": 1771545600000,
+            "yield": 1.77,
+            "currency": "USD"
+        },
+        {
+            "id": "8839948c-5abc-4fb1-a7a1-9e2c9c9f3dc4",
+            "shortName": "ZWS",
+            "amount": 0.11,
+            "date": 1771545600000,
+            "yield": 0.74,
+            "currency": "USD"
+        },
+        {
+            "id": "d298adaf-28df-44dc-b6d7-4ae566518558",
+            "shortName": "AMG",
+            "amount": 0.01,
+            "date": 1771804800000,
+            "yield": 0.01,
+            "currency": "USD"
+        },
+        {
+            "id": "b8fc8aba-c5c7-47ad-8788-1b727ecba03e",
+            "shortName": "ATO",
+            "amount": 1.0,
+            "date": 1771804800000,
+            "yield": 2.01,
+            "currency": "USD"
+        },
+        {
+            "id": "3d873c37-a2e2-49e9-a3c4-c93e07390c22",
+            "shortName": "AWR.N",
+            "amount": 0.504,
+            "date": 1771804800000,
+            "yield": 2.59,
+            "currency": "USD"
+        },
+        {
+            "id": "58c46ac1-d741-4a38-bf7e-71f4664752f1",
+            "shortName": "BCC.N",
+            "amount": 0.22,
+            "date": 1771804800000,
+            "yield": 0.99,
+            "currency": "USD"
+        },
+        {
+            "id": "da977dfb-37e8-429f-a52b-c2b38dc5ac3f",
+            "shortName": "BTU",
+            "amount": 0.075,
+            "date": 1771804800000,
+            "yield": 0.87,
+            "currency": "USD"
+        },
+        {
+            "id": "c30041bd-225b-463a-94e6-a897dbbbc7c0",
+            "shortName": "CHE",
+            "amount": 0.6,
+            "date": 1771804800000,
+            "yield": 0.46,
+            "currency": "USD"
+        },
+        {
+            "id": "1a8ec00c-ec0e-4f23-8a46-4b1c481dffef",
+            "shortName": "CNA.N",
+            "amount": 2.48,
+            "date": 1771804800000,
+            "yield": 3.78,
+            "currency": "USD"
+        },
+        {
+            "id": "9df6da6c-70a1-4a03-9ea7-9dee681dae4f",
+            "shortName": "DAC",
+            "amount": 0.9,
+            "date": 1771804800000,
+            "yield": 3.19,
+            "currency": "USD"
+        },
+        {
+            "id": "19ddcb1b-1a14-4e30-9827-781b01c7f30e",
+            "shortName": "INBR32",
+            "amount": 0.594689,
+            "date": 1771804800000,
+            "yield": 1.01,
+            "currency": "BRL"
+        },
+        {
+            "id": "4c19b366-00bb-4108-a056-fda3497bf568",
+            "shortName": "IP",
+            "amount": 0.4625,
+            "date": 1771804800000,
+            "yield": 3.77,
+            "currency": "USD"
+        },
+        {
+            "id": "dc93afc5-ccc5-4a30-9bff-8508b643b950",
+            "shortName": "MCHP.OQ",
+            "amount": 0.455,
+            "date": 1771804800000,
+            "yield": 2.32,
+            "currency": "USD"
+        },
+        {
+            "id": "5c2f76e5-3e0b-467a-9a58-68194981d5e3",
+            "shortName": "MKSI",
+            "amount": 0.25,
+            "date": 1771804800000,
+            "yield": 0.34,
+            "currency": "USD"
+        },
+        {
+            "id": "03aa0ee6-781a-4561-bff3-44db700d9c0d",
+            "shortName": "MUSA",
+            "amount": 0.63,
+            "date": 1771804800000,
+            "yield": 0.53,
+            "currency": "USD"
+        },
+        {
+            "id": "5c2db5f5-bd2d-486e-b355-f8f2604b494e",
+            "shortName": "NOC",
+            "amount": 2.31,
+            "date": 1771804800000,
+            "yield": 1.28,
+            "currency": "USD"
+        },
+        {
+            "id": "9edff819-fbbb-4ee5-91fe-3f7a932a14df",
+            "shortName": "OGN",
+            "amount": 0.02,
+            "date": 1771804800000,
+            "yield": 4.6,
+            "currency": "USD"
+        },
+        {
+            "id": "ce15db7f-4336-4a5e-b1eb-3c2b57c9a1b7",
+            "shortName": "PRI",
+            "amount": 1.2,
+            "date": 1771804800000,
+            "yield": 1.66,
+            "currency": "USD"
+        },
+        {
+            "id": "1a875aba-f098-4aad-bb3c-7478043f00a3",
+            "shortName": "PSX",
+            "amount": 1.27,
+            "date": 1771804800000,
+            "yield": 2.97,
+            "currency": "USD"
+        },
+        {
+            "id": "22645986-f7ae-4204-9034-f6ac9ee5803c",
+            "shortName": "RDN",
+            "amount": 0.255,
+            "date": 1771804800000,
+            "yield": 3.11,
+            "currency": "USD"
+        },
+        {
+            "id": "2c12a9f4-6357-4b9a-98db-f59ead0d3fac",
+            "shortName": "ROK",
+            "amount": 1.38,
+            "date": 1771804800000,
+            "yield": 1.35,
+            "currency": "USD"
+        },
+        {
+            "id": "c2afb664-c19c-4914-90fc-682852d470f7",
+            "shortName": "WRB",
+            "amount": 0.09,
+            "date": 1771804800000,
+            "yield": 0.5,
+            "currency": "USD"
+        },
+        {
+            "id": "4e5c8fa2-317a-4d34-aefd-b19e8291edcd",
+            "shortName": "WYNN.OQ",
+            "amount": 0.25,
+            "date": 1771804800000,
+            "yield": 0.88,
+            "currency": "USD"
+        },
+        {
+            "id": "15c5e229-fe07-472d-8fd3-6e5dabe0a48b",
+            "shortName": "BBAS3",
+            "amount": 0.219789,
+            "date": 1771891200000,
+            "yield": 1.95,
+            "currency": "BRL"
+        },
+        {
+            "id": "b2f762cb-719a-469f-b043-75d5e703b541",
+            "shortName": "CE.N",
+            "amount": 0.03,
+            "date": 1771891200000,
+            "yield": 0.2,
+            "currency": "USD"
+        },
+        {
+            "id": "bc211b2b-8ffb-4460-9223-09c5a13a6aed",
+            "shortName": "JNJ",
+            "amount": 1.3,
+            "date": 1771891200000,
+            "yield": 2.11,
+            "currency": "USD"
+        },
+        {
+            "id": "70c3692d-6a42-4fbb-a457-98cf8e9e270a",
+            "shortName": "LOG.MC",
+            "amount": 1.53,
+            "date": 1771891200000,
+            "yield": 6.26,
+            "currency": "EUR"
+        },
+        {
+            "id": "a5e74ffb-dfb3-478e-9b66-dfed3fb5fcab",
+            "shortName": "SNA.N",
+            "amount": 2.44,
+            "date": 1771891200000,
+            "yield": 2.3,
+            "currency": "USD"
+        },
+        {
+            "id": "99987829-6c8d-4e13-aa2c-3f5ca851ccc0",
+            "shortName": "SWKS.OQ",
+            "amount": 0.71,
+            "date": 1771891200000,
+            "yield": 4.54,
+            "currency": "USD"
+        },
+        {
+            "id": "c6e0160a-ef61-489b-9eb0-e5b84392cbc9",
+            "shortName": "TKR",
+            "amount": 0.35,
+            "date": 1771891200000,
+            "yield": 1.29,
+            "currency": "USD"
+        },
+        {
+            "id": "6d73031c-c30f-44c8-a158-159c55ea2d40",
+            "shortName": "TSCO.OQ",
+            "amount": 0.24,
+            "date": 1771891200000,
+            "yield": 1.67,
+            "currency": "USD"
+        },
+        {
+            "id": "3237eae0-bd23-46c6-ae1e-c3a23cb0556e",
+            "shortName": "VIVT3",
+            "amount": 0.101702,
+            "date": 1771891200000,
+            "yield": 2.27,
+            "currency": "BRL"
+        },
+        {
+            "id": "60572e6c-b9f8-4a3f-ae28-5dbd238e3e40",
+            "shortName": "XYL",
+            "amount": 0.43,
+            "date": 1771891200000,
+            "yield": 1.25,
+            "currency": "USD"
+        },
+        {
+            "id": "2925df9c-1b75-44f1-a2c6-231c8568ef2d",
+            "shortName": "AER",
+            "amount": 0.4,
+            "date": 1771977600000,
+            "yield": 0.72,
+            "currency": "USD"
+        },
+        {
+            "id": "73031902-092e-4fa2-9d77-78d9a9c1d437",
+            "shortName": "AMCR",
+            "amount": 0.65,
+            "date": 1771977600000,
+            "yield": 5.12,
+            "currency": "USD"
+        },
+        {
+            "id": "9698d45a-498b-4f81-903e-edaa0d235999",
+            "shortName": "AVA.N",
+            "amount": 0.4925,
+            "date": 1771977600000,
+            "yield": 4.55,
+            "currency": "USD"
+        },
+        {
+            "id": "9d0be289-ff79-4ee1-b07f-f086dab90ca0",
+            "shortName": "CDW",
+            "amount": 0.63,
+            "date": 1771977600000,
+            "yield": 1.97,
+            "currency": "USD"
+        },
+        {
+            "id": "f54a1d92-0f1e-4855-b19e-9a2ec15fe92d",
+            "shortName": "EA.OQ",
+            "amount": 0.19,
+            "date": 1771977600000,
+            "yield": 0.38,
+            "currency": "USD"
+        },
+        {
+            "id": "fdeb5ecb-692c-45ec-8ac7-5ec98537696d",
+            "shortName": "EQIX",
+            "amount": 5.16,
+            "date": 1771977600000,
+            "yield": 1.96,
+            "currency": "USD"
+        },
+        {
+            "id": "33f37d43-9876-44a8-9132-144e59a735b3",
+            "shortName": "L",
+            "amount": 0.0625,
+            "date": 1771977600000,
+            "yield": 0.23,
+            "currency": "USD"
+        },
+        {
+            "id": "61bf1503-3cf5-477d-81f0-cc366eef25cd",
+            "shortName": "PAG",
+            "amount": 1.4,
+            "date": 1771977600000,
+            "yield": 3.02,
+            "currency": "USD"
+        },
+        {
+            "id": "2afb834a-f60e-480c-85a6-0a14d6fd7843",
+            "shortName": "PBF",
+            "amount": 0.275,
+            "date": 1771977600000,
+            "yield": 3.18,
+            "currency": "USD"
+        },
+        {
+            "id": "031bc37e-939a-4ff2-ad93-57bb622144de",
+            "shortName": "RHI",
+            "amount": 0.59,
+            "date": 1771977600000,
+            "yield": 9.53,
+            "currency": "USD"
+        },
+        {
+            "id": "635fd493-74d3-405a-9357-f4bfd48fe6b3",
+            "shortName": "ROL",
+            "amount": 0.1825,
+            "date": 1771977600000,
+            "yield": 1.17,
+            "currency": "USD"
+        },
+        {
+            "id": "9fdca0a3-06f6-483a-b262-c45c53dc0f7b",
+            "shortName": "SON",
+            "amount": 0.53,
+            "date": 1771977600000,
+            "yield": 4.08,
+            "currency": "USD"
+        },
+        {
+            "id": "7dd32972-01c1-42c2-b818-3e07ce381654",
+            "shortName": "SPGI",
+            "amount": 0.97,
+            "date": 1771977600000,
+            "yield": 0.94,
+            "currency": "USD"
+        },
+        {
+            "id": "b1eeca15-4e51-44dc-b24a-118c2ca97bc9",
+            "shortName": "VOYA",
+            "amount": 0.47,
+            "date": 1771977600000,
+            "yield": 2.44,
+            "currency": "USD"
+        },
+        {
+            "id": "1ba13ff7-8706-4542-9e87-6a336ed332e0",
+            "shortName": "WCN.N",
+            "amount": 0.35,
+            "date": 1771977600000,
+            "yield": 0.81,
+            "currency": "USD"
+        },
+        {
+            "id": "167996e9-48ce-4276-ad3c-5f96fdaed691",
+            "shortName": "WELL",
+            "amount": 0.74,
+            "date": 1771977600000,
+            "yield": 1.34,
+            "currency": "USD"
+        },
+        {
+            "id": "6864aadf-77ad-4064-82ce-a67ef92e933a",
+            "shortName": "CATY",
+            "amount": 0.38,
+            "date": 1772064000000,
+            "yield": 2.55,
+            "currency": "USD"
+        },
+        {
+            "id": "06561f01-b709-45f5-bdf1-b96f910ae115",
+            "shortName": "CGNX",
+            "amount": 0.085,
+            "date": 1772064000000,
+            "yield": 0.55,
+            "currency": "USD"
+        },
+        {
+            "id": "41141642-211e-4798-a13e-6327e3f6307c",
+            "shortName": "DAL",
+            "amount": 0.1875,
+            "date": 1772064000000,
+            "yield": 0.98,
+            "currency": "USD"
+        },
+        {
+            "id": "a26ce335-f84d-422b-b597-115b54e619da",
+            "shortName": "FBP",
+            "amount": 0.2,
+            "date": 1772064000000,
+            "yield": 3.21,
+            "currency": "USD"
+        },
+        {
+            "id": "dedf17e6-175d-4f9d-9907-38705da4b52f",
+            "shortName": "KNSL",
+            "amount": 0.25,
+            "date": 1772064000000,
+            "yield": 0.18,
+            "currency": "USD"
+        },
+        {
+            "id": "ea6ead9b-54bf-476f-9e5c-741fe7409b2e",
+            "shortName": "MAR.OQ",
+            "amount": 0.67,
+            "date": 1772064000000,
+            "yield": 0.75,
+            "currency": "USD"
+        },
+        {
+            "id": "ebf2f3d4-30e8-4479-96f5-2f3b4b056d05",
+            "shortName": "TRU",
+            "amount": 0.125,
+            "date": 1772064000000,
+            "yield": 0.62,
+            "currency": "USD"
+        },
+        {
+            "id": "86cdb866-c9cf-4fff-82f3-1cd4953d2c6e",
+            "shortName": "AGNC",
+            "amount": 0.12,
+            "date": 1772150400000,
+            "yield": 12.68,
+            "currency": "USD"
+        },
+        {
+            "id": "2ab7e789-3358-485f-ae05-bc94f1fb2ca2",
+            "shortName": "ASH",
+            "amount": 0.415,
+            "date": 1772150400000,
+            "yield": 2.71,
+            "currency": "USD"
+        },
+        {
+            "id": "603e4dc4-07f3-4526-8b24-b11a9cf86042",
+            "shortName": "GOLD",
+            "amount": 0.42,
+            "date": 1772150400000,
+            "yield": 1.1,
+            "currency": "USD"
+        },
+        {
+            "id": "79189192-05d4-4259-b683-0c262ee9953f",
+            "shortName": "BAM",
+            "amount": 0.5025,
+            "date": 1772150400000,
+            "yield": 3.32,
+            "currency": "USD"
+        },
+        {
+            "id": "96fe1cff-1d4d-45d9-98ec-4774deeded0e",
+            "shortName": "BAX",
+            "amount": 0.01,
+            "date": 1772150400000,
+            "yield": 2.63,
+            "currency": "USD"
+        },
+        {
+            "id": "758fcf06-b2ac-4519-8d1e-a4eda1fd05e7",
+            "shortName": "ADS",
+            "amount": 0.23,
+            "date": 1772150400000,
+            "yield": 1.19,
+            "currency": "USD"
+        },
+        {
+            "id": "dd6752b8-68f7-4b7d-801d-c6011a627143",
+            "shortName": "BMI.N",
+            "amount": 0.4,
+            "date": 1772150400000,
+            "yield": 0.96,
+            "currency": "USD"
+        },
+        {
+            "id": "ccc733e7-9d79-4134-9fb2-cf123fc80674",
+            "shortName": "BOH",
+            "amount": 0.7,
+            "date": 1772150400000,
+            "yield": 3.58,
+            "currency": "USD"
+        },
+        {
+            "id": "bf85d2ad-5805-4641-9799-80d9a7a9ff55",
+            "shortName": "CBT",
+            "amount": 0.45,
+            "date": 1772150400000,
+            "yield": 2.34,
+            "currency": "USD"
+        },
+        {
+            "id": "c46037b8-f524-4066-bcf0-0140560f3a94",
+            "shortName": "CFR",
+            "amount": 1.0,
+            "date": 1772150400000,
+            "yield": 2.73,
+            "currency": "USD"
+        },
+        {
+            "id": "9b357147-6620-487d-a292-cc5f2300b1b6",
+            "shortName": "CR",
+            "amount": 0.255,
+            "date": 1772150400000,
+            "yield": 0.46,
+            "currency": "USD"
+        },
+        {
+            "id": "1e022049-4b44-4ca2-91fb-d920acdf550b",
+            "shortName": "D",
+            "amount": 0.6675,
+            "date": 1772150400000,
+            "yield": 4.01,
+            "currency": "USD"
+        },
+        {
+            "id": "58013265-e628-4c2c-b8e8-a4e99b9d1532",
+            "shortName": "DOV",
+            "amount": 0.52,
+            "date": 1772150400000,
+            "yield": 0.89,
+            "currency": "USD"
+        },
+        {
+            "id": "d9df972a-b076-4396-92ca-afcb271ab867",
+            "shortName": "DOW",
+            "amount": 0.35,
+            "date": 1772150400000,
+            "yield": 6.46,
+            "currency": "USD"
+        },
+        {
+            "id": "33037a7b-6e86-49ff-a299-e3f289049686",
+            "shortName": "EL",
+            "amount": 0.35,
+            "date": 1772150400000,
+            "yield": 1.29,
+            "currency": "USD"
+        },
+        {
+            "id": "7c4844fb-af3e-4d46-9407-708bc955e553",
+            "shortName": "ENR",
+            "amount": 0.7,
+            "date": 1772150400000,
+            "yield": 0.0,
+            "currency": "EUR"
+        },
+        {
+            "id": "d4385e9a-a06d-44d0-bb21-5d80d040d749",
+            "shortName": "EVR",
+            "amount": 0.84,
+            "date": 1772150400000,
+            "yield": 1.03,
+            "currency": "USD"
+        },
+        {
+            "id": "3ca8dc48-72e7-4743-ae94-0992122f0453",
+            "shortName": "FDS",
+            "amount": 1.1,
+            "date": 1772150400000,
+            "yield": 2.11,
+            "currency": "USD"
+        },
+        {
+            "id": "294a0f21-dbd8-48f4-ae3a-4b5f062e3958",
+            "shortName": "GLW",
+            "amount": 0.28,
+            "date": 1772150400000,
+            "yield": 0.84,
+            "currency": "USD"
+        },
+        {
+            "id": "cdc66146-c16e-4dbf-9c4a-8e70ba4d4a2d",
+            "shortName": "HII",
+            "amount": 1.38,
+            "date": 1772150400000,
+            "yield": 1.3,
+            "currency": "USD"
+        },
+        {
+            "id": "c38f0ff1-761a-4cc3-9ca0-e0ffb1d1838a",
+            "shortName": "HLT",
+            "amount": 0.15,
+            "date": 1772150400000,
+            "yield": 0.19,
+            "currency": "USD"
+        },
+        {
+            "id": "44da6769-b6fb-4a4f-91f2-66c71ee77580",
+            "shortName": "HON",
+            "amount": 1.19,
+            "date": 1772150400000,
+            "yield": 1.9,
+            "currency": "USD"
+        },
+        {
+            "id": "99786967-f425-46ac-b211-846b963a6cb7",
+            "shortName": "HUBB",
+            "amount": 1.42,
+            "date": 1772150400000,
+            "yield": 1.03,
+            "currency": "USD"
+        },
+        {
+            "id": "114cf385-5394-4d73-a3d6-61bd67fa50e1",
+            "shortName": "IBKR.OQ",
+            "amount": 0.08,
+            "date": 1772150400000,
+            "yield": 0.4,
+            "currency": "USD"
+        },
+        {
+            "id": "95f4c107-024f-4c7f-ad2a-8ce6d22f8266",
+            "shortName": "TRPL4",
+            "amount": 0.250553,
+            "date": 1772150400000,
+            "yield": 11.95,
+            "currency": "BRL"
+        },
+        {
+            "id": "e6bcc59b-be02-4baa-80a1-3f6bcf860889",
+            "shortName": "LH",
+            "amount": 0.72,
+            "date": 1772150400000,
+            "yield": 1.02,
+            "currency": "USD"
+        },
+        {
+            "id": "e6e6f5fa-4c37-47a2-ba74-bbf02bfb3219",
+            "shortName": "LPX",
+            "amount": 0.3,
+            "date": 1772150400000,
+            "yield": 1.2,
+            "currency": "USD"
+        },
+        {
+            "id": "3392b50b-bb52-48aa-9a80-ff6e30ec0258",
+            "shortName": "MGA",
+            "amount": 0.495,
+            "date": 1772150400000,
+            "yield": 2.82,
+            "currency": "USD"
+        },
+        {
+            "id": "38f4c09d-129c-4bf1-b2cc-a25f4484344f",
+            "shortName": "MLAB",
+            "amount": 0.16,
+            "date": 1772150400000,
+            "yield": 0.71,
+            "currency": "USD"
+        },
+        {
+            "id": "3f0c8159-dbc7-4786-95cf-324341e90e25",
+            "shortName": "NEE",
+            "amount": 0.6232,
+            "date": 1772150400000,
+            "yield": 2.42,
+            "currency": "USD"
+        },
+        {
+            "id": "c491d8f5-e88d-469f-a32e-558010d3a217",
+            "shortName": "NNI",
+            "amount": 0.33,
+            "date": 1772150400000,
+            "yield": 0.92,
+            "currency": "USD"
+        },
+        {
+            "id": "9a335ffc-6ce9-4510-924e-1a8141bc406f",
+            "shortName": "NWL",
+            "amount": 0.07,
+            "date": 1772150400000,
+            "yield": 5.96,
+            "currency": "USD"
+        },
+        {
+            "id": "da0762cb-7658-4d8c-bbba-37ae22515a07",
+            "shortName": "STEP.OQ",
+            "amount": 0.28,
+            "date": 1772150400000,
+            "yield": 2.54,
+            "currency": "USD"
+        },
+        {
+            "id": "3b8b57e9-84e3-4392-ad5c-71e61bd5b6b6",
+            "shortName": "TMUS.OQ",
+            "amount": 1.02,
+            "date": 1772150400000,
+            "yield": 1.67,
+            "currency": "USD"
+        },
+        {
+            "id": "25b6c489-9ac3-495c-a00d-2827b89720af",
+            "shortName": "TSN",
+            "amount": 0.51,
+            "date": 1772150400000,
+            "yield": 3.14,
+            "currency": "USD"
+        },
+        {
+            "id": "f5626e76-ccdb-4881-9280-59a01cbeae96",
+            "shortName": "UL",
+            "amount": 0.5547,
+            "date": 1772150400000,
+            "yield": 3.07,
+            "currency": "USD"
+        },
+        {
+            "id": "f9c1983a-32cd-45ed-8336-9e875076b0c4",
+            "shortName": "UNP",
+            "amount": 1.38,
+            "date": 1772150400000,
+            "yield": 2.09,
+            "currency": "USD"
+        },
+        {
+            "id": "c703d85f-dd8b-4f91-a174-186280f212bf",
+            "shortName": "VIRT",
+            "amount": 0.24,
+            "date": 1772150400000,
+            "yield": 2.5,
+            "currency": "USD"
+        },
+        {
+            "id": "54e3f541-8b2e-4d11-b079-ddc8ac70ebae",
+            "shortName": "AL",
+            "amount": 0.22,
+            "date": 1772409600000,
+            "yield": 1.36,
+            "currency": "USD"
+        },
+        {
+            "id": "5ae84715-c06a-4755-b76d-9f988a2c7e6d",
+            "shortName": "ALL",
+            "amount": 1.08,
+            "date": 1772409600000,
+            "yield": 1.93,
+            "currency": "USD"
+        },
+        {
+            "id": "696355cb-0606-4472-a080-8ead084f5a8a",
+            "shortName": "ASB.N",
+            "amount": 0.24,
+            "date": 1772409600000,
+            "yield": 3.34,
+            "currency": "USD"
+        },
+        {
+            "id": "c51b324e-2a75-4012-a690-5c0cb210d87d",
+            "shortName": "BLL",
+            "amount": 0.2,
+            "date": 1772409600000,
+            "yield": 1.19,
+            "currency": "USD"
+        },
+        {
+            "id": "0bc9bc02-cf51-4147-b2ce-abb0f4379cb5",
+            "shortName": "BWA",
+            "amount": 0.17,
+            "date": 1772409600000,
+            "yield": 0.89,
+            "currency": "USD"
+        },
+        {
+            "id": "9e5d0081-6377-472f-bbb7-6a9a72d0d599",
+            "shortName": "CTVA",
+            "amount": 0.18,
+            "date": 1772409600000,
+            "yield": 0.93,
+            "currency": "USD"
+        },
+        {
+            "id": "4dc5b21c-6cdb-416c-988d-86ca752914bf",
+            "shortName": "ESI",
+            "amount": 0.08,
+            "date": 1772409600000,
+            "yield": 0.99,
+            "currency": "USD"
+        },
+        {
+            "id": "9984b8a9-e039-4c7b-984b-bd37781461e0",
+            "shortName": "EXC",
+            "amount": 0.42,
+            "date": 1772409600000,
+            "yield": 3.3,
+            "currency": "USD"
+        },
+        {
+            "id": "be000f5a-e267-47ee-985a-b555e1be42a6",
+            "shortName": "FNB",
+            "amount": 0.12,
+            "date": 1772409600000,
+            "yield": 2.66,
+            "currency": "USD"
+        },
+        {
+            "id": "4e74aa19-3143-47f6-996e-c441b5f7745d",
+            "shortName": "GPI.N",
+            "amount": 0.55,
+            "date": 1772409600000,
+            "yield": 0.6,
+            "currency": "USD"
+        },
+        {
+            "id": "bf6b65b3-c656-4940-b844-4c1faeca83cf",
+            "shortName": "GS",
+            "amount": 4.5,
+            "date": 1772409600000,
+            "yield": 1.55,
+            "currency": "USD"
+        },
+        {
+            "id": "745c7ed2-f8fa-4580-be26-ba0572820fc8",
+            "shortName": "H",
+            "amount": 0.15,
+            "date": 1772409600000,
+            "yield": 0.36,
+            "currency": "USD"
+        },
+        {
+            "id": "0445b818-17e5-4f4b-a306-367681c2fe74",
+            "shortName": "HLI",
+            "amount": 0.6,
+            "date": 1772409600000,
+            "yield": 1.43,
+            "currency": "USD"
+        },
+        {
+            "id": "96d8923a-ce18-47de-ad14-3c848ad58b2b",
+            "shortName": "HOG",
+            "amount": 0.1875,
+            "date": 1772409600000,
+            "yield": 3.53,
+            "currency": "USD"
+        },
+        {
+            "id": "37ea79d2-31dc-4dfb-a618-98c2f424d313",
+            "shortName": "ITSA4",
+            "amount": 0.024243,
+            "date": 1772409600000,
+            "yield": 6.6,
+            "currency": "BRL"
+        },
+        {
+            "id": "e0532949-8742-4b3c-9e91-28605ad40b8e",
+            "shortName": "ITUB4",
+            "amount": 0.018182,
+            "date": 1772409600000,
+            "yield": 6.29,
+            "currency": "BRL"
+        },
+        {
+            "id": "082dbb48-3cf9-4453-b7f8-25afb9d105ce",
+            "shortName": "LMT",
+            "amount": 3.45,
+            "date": 1772409600000,
+            "yield": 2.05,
+            "currency": "USD"
+        },
+        {
+            "id": "cdfa1e69-0f8f-409c-8070-f26f882347bc",
+            "shortName": "MCK",
+            "amount": 0.82,
+            "date": 1772409600000,
+            "yield": 0.33,
+            "currency": "USD"
+        },
+        {
+            "id": "98617237-09f1-425e-8de9-4289f6aece44",
+            "shortName": "MCRI",
+            "amount": 0.3,
+            "date": 1772409600000,
+            "yield": 1.29,
+            "currency": "USD"
+        },
+        {
+            "id": "7e886186-e440-4228-ae43-175fee48f3fc",
+            "shortName": "NKE",
+            "amount": 0.41,
+            "date": 1772409600000,
+            "yield": 2.55,
+            "currency": "USD"
+        },
+        {
+            "id": "edf2cfef-3622-4b0e-ada0-cb4005b6daac",
+            "shortName": "PII",
+            "amount": 0.68,
+            "date": 1772409600000,
+            "yield": 4.07,
+            "currency": "USD"
+        },
+        {
+            "id": "f0a79697-e0ed-4c21-8f8d-5fe837d404bf",
+            "shortName": "PTEN",
+            "amount": 0.1,
+            "date": 1772409600000,
+            "yield": 3.95,
+            "currency": "USD"
+        },
+        {
+            "id": "0e9886d7-c94a-437c-83f2-40b311ac7776",
+            "shortName": "RF",
+            "amount": 0.265,
+            "date": 1772409600000,
+            "yield": 3.46,
+            "currency": "USD"
+        },
+        {
+            "id": "f78c0586-7443-41af-badb-3dd77e643457",
+            "shortName": "SF",
+            "amount": 0.51,
+            "date": 1772409600000,
+            "yield": 1.55,
+            "currency": "USD"
+        },
+        {
+            "id": "9b14a593-b3a1-4367-9467-ecc399dc6ab9",
+            "shortName": "TW.O",
+            "amount": 0.14,
+            "date": 1772409600000,
+            "yield": 0.42,
+            "currency": "USD"
+        },
+        {
+            "id": "06a920f4-1603-4be6-af4d-586ba9ba1d7c",
+            "shortName": "UFPI",
+            "amount": 0.36,
+            "date": 1772409600000,
+            "yield": 1.22,
+            "currency": "USD"
+        },
+        {
+            "id": "a5215ec6-0706-4ee5-b7f5-c0904e4662dd",
+            "shortName": "UHS",
+            "amount": 0.2,
+            "date": 1772409600000,
+            "yield": 0.34,
+            "currency": "USD"
+        },
+        {
+            "id": "07573c7d-18b2-4d4e-9317-4b9306b1351b",
+            "shortName": "WEN",
+            "amount": 0.14,
+            "date": 1772409600000,
+            "yield": 8.96,
+            "currency": "USD"
+        },
+        {
+            "id": "b8299f4b-69a2-44a6-9408-6a8fe736455e",
+            "shortName": "WHD",
+            "amount": 0.14,
+            "date": 1772409600000,
+            "yield": 0.95,
+            "currency": "USD"
+        },
+        {
+            "id": "4a1739aa-3033-4238-a173-9aaff49cef82",
+            "shortName": "WMS",
+            "amount": 0.18,
+            "date": 1772409600000,
+            "yield": 0.41,
+            "currency": "USD"
+        },
+        {
+            "id": "341bff71-ead4-43ed-bfda-0a161b4c686a",
+            "shortName": "BBDC4",
+            "amount": 0.018975,
+            "date": 1772496000000,
+            "yield": 5.49,
+            "currency": "BRL"
+        },
+        {
+            "id": "d40ea94e-1c7c-4531-ba70-c1a7f7f84e18",
+            "shortName": "ITUB.K",
+            "amount": 0.003355,
+            "date": 1772496000000,
+            "yield": 5.98,
+            "currency": "USD"
+        },
+        {
+            "id": "918659e8-5481-426f-8a42-caeb0025f36c",
+            "shortName": "KEY",
+            "amount": 0.205,
+            "date": 1772496000000,
+            "yield": 3.78,
+            "currency": "USD"
+        },
+        {
+            "id": "87507484-645a-427c-adc8-8110bd050ebd",
+            "shortName": "MCD",
+            "amount": 1.86,
+            "date": 1772496000000,
+            "yield": 2.19,
+            "currency": "USD"
+        },
+        {
+            "id": "d549d1e6-f34a-4745-a7cf-b02e0713c6f6",
+            "shortName": "PIPR.K",
+            "amount": 5.7,
+            "date": 1772496000000,
+            "yield": 0.84,
+            "currency": "USD"
+        },
+        {
+            "id": "61530d2d-c62b-4966-9d20-e3bb716727b0",
+            "shortName": "AVY",
+            "amount": 0.94,
+            "date": 1772582400000,
+            "yield": 1.89,
+            "currency": "USD"
+        },
+        {
+            "id": "9c2359d2-f3a8-48c9-8168-5307677e9126",
+            "shortName": "BBD",
+            "amount": 0.003613,
+            "date": 1772582400000,
+            "yield": 5.38,
+            "currency": "USD"
+        },
+        {
+            "id": "ce792c29-4f6b-4f16-9f6b-860f2f2c8008",
+            "shortName": "FOXA.OQ",
+            "amount": 0.28,
+            "date": 1772582400000,
+            "yield": 0.98,
+            "currency": "USD"
+        },
+        {
+            "id": "60c7b6d5-d431-4a3f-93ce-6efaaa4b051d",
+            "shortName": "HRB",
+            "amount": 0.42,
+            "date": 1772582400000,
+            "yield": 5.12,
+            "currency": "USD"
+        },
+        {
+            "id": "532bcf6c-d1d3-4a4f-9c06-ac97a8f2603b",
+            "shortName": "LBRT",
+            "amount": 0.09,
+            "date": 1772582400000,
+            "yield": 1.27,
+            "currency": "USD"
+        },
+        {
+            "id": "837f0bcc-da00-489e-922e-9e0e67d06ec5",
+            "shortName": "LRCX.OQ",
+            "amount": 0.26,
+            "date": 1772582400000,
+            "yield": 0.42,
+            "currency": "USD"
+        },
+        {
+            "id": "0f1dee17-dcd8-46ac-9fd0-dc17a0a2a9b3",
+            "shortName": "NE",
+            "amount": 0.5,
+            "date": 1772582400000,
+            "yield": 4.36,
+            "currency": "USD"
+        },
+        {
+            "id": "6b552f77-57e5-41a8-935c-028fc0b971df",
+            "shortName": "ODFL.OQ",
+            "amount": 0.29,
+            "date": 1772582400000,
+            "yield": 0.58,
+            "currency": "USD"
+        },
+        {
+            "id": "7b4a269f-efd8-4bb5-bbd8-2e447e266afa",
+            "shortName": "PVH",
+            "amount": 0.0375,
+            "date": 1772582400000,
+            "yield": 0.22,
+            "currency": "USD"
+        },
+        {
+            "id": "b358f715-0131-4f4a-b0d9-78a52a1ea29a",
+            "shortName": "PYPL.OQ",
+            "amount": 0.14,
+            "date": 1772582400000,
+            "yield": 0.35,
+            "currency": "USD"
+        },
+        {
+            "id": "7875ea6d-cb72-48f7-9fad-f931decc3150",
+            "shortName": "CI",
+            "amount": 1.56,
+            "date": 1772668800000,
+            "yield": 2.07,
+            "currency": "USD"
+        },
+        {
+            "id": "19af644b-152c-40eb-860e-e695a1d7fb3b",
+            "shortName": "ES",
+            "amount": 0.7875,
+            "date": 1772668800000,
+            "yield": 4.1,
+            "currency": "USD"
+        },
+        {
+            "id": "42378aa5-2dc9-4cc5-9e51-535e2daec629",
+            "shortName": "EXPE.OQ",
+            "amount": 0.48,
+            "date": 1772668800000,
+            "yield": 0.75,
+            "currency": "USD"
+        },
+        {
+            "id": "c21e9f62-f16a-44d9-b241-4dc4b66ce0f6",
+            "shortName": "HWC",
+            "amount": 0.5,
+            "date": 1772668800000,
+            "yield": 2.53,
+            "currency": "USD"
+        },
+        {
+            "id": "3287e24e-5c24-4033-968c-26c60463bfa9",
+            "shortName": "JKHY",
+            "amount": 0.61,
+            "date": 1772668800000,
+            "yield": 1.48,
+            "currency": "USD"
+        },
+        {
+            "id": "0c098c6b-a745-4c63-a398-ae8c75f45bf4",
+            "shortName": "LEA",
+            "amount": 0.77,
+            "date": 1772668800000,
+            "yield": 2.23,
+            "currency": "USD"
+        },
+        {
+            "id": "92c7f654-5754-45e5-8f0b-0e5f1385d9c6",
+            "shortName": "QCOM.OQ",
+            "amount": 0.89,
+            "date": 1772668800000,
+            "yield": 2.5,
+            "currency": "USD"
+        },
+        {
+            "id": "fd9b0726-e409-4816-ae13-bc59d7009d78",
+            "shortName": "SLM",
+            "amount": 0.13,
+            "date": 1772668800000,
+            "yield": 2.16,
+            "currency": "USD"
+        },
+        {
+            "id": "186f1c90-73c3-41f8-9db3-ef47747e7086",
+            "shortName": "SSTK",
+            "amount": 0.36,
+            "date": 1772668800000,
+            "yield": 7.64,
+            "currency": "USD"
+        },
+        {
+            "id": "96a37fd5-4757-4c38-ad42-1fd871b8aab3",
+            "shortName": "WDC.OQ",
+            "amount": 0.125,
+            "date": 1772668800000,
+            "yield": 0.12,
+            "currency": "USD"
+        },
+        {
+            "id": "f0d4af57-f133-4647-ae94-bc779a46ca16",
+            "shortName": "AJG",
+            "amount": 0.7,
+            "date": 1772755200000,
+            "yield": 1.25,
+            "currency": "USD"
+        },
+        {
+            "id": "5f2d2186-7ef1-4985-8376-10a1d1f0027a",
+            "shortName": "BAC",
+            "amount": 0.28,
+            "date": 1772755200000,
+            "yield": 2.06,
+            "currency": "USD"
+        },
+        {
+            "id": "b71e40ce-8330-4617-8ed2-11b7b4e62e93",
+            "shortName": "CHRW.OQ",
+            "amount": 0.63,
+            "date": 1772755200000,
+            "yield": 1.41,
+            "currency": "USD"
+        },
+        {
+            "id": "1f07ecbf-ba16-4416-9ae8-426cde428896",
+            "shortName": "EBC.OQ",
+            "amount": 0.13,
+            "date": 1772755200000,
+            "yield": 2.36,
+            "currency": "USD"
+        },
+        {
+            "id": "584073e2-b886-4b77-b792-7c5c8fea31f5",
+            "shortName": "EXPO",
+            "amount": 0.31,
+            "date": 1772755200000,
+            "yield": 1.8,
+            "currency": "USD"
+        },
+        {
+            "id": "04c6f8ce-923f-4ede-bd7f-be6d4b997cc7",
+            "shortName": "NYCB",
+            "amount": 0.01,
+            "date": 1772755200000,
+            "yield": 0.28,
+            "currency": "USD"
+        },
+        {
+            "id": "50d41c7b-0f4e-4df5-884d-b1b8005b576b",
+            "shortName": "GM",
+            "amount": 0.18,
+            "date": 1772755200000,
+            "yield": 0.7,
+            "currency": "USD"
+        },
+        {
+            "id": "dabd7a23-93e2-4028-b41e-5ad324921adc",
+            "shortName": "ITT",
+            "amount": 0.386,
+            "date": 1772755200000,
+            "yield": 0.69,
+            "currency": "USD"
+        },
+        {
+            "id": "66f8ea6e-37cd-4ee3-a735-a9de6490199b",
+            "shortName": "KHC.OQ",
+            "amount": 0.4,
+            "date": 1772755200000,
+            "yield": 6.45,
+            "currency": "USD"
+        },
+        {
+            "id": "73d7424e-0149-414a-a924-4d45b4161391",
+            "shortName": "KMB",
+            "amount": 1.28,
+            "date": 1772755200000,
+            "yield": 4.61,
+            "currency": "USD"
+        },
+        {
+            "id": "1ee4ffc8-469c-41d2-8069-e8cd21302d2f",
+            "shortName": "KNEBV",
+            "amount": 1.8,
+            "date": 1772755200000,
+            "yield": 3.01,
+            "currency": "EUR"
+        },
+        {
+            "id": "60c344fd-686c-4161-b5b5-cec9d311379e",
+            "shortName": "KNX.N",
+            "amount": 0.2,
+            "date": 1772755200000,
+            "yield": 1.21,
+            "currency": "USD"
+        },
+        {
+            "id": "a948d2a2-616b-490c-96dc-447111b64796",
+            "shortName": "LAD",
+            "amount": 0.55,
+            "date": 1772755200000,
+            "yield": 0.72,
+            "currency": "USD"
+        },
+        {
+            "id": "69f95608-ea7c-46ca-b50a-e48943e816e4",
+            "shortName": "LHX",
+            "amount": 1.25,
+            "date": 1772755200000,
+            "yield": 1.39,
+            "currency": "USD"
+        },
+        {
+            "id": "66cbd981-a0c8-43ce-9d86-5757c16a9a6c",
+            "shortName": "MAIN",
+            "amount": 0.26,
+            "date": 1772755200000,
+            "yield": 7.15,
+            "currency": "USD"
+        },
+        {
+            "id": "10f2dc9f-ffd8-41f7-b8f1-edbc9096a3a5",
+            "shortName": "LANC",
+            "amount": 1.0,
+            "date": 1772755200000,
+            "yield": 2.41,
+            "currency": "USD"
+        },
+        {
+            "id": "626bbd95-d899-4246-b275-306f1c62939c",
+            "shortName": "NTRS.OQ",
+            "amount": 0.8,
+            "date": 1772755200000,
+            "yield": 2.12,
+            "currency": "USD"
+        },
+        {
+            "id": "b1af1eb6-ea69-4034-aaac-3bace0915f34",
+            "shortName": "PEP.OQ",
+            "amount": 1.4225,
+            "date": 1772755200000,
+            "yield": 3.39,
+            "currency": "USD"
+        },
+        {
+            "id": "44b8c283-bf17-4764-91d1-89ca353ca600",
+            "shortName": "RCL",
+            "amount": 1.5,
+            "date": 1772755200000,
+            "yield": 1.1,
+            "currency": "USD"
+        },
+        {
+            "id": "592f7909-c253-4da2-96af-b9ea2ec71bdb",
+            "shortName": "TEX.N",
+            "amount": 0.17,
+            "date": 1772755200000,
+            "yield": 0.98,
+            "currency": "USD"
+        },
+        {
+            "id": "e29184b9-49d6-4a77-814a-21b933e796b6",
+            "shortName": "TPR",
+            "amount": 0.4,
+            "date": 1772755200000,
+            "yield": 0.98,
+            "currency": "USD"
+        },
+        {
+            "id": "e1c61162-46c7-455a-83f8-3947732698ec",
+            "shortName": "TT",
+            "amount": 1.05,
+            "date": 1772755200000,
+            "yield": 0.81,
+            "currency": "USD"
+        },
+        {
+            "id": "f8a31229-3da3-439f-95ed-b80ad6e4ce7a",
+            "shortName": "UNF",
+            "amount": 0.365,
+            "date": 1772755200000,
+            "yield": 0.59,
+            "currency": "USD"
+        },
+        {
+            "id": "93b517f2-77a7-42e9-8d63-e6a9f5d2a6ac",
+            "shortName": "COLM",
+            "amount": 0.3,
+            "date": 1773014400000,
+            "yield": 1.9,
+            "currency": "USD"
+        },
+        {
+            "id": "26810426-e66f-476a-8041-5445be6df1c3",
+            "shortName": "FAF",
+            "amount": 0.55,
+            "date": 1773014400000,
+            "yield": 3.24,
+            "currency": "USD"
+        },
+        {
+            "id": "184ab6e2-8f49-4dd5-a464-99a28301ebfd",
+            "shortName": "FDX",
+            "amount": 1.45,
+            "date": 1773014400000,
+            "yield": 1.53,
+            "currency": "USD"
+        },
+        {
+            "id": "4a9e7207-d33e-4e72-9c55-9191036b0b42",
+            "shortName": "GE",
+            "amount": 0.47,
+            "date": 1773014400000,
+            "yield": 0.46,
+            "currency": "USD"
+        },
+        {
+            "id": "d1afde5a-6567-4bcf-b1a3-73927b02feb0",
+            "shortName": "GOOGL.OQ",
+            "amount": 0.21,
+            "date": 1773014400000,
+            "yield": 0.27,
+            "currency": "USD"
+        },
+        {
+            "id": "1d7f8cd5-0012-42b8-a4d6-f67543b12bd7",
+            "shortName": "MOS",
+            "amount": 0.22,
+            "date": 1773014400000,
+            "yield": 2.97,
+            "currency": "USD"
+        },
+        {
+            "id": "fe63fd7e-636a-4e74-bf61-2f8d61d3b351",
+            "shortName": "OC",
+            "amount": 0.79,
+            "date": 1773014400000,
+            "yield": 2.13,
+            "currency": "USD"
+        },
+        {
+            "id": "7d26bdf6-9dc7-47a4-bb48-c2d169553a6e",
+            "shortName": "PAYC",
+            "amount": 0.375,
+            "date": 1773014400000,
+            "yield": 1.2,
+            "currency": "USD"
+        },
+        {
+            "id": "8109193e-5d97-4c10-9338-1d86e9bc9259",
+            "shortName": "VMC",
+            "amount": 0.52,
+            "date": 1773014400000,
+            "yield": 0.6,
+            "currency": "USD"
+        },
+        {
+            "id": "be15c6af-04cf-45c9-987c-f5c31f7fc7e6",
+            "shortName": "AEE",
+            "amount": 0.75,
+            "date": 1773100800000,
+            "yield": 2.56,
+            "currency": "USD"
+        },
+        {
+            "id": "747392a7-d199-4fff-81b5-2f452fde245f",
+            "shortName": "CME",
+            "amount": 1.3,
+            "date": 1773100800000,
+            "yield": 1.65,
+            "currency": "USD"
+        },
+        {
+            "id": "63395bb0-9081-46b5-82c6-411df91540cf",
+            "shortName": "ANTM.K",
+            "amount": 1.72,
+            "date": 1773100800000,
+            "yield": 1.97,
+            "currency": "USD"
+        },
+        {
+            "id": "284b849d-74a7-4212-bd17-134fbb50b585",
+            "shortName": "FIS",
+            "amount": 0.44,
+            "date": 1773100800000,
+            "yield": 3.42,
+            "currency": "USD"
+        },
+        {
+            "id": "a89c6856-5206-40dd-b15e-24b1c9fe8b86",
+            "shortName": "SPG",
+            "amount": 2.2,
+            "date": 1773100800000,
+            "yield": 4.34,
+            "currency": "USD"
+        },
+        {
+            "id": "70d58fb9-64b8-4b56-872f-afd58891361a",
+            "shortName": "TRV",
+            "amount": 1.1,
+            "date": 1773100800000,
+            "yield": 1.48,
+            "currency": "USD"
+        },
+        {
+            "id": "66166108-6d24-4239-96a9-0e38478c459f",
+            "shortName": "VFC",
+            "amount": 0.09,
+            "date": 1773100800000,
+            "yield": 1.77,
+            "currency": "USD"
+        },
+        {
+            "id": "09ee11d9-17f6-49d7-b68d-154b2880c340",
+            "shortName": "WY",
+            "amount": 0.21,
+            "date": 1773100800000,
+            "yield": 3.14,
+            "currency": "USD"
+        },
+        {
+            "id": "6ee72ff8-d66d-4598-97b1-b8930a0d8f6a",
+            "shortName": "HPQ",
+            "amount": 0.3,
+            "date": 1773187200000,
+            "yield": 6.07,
+            "currency": "USD"
+        },
+        {
+            "id": "b3386e39-12eb-4993-a479-cb2c3dcf2f43",
+            "shortName": "NVS",
+            "amount": 4.772961,
+            "date": 1773187200000,
+            "yield": 2.45,
+            "currency": "USD"
+        },
+        {
+            "id": "0a6a5f02-127c-4bcb-b3c9-a35dcade701e",
+            "shortName": "NWSA.OQ",
+            "amount": 0.1,
+            "date": 1773187200000,
+            "yield": 0.88,
+            "currency": "USD"
+        },
+        {
+            "id": "16d02079-4be9-47fe-9dd7-490c246a8a2a",
+            "shortName": "PFG",
+            "amount": 0.8,
+            "date": 1773187200000,
+            "yield": 3.41,
+            "currency": "USD"
+        },
+        {
+            "id": "1c8ec8d7-1551-41df-b662-a416bbba63fc",
+            "shortName": "REG.OQ",
+            "amount": 0.755,
+            "date": 1773187200000,
+            "yield": 3.77,
+            "currency": "USD"
+        },
+        {
+            "id": "27f79a7f-7771-4494-907b-06950de9701a",
+            "shortName": "SR",
+            "amount": 0.825,
+            "date": 1773187200000,
+            "yield": 3.46,
+            "currency": "USD"
+        },
+        {
+            "id": "542380c2-faff-4f67-9916-79beb4cad932",
+            "shortName": "FNV",
+            "amount": 0.44,
+            "date": 1773273600000,
+            "yield": 0.6,
+            "currency": "USD"
+        },
+        {
+            "id": "dab2cbcf-32c5-40a4-b7b5-eb1b1e14aced",
+            "shortName": "LUV",
+            "amount": 0.18,
+            "date": 1773273600000,
+            "yield": 1.41,
+            "currency": "USD"
+        },
+        {
+            "id": "cef7a7c5-3c26-4a5b-88d4-2e90b1ecd0b4",
+            "shortName": "MPW",
+            "amount": 0.09,
+            "date": 1773273600000,
+            "yield": 6.07,
+            "currency": "USD"
+        },
+        {
+            "id": "0179c60c-159a-49d1-82b0-e2650f4922fb",
+            "shortName": "VSH",
+            "amount": 0.1,
+            "date": 1773273600000,
+            "yield": 2.12,
+            "currency": "USD"
+        },
+        {
+            "id": "60760d9d-1db4-4718-9aac-999e5bcd1f00",
+            "shortName": "ADP.OQ",
+            "amount": 1.7,
+            "date": 1773360000000,
+            "yield": 2.98,
+            "currency": "USD"
+        },
+        {
+            "id": "85bdfe61-d1f7-49e3-b22c-6f5b0b1b3c28",
+            "shortName": "ALLE",
+            "amount": 0.55,
+            "date": 1773360000000,
+            "yield": 1.14,
+            "currency": "USD"
+        },
+        {
+            "id": "47813036-53ab-4e99-b752-584a4336c596",
+            "shortName": "AMH.N",
+            "amount": 0.33,
+            "date": 1773360000000,
+            "yield": 3.8,
+            "currency": "USD"
+        },
+        {
+            "id": "b6e38827-5898-47cf-b31e-1dc2aeba0915",
+            "shortName": "ARCC",
+            "amount": 0.48,
+            "date": 1773360000000,
+            "yield": 9.91,
+            "currency": "USD"
+        },
+        {
+            "id": "2efbf845-e29c-450a-82e8-ee3415c459d5",
+            "shortName": "EMN",
+            "amount": 0.84,
+            "date": 1773360000000,
+            "yield": 4.16,
+            "currency": "USD"
+        },
+        {
+            "id": "f595a499-3868-4fcf-b6a8-0a4128ab21e4",
+            "shortName": "ENS",
+            "amount": 0.2625,
+            "date": 1773360000000,
+            "yield": 0.56,
+            "currency": "USD"
+        },
+        {
+            "id": "413aa3c3-66a4-46f5-8684-0e23ced35cfe",
+            "shortName": "ESNT",
+            "amount": 0.35,
+            "date": 1773360000000,
+            "yield": 2.02,
+            "currency": "USD"
+        },
+        {
+            "id": "657c8b46-f005-4092-9b11-59aa233b7409",
+            "shortName": "FHN.N",
+            "amount": 0.17,
+            "date": 1773360000000,
+            "yield": 2.44,
+            "currency": "USD"
+        },
+        {
+            "id": "24c465c5-e9c0-45f0-b8f9-fcd20e7393e6",
+            "shortName": "GILD.OQ",
+            "amount": 0.82,
+            "date": 1773360000000,
+            "yield": 2.04,
+            "currency": "USD"
+        },
+        {
+            "id": "5c6744ab-a142-42f1-bea3-9111f1d74664",
+            "shortName": "GRMN.OQ",
+            "amount": 0.9,
+            "date": 1773360000000,
+            "yield": 1.61,
+            "currency": "USD"
+        },
+        {
+            "id": "3a5f8ea1-2bdd-46f0-915d-cbfe177ba9e5",
+            "shortName": "NWE.OQ",
+            "amount": 0.67,
+            "date": 1773360000000,
+            "yield": 3.79,
+            "currency": "USD"
+        },
+        {
+            "id": "30d5996f-6543-40ae-892e-ea266f8229ae",
+            "shortName": "PB",
+            "amount": 0.6,
+            "date": 1773360000000,
+            "yield": 3.22,
+            "currency": "USD"
+        },
+        {
+            "id": "ec2c23fc-c843-4780-8e0b-82cffb9af95d",
+            "shortName": "RNR",
+            "amount": 0.41,
+            "date": 1773360000000,
+            "yield": 0.53,
+            "currency": "USD"
+        },
+        {
+            "id": "4718c68a-d7ad-4393-a2b1-9973c4fc278b",
+            "shortName": "SNDR",
+            "amount": 0.1,
+            "date": 1773360000000,
+            "yield": 1.32,
+            "currency": "USD"
+        },
+        {
+            "id": "e308df7a-8ab2-4b4f-a17f-9ec9a5c01f27",
+            "shortName": "WMB",
+            "amount": 0.525,
+            "date": 1773360000000,
+            "yield": 2.77,
+            "currency": "USD"
+        },
+        {
+            "id": "e6874036-5f8f-496d-b8b0-5904c65e69ec",
+            "shortName": "WRT1V",
+            "amount": 0.79,
+            "date": 1773360000000,
+            "yield": 1.24,
+            "currency": "EUR"
+        },
+        {
+            "id": "d1c5a0b5-d72a-4727-a6b8-fdbefce6e801",
+            "shortName": "AIG",
+            "amount": 0.45,
+            "date": 1773619200000,
+            "yield": 2.24,
+            "currency": "USD"
+        },
+        {
+            "id": "b47cb561-3215-4493-b386-d613269232a4",
+            "shortName": "AME",
+            "amount": 0.34,
+            "date": 1773619200000,
+            "yield": 0.54,
+            "currency": "USD"
+        },
+        {
+            "id": "c6d0879e-f830-4510-a9ba-deb378162d88",
+            "shortName": "CBU.N",
+            "amount": 0.47,
+            "date": 1773619200000,
+            "yield": 2.8,
+            "currency": "USD"
+        },
+        {
+            "id": "d887f57c-abfb-4902-b92c-3ecdc6c2fbb3",
+            "shortName": "DTE",
+            "amount": 1.165,
+            "date": 1773619200000,
+            "yield": 3.06,
+            "currency": "USD"
+        },
+        {
+            "id": "269a98df-969b-4688-b176-faec928258d5",
+            "shortName": "EXP",
+            "amount": 0.25,
+            "date": 1773619200000,
+            "yield": 0.43,
+            "currency": "USD"
+        },
+        {
+            "id": "11e55a88-54bf-41e2-b74a-a3ed1de3a466",
+            "shortName": "EXR",
+            "amount": 1.62,
+            "date": 1773619200000,
+            "yield": 4.43,
+            "currency": "USD"
+        },
+        {
+            "id": "1c9f9ca5-1ead-4873-bf0e-2a7ad39832de",
+            "shortName": "G",
+            "amount": 0.1875,
+            "date": 1773619200000,
+            "yield": 1.82,
+            "currency": "USD"
+        },
+        {
+            "id": "d6e16ff6-f719-4dc0-a972-e2cbd27b7f13",
+            "shortName": "IRM",
+            "amount": 0.864,
+            "date": 1773619200000,
+            "yield": 2.93,
+            "currency": "USD"
+        },
+        {
+            "id": "94ad0716-776a-4a41-a0ac-ee1d01ee0054",
+            "shortName": "LDOS",
+            "amount": 0.43,
+            "date": 1773619200000,
+            "yield": 0.92,
+            "currency": "USD"
+        },
+        {
+            "id": "767ca11f-0a36-4c23-888b-6325602c5403",
+            "shortName": "MAC",
+            "amount": 0.17,
+            "date": 1773619200000,
+            "yield": 3.67,
+            "currency": "USD"
+        },
+        {
+            "id": "bfc10868-20c5-4f84-ada6-fde544ab6f79",
+            "shortName": "FB.OQ",
+            "amount": 0.525,
+            "date": 1773619200000,
+            "yield": 0.33,
+            "currency": "USD"
+        },
+        {
+            "id": "e9f5af8b-82b2-47a3-b225-9e9e17bb7b21",
+            "shortName": "MRK",
+            "amount": 0.85,
+            "date": 1773619200000,
+            "yield": 2.7,
+            "currency": "USD"
+        },
+        {
+            "id": "9361062f-b75f-44d6-9a97-99ac217fd699",
+            "shortName": "NDAQ.OQ",
+            "amount": 0.27,
+            "date": 1773619200000,
+            "yield": 1.32,
+            "currency": "USD"
+        },
+        {
+            "id": "dd7e7162-b692-451f-9f5a-8fdab26ab6e9",
+            "shortName": "NTES.OQ",
+            "amount": 1.16,
+            "date": 1773619200000,
+            "yield": 2.52,
+            "currency": "USD"
+        },
+        {
+            "id": "0fe94028-5583-4756-b621-25f4974585a2",
+            "shortName": "PECO",
+            "amount": 0.1083,
+            "date": 1773619200000,
+            "yield": 3.3,
+            "currency": "USD"
+        },
+        {
+            "id": "60c7ffc2-e767-4b5d-826d-360fbab50188",
+            "shortName": "CBS",
+            "amount": 0.05,
+            "date": 1773619200000,
+            "yield": 1.94,
+            "currency": "USD"
+        },
+        {
+            "id": "c4d45ef0-75c7-498d-9f80-9157ec0950d3",
+            "shortName": "TROW.OQ",
+            "amount": 1.3,
+            "date": 1773619200000,
+            "yield": 5.42,
+            "currency": "USD"
+        },
+        {
+            "id": "594cfcdc-db3c-4b6a-b3af-33160421237f",
+            "shortName": "UGI.N",
+            "amount": 0.375,
+            "date": 1773619200000,
+            "yield": 3.87,
+            "currency": "USD"
+        },
+        {
+            "id": "b5075a53-bdac-4e9d-9772-268f808b241f",
+            "shortName": "ARES",
+            "amount": 1.35,
+            "date": 1773705600000,
+            "yield": 3.35,
+            "currency": "USD"
+        },
+        {
+            "id": "4949b10b-b0b8-4dbe-b901-a28522add29b",
+            "shortName": "BN",
+            "amount": 0.07,
+            "date": 1773705600000,
+            "yield": 0.5,
+            "currency": "USD"
+        },
+        {
+            "id": "e022f2a0-4718-4f9d-be58-d8a3331bd13f",
+            "shortName": "HCA",
+            "amount": 0.78,
+            "date": 1773705600000,
+            "yield": 0.53,
+            "currency": "USD"
+        },
+        {
+            "id": "34c312be-ab9a-4101-b824-ad65ec6bb93b",
+            "shortName": "ICE",
+            "amount": 0.52,
+            "date": 1773705600000,
+            "yield": 1.26,
+            "currency": "USD"
+        },
+        {
+            "id": "c485cc97-a4a3-485f-bea2-252c1426d01e",
+            "shortName": "JJSF",
+            "amount": 0.8,
+            "date": 1773705600000,
+            "yield": 3.66,
+            "currency": "USD"
+        },
+        {
+            "id": "a4f33b5a-e31b-4c2f-9943-20c7071eccdf",
+            "shortName": "PHM",
+            "amount": 0.26,
+            "date": 1773705600000,
+            "yield": 0.65,
+            "currency": "USD"
+        },
+        {
+            "id": "efc6cb96-2ed6-4a58-92e5-acba62b14baa",
+            "shortName": "PLD",
+            "amount": 1.07,
+            "date": 1773705600000,
+            "yield": 2.91,
+            "currency": "USD"
+        },
+        {
+            "id": "a398f740-7e6e-49aa-9ccf-7dbc1ff885dd",
+            "shortName": "TSM",
+            "amount": 0.967804,
+            "date": 1773705600000,
+            "yield": 0.84,
+            "currency": "USD"
+        },
+        {
+            "id": "165a3ee2-e637-45be-8215-e315711a8eb0",
+            "shortName": "HBAN",
+            "amount": 0.155,
+            "date": 1773792000000,
+            "yield": 3.59,
+            "currency": "USD"
+        },
+        {
+            "id": "50121911-b3d6-48cf-bbda-e589f58dd15c",
+            "shortName": "QSR",
+            "amount": 0.65,
+            "date": 1773878400000,
+            "yield": 3.75,
+            "currency": "USD"
+        },
+        {
+            "id": "d5f68d27-ff23-443e-b74f-80f2afaac3d9",
+            "shortName": "APH",
+            "amount": 0.25,
+            "date": 1774224000000,
+            "yield": 0.51,
+            "currency": "USD"
+        },
+        {
+            "id": "c7e455ce-cdfd-42f5-aa71-7a003131bc3a",
+            "shortName": "POR",
+            "amount": 0.525,
+            "date": 1774224000000,
+            "yield": 3.84,
+            "currency": "USD"
+        },
+        {
+            "id": "8a134ffe-f9b2-4ca3-af27-78c5998e06cf",
+            "shortName": "STMp.CHI",
+            "amount": 0.075797,
+            "date": 1774224000000,
+            "yield": 1.1,
+            "currency": "EUR"
+        },
+        {
+            "id": "e4822209-e912-459b-8d16-8515eabc7723",
+            "shortName": "CINF",
+            "amount": 0.94,
+            "date": 1774310400000,
+            "yield": 2.14,
+            "currency": "USD"
+        },
+        {
+            "id": "814cbc76-fe66-4b2b-9c3a-7bc7a31d370b",
+            "shortName": "CGCBV",
+            "amount": 1.17,
+            "date": 1774396800000,
+            "yield": 2.43,
+            "currency": "EUR"
+        },
+        {
+            "id": "c9f6adf9-47a3-4bcb-b789-6932c2d87ea9",
+            "shortName": "NDA",
+            "amount": 0.96,
+            "date": 1774396800000,
+            "yield": 5.92,
+            "currency": "EUR"
+        },
+        {
+            "id": "09e8f8bc-550b-469e-ade2-db08f4d2bccd",
+            "shortName": "ORNBV",
+            "amount": 0.9,
+            "date": 1774396800000,
+            "yield": 2.43,
+            "currency": "EUR"
+        },
+        {
+            "id": "e0497285-01c6-408f-937e-e2ed57ed061a",
+            "shortName": "STERV",
+            "amount": 0.13,
+            "date": 1774396800000,
+            "yield": 2.1,
+            "currency": "EUR"
+        },
+        {
+            "id": "a1de3b3d-aee7-4251-98b0-1c4598abc4ca",
+            "shortName": "STX.OQ",
+            "amount": 0.74,
+            "date": 1774396800000,
+            "yield": 0.68,
+            "currency": "USD"
+        },
+        {
+            "id": "9282e3bd-6d56-4ba2-8488-657330540310",
+            "shortName": "TIETO",
+            "amount": 0.44,
+            "date": 1774396800000,
+            "yield": 7.86,
+            "currency": "EUR"
+        },
+        {
+            "id": "a7f00b1b-51f0-498e-862b-8a9b96887bc3",
+            "shortName": "CW",
+            "amount": 0.24,
+            "date": 1774483200000,
+            "yield": 0.14,
+            "currency": "USD"
+        },
+        {
+            "id": "5ab8e668-e4e5-40b7-ae32-c091b1236ff2",
+            "shortName": "NESTE",
+            "amount": 0.2,
+            "date": 1774483200000,
+            "yield": 0.96,
+            "currency": "EUR"
+        },
+        {
+            "id": "6dd3fd97-fbac-497d-8ec2-d7b50df1dde1",
+            "shortName": "VALMT",
+            "amount": 0.68,
+            "date": 1774483200000,
+            "yield": 4.92,
+            "currency": "EUR"
+        },
+        {
+            "id": "e056bc0f-6640-429e-a324-ee8c7ea01ca7",
+            "shortName": "AFX",
+            "amount": 0.55,
+            "date": 1774569600000,
+            "yield": 2.24,
+            "currency": "EUR"
+        },
+        {
+            "id": "d1edc584-2326-45ab-af68-ae8bdf5289e6",
+            "shortName": "BTI",
+            "amount": 0.834851,
+            "date": 1774569600000,
+            "yield": 5.4,
+            "currency": "USD"
+        },
+        {
+            "id": "454e30ed-50c2-4822-8e96-42be35bea52e",
+            "shortName": "CP",
+            "amount": 0.167516,
+            "date": 1774569600000,
+            "yield": 0.76,
+            "currency": "USD"
+        },
+        {
+            "id": "628e6b89-aad3-448a-b5ce-a0a6f3919770",
+            "shortName": "ELS.N",
+            "amount": 0.5425,
+            "date": 1774569600000,
+            "yield": 3.04,
+            "currency": "USD"
+        },
+        {
+            "id": "77d7f50b-7384-45cc-a591-aa8857aefb84",
+            "shortName": "FLS",
+            "amount": 0.22,
+            "date": 1774569600000,
+            "yield": 0.94,
+            "currency": "USD"
+        },
+        {
+            "id": "bf264f11-cd9c-4302-81b7-23cbca696454",
+            "shortName": "KCR",
+            "amount": 2.25,
+            "date": 1774569600000,
+            "yield": 1.79,
+            "currency": "EUR"
+        },
+        {
+            "id": "2f4009c2-3fad-4968-9d7d-b4c0e00e2e30",
+            "shortName": "KDP",
+            "amount": 0.23,
+            "date": 1774569600000,
+            "yield": 3.1,
+            "currency": "USD"
+        },
+        {
+            "id": "b7747205-6058-40d2-a74e-1e96be9c3328",
+            "shortName": "KESKOB",
+            "amount": 0.23,
+            "date": 1774569600000,
+            "yield": 4.32,
+            "currency": "EUR"
+        },
+        {
+            "id": "21c3e93e-b1a7-49fd-8dad-6111927c960c",
+            "shortName": "SRT3",
+            "amount": 0.74,
+            "date": 1774569600000,
+            "yield": 0.32,
+            "currency": "EUR"
+        },
+        {
+            "id": "6f7a6d95-c561-4258-a530-e7c38c81616a",
+            "shortName": "NVO",
+            "amount": 1.275101,
+            "date": 1774828800000,
+            "yield": 3.48,
+            "currency": "USD"
+        },
+        {
+            "id": "3c6bef17-0806-449d-8e4e-7af4ed9a4ef4",
+            "shortName": "A",
+            "amount": 0.255,
+            "date": 1774915200000,
+            "yield": 0.79,
+            "currency": "USD"
+        },
+        {
+            "id": "9dd9cb7f-162f-40cd-b949-aa2d4a51b763",
+            "shortName": "AVB",
+            "amount": 1.78,
+            "date": 1774915200000,
+            "yield": 3.97,
+            "currency": "USD"
+        },
+        {
+            "id": "7be76191-6efd-476a-8f9a-26cb22f1967b",
+            "shortName": "BEN",
+            "amount": 0.33,
+            "date": 1774915200000,
+            "yield": 4.77,
+            "currency": "USD"
+        },
+        {
+            "id": "dde7bf86-3881-45d0-a0ce-66981a16e72c",
+            "shortName": "DOX",
+            "amount": 0.569,
+            "date": 1774915200000,
+            "yield": 3.04,
+            "currency": "USD"
+        },
+        {
+            "id": "e9fbeee6-a781-4450-8760-9472105f10be",
+            "shortName": "FR",
+            "amount": 0.5,
+            "date": 1774915200000,
+            "yield": 3.02,
+            "currency": "USD"
+        },
+        {
+            "id": "5e8ec135-913d-47da-8989-f3a29dd536a7",
+            "shortName": "ITW",
+            "amount": 1.61,
+            "date": 1774915200000,
+            "yield": 2.08,
+            "currency": "USD"
+        },
+        {
+            "id": "457cf30a-48d7-42be-b076-04f7efa12bfd",
+            "shortName": "MDLZ.OQ",
+            "amount": 0.5,
+            "date": 1774915200000,
+            "yield": 3.1,
+            "currency": "USD"
+        },
+        {
+            "id": "86ef3e14-9eb3-4679-b344-85219b95672a",
+            "shortName": "MPWR",
+            "amount": 2.0,
+            "date": 1774915200000,
+            "yield": 0.53,
+            "currency": "USD"
+        },
+        {
+            "id": "ee1d6b37-c88d-4a4b-958e-0f9afea2bc9a",
+            "shortName": "RANDa.CHI",
+            "amount": 1.62,
+            "date": 1774915200000,
+            "yield": 5.91,
+            "currency": "EUR"
+        },
+        {
+            "id": "471451b8-ac2a-4926-81bb-46cb4711cc5a",
+            "shortName": "RRX",
+            "amount": 0.35,
+            "date": 1774915200000,
+            "yield": 0.64,
+            "currency": "USD"
+        },
+        {
+            "id": "6f326ddd-a504-4b8f-9e67-a2f1bc3f5430",
+            "shortName": "STAG",
+            "amount": 0.3875,
+            "date": 1774915200000,
+            "yield": 3.91,
+            "currency": "USD"
+        },
+        {
+            "id": "ce3796c6-a419-4a9e-b39c-49d0e6e026fa",
+            "shortName": "SYK",
+            "amount": 0.88,
+            "date": 1774915200000,
+            "yield": 0.93,
+            "currency": "USD"
+        },
+        {
+            "id": "dbbab068-5235-4f41-b79e-13b324259a0f",
+            "shortName": "FPp.CHI",
+            "amount": 0.85,
+            "date": 1774915200000,
+            "yield": 5.28,
+            "currency": "EUR"
+        },
+        {
+            "id": "f73259d7-b650-4a7b-b5f0-ff852a1536a3",
+            "shortName": "VTR",
+            "amount": 0.52,
+            "date": 1774915200000,
+            "yield": 2.25,
+            "currency": "USD"
+        }
+    ],
+    "isSuccess": true
+}

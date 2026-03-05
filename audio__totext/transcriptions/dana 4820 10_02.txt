@@ -1,0 +1,1182 @@
+ There's no quiz, no quiz this week, no quiz this week. Enjoy the midterm in the other class.
+ Okay? And I'm also, I need to look at the schedule, right? You know whether we allow for the quiz, okay?
+ If there's no quiz, we do have time for quiz, but I'd like to change the way of this, okay?
+ I put a decision on probably on Thursday, right?
+ So don't worry. So this week, enjoy the other class midterm, okay?
+ All right, so on the last day, we learned the just-like regression model, right?
+ We simply completed the topic, the basic, right?
+ So let's do a review question. We need to do a proof foundation, right?
+ Yep, so we get a question, you do, right? Okay.
+ All right, I'm going to look at the description.
+ Suppose you are our data analyst as a company that sells customer electronics online.
+ It's a sale, right? It's a sale company, right, you know? Okay, selling stuff online.
+ The marketing team wants to increase the sale efficiency, effectively,
+ efficiently by identifying which customers are more likely to make a purchase.
+ You know, just like Amazon, right? You know, sometimes when you log in, Amazon, right,
+ you can track the IP address, you can track how long you have been looking for the website, right?
+ All right, so the company has historical data on thousands of customers,
+ including the amount of money spent on marketing for the customer.
+ Now, you know what my marketing, Amazon is selling marketing, right, you know?
+ If the customer logged in the website, right, okay, you can have an advertisement, you know what I'm saying, right?
+ Say if you search for an item, right, you can have some special advertisement for this customer, right?
+ Say you're looking for, I don't know what you're looking for, looking for a computer, let's say a computer, right?
+ So it will show relative advertisement for computer, right?
+ Say you're looking for a laptop, a desktop, or all the other accessories, this is what I'm saying, right?
+ This is called amount of money spent on marketing for this particular customer, is it really not?
+ It's a payment advertisement, right? Just like, you know, go to Amazon, go to YouTube, probably go to Google, right, you know?
+ The number of months the customer has been with the company.
+ And I said, right, when you log into Amazon, right, they can track your IP address, they can get most of the information if you like.
+ So then we know how long the customer has been spent with the company. Does this make sense to you?
+ Right, the data set is downloaded from this line, so we're going to extract the data, right?
+ And the data set is downloaded from this line, you click the link, right?
+ Okay, type the link on the browser, you'll get the data set.
+ The objective is to predict whether a customer will make a purchase or not, based on the thought predictor.
+ First, marketing spending, as I said, right, you know, is the amount of money spent on marketing for the customer.
+ Second, customer money, the number of months the customer has been with the company, right?
+ So we're going to answer the rest of the question based on the data set. Does this make sense to you?
+ So far so good?
+ Click forward, now.
+ So let's get the data set, okay, saved on the computer, and then use R, we're going to fit the model to data.
+ So let's get the data set first.
+ So let me go over to the browser, I'm going to do that, right?
+ Yeah, that's okay.
+ All right, first of all, I want to load the data.
+ Load the data from the link to R. How to do that?
+ All right, so let me get the address of the file.
+ So call file, address, equal to, you don't have to follow my code, okay, you can follow your way to load the data.
+ You don't have to follow me, is that clear or not?
+ So that's the link to the data, right?
+ I copy the link.
+ This is the link of the file, you guys see that?
+ So I save the link, okay, to an object called file address.
+ All right, these objects contain the address of the file, does that make sense to you?
+ Now I need to use the read.csv function that read the data from this file and load into R, is that clear?
+ All right, so let's say read.csv, all right, the function, take the file address and then save it into my data.
+ So far so good, so many want this to lie?
+ By the way, you don't have to follow my way, you can use your way to read the data, is that clear or not?
+ Yeah, no problem, okay, let me type the data.
+ Let me take the first few lines of the data, right?
+ Looks pretty good, so the three column, first is called marketing spending, right?
+ Next is called customer, is that the same one?
+ You get the same data?
+ So the first row, right?
+ Customer, 10 years, month, and purchase.
+ Purchase take two value, either one or zero.
+ Zero means the customer make no purchase.
+ Before, okay, make no purchase, what means customer make purchase, is that clear?
+ Okay, do you need more time to read the data and load into R?
+ No problem?
+ Do you need more time?
+ Are we okay?
+ All right, now we're going to read the question.
+ Okay, state the logistic regression model that describes the relationship between the predictors, the two, right?
+ Okay, customer spending and customer month, and purchase probability.
+ All right, so we know we're going to use the logistic model, right?
+ Now there are two ways to state the model.
+ All right, first we get model.
+ Okay, that's the point, right?
+ P, be the purchase probability, right?
+ Okay, customer make a purchase.
+ All right, let's see.
+ And X, it's X1 by the way, okay?
+ X with a spanning, right?
+ X spanning, the amount of money spent on marketing for a customer.
+ And X month, be the number of month a customer has been with the company.
+ So here's the logistic model.
+ We say log or long of P, P over 1 minus P,
+ equals to the interest at A plus B1 plus B for marketing, also spanning,
+ times X spanning of P for month, times X for month.
+ So what's so good?
+ That's the model, right?
+ How we relate the model to P with a list of predictors, is that clear?
+ Now let's just get in my right.
+ The log of P over 1 minus P is called log art of making a purchase.
+ So that's good.
+ That makes sense to you, right?
+ This one here is called log art of making a purchase.
+ That makes sense to you?
+ Or you can say it.
+ Now you can relate this model as P equal to E to the power of the linear predictor, right?
+ The linear predictor term over 1 plus E to the power of the linear predictor term.
+ So it should be a linear function of predictor.
+ Where the linear function of predictor is given by
+ A plus B for spanning, times spanning plus B for month, times the month.
+ Good?
+ Are you going to follow?
+ Any questions so far?
+ No problem, right?
+ No problem.
+ We're going to fit the logistic regression model to the data and get the regression output.
+ Does that make sense to you?
+ Alright, back to R.
+ Okay, first we're going to get all the data, right?
+ Now, once the data has been loaded into R, we need to know the names of all variables, right?
+ How do we do that?
+ Well, we use the name function, names of my data.
+ Alright, there are three variables.
+ One is a marketing spanning.
+ Two is a customer month.
+ The last one is purchase.
+ We remember the name, okay?
+ Okay, we remember the name first, okay?
+ So let's set the predictor.
+ Set the predictor, okay?
+ So X with spanning is marketing spanning, right?
+ I can say my data dollar marketing spanning.
+ So I want to extract marketing spanning from my data and save it into X spanning, which is also good.
+ The other one is X month, right?
+ I want to get the number of months from my data, right?
+ Okay, my data, dollar, customer, 10 years, month.
+ So far so good.
+ Does that make sense to you?
+ Yeah, no problem?
+ Now, you don't have to do this step, by the way.
+ It's just easy to remember the name, right?
+ You know?
+ I mean, I know in 410, right?
+ It's up to you.
+ You don't have to follow my way, okay?
+ Right, then we have to set up the response variable.
+ The response variable.
+ That's okay, right?
+ It's whether a customer makes a purchase.
+ Okay, so Y is purchase, right?
+ My data, you have to extract purchase from my data.
+ Now one more thing you have to do, right?
+ Now if you simply look at the data of Y,
+ they give you a whole bunch of ones and zeros, right?
+ Now, at this point, R tweets Y as a numerical variable.
+ It's just a number, one or zero, right?
+ But when you fit the regression model,
+ we have to make sure this is a kind of numerical variable.
+ Is that right?
+ We have to make sure this is a kind of numerical variable.
+ How to do that?
+ We have to use the factor function, right?
+ That converts a numerical variable to a categorical variable with two categories.
+ Does that make sense to you?
+ Okay, so that's okay, okay?
+ So, do you have a factor function?
+ I apply the factor function on purchase.
+ I'll give you one again.
+ Alright, now, let's type Y again.
+ Now, it's the same as before, nothing going to change, except one thing different.
+ At the end, you see levels, levels, the two levels, right?
+ Zero and one.
+ Now we can see that, right?
+ Y becomes a categorical variable with two categories or two levels, right?
+ Now, more importantly, what's the last category?
+ It's one, right?
+ One, is that right?
+ One represents a customer with a purchase.
+ This is the event you want to predict its outcome, is that right?
+ This is the event of interest, is that right?
+ Now, when you fit the logistic regression model,
+ R will tweak the second level as the set.
+ Does that make sense to you?
+ R, we tweak the second level as the set as the event of interest.
+ Does that make sense to you?
+ Make sure what is the second level.
+ If not, you have to re-level, okay?
+ I'll show you how to do that.
+ Or add chart GDP, I'm sure you can do it for you, right?
+ But you have to pay attention, okay?
+ So, what's so good?
+ Are you going to follow?
+ Do you need more time?
+ Okay.
+ All right, if everyone's ready, now I'm going to fit the regression model.
+ Fit the logistic regression model.
+ The function we use to fit the logistic regression model is called GLM.
+ G stands for generalize, L stands for linear, and M stands for model.
+ Put GLM, right?
+ You put Y, two down.
+ Now, this time we have two predictors, right?
+ We'll say X spanning plus X month.
+ Two, okay?
+ Not just one.
+ As well, you have the best of life, a family.
+ Now, to model a categorical variable, we have two categories, right?
+ We call binary data.
+ We always use binomial model.
+ Binomial, right?
+ Okay, but I don't want to say explicitly, right?
+ All we need is P.
+ When you study binomial model, all we need is P.
+ The property that customer make purchase, is that right?
+ Does that make sense to you?
+ Put your hand up.
+ You should wave your hand, right?
+ To be honest, I don't care.
+ You're welcome.
+ That makes sense, okay?
+ Go final, y'all.
+ So far so good.
+ And then I'll save the result into fillet model.
+ Fillet model.
+ You don't fit the model to data, right?
+ To fillet model.
+ All right, that needs to stop.
+ Select all the code one more time, right?
+ Make sure don't miss anything.
+ And now, hit the model.
+ Wait up.
+ My god.
+ There's some problem, right?
+ Looks fine.
+ Everything looks fine, okay?
+ And now, let's type, let's do the summary function to get the detail, right?
+ Get the question output.
+ Model, summary function on fillet model.
+ Here we go.
+ You got the same thing here?
+ Any questions so far?
+ You got the same thing?
+ Or all the same thing?
+ Well, the number can be small, by the way.
+ You got the same number?
+ Yeah?
+ Shouldn't be a problem?
+ Well, the number can be small, right, you know?
+ Anyway, that's the output.
+ We're going to use it to answer all the questions.
+ Ready?
+ Well, that means copy number, right?
+ Any copy of the question table?
+ Let me move on.
+ Before I move on, I have a quick question for you, right?
+ Look at the output.
+ Do you look at all the data, right?
+ Is that really small?
+ Really, really small, right?
+ Okay.
+ Now, when you fit a big data, when you fit a model with big data, right?
+ You know, basically almost no uncertainty.
+ It makes sense to you, right?
+ So that's why you got a very, basically got a very precise result.
+ Very, very precise result.
+ The PR becomes really, really big, and the standard error becomes really, really small.
+ It makes sense to you.
+ That's the power of big data.
+ So when you get a big data, inference is not very important.
+ We don't perform high-volt test or interval estimation for big data.
+ You know it's very precise, right?
+ Anyway, let's move on.
+ Ready?
+ Next question.
+ Now, after the model has been fit to the data, okay?
+ After the model fit to the data, right?
+ The first thing you want to know is how well is the model significantly useful in predicting the probability?
+ Is the model useful?
+ That's the question, right?
+ After the model fit to the data, you want to know whether the model is useful or not.
+ What about useful?
+ Useful in predicting the probability, okay?
+ How do you know the model is useful?
+ The model is useful.
+ Now, in this case, we have more than one predictor, right?
+ The model is useful in predicting the probability if at least one of the predictors.
+ Either market spending or number of months is related to the probability.
+ Either one.
+ You don't have to go, but either one is a good enough, okay?
+ Let me say it for you.
+ So the model is significantly useful in predicting the probability, okay?
+ If at least one of the predictors, either marketing, spending, or number of months, okay?
+ is related to the probability, to the purchase probability.
+ Okay.
+ Alright, so based on this, let's say the hypothesis.
+ Are you ready?
+ Now let me start from the alternative hypothesis.
+ Because it's simple.
+ You can just grab it from a question of interest.
+ So the alternative hypothesis is this.
+ If at least one of the predictors, either marketing, spending, or number of months, is related to the purchase probability.
+ Right, that's a question of interest, right? That's your claim.
+ Alright, let's get back to the no hypothesis.
+ Alright, what is the opposite?
+ Now, the no hypothesis is the opposite of the alternative, right?
+ Now, if the alternative hypothesis at least one of the predictors is related to the purchase probability, what should be the no hypothesis?
+ What should be the no hypothesis?
+ What's the opposite of at least one?
+ None.
+ None, nothing, right?
+ No predictor, right?
+ Well, all predictors are not related. Does that make sense to you?
+ The no set or predictor are not related to the purchase probability.
+ Does that make sense to you?
+ Now, this is just a statement, right?
+ Now, we need to determine the model if all predictors are not related to the purchase probability.
+ Now, what's our model?
+ It's a lot odd, right?
+ Equals to A plus B for spending, prime spending, right?
+ Plus B for a month times the number of months, right?
+ So what's the good? That's the model, right?
+ Now, if spending and number of months are not related to the purchase probability, you have to make this one go away, right?
+ How to do that?
+ All the coefficients except for that, right, become zero. Does that make sense to you?
+ So what's the good, right?
+ So that implies the regression coefficient for market as for spending and the coefficient for month above zero.
+ The model is simply become the law of P over one minus P equals to a constant A, right?
+ Does that make sense to you?
+ So far, so good.
+ Alright, under the eternity hypothesis, at least one of the predictors is related to the purchase probability.
+ That means at least one of the coefficients is not zero, is that right?
+ Maybe this one is zero, but this one is not zero.
+ Or the other way around, right, you know, many possibilities.
+ So at least one of the coefficients is not zero. Does that make sense to you?
+ The regression coefficient for spending, okay, not zero, or by either one, right?
+ Alright, so you don't want the law of zero, right?
+ And the model must contain these two coefficients, okay?
+ I don't want to say explicitly, right?
+ So far, so good.
+ Alright, now we have to test the hypothesis. How to do that?
+ Now first, we assume the null hypothesis is true, right?
+ In the next second, we have to find evidence against the null hypothesis.
+ Okay, the evidence is given by P value.
+ Smaller P value, stronger evidence against the null hypothesis, right?
+ Okay, to get the P value from theta, we get that thing called test statistic.
+ So in these, we get two numbers. Test statistic and P value, right?
+ How to get this? We have to use the likelihood ratio test.
+ So next, calculate the test statistic and P value using the likelihood ratio test called LRT.
+ L stands for likelihood, R stands for ratio, and T for test.
+ The whole idea is, first we calculate the ratio of two likelihoods.
+ And the likelihood under the null hypothesis, and the maximum likelihood under the alternative.
+ So far, so good.
+ First, we get the maximum likelihood under the alternative, which is the set of values.
+ Now, to fit the logistic regression model, we need to know the estimate of A, B, right?
+ The method to estimate A, B, right, is to use the maximum likelihood estimation, is that correct or not?
+ It's the value of A and B that maximize the probability of producing our data, is that correct or not?
+ Maximum probability of producing our data, right?
+ Now, under the null hypothesis, we believe the coefficient for spanning and number of nulls is zero, is that right?
+ Only right to intercept.
+ Based on this, we use, again, likelihood estimation method to get the estimate of A.
+ Does that make sense to you?
+ Now, although it doesn't give the maximum likelihood, that should be close enough if the null is true, is that right?
+ You don't get that, okay?
+ Or I can say, right, if the null model, if the logistic regression model under null hypothesis fits as good as the alternative model.
+ Let me see again, okay?
+ So here, the logistic regression model under the null profile as well as near, as good as well.
+ As good as fit to the logistic model, logistic regression model under the alternative.
+ Then, the likelihood ratio should be close to one, does that make sense to you?
+ Right? If the logistic regression model under null profiles as good as, should be as well as by anybody, is that as well as?
+ That's a very hard problem, right?
+ Obviously, as well as.
+ As good as fit to the logistic model under alternative, right?
+ The two likelihoods should be similar, is that correct or not?
+ That means the likelihood ratio should be somewhat close to one, is that right?
+ Otherwise, otherwise, yeah, the logistic regression model under the null hypothesis
+ profile a much poor or fit to the data, to the data by the way.
+ Fit compared to the data, compared to the logistic regression model under the alternative, right?
+ Then, the likelihood ratio should be much less than one or close to zero, does that make sense to you?
+ To decide whether the likelihood ratio is closer to one or much less than one, we can convert
+ the likelihood ratio to a chi-square statistic, and get the V value from the chi-square statistic.
+ So how?
+ So, the chi-square statistic, I call D or D internet, right?
+ Or I call G-square too, right?
+ Actually, the thing is almost similar, doesn't make any difference, right?
+ It's negative two times log of the ratio, that's it, okay?
+ And these quantities, the chi-square statistic, the chi-square statistic, D, right?
+ Follow our chi-square distribution, the chi-square distribution, what the degree of freedom?
+ Different by what?
+ Do you make a guess?
+ Now, in this case, right, we're testing two coefficients simultaneously, right?
+ Therefore, the chi-square statistic, follow the chi-square distribution with the degree of freedom of two, okay?
+ Which is the number of coefficients being tested.
+ So, what's the good?
+ Does that make sense?
+ So, there are two steps, right?
+ First of all, get the likelihood ratio, okay?
+ Actually, this is not the first step, right?
+ First, you have to fit the model to the data with each step, okay?
+ Is that clear enough?
+ Yep, and then, get the likelihood ratio, convert to chi-square statistic, again, get a DRU.
+ Does that make sense to you?
+ So, here's the step, right, okay?
+ Can I move on?
+ So, do the right-side one.
+ Fit the logistic model with the index step only to the data.
+ And get the likelihood value, right?
+ Last two, calculate the likelihood ratio.
+ Three, convert the likelihood ratio to chi-square statistic, and get the DRU.
+ Does that make sense to you?
+ Now, we have to do step one in R, and step two, step three in R2, alright?
+ First, you have to fit the model to the data, right, with each step only.
+ You get the null model, right, and then get the likelihood ratio,
+ and then you get a chi-square statistic and DRU.
+ Does that make sense to you?
+ Any questions so far?
+ If no questions, we're going to move on.
+ I should do the work, right? No more BS.
+ I'm going to do coffee first, okay?
+ I need to go first after, okay?
+ I'm wondering what's going on.
+ Alright, may we move on?
+ May we move on?
+ All good?
+ Alright, so let's do it now.
+ Right now, fit the logistic regression model under the null hypothesis,
+ which is the one with intercept only.
+ Alright, so fit the model with no intercept.
+ I'm sorry, no intercept only, okay?
+ Intercept only.
+ Equal to GLM.
+ Now, how to fit the model with intercept only?
+ Remember?
+ Intercept represented by...
+ Hey, my model is my favorite figure, right?
+ Okay, good.
+ So Y to the 1.
+ Okay?
+ Finally, it's binomial.
+ Alright, let me run this null.
+ Okay, let's do a little summary.
+ Fit model with intercept only.
+ There we go. Now see that's the only intercept, right?
+ So far, so good.
+ No problem, right?
+ And now we're going to compare the two models, right?
+ Now, we have done step one.
+ Now we need to get step two and step three.
+ How to do that?
+ Now in R, there's a one command to do the two steps.
+ It's called ANOVA.
+ A-N-O-V-A. Remember that one?
+ I'm not sure you learned that in the other class, right?
+ It's called ANOVA.
+ In this command, we compare the two models, right?
+ And give you the ties of this step and the E value.
+ I don't quite remember this one, okay.
+ Okay, so we check that.
+ A-N-O-V-A, ANOVA, right?
+ Now we need to enter three inputs.
+ All right, so we enter three inputs right first.
+ It's the final model.
+ I don't know how this is.
+ Which is the model with intercept only.
+ The other model is, what do you call it?
+ Just the final model, right?
+ With all the predictor.
+ All right, the last input,
+ Chi-square, right?
+ You want to convert the line of the ratio to Chi-square, right?
+ All right, what was the option?
+ I don't remember the option, right?
+ We did a little check really quick.
+ Right here, the test method is Chi-square.
+ Chi-square, I think.
+ You want the command?
+ Okay, here we go.
+ Now, this is the end result.
+ This is the definite, right?
+ It's called definite.
+ Which is these numbers here, right?
+ That's the two times, bigger two times log of the line of the ratio.
+ Is that clear enough?
+ Now, these two numbers is negative two times log of the likelihood.
+ Or I can say the log of the likelihood.
+ So what's so good?
+ Does that make sense to you?
+ Okay, and here's the EIU of the Chi-square statistic.
+ Now, this is pretty small, right?
+ 2.2 times 10 to the power of negative 16.
+ Which means they are 16-0 before 2.2.
+ Does that make sense to you?
+ Any questions so far?
+ Now, I don't waste my time to say the conclusion.
+ Any questions so far?
+ Did you follow me?
+ No problem?
+ Now, on the midterm, I'm going to ask you to interpret the output, right?
+ Which one is the log of the likelihood?
+ Which one is the definite?
+ Which one is the EIU?
+ Does that make sense to you?
+ May I?
+ No.
+ Okay, say the EIU.
+ It's small, right?
+ How small?
+ It's 2.2 times 10 to the power of negative 16.
+ Really small, right?
+ Really small.
+ Actually, even small.
+ Actually, even lower than this number.
+ Even lower, right?
+ So clearly, the P-MAR is small.
+ Smaller than the submittable level.
+ Less than 5%, right?
+ We took down our hypothesis.
+ At the 5% submittable level,
+ for example, data for 5 sufficient evidence,
+ to conclude that at least
+ one of the predictors,
+ either marketing, spending,
+ or number of months,
+ is related to the purchase property.
+ I think I just said that, right?
+ When you get a big data like this, right?
+ Profile test is not really important.
+ The result is so precise, right?
+ That means the P-MAR is really, really small.
+ Any change, you get a very small P value, right?
+ As you can see.
+ So you get a big data, right?
+ All the P value are really, really small.
+ So your focus is to use a lot of prediction.
+ Does it make sense to you?
+ Alright, I think we take a break,
+ and then come back.
+ We're going to continue.
+ So how's it going?
+ Now, in the meantime, you don't need to write a lot.
+ Just simply give me the hypothesis,
+ test the P value, and conclusion, that's it.
+ I give you that much information
+ because I need to explain to you, right?
+ In the meantime, you don't need to explain to me.
+ Give me the hypothesis,
+ test the P value, and conclusion.
+ So okay, no problem, right?
+ Good?
+ Good!
+ Alright!
+ I need you to go to your place.
+ I see you don't have it.
+ Okay!
+ I need you to write this.
+ Make sure that no one's found this.
+ Okay.
+ Oh no, it's all broken.
+ This is not the right label.
+ It's all broken.
+ You need anus 4.
+ That's right.
+ Anus 4.
+ And...
+ Anus 4.
+ Yeah, no, it's okay.
+ Try that one more time.
+ Is it good?
+ Oh no?
+ Oh, it's faster.
+ No problem.
+ Alright.
+ This one's too bad.
+ It's too...
+ You focus it in yourself.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Lady and Jack, come on.
+ Are you ready?
+ To move on?
+ Or you just want to go, oh hey, I know everything, and go home.
+ Yeah, do you want to do it this way?
+ Or go home and, you know.
+ Sometimes, you know, I got midterm to pick up on Wednesday.
+ I think check in for that on Wednesday, you can focus on midterm, see.
+ Okay.
+ Thank you.
+ I'm going on holiday.
+ You want to do that? Sure problem!
+ You want? Yeah?
+ I said that already!
+ Do you want a quiz?
+ Okay, do you want a quiz?
+ Okay, I can add a quiz for everyone no problem.
+ Okay, he said that. Not me, not me, okay.
+ Alright, let's move on.
+ Alright, now once we find a model useful in predicting probability, right?
+ It's time to do some calculations.
+ Estimate the odds of a customer making a purchase.
+ The marketing spending for this customer is $4,000.
+ And this customer of...
+ No X by the way, correct grammar, right?
+ No X.
+ This customer has been with the company for 12 months.
+ Okay?
+ Now, let me write down the model first.
+ It's a lot of odds, right?
+ Even by A plus the coefficient for spending times the amount of spending
+ plus the coefficient for month times the number of months, is that right?
+ Now, to make any prediction, we have to know the estimate of those two parameters, right?
+ Now, let's check that out.
+ Now, in R, there's a command called coefficient.
+ Okay?
+ C-O-E-F.
+ It's a shorthand of coefficient.
+ If you provide the model, it will get you the coefficient, is that clear enough?
+ I mean, you know that from the previous class, right?
+ Have you learned that?
+ This command, coefficient, C-O-E-F.
+ All right?
+ Let me apply this function to the model, right?
+ The fillet model.
+ Here we go.
+ Now I've got all the coefficients, right?
+ The first one is the intercept is negative 3.95.
+ Next one is point C-O, C-O, C-O.
+ Is that right?
+ Or three?
+ Three.
+ Three.
+ Now, I've got this.
+ That whole place, right?
+ At point five, I've got the point C-O, six, okay?
+ Next one is the coefficient for month is point C-O-five.
+ Something like that, right?
+ Okay?
+ All right.
+ Now to make a prediction.
+ In this case, right?
+ The spending is $4,000.
+ That's like $4,000, right?
+ And the number one is 12.
+ So what's so good?
+ So let's do the calculation.
+ Now, you can do it manually.
+ Because of the midterm, you don't have R review, right?
+ You have to do the calculation with your calculator, right?
+ Okay?
+ I'll give you the output.
+ Don't worry.
+ I'll give you the output.
+ Don't worry, okay?
+ So let's do it in 21.
+ In R.
+ Now, let me define the value of the predictor, right?
+ Let's call X naught, okay?
+ Now, how do I do the calculation, right?
+ It's the intercept plus this number times $4,000 plus this number times 12.
+ How do I do that in R?
+ Now, even though there's no X value beside constant A, right?
+ But you can rewrite as A times one, is that okay?
+ Think about A is also a coefficient, right?
+ It's A times one.
+ So we have a new predictor, right?
+ It's a constant.
+ It's just one.
+ One, 4,012, right?
+ So what's so good?
+ So let's define our least of number, okay?
+ Our least of three number.
+ Okay?
+ Our least of three number.
+ Begin with one, 4,000, and 12.
+ Now, I use the C function.
+ C stands for collection.
+ Collection of three number, okay?
+ And save that into X naught, which is the object that contains the least of three number, right?
+ So what's so good?
+ And now I'm going to do the calculation.
+ I take the coefficient from the model times X naught.
+ So what's so good?
+ Now let's see what we get.
+ Now, it did the calculation, right?
+ Now, one times the intercept is still negative 3.95, right?
+ That's going to change.
+ Now, 4,000 times 0.006 gives you a big number, right?
+ It's 2.39.
+ It does the calculation.
+ Now, 12 times 0.0513 is about 60, or 0.6.
+ All right, now I'm going to add up together, right?
+ Add up together?
+ You put your sum, right?
+ How does the sum function?
+ I got negative 0.94.
+ So here is negative 0.94.
+ So what's so good?
+ The log art of a customer making a purchase is given by negative 0.94.
+ So far, so good.
+ 0.9437 like that, okay?
+ All right, now we're going to do some calculation, right?
+ Well, we haven't done the calculation yet.
+ What we got here is called log art.
+ Is that the art you're looking for?
+ No, right?
+ This is log art.
+ How do you get log?
+ How do you get art from log art?
+ E to power something, right?
+ It's good.
+ We just have to put it here, okay?
+ Now we know, right, the estimate log art is given by negative 0.943, right?
+ 0.943.
+ Therefore, the estimate art is given by E to negative 0.943.
+ So far, so good.
+ Let's go back to the map and see what we got.
+ And the art is given by exponential E to power log art.
+ Here we go.
+ 0.39 is the art, right?
+ Okay, question is, how can we interpret the art?
+ Not the log art, the art.
+ Now, I hope you still remember the definition of art.
+ Art is given by the probability of making purchase.
+ If I buy the probability of not making purchase.
+ So far, so good.
+ And this ratio is given by 0.389.
+ So far, so good.
+ Now, let me run to a little round, okay, do it like that.
+ Now, here's a magic here, right?
+ If I multiply a sample size, right, any sample size, and have a model, right, what do you get?
+ What do you get?
+ We get the expected number of a customer making purchase.
+ Now, on the denominator, we get the expected number of a customer not making purchase.
+ So far, so good.
+ And what's the ratio of these expected numbers?
+ It's 0.39, right?
+ You can think of 0.39 as 0.39 over 1.
+ Does this make sense to you?
+ Any questions so far?
+ Interpret the art by completing the following.
+ For every one customer who makes a purchase,
+ Okay, now, this is the tricky part, right?
+ Okay, we expect how many customers who do not make a purchase?
+ Oh, this is really off-ended, okay.
+ Is that 0.38?
+ Be careful.
+ Is that 0.38?
+ Is this another 0.38?
+ For every one customer who makes a purchase,
+ We expect how many customers who do not make a purchase?
+ Now, this ratio, okay, look at this ratio, right,
+ is the number of customers who make a purchase
+ over the expected number of customers who do not make a purchase, is that right?
+ The ratio is 0.389 over 1.
+ So for every one customer who don't make a purchase,
+ we expect 0.389 customer to make a purchase, particularly not.
+ But look at my interpretation.
+ I don't want this.
+ For every one customer who makes a purchase,
+ how many do not make it?
+ Now, let's do a check here, right?
+ Now, I want one on the top, okay, I want one on the top, right?
+ For every one customer who makes a purchase,
+ how many do not make a purchase?
+ Now, let's do a check here.
+ Let's define, close my right one by the way.
+ You see my right one?
+ Now, you want to define 0.9 on the top, right?
+ And then define 0.389 at the bottom, what do you get?
+ I have another ratio,
+ which is 1 over, the top is 1, right?
+ This is 1, is that right?
+ And what is 1 over 0.39?
+ Say again?
+ Good.
+ It's 2.538, right?
+ So that means for every one customer who make a purchase,
+ we expect 2.568 do not make it.
+ Is that clear enough?
+ Now, make sure you don't put a check here, okay?
+ You have to be careful.
+ Expand.
+ 2.568 customer.
+ Don't make a purchase, okay?
+ I'll get 2.568.
+ It's 1 over 0.389.
+ That was so good.
+ Does that make any sense to you?
+ You know what I'm feeling a little too bad, right?
+ For every one customer who make a purchase,
+ 2.568 do not make a purchase, right?
+ I want to say that there are four customers here, right?
+ You have one who make a purchase,
+ you have three who don't make it.
+ It's like only 4 to 1, right?
+ It's pretty good.
+ It's not too bad, right?
+ Any questions so far?
+ Does that make sense to you?
+ Is it hard?
+ No comments?
+ We'll do that after the break.
+ Okay.
+ I'll make sure you have to say that, right?
+ Those customers have a common feature, right?
+ We're going to expand.
+ It's not a big one.
+ All right.
+ The amount of money I'm spending for those customers is $4,000.
+ And the customer has been with the company over 12 months.
+ That's the condition of the customer, right?
+ All right.
+ The old customer has been with the company 12 months,
+ and we spent $4,000 on the customer.
+ Well, that's a lot, man, you know.
+ Any questions so far?
+ Anyone?
+ It's okay, just wait for them, okay?
+ I don't want you to try my laptop first.
+ You can ask me if you want.
+ It's okay, it's okay.
+ Let them talk, all right?
+ Let them talk to me in the laptop first.
+ Finish talking?
+ May I talk?
+ Okay, no problem.
+ All right, next question.
+ Estimate the probability of purchasing for a customer under foreign criteria.
+ The marketing spending for this customer is $4,000,
+ and this customer has been with the company 12 months.
+ Next criteria, the marketing spending for this customer is $4,001.
+ $4,001, $1.10.
+ And the customer has been with the company for 12 months.
+ Next criteria, next scenario.
+ The marketing spending for this customer is $4,000 again,
+ but the customer has been with the company for 13 months.
+ 13, one extra month.
+ All right, so let's do the calculation of what estimate the probability.
+ So, is it good?
+ Okay.
+ But let's start with the first case.
+ Because in the first case, we have calculated the odd, right?
+ The odd, right?
+ Now, next I want to calculate is the probability.
+ How can you get the odds?
+ How can you get the probability from odds?
+ Remember?
+ Now, you have to know about the adjusting model, okay?
+ Now, you want to get an odd from log odd, right?
+ Remember to calculate E to the power of log odd, is that right?
+ So, what's the good?
+ Now, you want to calculate the odd from the probability.
+ How do you get it?
+ You have to take E to the log, take the odd, right?
+ Here, right?
+ Over one plus odd.
+ Or I can say, right?
+ Or E to the power of log odd.
+ Over one plus E to the power of log odd.
+ So, what's the good?
+ You know the identity?
+ We derived before, right?
+ Do you think we can cover?
+ Okay, this will be cover, okay?
+ Now, we start from the log of E over one plus E, right?
+ It's a linear term, right?
+ Let me call set for a moment, okay?
+ Easy to derive, right?
+ Set is given by A plus B times X for a moment, okay?
+ Now, this is called log odd.
+ It's given by set, right, which is A plus B times X.
+ So, what's the good?
+ So, we get the odd, right?
+ We have to take the exponent E to the power of log odd,
+ which is E to A plus BX.
+ Does that make sense to you?
+ Does that make sense to you?
+ So, what's the good?
+ Now, we get from odd to probability, right?
+ P is given by odd over one plus odd,
+ and this is equivalent to E to A plus BX, right here, right?
+ Odd E to A plus BX, right?
+ Over one plus E to A plus BX.
+ Does that make sense to you?
+ So, see, we're speaking, right?
+ You can have an odd, right?
+ You can just calculate the P by this transformation.
+ Does that make sense to you?
+ Do you follow?
+ Yes or no?
+ Okay.
+ In this case, we always have an odd.
+ So, I can calculate P based on odd over one plus odd.
+ Does that make sense to you?
+ So, P property, right?
+ It's given by odd over one plus odd, right?
+ Does that make sense to you?
+ I didn't put a subscript here, right?
+ I put a first one, okay?
+ We're going for the first scenario.
+ It's 0.28, 02668.
+ At the same time, I'm going to make a table
+ to record all the numbers, right?
+ We're going to use that later.
+ So, in the spanning, it's 4,000.
+ The number of month is 12, right?
+ The art is given by...
+ That was odd again.
+ 0.389.
+ And the property P is given by...
+ 0.28, 0.28, 0, 2...
+ All right, on the next criteria.
+ Now, the span is 4,001, still 12 month.
+ Let's get the odd and the property.
+ All right, let's get back to the same code, right?
+ But this time, right?
+ The spanning is not 4,000.
+ It's 4,001, right?
+ So, let's change it to 4,001.
+ And then we repeat the same code.
+ Do you follow me?
+ Or is it 0.3 still?
+ Does that make a difference?
+ Let me double check, okay?
+ Wait, let me just double check on the code, right?
+ 0.8, 9, 4, 0, 6, 5.
+ I think that was too small, right?
+ Does that make any change?
+ 9, 4, 9, 6.
+ 9, 4, 0, 6, 5, right?
+ And the property is...
+ 0.28.
+ All right, next one, 4,001.
+ I'm looking at a different one, right?
+ 4,001, okay, looks good to me.
+ Let's check out.
+ So, pick one.
+ What odd?
+ Okay, that doesn't make a big difference.
+ That doesn't change, right?
+ 0.39, 6, 3, 9, 4.
+ Make some change here, okay?
+ What's the property?
+ 0.02A, 0.03AAA.
+ All right, got the last case.
+ This time, the span is still 4,000.
+ And the month, 13th.
+ We'll go through the math.
+ Let's do a calculation.
+ The odd is 0.49.
+ 0.49, 0.099, 0.175.
+ And the corresponding property is...
+ 0.29, 0.07.
+ Okay, good.
+ So far, so good.
+ All right, now, keep this number, right?
+ We're going to use it for the next part.
+ So far, so good?
+ Hopefully not too bad, right?
+ I can do it manually by hand.
+ It's no problem, right?
+ All right, interpret the coefficient associated with the market spending in terms of log art and art ratio.
+ Recall the model.
+ The log art of a customer making a purchase given by A plus B, the coefficient for spending, time, the spending amount, plus the coefficient for month times the number of month.
+ So far, so good.
+ Right?
+ The log art, right?
+ Given by A plus B over the last B, right?
+ All right.
+ Now, let's say we spend...
+ That's the amount we're spending for a customer is some amount of money, right?
+ Let's say 4,000, right?
+ Just pick a number, okay?
+ You can make any number you like.
+ 5,000, 6,000, I don't care, right?
+ Okay, so the log art and the month, right, is 12.
+ It doesn't matter what number you pay.
+ I don't care, okay?
+ It's not going to make a difference.
+ So the log art becomes A plus the coefficient of spending, time, the number of 4,000, right?
+ Plus the month, the coefficient for month times 12.
+ So far, so good.
+ Any questions so far?
+ Now, I'm going to subscript one for a moment, okay?
+ This one for the first scenario.
+ Is that clear?
+ All right.
+ Now, let's try the other scenario, which is...
+ In the second scenario, the spending is 4,000 and 1, is that right?
+ You can say it's 4,000 plus 1.
+ Here, we have 4,000 plus 1, right?
+ Does it make sense to you?
+ And the month, we made unchanged.
+ The number of month, we made unchanged is 12, right?
+ So the log art in this case, right?
+ For the second scenario is A plus the coefficient of spending times 4,000 plus 1.
+ Does it make sense to you?
+ And then plus the coefficient for month times the number of month.
+ Times 12, right?
+ All right, now do a math here.
+ Here's what I want to do.
+ I want to subtract the equation.
+ Okay, subtract the equation, right?
+ Can you raise it?
+ Yeah, can you raise it?
+ Now, I want to take a second one minus the first one.
+ Does it make sense to you?
+ All right, I want to take a different one, right?
+ Now, if I do that, first of all, right?
+ The constant term goes away, is that right?
+ What else goes away?
+ The term with the month also goes away because they're the same, right?
+ The number of month, we make unchanged.
+ And here is the thing I want to deal with, right?
+ Now, let me expand this term.
+ This is given by the coefficient for spending times 4,000, right?
+ And then plus the coefficient for spending one more time.
+ But that's it, that's all, right?
+ Now, even subtract this equation, right?
+ This term also cancel, right?
+ This also cancel.
+ Lock with this term.
+ So what's the good?
+ This is the coefficient we're looking for, right?
+ We want to come up with this one, right?
+ So what's the good?
+ So this is the change in the art ratio, right?
+ This is the change in the law of art.
+ Does it make sense to you?
+ Any questions so far?
+ Are you good with the algebra here?
+ I don't need to know the algebra.
+ I just need to know the interpretation, okay?
+ May I move on?
+ Okay, may I move on?
+ Therefore, we interpret the coefficient for spending as the change in the law of art, right?
+ So here's the full interpretation.
+ May I get back to the PowerPoint?
+ Can I get back to the screen?
+ Okay, for every $1 increase,
+ Now, if you're spending, increase from $4,000 to $4,001.
+ Just $1 increase, right?
+ Spending, right?
+ We expect or we escalate whatsoever, right?
+ Same amount of time, right?
+ Okay, we expect what?
+ The change, okay?
+ We expect the law of art change, is that right?
+ Now, we move on the side of this coefficient, right?
+ Now, recall, we estimate the coefficient for spending
+ to be 0.000597, is that right?
+ Alright?
+ These numbers are positive.
+ It's positive.
+ Therefore,
+ So, we expect, right?
+ The law of art of a customer making a purchase increase, is positive, right?
+ By how much?
+ By 0.000, let's run to 6 for a moment, okay?
+ I just run to 0.0006, so far so good.
+ Does this make sense to you?
+ It's the estimate of the coefficient for spending.
+ Is that fine?
+ Is that complete?
+ Is this complete?
+ Is that right in confrontation?
+ Is this right in confrontation?
+ Is this the right in confrontation?
+ If yes, say yes.
+ If no, tell me why.
+ Is this the right in confrontation?
+ You sure?
+ Now, give this our free mark.
+ If you say yes, you're going to get two marks.
+ What did I miss?
+ I don't know the estimate, but what did I miss?
+ That's the important part.
+ How many predictors are there?
+ Two.
+ Two.
+ What about the other one?
+ Must be static or constant.
+ Exactly, you're right.
+ We flex the number of months, right?
+ We do not vary the number of months, is that right?
+ In this case, right?
+ The number of months the customer has been with the company is always 12, is that right?
+ I did not make any change.
+ Is it clear or not?
+ So I need to say one more thing.
+ Given the number of months a customer has been with the company,
+ what do you mean unchanged?
+ Does it make sense to you?
+ You guys have a big term in 4010, is that right?
+ On Wednesday, is that right?
+ 4010, is that right?
+ You have to do that.
+ You have to interpret the regression coefficient.
+ If you have more than one predictor, you have to fix the other.
+ Only vary one coefficient at a time, is that right?
+ You do that on Wednesday, I'm pretty sure.
+ Good.
+ All right, we're not done yet.
+ Now in terms of the art ratio, right?
+ How to go from law art to art?
+ E to power something, right?
+ So same interpretation, except one more thing.
+ For every $1 increase in the marketing spending,
+ we expect the law art.
+ Now law art, don't say law art, right?
+ It's the art.
+ The art of a customer making a purchase increased by 0.006, is that right?
+ You have to take E to something, right?
+ Remember, you go from art to law art, right?
+ Law art to art, then to E to something, is that right?
+ Okay, that's one way.
+ Let me do a calculation with you, correct?
+ So E to the coefficient.
+ It's 1.00059, which is about 1.0006, right?
+ So it's good?
+ All right.
+ Is that correct?
+ You think it's good, right?
+ You think it's right or wrong?
+ Right?
+ Okay, I did change from law art to art, right?
+ Okay.
+ My question, is it right?
+ Yeah?
+ Almost?
+ Now let's double check, right, you know?
+ Now, we call, right, the coefficient is positive, is that right?
+ E to positive number is always greater than 1, right?
+ So that means the art increased by a factor of, is that right?
+ Not the actual number.
+ This is what I was going to say, right?
+ Now you have to say by a factor of something.
+ That's a multiple of number, right?
+ This is what I'm saying.
+ We look at the art ratio, right?
+ It's a ratio of two numbers, right?
+ The art, you look at increased by a factor, not by adding a constant.
+ This is what I'm saying.
+ So that's not perfectly right.
+ You have to say increased by a factor of.
+ So increased by a factor of 1.0006, right?
+ By a factor of 1, right?
+ 1.0006.
+ Basically almost no change, but you see, right?
+ The change is very slightly.
+ It does make a big difference, right?
+ You look at the result, right?
+ The art doesn't make a big change, but it does make a change.
+ Look at the last four digits, right?
+ Go from 4.0006 to 6.394.
+ The change is not obvious, but it does change.
+ Is that clear or not?
+ But by what?
+ By a factor of 1.0006.
+ Not the number at that constant, right?
+ You have to be specified.
+ Is that clear or not?
+ Or you can say increased by 0.0006%.
+ Now, I let you think about why it's 0.06%.
+ 0.06%, you're right.
+ I let you think about why.
+ Why increased by 0.06%?
+ You can say the art of making a purchase increased by a factor of 1.0006.
+ I mean, there's no problem, right?
+ Or I can say increased by 0.06%.
+ I let you think about why it's 0.06%.
+ I let you think about that, okay?
+ Okay, it's been there last time, right?
+ Remember, the change, the percent change of increase, right?
+ It's given by the new quantity,
+ minus the old quantity over the old quantity times the new percent, right?
+ Think about this expression.
+ Okay, now I think that's it for today's class.
+ We don't have time, right?
+ Okay, so I want you guys to interpret the other coefficient from the same manner, right?
+ Now, the assignment, remember assignment three, right?
+ Now, we did a couple of questions in the class.
+ I think now you're okay, right?
+ Okay, thank you.

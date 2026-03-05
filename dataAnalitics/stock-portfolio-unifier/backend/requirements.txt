@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pandas
+openpyxl
+yfinance
+python-dateutil
+pydantic

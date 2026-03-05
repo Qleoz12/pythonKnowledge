@@ -2,5 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dataAnalitics/2nd-edition-BOOK-AMAZON-Python-for-Finance-and-Algorithmic-Trading" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dataAnalitics/nyse-other-listings" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dataAnalitics/portfolio-analysis-dashboard" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dataAnalitics/trading-os" vcs="Git" />
   </component>
 </project>

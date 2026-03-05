@@ -1,0 +1,1592 @@
+ 75%
+ It's like the
+ P pass right here
+ Have any
+ Questions about that?
+ Alright, if no questions I want to move on
+ Do you have any questions?
+ No
+ You want to get the higher grade?
+ Sure, right?
+ Yeah, you explain
+ Because he was out
+ Oh, okay
+ Alright, if no questions
+ I want to move on
+ We'll still
+ Start the logistic regression model, alright?
+ You know?
+ Alright, today
+ I'm going to show you how to
+ Include a calicoid
+ Protector into
+ Logistic regression model
+ Now, I'm going to put the hand out
+ It's only one in the network, right?
+ Now, the hand out has been closed on right side
+ It's number 6
+ Under regression
+ Logistic regression model
+ Including calicoid protector into regression model
+ Now, the hand out
+ On right side
+ Including calicoid protector into regression model
+ It's number 6
+ Under logistic regression model
+ Right in here
+ That's it, that's one
+ Okay
+ Got a copy?
+ Okay
+ We're going to move on
+ Alright, um
+ I should not take this
+ The data set of these data, okay?
+ One thing about data set
+ It's called
+ Oh, data science class
+ Alright, the data set
+ Called data science
+ The data set
+ Called data science
+ Contains information of student
+ Embroidered in
+ An introductory
+ Introductory data science
+ Course
+ The objective is to model
+ The probability that a student
+ Passed the course
+ Using the logistic regression
+ Model
+ The data set includes
+ Three variables
+ First is the numerical predictor
+ The number of hours a student
+ Passed the course
+ The probability per week
+ Second, a calicoid protector
+ Called code experience
+ Okay
+ This variable
+ Consists of three categories
+ One, intermediate
+ And proficiency
+ And the last one is called
+ Pass
+ It's also a calicoid variable
+ Okay, this variable
+ Takes on two numbers
+ Zero
+ One means student
+ Passed the course
+ Zero means student
+ Failed the course
+ Now, the full data set
+ Can be downloaded from this link
+ They copy the link
+ Right in the data set
+ That's the data set, right?
+ So the data set consists of
+ Three columns
+ Alright, first
+ The first column
+ The second column
+ The third column
+ The fourth column
+ The fifth column
+ The sixth column
+ The seventh column
+ Alright, first
+ The first column contains
+ The number of hours a student spent studying
+ Right?
+ Second column is the level of
+ Code experience
+ The last one is
+ When a student passed the course or not
+ Makes sense to you?
+ Alright
+ We're going to use the data set later
+ But let me
+ Look at the question first
+ Alright, we call
+ The objective of using the data
+ Is to
+ Model, is to predict
+ The probability of a student
+ Passing the course
+ Is that right?
+ Based on some predictor
+ The two, right?
+ First, the number of hours
+ A student spent studying, right?
+ Second
+ Is the coding experience
+ Remember it's data science class, right?
+ You need to code, right?
+ So if you have some experience in coding
+ Would that help to increase the chance
+ Of passing the course?
+ Sounds good?
+ Alright
+ So how to
+ Set the model
+ How to set up the logistic regression model
+ Alright
+ So let me write down something first
+ Let's see
+ This is all a marker, right?
+ Alright
+ So the logistic regression model
+ Is this
+ The model
+ The model is
+ First part of the log
+ Log fourth, right?
+ Okay
+ Of passing
+ Is defined as
+ Long of P over 1 as P
+ Is that right?
+ This is the first part, right?
+ Equals to
+ Our linear function
+ Of some predictor, right?
+ The linear function
+ Of a predictor
+ The question is
+ Now
+ If all the predictors are in red, right?
+ If all the predictors are in blue, right?
+ It's just A plus B, right?
+ That's simple
+ However
+ If one of the predictors is not in red
+ It's categorical
+ How can you handle it?
+ In this case, we do have a categorical predictor
+ Which is
+ Coding experience
+ It does not take a number
+ It takes on category
+ It takes on label, is that right?
+ Alright
+ Let's connect
+ This categorical predictor
+ Into
+ The linear function
+ I hope you learned that from the previous class, right?
+ Let's do the review
+ To include a categorical
+ Variable or predictor
+ In our regression model
+ We must convert the categorical
+ Variable or predictor
+ Into
+ W variable also called
+ Indicator variable
+ I'm not sure what language you used before, right?
+ I usually call W variable
+ W, okay?
+ Now a W variable
+ Is a variable that takes on two
+ Possible value, either one or zero
+ That's it, one or zero
+ No any other value
+ Now we use one
+ To indicate the present
+ Of a specific category
+ And zero to indicate
+ The absent
+ Of that category
+ I'm going to show you an example, okay?
+ If a categorical variable
+ Has k categories
+ We only need k
+ Minus one dummy variable
+ Now for example
+ If a categorical variable
+ Has three categories
+ We only need two dummy
+ Variables
+ So what's up there?
+ Okay
+ In this case
+ We have one categorical predictor
+ Is coding experience
+ Okay?
+ Coding experience has three levels
+ Has three categories
+ One, mean nothing
+ No experience
+ Second, intermediate
+ Middle level, right?
+ The third one, proficiency
+ Expert
+ Okay? Very experienced
+ Now let's define the two dummy
+ Variables
+ As I said, right?
+ If a categorical variable has three categories
+ We only need two
+ Dummy variables
+ Is a query log
+ Alright? So let's define
+ The two dummy variables
+ Here's the two
+ First, coding one
+ Okay?
+ Now this is all label, right?
+ As a dummy variable
+ This variable takes on two values
+ One or zero
+ Coding one
+ Is one if a student
+ Has no coding experience
+ Zero
+ If otherwise
+ Alright, the other one is coding proficiency
+ Okay? Coding proficiency is
+ One if a student
+ Has proficiency
+ Coding
+ Experience
+ Zero if otherwise
+ So that's all good?
+ Alright, now I'm going to show you
+ How to use two dummy
+ Variables to represent
+ Three categories
+ Alright, let me show you how to
+ Use the two dummy variables to represent
+ Three categories
+ Now, if a student has no coding
+ Experience
+ Then
+ Coding none
+ Will be one, is that right?
+ And coding proficiency will be zero
+ Does that make sense to you?
+ Alright, now if a student
+ Has proficiency
+ Coding experience
+ Now proficiency, right?
+ Coding none will be one
+ Coding none will be one
+ Should be
+ Zero, is that right?
+ And coding proficiency
+ Will be
+ One, is that right?
+ So that's all good?
+ Alright, the last one
+ If a student has intermediate
+ Coding experience
+ Then coding none
+ Should be one
+ Should be
+ Should be what?
+ Zero
+ Zero, right?
+ What about coding proficiency?
+ Zero
+ Zero, right, good?
+ Not none, not proficiency
+ Will be zero, right?
+ That's the way how to represent
+ Three categories with two dummy, right?
+ Alright, now the category
+ Represented by both
+ W variables being equal to zero
+ Is called the
+ Reference category
+ I will explain the reference category later
+ In more detail
+ In this case, right, the category
+ Intermediate
+ Represented by both
+ W variables being zero
+ Therefore, the reference category
+ For coding experience
+ Is intermediate
+ Right?
+ Now remember
+ The reference category
+ We will use it later, alright?
+ Alright, now let's formulate
+ The logistic regression model
+ Using
+ The dummy variables defined above
+ First
+ We define P
+ P as the probability
+ That our student will pass the course
+ An hour
+ Now use hour, right?
+ Instead of x
+ Being the number of hours a student
+ Studied per week
+ So the logistic regression model is
+ Revlog, right?
+ Of P
+ Over
+ What minus P?
+ Okay?
+ Equal
+ To the linear function
+ Of all the predictors, right?
+ So we get
+ Interest at A
+ Plus the
+ Proficient
+ B for hour
+ Times
+ The hour
+ Alright, and plus
+ The term
+ For coding experience
+ Remember, we have been
+ Confirmed coding experience to
+ Two dummy variables, right?
+ We got the two terms
+ The coefficient
+ For coding
+ Experience, none
+ I put it down, right?
+ Times coding
+ None
+ Class
+ The coefficient
+ For proficiency
+ Any questions so far?
+ Now, on the left side, right?
+ We have the
+ Log-orcs
+ Log-orcs
+ Okay?
+ Of passing the course
+ Okay?
+ Okay, log-orcs
+ Of passing the course
+ On the right side, you have the linear
+ Function of all the predictors
+ Does that make sense to you?
+ So what's good?
+ That is the model
+ We need to
+ Relate the probability
+ With a set of predictors
+ Does that make sense to you?
+ Everybody's okay?
+ Everybody's okay?
+ We're going to fit the model to the data
+ Are you ready?
+ Alright, let me open R, right?
+ Okay
+ Great, so let me copy the line
+ The archives of data sets
+ Look at the recommended data sets
+ Like here
+ All right, and save it into file address, that's the article file, right?
+ We need that to get the data, certainly not.
+ Then we're going to use read.csv function.
+ This function takes the article file, and then read the data from the file and load it into R.
+ So let me say that they can do an object called myData.
+ All right, so when you type myData, you see a data, right?
+ All right, I'm going to give you a gradient, by the way, or should I write, please, one more time?
+ To load the data.
+ You need one more time?
+ Ready?
+ Okay.
+ Ready?
+ Are you ready yet?
+ All right, everybody ready?
+ Should I move on?
+ All right, now once the data has been loaded into R, we have to get the name of all variables, right?
+ Let's do the name function to get the names of all variables.
+ Write those in the name of variable.
+ All right, so let's get all the predictor, right?
+ Okay, now let's get all the dummy variables first, right?
+ So let's get the dummy variable.
+ Now to do that, we have to use a function called inL, right?
+ We define two dummy variables, right?
+ First, it's called codingNone.
+ Let's just say no coding experience.
+ Now, codingNone is one if a student has no experience.
+ Otherwise, zero.
+ So we can use the inL function to do that.
+ So equal to inL, inL, right?
+ Now, first we need to look at the coding experience, right?
+ Now, coding experience comes from my data, right?
+ So my data, dollar, coding experience, equal, equal, for double code.
+ Now, let me double check coding experience, okay?
+ I want to do something before I move on, okay?
+ I want to see what are the categories, and make sure the spelling.
+ I want to know the name, how is the name of the category.
+ It's actually not.
+ So let me get my data, dollar, code experience.
+ All right, I want to use table function to double check the table function, right?
+ Now, I just want to know the name of all categories.
+ Let me fix that to you.
+ I want to make a table to summarize coding experience.
+ From here, I will know all the names, right?
+ The name, all the levels of coding experience.
+ All right, these are the three levels, right?
+ In the media, none and efficiency.
+ Now, I want to check it, right?
+ All the names, they give an uppercase letter.
+ You can see that, okay?
+ If you take a lowercase, you won't get anything.
+ It makes sense to you.
+ That's why I want to look at this variable, right?
+ So let me call in the name.
+ We'll get used to it later.
+ I don't want the name, right?
+ So if the coding experience is none, then I put a comma and then put one.
+ It means if the coding experience is none, then coding none will be one and zero,
+ if otherwise, right?
+ Then put a comma and zero.
+ Basically said, if coding experience is none,
+ we're going to return one and save it into coding none,
+ otherwise, zero, we're going to return zero, right?
+ And save it into these objects, these variables.
+ That make sense to you?
+ So let's do one more.
+ The other one is coding proficiency.
+ Coding proficiency, right?
+ If coding experience is proficiency,
+ let me call in the name here, right?
+ Proficiency.
+ Then coding proficiency is one and zero, if otherwise.
+ Do you follow me?
+ Sounds good?
+ All right.
+ Now we have the two W variables, right?
+ Let's get the hour found for the data, right?
+ Let's call hour.
+ Hour equal to my data, dollar, study, hours for me.
+ This is the name, right?
+ I want to save it into hour, right?
+ So now we've got all the predictors, right?
+ All right, one more thing.
+ We have to get the response variable, right?
+ Get the response variable.
+ Let's say pass, right?
+ Okay, pass equal to my data, dollar, pass, okay?
+ Now this will return one and zero, right?
+ But that's not enough.
+ Why?
+ This is just a list that contains two numbers, right?
+ One and zero.
+ But it's not a calico variable, right?
+ So how do you convert a calico variable to a calico variable?
+ We need a factor function, right?
+ So please do this step, a factor, right?
+ A high factor function on pass.
+ Factor on pass, right?
+ Does that make sense to you?
+ So far so good?
+ All right, let me execute.
+ All right, let me execute the commands.
+ That's fine to me, right?
+ I don't have any error message.
+ Let's double check.
+ Coding, none.
+ Open one and zero, right?
+ Coding, proficiency, should be capital letter, right?
+ Is that right?
+ Yeah, capital letter, okay.
+ And hour?
+ All right, that's pretty good to me.
+ I don't see any problem, right?
+ Did you?
+ Now we're going to fit the model.
+ We're going to fit the logistic regression model.
+ Okay.
+ Are you ready?
+ Okay, to fit the model, we use the glm function, right?
+ So glm, the word of response is pass, right?
+ You want to model the policy of pass, right?
+ Q dot, okay, and tonight hour plus the 2W, right?
+ Our coding, none, plus coding proficiency, right?
+ Okay, and we're best at family, right?
+ To model binary data, we need binomial, right?
+ So family is binomial.
+ So we're starting to fit the model.
+ So far so good?
+ Let's do a little bit of an extra queue.
+ Click command.
+ Then we're going to use summary function.
+ All right, you get more detail of the result.
+ Here we go.
+ Now let's take a look, my result and with yours, right,
+ do you get the same thing?
+ For example, right?
+ Look at the coefficient table.
+ The first number is negative 2.98.
+ Second number?
+ Look at second number.
+ Hour is 0.16742.
+ So far so good.
+ You need more time to get the output?
+ Everything's okay?
+ Everything's okay?
+ Everything is okay?
+ And yeah, one summary function here?
+ Yeah, yeah, yeah, I can see it.
+ Any question?
+ Any idea?
+ Everything's good?
+ Everything's good?
+ No problem, we're gonna move on.
+ All right, let's go break, right?
+ It's five, 11.
+ Okay, let's go break first.
+ Make sure.
+ Okay, don't worry, be happy.
+ So, it's the right time for a break, right?
+ All right.
+ All right.
+ Okay.
+ One, two, one, two, one, two.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ All right, are you ready?
+ Hi, ready?
+ Ready? Okay.
+ Alright, next question.
+ Alright, which one? Okay.
+ I think C, right?
+ Now we did fit the regression model, right?
+ And obtained the regression output, right?
+ Next, we're going to determine if coding experience
+ is our significant predictor of the probability
+ of a student passing the course.
+ Alright, how do we know coding experience
+ is a significant predictor?
+ If it is related to the probability, right?
+ Now, in the model, right?
+ The two terms relate to the code experience, right?
+ Here, these two terms, right?
+ Now, if coding experience is not related to the probability, right?
+ Okay, the term associated with coding experience
+ should be gone, is that right?
+ Does that make sense to you?
+ So that means the coefficient,
+ the regression coefficient associated
+ for the coding experience should be zero.
+ Does that make sense to you?
+ Right, it's not related, right?
+ If it's related, it's not zero.
+ Does that make sense to you?
+ Alright, let me just formalize the hypothesis.
+ Okay.
+ So, let's say you don't have all of the firsts.
+ Okay, let's say you don't have all of the firsts.
+ Okay, the code experience is a significant predictor
+ of the probability of a student passing the course.
+ Alright, what about the null hypothesis?
+ Remember, the null hypothesis begins with O, right?
+ O? No. Oh no!
+ That means the code experience is not or has no relationship
+ with our significant predictor.
+ Predictor of a probability, right? Okay.
+ Now, under the null hypothesis,
+ this implies the regression coefficient
+ associated with code experience is zero.
+ Which one?
+ The coefficient for null
+ and the coefficient for
+ the coefficient of both zero.
+ Does that make sense to you?
+ So, therefore, the model only works with two terms.
+ The model works with each step in the hour, is that right?
+ So, the logistic model?
+ Only contains two terms.
+ It's the interstep
+ plus the hour.
+ Is that right?
+ Now, under the alternative hypothesis,
+ that coding experience is a significant predictor of a probability, right?
+ That means the coefficient associated with coding experience
+ should not be zero.
+ Is that right?
+ Does not equal to zero?
+ That means
+ either one of the coefficients should not be zero.
+ Does that make sense to you?
+ Right, there are two coefficients, right?
+ Either one of them should not be zero.
+ One of them must not be zero, is that right?
+ Does that make sense to you?
+ Alright, now we need to run the test, right?
+ To test the claim.
+ To test the claim,
+ we have to assume the null hypothesis is true, right?
+ In the next second, we have to find evidence against the null hypothesis.
+ The amount of evidence against the null hypothesis is given by p-value.
+ Smaller p-value, stronger evidence against the null hypothesis, right?
+ To get a p-value from theta,
+ what is that thing called? Test statistic, right?
+ How to get a test statistic p-value?
+ We have to go from the likelihood ratio test.
+ So let's perform a test.
+ So to perform
+ the test, the likelihood
+ ratio test,
+ ratio test,
+ we need to calculate
+ the likelihood ratio.
+ It's the likelihood
+ ratio.
+ Okay, under the null hypothesis,
+ divide by the maximum likelihood
+ under H-A,
+ right?
+ Then we convert
+ the likelihood ratio
+ R
+ to
+ our chi-square statistic.
+ Call D, right?
+ P-value.
+ Then
+ get the p-value
+ from the chi-square statistic.
+ From the chi-square statistic, okay?
+ Does that make sense to you?
+ Are we okay with the procedure?
+ Now, the chi-square statistic,
+ call D for that, right?
+ It's given by
+ negative 2 times the long
+ of the likelihood ratio.
+ All right.
+ Now we're going to carry
+ the likelihood ratio test using R.
+ Does it make sense to you?
+ Now, to do that, right,
+ we have to get the likelihood
+ under the null hypothesis, right?
+ We have to fit the model, right,
+ under the null hypothesis
+ and obtain the likelihood,
+ right, and use it
+ to compare the likelihood
+ under the alternative.
+ So what's so good?
+ Are you ready?
+ So what's so good? Are you ready to run?
+ All right, so,
+ so let me fit
+ the logistic model
+ with intercept
+ and hour.
+ So I'm going to say
+ g of m
+ has
+ to the hour
+ plus, that's it, that's all we need, right?
+ Right? We need hour, that's it.
+ That will include intercept.
+ Then we need
+ finally,
+ is it finally over?
+ We're out.
+ We're only out, okay?
+ Only hour.
+ Okay, fit the model, only hour.
+ Is it really not?
+ No coding experience.
+ Does it make sense to you?
+ Right now, we're going to run
+ Run the likelihood
+ ratio
+ test
+ How to run it?
+ We use another command
+ a-n-o-v-a
+ All right?
+ This requires three
+ inputs. First,
+ as the model under null hypothesis.
+ We need the model under null hypothesis, right?
+ As infinite
+ model, only hour.
+ Okay?
+ Second, we need fit the model
+ with all predictor
+ which is a
+ fit the model, right?
+ And the
+ test option is a kind of
+ square, right?
+ That's all we need.
+ Do you follow me?
+ Do you follow me?
+ Did you follow me?
+ May I run the commands?
+ Anyone need help?
+ Is that okay?
+ Hello?
+ Capital C
+ Capital C
+ Capital C, okay?
+ Here we go.
+ All right.
+ Now, couple of things.
+ All right.
+ Now, this is what we call
+ divina, right?
+ It's negative two times
+ log of the likelihood ratio.
+ Sound so good?
+ All right? These two
+ is the log
+ likelihood, right? It's negative two times
+ log likelihood.
+ Sound so good?
+ Remember, when you calculate log of
+ the likelihood ratio, right?
+ It's negative two terms.
+ The log of likelihood
+ under
+ h0
+ minus log
+ likelihood
+ under
+ hj, right?
+ The likelihood is the clear log.
+ All right?
+ We have the degree of freedom and the p-value.
+ That's the p-value, right?
+ What's the p-value?
+ It's 1.544
+ times e to the 7.
+ That means it's a 7-0.
+ 7-0, right?
+ Before
+ 1-5-0-4.
+ Does this make sense to you?
+ Smaller p-value,
+ stronger evidence against
+ the null hypothesis.
+ In this case, it's a really small p-value, right?
+ With a strong evidence against
+ the null hypothesis.
+ Can I move on?
+ Can I move on?
+ Can I say the p-value?
+ 1
+ 5
+ 4
+ Okay.
+ It's less than
+ the significant level
+ Let's say 0.25, right?
+ The sample data
+ of the leading general hypothesis first.
+ We check
+ the null hypothesis
+ at 5%
+ significant level.
+ Sample data
+ 0.5
+ sufficient evidence
+ to conclude
+ coding
+ experience
+ is our significant
+ predictor
+ of probability
+ of passing
+ the course.
+ Okay.
+ Does this make sense to you?
+ All right. Next question.
+ Now what do you find
+ coding experience is
+ significant predictor of probability, right?
+ Let's move on
+ to big prediction.
+ Suppose a student
+ studies for 10 hours
+ in a week.
+ Well, there's also time for 10 hours in a week, right?
+ Okay.
+ Predict the odds
+ and probability of a student
+ passing the course.
+ Okay.
+ Given a student with
+ no coding experience
+ with intermediate
+ coding experience
+ and proficiency coding
+ experience. We're going to do
+ one by one, okay? Are you ready?
+ I may move on.
+ Okay.
+ How to predict
+ that will start from log
+ odds.
+ The log odd, right,
+ is given by
+ the linear function of all predictor, right?
+ A plus B
+ for hour
+ times the hour
+ plus
+ coefficient
+ or
+ none times
+ the W variable
+ coding
+ none and plus the coefficient
+ for proficiency
+ times coding
+ proficiency.
+ So much for good.
+ We've got a log odd, right?
+ From the linear function of all predictor, right?
+ When you've got the log odd, right,
+ we can get the odd.
+ How to get the odd?
+ By e
+ to log odd.
+ Are you up here with that?
+ Now, please remember our
+ books relationship, right, you know?
+ We're going to use that very frequently.
+ Okay, when you first get a
+ log odd,
+ what can get the odd?
+ How?
+ By e
+ to log odd.
+ So much for good.
+ Now, if you've got odds,
+ we can get the probability.
+ How?
+ By taking odds
+ over
+ one plus odd.
+ So much for good.
+ If you want to jump to a log odd,
+ to probability, right?
+ We're going to
+ do this transformation, right?
+ e to the linear function
+ of
+ predictor
+ defined by
+ one plus e to the power of
+ linear function
+ of predictor.
+ Is that clear or not?
+ Alright? Now, I encourage you
+ to remember this relationship,
+ right?
+ Now, don't worry about that, I'm going to
+ show you the relationship, right?
+ I will lay out the relationship. Is that clear or not?
+ You don't need to memorize.
+ It's going to be put on GC2, right?
+ But if it's good, you can memorize.
+ I want you to look at better form, right?
+ Okay, so much for good.
+ Now, I start with log odd.
+ Get the odd
+ and then get the probability.
+ So much for good.
+ Now, let me do an R.
+ Don't make
+ prediction.
+ We start on first one.
+ Okay?
+ Student
+ with no
+ experience.
+ Okay, none, right?
+ Hour
+ is 10, is that right?
+ Okay. Now, let me
+ set the value of x first.
+ Option, right?
+ Now, in this case, right, x,
+ but in this case, right, the value of
+ predictor, hour is 10.
+ Is that right?
+ Looks like new?
+ Now, you have to student with
+ no experience, right?
+ Coding number will be 1.
+ 1 plus 1, right?
+ Coding number will be 1.
+ 1 or 0?
+ Coding number will be
+ 1.
+ And coding proficiency will be
+ 0, right?
+ Now, the intercept
+ is a derivative
+ of 8, okay?
+ So, let me define
+ the value
+ of one predictor called x naught,
+ right, equal to
+ let me give you a list of functions,
+ right, a list of number,
+ right, and you see function
+ to collect all the value
+ of predictor, right?
+ Now, we start with intercept.
+ Now, intercept is a constant, right?
+ You can think of
+ 8 times
+ 1, is that right?
+ You can think of
+ the value of the predictor
+ is 1, so 1, right?
+ 1, 10, 1, and 0.
+ So, let enter
+ this into
+ our list of a number, right?
+ into our list.
+ So, 1,
+ 10,
+ 1, and 0.
+ Now, we can calculate
+ the log arc, right?
+ The log arc, right?
+ Now, to get the log arc, we have to get
+ all the coefficients, right?
+ So, let me get
+ the coefficients, right? You say coefficient function.
+ C-O-E-F
+ of the film model.
+ We give you all the coefficients,
+ right? And then time together,
+ right? One time this, one
+ time this number, 10
+ time our, one time
+ this number, zero time
+ this number. Is that clear? And then add
+ together.
+ You follow?
+ Let me show you, right?
+ You follow?
+ Okay.
+ Okay, here is
+ all the coefficients, right?
+ This is the constant, right?
+ You think of one time
+ the constant, okay?
+ That's all we need to input, right?
+ Here, hour is 10, right?
+ Alright,
+ I need to take 10, multiply these numbers,
+ okay? 10, multiply the
+ coefficients for hour.
+ Next time, coding 9, right?
+ Coding 9 is 1.
+ One time this coefficient,
+ which is this number, right?
+ And coding coefficient is 0.
+ Zero time
+ this number. Does that make sense to you?
+ Now, how to do that in
+ program?
+ Have you learned this one?
+ Now, first we define
+ two
+ result numbers.
+ So, that's the coefficient, right?
+ Okay, we have four numbers here.
+ So, the intercept, the coefficient
+ for hour,
+ the coefficient for
+ coding 9,
+ and the coefficient for proficiency.
+ You following?
+ And then I define
+ a list of numbers, right?
+ Or call factor, right?
+ That contains all the
+ electors.
+ We start with 1.
+ Hour is 10.
+ Coding 9 is
+ 1.
+ Coding coefficient is 0.
+ So, what's so good?
+ What I want to do now, what the
+ this time is
+ x time coefficient.
+ So, what's so good?
+ It will give you
+ it will give you another
+ list of functions, right? That take the product
+ of each pair.
+ So, 1 times 8,
+ 10 times hour,
+ 10 times
+ coefficient for hour,
+ 1 times
+ the coefficient
+ for none,
+ and 0
+ times the coefficient
+ for proficiency.
+ Now, you follow?
+ Now, raise your hand if you cannot follow.
+ Yes or no?
+ What was the
+ question?
+ You show up here, right?
+ So, again,
+ a list of
+ number, right?
+ That's going to take the product of each term.
+ Finally, you have to sum
+ together, right?
+ They will give you a sum
+ of those
+ numbers,
+ those products.
+ Does this make sense to you?
+ Now, even if you're not familiar,
+ you can do it by hand. It's not very difficult, right?
+ Okay?
+ You have to do the hand calculation, right?
+ 1 intercept
+ plus 8 times this number,
+ plus 1 times this number, 0 times this number,
+ right? But you want to do it
+ in program, right? That's the right way
+ to do it. Default, one more time.
+ Let me
+ get back to
+ R.
+ Let me get back to
+ the sweep.
+ Alright, so let me get the
+ coefficient
+ of the final model, right?
+ Now, let's return the coefficient
+ of the final model.
+ The equation for the
+ coefficient for the equation, right?
+ Let me call coefficient.
+ Alright, now put the time together.
+ X naught times
+ the coefficient.
+ And then sum all the products,
+ right?
+ This will give the long arc.
+ Is it okay?
+ Put the
+ code in here.
+ Any questions so far?
+ Now, let me double-check,
+ right? So let me run those
+ one to curl,
+ one to command, and see what we get.
+ So, X naught
+ is a list of input, right?
+ A list of value of the predictor.
+ Okay, coefficient.
+ We got a list of coefficients
+ from the equation.
+ Which are on this side, right? Those are the coefficients, right?
+ X naught times
+ the coefficient.
+ Give me the product of those, right?
+ Now, this is the intercept here.
+ Our 10 times the coefficient,
+ 10 times 1.167
+ is 1.167, right?
+ Coding none is 1, right?
+ So, we get a C number here.
+ Zero time
+ coefficient. For proficiency,
+ it's also zero, right?
+ Now we add together.
+ Alright, summing up.
+ Then we'll give back
+ the long arc.
+ So, is it good? So there's the long arc, right?
+ Any questions so far?
+ Now, once you get the long arc,
+ okay, you can get
+ the arcs.
+ How to do that?
+ E to power
+ long arc, right?
+ Long arc,
+ equal to
+ E to power
+ arc, long arc.
+ Okay?
+ And finally, the problem is
+ given by
+ arc over long arc.
+ You want a big jump?
+ You can jump from long arc to probability, right?
+ How?
+ By this transformation.
+ By this transformation.
+ So, the probability is given by
+ arc
+ over
+ long arc.
+ Alright, let me execute
+ commands.
+ So, long arc.
+ Long arc,
+ arc,
+ and probability.
+ Does that make sense to you?
+ Let me call my number.
+ Let me just write my experiment.
+ This is long arc.
+ This is
+ long arc.
+ Okay.
+ And this is probability.
+ 0.09 by 8,
+ 1.10%, right?
+ 10% chance.
+ Well, I can see, right?
+ You spend 10 hours
+ studying a week,
+ but no whole experiment,
+ the chance applies to this for only 10%.
+ Oh my god.
+ No matter how hard you are, right?
+ The chance is only 10%, even if you have no whole experiment.
+ Right?
+ Alright, let's try
+ intermediate.
+ Now,
+ if students have
+ intermediate experiment,
+ okay,
+ how can you
+ set the dummy variable?
+ That means actually what?
+ For intermediate, right?
+ So be
+ 0, is that right?
+ Right?
+ It's intermediate, not non-proficiency, right?
+ Calling proficiency also
+ is also 0, right?
+ Hour, we make unchanged 10.
+ Right?
+ So now, plus we calculate
+ we estimate the whole 30, right?
+ With those we put
+ 0.
+ Silver with
+ intermediate experiment.
+ Right, the first intercept
+ is 1, right?
+ Hours 10,
+ both dummy are 0.
+ So now,
+ let's execute the command, right?
+ It's the same command, but the input is different.
+ Do you follow?
+ Who needs help?
+ Any question?
+ Alright, the log arc is
+ negative 1.3,
+ 0.9,
+ for port
+ is given a 0.27,
+ and for 30
+ is given by
+ 0.2126.
+ Alright?
+ So what about probability, right?
+ So far so good. Now do it one more time.
+ What about proficiency?
+ Now, if a student has proficiency
+ experience,
+ coding is still 0, right?
+ And coding proficiency
+ will be
+ no, proficiency, right, will be 1.
+ So look what proficiency we have.
+ Does this make sense to you?
+ The hour, we make a change,
+ right?
+ So far so good.
+ Did you follow?
+ Everything is fine?
+ Let me execute the commands,
+ and get the result.
+ Log arc,
+ arc,
+ arc,
+ and probability,
+ log arc,
+ negative 0.7,
+ 0.9,
+ 0.7,
+ 0.4,
+ 0.6,
+ 0.7,
+ 0.3,
+ 0.5,
+ 0.5,
+ 1.
+ 5.
+ 1.
+ 5.
+ Right, so far so good.
+ Alright, one more time. Give me any question about a calculation.
+ Are you going to follow what I did?
+ You're going to do that on the midterm, okay? Are you even going to do that? Yeah?
+ So, okay, no problem?
+ Great.
+ Alright, next question.
+ Determine the equation that used the number of hours to predict the probability of passing the course
+ for a student with low coding experience, with intermediate coding experience, or proficiency coding experience.
+ Now, this time I want to get an equation, not a number. Is that clear?
+ Alright, how do I get it?
+ Let me grab the equation first.
+ Here's the model, right?
+ The model 4 is given by the linear function of all predictors, right?
+ Now, if students have no coding experience, coding none will be what?
+ Zero, good.
+ Zero, right?
+ And what else? Alright.
+ And coding proficiency, I'll just show you, it will be one by the way, not zero, it will be one.
+ Sorry about that.
+ What about coding proficiency?
+ It's zero, you're right, good.
+ Zero, you're right.
+ Okay.
+ Now, zero times whatever number is zero, right?
+ So this time is gone, is that right?
+ This time is gone.
+ So now that we have those terms, right?
+ Now, one time the coefficient for none is given by the same coefficient, right?
+ Let me say to you, one time the coefficient for none is given by the same coefficient, right?
+ So this is given by...
+ Alright, so we can take this number, combine with the intercept, right?
+ I'll give you...
+ So it's good.
+ Now, we got a new equation, right?
+ It's the intercept plus the coefficient for none plus the linear term of hour.
+ That makes sense to you.
+ If we follow the algebra, alright?
+ Now we call the intercept A...
+ A is estimated to be...
+ negative 2.98, right?
+ Okay?
+ And the coefficient for none...
+ is estimated to be...
+ to be 0.16...
+ sorry, negative 0.9448, right?
+ So let's add together or together?
+ So A plus the coefficient for none equal to...
+ negative 2.9834 plus the coefficient for coding none...
+ is negative 3.8792, right?
+ So far so good.
+ Do you follow what I did?
+ Is everyone okay?
+ Is everyone okay?
+ So the equation given by...
+ the whole part given by negative 3.8792...
+ plus the coefficient for hour, right?
+ So we call the coefficient for hours given by 0.167417, right?
+ Here we go.
+ That is the equation to estimate the log-ort, is that right?
+ The log-ort, right?
+ Does it make sense to you?
+ Anyone question?
+ Are you able to follow?
+ Are you able to follow here?
+ No problem?
+ Alright.
+ When we get the log-ort, we can get the probability...
+ the estimate probability is given by...
+ E to log-ort...
+ over 1 plus E to log-ort.
+ Does it make sense to you?
+ When we get log-ort from this equation, we can get the estimate probability.
+ Any questions so far?
+ So that's the way how we get the equation...
+ that predicts the probability of a student passing the course...
+ based on the hour, right?
+ Any questions so far?
+ Alright, just need a little break, alright?
+ Alright, let's do the same thing for intermediate experience.
+ Alright, now, if students have intermediate coding experience...
+ Now, coding number will be what?
+ Zero.
+ And coding coefficient also?
+ Zero, right? Good.
+ Now, zero times whatever number is also zero, right?
+ So the last two terms basically gone, is that right?
+ The last two terms are gone, left with these two terms, right?
+ Intercept plus coefficient of hour times the hour, is that right?
+ Does it make sense to you?
+ Now, we call, right?
+ The coefficient of A is estimated to be negative 2.98.
+ And the coefficient of hour is estimated to be 0.1674.
+ Therefore, the equation that predicts the probability is given by...
+ So, negative 2.98 plus 0.16 times the hour.
+ Does it make sense to you?
+ Any questions so far?
+ Is that okay?
+ No questions, yeah?
+ Did we find the problem?
+ Now, let me do the last one.
+ Student has proficiency coding experience.
+ Now, if student has proficiency coding experience, coding number should be what?
+ Zero, good.
+ All right, and coding proficiency will be one, you're right.
+ Now, zero times whatever number is also zero, right?
+ So, this term is gone.
+ All right, it isn't gone, right?
+ Anyone come back over?
+ This term, this term, and this term, right?
+ All right, now, since coding proficiency is one, one time, whatever number, give a C number, right?
+ It will give back proficiency, the coefficient for proficiency.
+ Therefore, we have that we can combine these coefficients, right, with the intercept A.
+ Does it make sense to you?
+ Does it make sense?
+ All right, now we have to put in the estimate of those values, right?
+ Now, I'll let you do that, I'll let you do that, right, okay?
+ Any questions so far?
+ Any questions so far?
+ I'll let you define out the estimate of those numbers, right, and then combine together.
+ Is that clear?
+ Okay, we are going to do the next question.
+ May I move on?
+ All right, question G, interpret the regression proficiency for each dummy variable.
+ Now, there are two dummy variables.
+ One is the dummy variable as the coefficient for none, right, coding none, is that right?
+ No experience.
+ The other coefficient is for coding proficiency, is that right?
+ So how do I interpret these two coefficients?
+ These two, right?
+ All right, so here's what I do.
+ So let's interpret the regression proficiency for coding none, right, which is...
+ All right, now recall from the previous part, right?
+ The equation that used the number of hours to predict the probability of a student passing a course for a student with none experience, no experience, is given by this one, right?
+ It's a log r equals to a plus the coefficient for none, right, for coding none, plus the coefficient for hour times the hour.
+ Is that right?
+ So what's so good?
+ All right.
+ Now let me get the other equation.
+ Which one?
+ I want to get an equation that used to predict the probability of passing the course for a student with intermediate experience.
+ This is the one.
+ So what's so good?
+ Okay, this is four.
+ None or no experience.
+ This is four. Intermediate experience.
+ Are you okay with that?
+ All right, here's what I want to do.
+ I want to take a different between these two equations.
+ I want to subtract the difference between these two equations.
+ Now this is different, right?
+ First we got on the left-hand side, we got the difference between log r, right?
+ There's a change in the log r.
+ Okay, between student with no experience and intermediate experience.
+ So what's so good?
+ Does that make sense to you?
+ On the left-hand side, we're going to change in the log r.
+ All right, now on the right-hand side, we're going to do some cancellation, right?
+ Now a, can we cancel, right?
+ You see, can we cancel intercept?
+ a is gone, right?
+ What else is gone?
+ The hours.
+ The hour, right? The whole term here, right?
+ This term is also gone, right?
+ Which term is survived?
+ The coefficient for coding none, right?
+ Okay, now you can see, now based on this, right?
+ You can say the coefficient for the w variable coding none is the change,
+ is the change in the log r between student with no experience and intermediate experience.
+ Is that clear or not? Does that make sense to you?
+ Now you may wonder why I compare a student with no experience with intermediate experience.
+ Now we call intermediate experience as a reference category.
+ All students remember, right? As a reference category.
+ In this case, right, all w are zero.
+ Now based on the output, right, we know coding none is given by what's the number?
+ So let me just write that for you, right?
+ So beta, so the change in the log r is given by,
+ the change in the log r between student with no experience and intermediate experience
+ is given by the coefficient for none.
+ Does that make sense to you?
+ Now let's take a look at this coefficient that we call the coefficient.
+ Okay.
+ Or no, it's none experience, right?
+ Estimate to be is negative point i, right?
+ Now these numbers are negative, is that right? Negative, right?
+ What does this mean?
+ The log r of passing for student with no experience is lower than the student with intermediate experience.
+ Is that clear?
+ Now you can double check the calculation we did before.
+ This calculation, right?
+ Now, if student have no experience, the log r is only negative 2.21, right?
+ When the student have more experience, right?
+ When the student have intermediate experience, right?
+ The log r is essentially go up.
+ Okay, go up, right?
+ To negative 1.3.
+ Okay, that's higher, right? Does that make sense to you?
+ Okay, by how much?
+ By that number, right? Okay, log r, right?
+ Okay, 2.2.
+ Let me double check, right?
+ Negative point i, right? Okay.
+ So therefore, we say, right, we estimate the log r of passing the course.
+ The course, okay, is for student who has no experience is lower than those with intermediate experience.
+ Okay, by how much?
+ By 0.9.
+ Now, don't say negative 0.9.
+ Reason is the negative sign has been represented by negative.
+ Does that make sense to you?
+ So far so good.
+ Any questions so far?
+ One more thing.
+ Now, sometimes we don't write log r.
+ What do you want? You want log r instead of log r, right?
+ How can you get the log r?
+ How can you get the log r?
+ By e to power something, right?
+ e to power something.
+ Therefore, we can also say,
+ or this is equivalent to say,
+ we estimate the log r of passing the course for students who have no experience is 1.
+ Now, it's still lower or higher?
+ It's still lower, right?
+ Because this is a negative coefficient, right?
+ Right?
+ If you give me a fraction below 1, right?
+ Lower than those with intermediate experience by a factor of 0.904.
+ Is that okay?
+ So far so good?
+ Or by 0.904.
+ We're getting smaller, right?
+ The number is getting smaller.
+ Does that make sense to you?
+ 0.1 CO9?
+ Okay.
+ Or by 0.002%, right?
+ Let me double check here.
+ About 10%.
+ By 9.5%.
+ I'd like to figure out why, okay?
+ Okay?
+ But if you just leave it like that, I'm fine with that.
+ No problem.
+ But why 9.5%?
+ I'd like to figure out by yourself.
+ Is that number?
+ I think that number is called the log r.
+ Oh, sorry, sorry.
+ I didn't get a lot more right.
+ Sorry, sorry, sorry.
+ I need to follow up 0.904, right?
+ This is 0.4 CO4, okay?
+ So by the low by a factor of 0.04, right?
+ So far so good?
+ Alright.
+ Now, two things I want to mention, right?
+ In this case, we compare the odds of passing the course for students with no experience with those with intermediate experience, right?
+ And the intermediate experience is the reference category.
+ Is that correct or not?
+ Reference category.
+ That's why we call it reference, right?
+ We want to compare the student with no experience with the reference.
+ What's the reference?
+ Intermediate experience.
+ No, that's okay.
+ That's the reference category.
+ Alright, I think this is time out, right?
+ But let me do one more thing in five minutes.
+ I want to do the last one, right?
+ So what about the other coefficient?
+ The other coefficient, right?
+ So this is coding for intermediate, is that right?
+ Now, how to interpret the code intermediate?
+ Sorry, not intermediate.
+ It's proficiency.
+ So far so good?
+ How to interpret this coefficient?
+ It's the same thing, right?
+ You want to compare the odds of students passing the course, okay?
+ For the one who have proficiency experience with the one who have intermediate experience, is that right?
+ Compare proficiency versus intermediate.
+ So far so good?
+ Why intermediate?
+ Because it's a reference category.
+ Does that make sense to you?
+ So same kind of interpretation.
+ So we estimate the log odds of passing the course for students who have proficiency experience.
+ Now, let's look at the coefficient for this case.
+ Now, the coefficient for proficiency is 0.6, right?
+ Here, right?
+ It's positive.
+ What does this mean?
+ The log odds, get the higher or lower?
+ Greater.
+ Greater, good.
+ Okay, so this case is positive, right?
+ So the number is higher than those with proficiency experience.
+ How much?
+ By 0.6.
+ 0.8, right?
+ Now you can convert to odds instead of log odds, right?
+ Which can lead to something, right?
+ It can lead to power of 0.6.
+ So we estimate the odds of passing the course for students who have proficiency experience
+ is higher than those with intermediate experience by a factor of e to the power of 0.6.
+ 0, 0, 8.
+ That is?
+ One point?
+ One point and two.
+ Okay, right, one point and two.
+ Thank you very much.
+ So we are finished.
+ Can you say this word five?
+ What?
+ Can you say this word five?
+ Five?
+ No, word five.
+ This is word five.
+ With the middle answer.
+ Okay.
+ And the goal.
+ Any questions about that?
+ No questions?
+ Are you here to follow?
+ Yeah?
+ No problem?
+ I'm not going to tell you the cheesy problem, right?
+ I'm not going to talk to other people, okay?
+ I'm going to find out.
+ Okay?
+ We have lots of time, right?
+ Okay?
+ Any questions about that?
+ No questions?
+ I want to take a break.
+ Alright, no problem.
+ Any questions about that?
+ No.
+ Alright.

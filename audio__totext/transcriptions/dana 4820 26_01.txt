@@ -1,0 +1,1067 @@
+ 1 minus p, 1 minus p, 1 minus p. So far, so good.
+ How many 1 minus p? It's n minus x, 1 minus p, right?
+ Top-getter becomes 1 minus p to the power of n minus x.
+ So this is the property of producing our data.
+ x, people use iPhone, and n minus x, people do not use iPhone. So far, so good.
+ As you can see, this is the function of p.
+ This expression is written in terms of p.
+ So we can treat this function as this function called likelihood function.
+ From p to 1x to prime 1 minus p to power of n minus x.
+ For given p, I can get the property of producing our data.
+ As I said, p is unknown.
+ How can I estimate the p based on the sample data?
+ We have to find the most reasonable value of p based on the sample data.
+ We have to find the most reasonable value of p based on the sample data.
+ And how can I find the most reasonable value of p?
+ We need the value we are looking for.
+ We are looking for p such that the likelihood is maximum.
+ We are looking for the value of p that maximizes the probability of producing our data.
+ That should be the most reasonable value.
+ We are looking for the value of p that maximizes the likelihood of producing our data.
+ How can I find this value?
+ Hopefully you understand some calculus.
+ The trick is that I have to take the derivative.
+ This function should have a max.
+ You can grab this function.
+ The function looks something like that.
+ p is always between 0 and 1.
+ The function should look something like that.
+ This is the value we are looking for.
+ This value maximizes the likelihood function.
+ At the maximum, you put a tangent line here.
+ The slope is 0.
+ Our job is to find the derivative of this function and then set it to be 0.
+ Does that make sense to you?
+ How can we effectively find the derivative?
+ It's an easy way to find the derivative.
+ We can use the product rule.
+ There are many rules to do that.
+ The easiest way is to take the logarithm of this function.
+ Take the logarithm.
+ The logarithm of the likelihood function is called the log likelihood.
+ You know by L of p.
+ So it's good.
+ We want to find the value of p that maximizes the likelihood function.
+ To do that, we have to find the derivative of the likelihood function and then set it to be 0.
+ To make the algebra simple,
+ we can take the logarithm of the function to the log.
+ What are we doing with the log?
+ I can bring down all the power inside the log.
+ The other thing is, I'm going to show you a little calculus.
+ If y is given by log of some function of x,
+ the derivative is given by y over f of x times f prime of x.
+ Does that make sense to you?
+ So we can easily find the derivative of this function.
+ Does that make sense to you?
+ And the nice thing is,
+ this action does not affect the value of p that maximizes the likelihood function.
+ We still get the same value that maximizes the likelihood function.
+ Is that clear?
+ Also, the likelihood function has a nice property.
+ We're going to cover this today.
+ That's what I want to do.
+ You can simplify this function.
+ The log of the likelihood function
+ will give you capital term.
+ If you don't know algebra, that's okay. I'll give you the result.
+ It's x times log of p plus n minus x times log of 1 minus p.
+ I don't want to show you all the detail algebra.
+ That is the log likelihood function.
+ As I said, we bring down the power from p beside log.
+ So it's easy for us to take the derivative. Does that make sense to you?
+ So now, the next step is to take the derivative of a function.
+ We can just take the derivative of log likelihood.
+ So the log likelihood is given by
+ x over p minus n minus x over 1 minus p.
+ Again, I won't show you all the detail algebra.
+ I'll let you know about that.
+ As I said, this is an important point, right?
+ I don't want to ask you to take the derivative during the midterm.
+ Don't worry. I'll be happy.
+ But I won't give you the result, right?
+ We'll get something like this.
+ x times n times p over n of p times log of p.
+ And now we can set it to be zero, right?
+ Set the derivative to be zero.
+ Why I won't do that? As I said, right?
+ When you set the derivative of the log likelihood function,
+ it's important to make the derivative of the log likelihood function to be zero.
+ Makes sense to you, right?
+ The same as the log likelihood function is zero.
+ Why does it have to be zero, right?
+ We can solve this function.
+ Zero equals to x times n times p over p times log of p, right?
+ So that's in pi.
+ x equals to x over p e to the n, right?
+ That's in pi, right?
+ p equals to x over n.
+ And this is the sample proportion.
+ Does that make sense to you?
+ Therefore, the p we are looking for,
+ that maximize the likelihood function given by
+ x over n, which is the sample proportion.
+ So far so good.
+ Now, as I said, right?
+ My expectations are, one, understand the central concept of maximum likelihood estimation, right?
+ We're looking for the value of p that maximize the likelihood function,
+ maximize the probability of producing our data, okay?
+ Second, is formally the likelihood function using basic probability rule.
+ That's it.
+ That's all, okay?
+ I don't expect you know algebra,
+ but you should know some basic algebra, okay?
+ Very basic, okay?
+ I don't expect you know derivative.
+ Leave it, okay?
+ Does that sound new?
+ Any questions so far?
+ Are we going to try the assignment?
+ Problem two?
+ Is that problem two, right?
+ Problem three?
+ I'll let you work for today, okay?
+ If you have any questions, you can ask me, right?
+ Alright, that's what I did last day.
+ So far so good.
+ Okay, we're going to introduce maximum,
+ sorry, maximum likelihood test.
+ Oh, sorry, likelihood ratio test, sorry.
+ Alright, today we're going to talk about likelihood ratio test.
+ Does that make sense?
+ Alright, in this lecture, you will learn how to use the likelihood function
+ to test a claim about a proportion.
+ Alright, let's begin the topic with an example.
+ A random sample type of student is selected from a college, say like there.
+ 60 of them use iPhones.
+ And we want to use the sample data to determine
+ whether the proportion of all students who use an iPhone is different from 50%.
+ Is that like 100 people?
+ Alright, 100 people.
+ 60 of them use iPhones, is that right?
+ So the proportion of students we sample who use iPhones is 60%, is that right?
+ Now, 60% is clearly different from 50%, is that right?
+ Okay, I understand.
+ Okay, final problem.
+ However, this is not my concern.
+ Because we only observe this in a sample.
+ If I repeat the study again, again and again with different random samples,
+ it may not happen, is that right?
+ So we, my concern is the whole population.
+ I want to know, in the population of all students,
+ the proportion of all students who use an iPhone is different from 50%, is that right?
+ Now, the sample gives us a clue.
+ It might happen in the population.
+ That's why one has this claim.
+ Whether the proportion of all people who use an iPhone is different from 50%.
+ Alright, let's follow the hypothesis.
+ First, I want to say the alternative hypothesis.
+ Now, recall, the alternative hypothesis is the claim we are going to test.
+ And what's the claim?
+ We test the proportion of all students who use an iPhone is different from 50%, right?
+ So we say P does not equal to 0.5.
+ So P is the proportion of all students who use an iPhone, alright?
+ Now, forget about the null hypothesis.
+ The null hypothesis always stick with equal sign.
+ Same as before, right?
+ Okay, we say P equal to 0.5, it means exactly, exactly,
+ 50% of all students use an iPhone under the null hypothesis.
+ That was good? Not too bad, okay.
+ Now, to perform the test,
+ we need to calculate how likely your observed data is under both hypotheses, okay?
+ Then we compare two likelihoods using a ratio.
+ So the ratio is defined as the likelihood under the null hypothesis
+ divided by the maximum likelihood under the alternative hypothesis.
+ Okay, we'll use the ratio.
+ Now, the likelihood ratio test asks the following question.
+ Does the null hypothesis make your observed data near as likely to occur
+ as the maximum likelihood under the alternative hypothesis?
+ Okay, now, we get back to the likelihood function, right?
+ Now, as I said, we're looking for the value of P that maximize the likelihood function, is that right?
+ Based on the sample data.
+ We call the value that maximize the likelihood function is the sample proportion, is that right?
+ Okay, so when P equals to the sample proportion, it will maximize the likelihood.
+ It will maximize the probability of producing our data, is that right?
+ Okay, now under the null hypothesis, we believe the proportion is 0.5, is that right?
+ Now, 0.5 obviously is not the value that maximize the likelihood function, is that right?
+ It's not the one that maximize the probability of producing our data.
+ It should be close, is that what I'm saying, right?
+ If the null hypothesis is true, okay, that P is truly 0.5, okay?
+ It should make the probability of producing our data close at the maximum likelihood.
+ Even though it's not the max, but should be close to max, is that right?
+ So that is the idea behind the likelihood visual test.
+ So here's a question.
+ Does the null hypothesis make your observed data near as likelihood curve at maximum likelihood?
+ That's the key concept, right?
+ If the null is true, okay, it should be very close, okay?
+ So here's a property of a likelihood ratio.
+ The likelihood ratio is always less than or equal to 1.
+ Why?
+ Remember, the ratio is defined as the likelihood under the null hypothesis
+ divided by the maximum likelihood.
+ Divided by maximum, right?
+ That means the number on the top must be less than the number at the bottom, is that right?
+ You take a number divided by maximum.
+ This number has to be less than 1. Does this make sense to you?
+ Because the max likelihood under the alternative hypothesis is always greater or equal to the likelihood under the null hypothesis.
+ Let me just write it up for you right here.
+ So, the max likelihood
+ under H8 must be greater than any likelihood under H1.
+ That's why it's called max, right?
+ Here for the ratio, equal to likelihood under H0 divided by the max likelihood under H8 must be less than 1.
+ So that's good, or equal to, you can say, right?
+ Does it make sense to you?
+ Now, if the null hypothesis is true,
+ if the null hypothesis is true, it will make the observed data near as likely as the maximum likelihood under the alternative.
+ Therefore, the ratio will be closer to 1.
+ It makes sense to you, right?
+ The null hypothesis makes the observed data near as likely as the maximum likelihood.
+ So if the value of P under the null hypothesis makes the likelihood as closer to the maximum likelihood,
+ the ratio should be closer to 1. Does this make sense to you?
+ This indicates that the observed data are consistent with the null hypothesis.
+ Therefore, we should not reject the null hypothesis.
+ So that's good.
+ Alright, on the other hand,
+ if the null hypothesis does not make the observed data near as likely as the maximum likelihood,
+ so that's a big gap between two likelihoods, right?
+ R is close to 0.
+ That's for example, right?
+ Suppose you believe the proportion of all students who use an iPhone is 0.1.
+ For example, 0.1, let's say that, right?
+ But in our data, we observe 0.6. Come on, it's a big difference, right?
+ So in this case, the null hypothesis does not make our observed data as near as likely as the maximum likelihood.
+ So the ratio should be really small.
+ How small? Close to 0.
+ So what should we do?
+ So this indicates the observed data are not consistent with the null hypothesis.
+ Therefore, we reject the null hypothesis.
+ Now, in summary, as the likelihood ratio gets closer to 0,
+ the evidence against the null hypothesis becomes stronger.
+ Okay?
+ As the ratio gets closer to 0, the stronger evidence against the null hypothesis.
+ Does this make sense to you?
+ Yeah? Good problem?
+ Now, don't let you know.
+ In the future, we will always use the likelihood ratio test.
+ Okay?
+ That's why you need to understand the concept, right, you know?
+ Right.
+ Now, let's perform the likelihood ratio test.
+ Now, the likelihood ratio test is denoted by LRT.
+ LRT, okay?
+ L stands for likelihood, R stands for ratio, T stands for test.
+ Instead of likelihood well-being.
+ Whatever, right, you know, it's different, okay?
+ LRT, L stands for likelihood, R stands for ratio, T stands for test.
+ Okay?
+ It's not light well-being training, okay?
+ It's a different concept, right?
+ You know, in calculus, right, we have a light well-being, right, you know?
+ Okay?
+ Difference.
+ It's also important.
+ There are a couple of ones, right?
+ Okay?
+ All right.
+ All right.
+ From the last lecture, we learned the likelihood function of the unknown population proportion is given by this function.
+ Okay?
+ It's a constant times P to the power of X times 1 minus P to the power of M minus X.
+ All right?
+ For the case I just showed you, the constant is 1.
+ But in some cases, the constant is not 1.
+ Don't worry.
+ Be happy.
+ The constant has made no contribution to the ratio test.
+ Don't let it come, okay?
+ When you calculate the likelihood ratio, the constant will be gone.
+ So the constant has no role, okay?
+ Make no contribution to statistical inference.
+ So don't worry.
+ Be happy.
+ You can drop out the constant.
+ That's not really matter.
+ All right.
+ Now in the expression, now P represents the unknown value of the population proportion.
+ In this case, it is the proportion of all students who use an iPhone.
+ X represents the number of individuals who fall in the category of interest.
+ In this case, this represents the number of students who use an iPhone.
+ Finally, N. N represents the sample size.
+ Does this make sense?
+ All good?
+ Now in this example, we select a sample of 100 students.
+ And 60 of them use iPhone, right?
+ Okay, so let's formulate the lemma function.
+ So L of P, right?
+ Is given by P12X times 1 not P12M minus A.
+ Now, I don't put a constant here.
+ It's not really important anyway, okay?
+ It's going to cancel out.
+ They did all right, not bad deal, okay?
+ In this case, N is 100, right?
+ We select 100 people and 60 of them use iPhone.
+ So the lemma function becomes P to the power of 60.
+ Now, X is 60, right?
+ Okay.
+ And N is 100.
+ So far so good.
+ So now, we're putting all the numbers into the lemma function.
+ So we get P12X times 1 not P to the power of 100 minus 60.
+ That is P12X times 1 not P to the power of 100 minus 60 is 40.
+ That means other 40 people do not use an iPhone.
+ Does this make sense to you?
+ Okay.
+ Now, let's move on.
+ Under the null hypothesis,
+ under the null hypothesis, right?
+ P is 0.5.
+ This is the hypothesis proportion, is that right?
+ Okay.
+ So we have to plug in 0.5 into the likelihood function
+ and get the likelihood value.
+ Does it make sense?
+ So under the null hypothesis, P is 0.5.
+ So to calculate the likelihood at P equal to 0.5,
+ that is 0.5 to the power of 60 times 1 not 0.5 to the power of 40.
+ Now, you can zoom in a little bit, right?
+ 0.560 is also 0.5, right?
+ 1 not 0.5 is 0.5, right?
+ So 0.560, 0.1 to the power of 40 together become 1.
+ It's 0.5 to the power of what number?
+ 0.5.
+ Alright, good, that's it.
+ Does this make sense to you?
+ Alright.
+ Can I move on?
+ Alright, under the alternative hypothesis,
+ P does not, yes?
+ Do you put 0.4 as 40?
+ Oh, this would be 40, not 0.4, right?
+ Not 40, right?
+ Alright, good, you passed my test.
+ I detest you.
+ Okay, thank you very much.
+ May I move on?
+ Okay, now under the alternative hypothesis,
+ P does not equal 0.5, right?
+ So that means there are many possible choices for P.
+ So P can be 0.1, 0.2, 0.3, right?
+ Whatever you want.
+ But we need to pick the one,
+ pick the value of P that maximizes the likelihood function, is that right?
+ And this value is defined by the sample proportion, is that right?
+ Alright, the value of P that maximizes the likelihood function
+ is the sample proportion, right?
+ P bar.
+ In this case, the sample proportion is defined by 60 over 100.
+ Remember, we sample hundreds of people, right?
+ And 60 of them use iPhone,
+ so the sample proportion is 60 over 100, which is 0.6.
+ So we put 0.6 into the likelihood function.
+ So that's good now, right?
+ Alright, so under the alternative hypothesis,
+ P is 0.6.
+ It's given by the sample proportion, right?
+ So the likelihood function at 0.6 is given by 0.6 to the power of 60
+ times 1 minus 0.6 to the power of 40.
+ Now let's do the math here.
+ The first one is 0.6 to the power of 60, right?
+ Second time is 0.4, right?
+ It's 0.4 to the power of 40.
+ That's all you can simplify. That's it.
+ Does this make sense to you?
+ Now for now, we can calculate the likelihood ratio, okay?
+ The likelihood ratio, R, is given by the likelihood.
+ The likelihood under H2O divided by the max likelihood under HK, right?
+ Now, the likelihood under the null hypothesis is given by 0.5 to the power of 100, is that right?
+ And the max likelihood under the alternative is given by 0.6 to the power of 60 times 40 to the power of 0.4.
+ So far so good.
+ Alright, let's simplify.
+ We'll get the number, right?
+ Now, don't let you know.
+ The number is approximately...
+ What's that?
+ The null hypothesis, right?
+ You wrote this form up, you're right.
+ You know you all passed my test, right?
+ Oh, okay.
+ Let's do that here, right?
+ Finally, we got 0.133 something.
+ 1, 3, 3.
+ 5, 1, 5, 5.
+ 1, 3, 7, something like that, right?
+ Wow, did you see that?
+ This number is pretty close to 0.
+ Did you see that?
+ But I just said, you know, as the likelihood ratio gets closer to 0, stronger evidence against the null hypothesis, right?
+ So this in the case, there should be strong evidence against the null hypothesis.
+ Does this make sense?
+ So in this case, right, based on the calculation, we can say the observed data, which is 60 people use Eiffel.
+ And of all the people who use Eiffel, are not consistent with the null hypothesis, right?
+ That provides strong evidence against the null hypothesis, okay?
+ Now, to determine how strong this evidence, how strong the evidence is, we need to calculate the p-value.
+ Remember, when you perform any hypothesis test, when you get a p-value, right?
+ Smaller p-value, stronger evidence against the null hypothesis.
+ But this rule is always true, always true in any hypothesis test.
+ Same in likelihood ratio test.
+ So how can you get a p-value from the likelihood ratio test?
+ Now, to calculate the p-value of the likelihood ratio test,
+ First, we need to convert the likelihood ratio R into a chi-square statistic.
+ Now, in this course, you always do chi-square statistic, not just this example.
+ But in many examples, in many test procedures you learn in the future, it's always chi-square statistic.
+ So in this course, you deal with two different test statistics.
+ What is C-statistic?
+ The other one is chi-square, no any other.
+ So we have to convert the likelihood ratio R into a chi-square test statistic.
+ Now, this chi-square test statistic is also called DEVIANCE.
+ But it's called chi-square statistic.
+ I think you're more familiar with chi-square statistic, right?
+ Now, how can you do that?
+ We have to use the transformation.
+ We take the log of the likelihood ratio and then times negative 2.
+ Now, don't ask me why I won't do that, okay?
+ There's reason for that.
+ There's a math reason behind it, okay?
+ That I don't want to waste my time explaining, okay?
+ So you have to convert the likelihood ratio R to chi-square statistic, okay?
+ First, we take the logarithm of the ratio and then times negative 2.
+ That's it.
+ Now, for our north sample, the chi-square statistic D follows a chi-square distribution with one degree of freedom.
+ That means we can calculate the p-value from the chi-square distribution.
+ Now, I think we talked about chi-square distribution before, right?
+ In the previous lecture, right?
+ When you compare more than two proportions, right?
+ The p-value is the area under chi-square distribution, okay?
+ The area is on the right side of the chi-square statistic, okay?
+ This is the p-value, right?
+ The p-value is the area of the right tail bounded by the chi-square statistic.
+ Sounds good?
+ Alright, so let's get the p-value in our case that we call...
+ This is the likelihood ratio, okay?
+ It's defined by 0.5 to the power of hundreds divided by 0.6 to the power of 60 times 0.4 to the power of 40, okay?
+ We take the log of this ratio...
+ The log of this ratio...
+ Now, we use Ln.
+ Let's do a log, right?
+ I'll give you a natural log, by the way.
+ You know, on your calculator, right?
+ There's a button called Ln.
+ Ln, right?
+ We take the log of this ratio and then times negative 2, right?
+ Now, be careful, right?
+ This is a match of negative 2 that give...
+ That make...
+ This quantity follow our chi-square distribution.
+ Without negative 2, we cannot get the distribution to let you know, right?
+ This is a match of negative 2, okay?
+ So it's all 4.027103.
+ Okay, with the calculation?
+ Are you okay with logarithm?
+ Why is it logarithm?
+ Just put it on the calculator, right?
+ It's a long key, right?
+ And then log of this ratio...
+ All right, now we're going to calculate the p-value, right?
+ Now, to calculate the p-area under chi-square distribution...
+ Okay?
+ We need software.
+ Okay, this is not an easy math problem.
+ Calculate the area under chi-square distribution is not an easy job.
+ It's a difficult job in math, okay?
+ It's required a large computer power.
+ But in this state, there's no nothing, right?
+ You won't be happy, but long time ago, right?
+ It's challenging.
+ This is really challenging, okay?
+ Anyway, in this state, we can ask your best friend to do it for you.
+ Who's your best friend?
+ R, right? No, I should call AI.
+ You're going to use AI to code, right, and then copy the R, right, you know?
+ By the way, on the resume, don't say, I don't R.
+ That's useless.
+ You say, oh, I need this AI to do R programming, to do Python programming.
+ Doesn't make sense, right, you know?
+ But you still need R in this state, okay?
+ So let's program this in R.
+ First, I calculate the likelihood ratio.
+ And get the chi-square statistic.
+ By taking negative 2 times log random of the ratio.
+ Now, in R, we don't call log.
+ In R, we don't call ln, okay?
+ In R, we don't use ln.
+ We use log, L-O-G.
+ Does that make sense?
+ So L-O-G is seen as ln in R.
+ But of course, on the calculator, it's not true, okay?
+ On the calculator, we have to find the T, ln, okay?
+ Right now, let's calculate the area under chi-square distribution.
+ In R, there is a function called p chi-square.
+ p stands for probability.
+ And chi-square stands for chi-square distribution.
+ So p chi-square.
+ So p stands for probability.
+ This stands for chi-square distribution.
+ Now, this function calculates the area of the left tail.
+ Now, left tail, be careful, okay?
+ So let me draw a picture, right?
+ This is a chi-square distribution, right?
+ This is the p-value.
+ It's the area on the right, right?
+ This is the chi-square value.
+ What's the chi-square value here?
+ I don't know. It's 4.27, right?
+ Now, the p chi-square calculates the area on the left of these numbers.
+ So p chi-square calculates the area on the left side.
+ So what's so good?
+ Now, this function requires two inputs.
+ First, it's the chi-square value.
+ It's 4.27.
+ The other one is the degree of freedom.
+ The degree of freedom is always 1 in this case.
+ You're testing one parameter.
+ So the degree of freedom is 1, okay?
+ Later on, when you test multiple parameters,
+ the degree of freedom is not just 1, okay?
+ Just like when you compare more than two proportions, right?
+ The degree of freedom is however proportion being compared minus 1, okay?
+ So you have to pay attention.
+ When you get the area on the left tail,
+ you subtract from 1, then you get an EIU.
+ Does this make sense to you?
+ The EIU is really small, but not really small, right?
+ It's 0.047747.
+ That's an EIU.
+ And I said, smaller EIU, stronger evidence against the law of hypothesis.
+ Is that a small EIU?
+ Well, you have to compare with the significant level, right?
+ Okay.
+ So compared to 0.05, it is small.
+ Therefore, the evidence is strong enough to reject the law of hypothesis.
+ At a 5% significant level,
+ the sample data will find sufficient evidence against the null hypothesis, okay?
+ Which is we can conclude, right?
+ Well, again, null hypothesis, right?
+ Therefore, we can reject null hypothesis and support alternative, right?
+ That's the proportion of all students who use an iPhone is different from 50%.
+ That's it.
+ Does it make sense to you?
+ Now, one thing to keep in mind,
+ the likelihood ratio test cannot test the direction of the proportion.
+ It cannot test whether P is bigger than or less than 0.5.
+ Only different from 0.5.
+ No direction is specified, okay?
+ Any questions so far?
+ Okay, no problem.
+ All right, may I move on?
+ Okay, I better give you a point on the assignment, right?
+ Just want to finish up?
+ Is it okay?
+ Is there going to be a problem?
+ All right, condition for a valid likelihood ratio test of a population proportion.
+ Now, I mentioned before, right,
+ to get these tests is only valid when you have a lower sample, a large sample.
+ But how large is enough?
+ Now, for the likelihood ratio test of a population proportion,
+ it is recommended that the expected number of individuals who fall into the category of interest
+ and the expected number of individuals who do not fall into the category of interest
+ are both at least 5 in a sample.
+ By the way, even though 5 is a pretty small number, right?
+ But we still get more and more numbers, okay?
+ Now, 5 is fairly okay.
+ Just say fairly okay, right?
+ If the true proportion is something close to 0 or close to 1, right?
+ We're going to have a big problem, okay?
+ We need more and more.
+ We need a bigger, bigger sample size to get a balanced result.
+ Okay?
+ So 5 is barely minimum, okay?
+ You should get maybe 15 or 20, right?
+ That's the more safer.
+ Does this make sense to you?
+ All right, in our example, okay,
+ we want to test whether 50% of all students use iPhones, is that right?
+ Right?
+ Under the null hypothesis, we expect that under the null hypothesis, okay,
+ if the null hypothesis is true,
+ we expect exactly 50% of all students use iPhones, is that right?
+ Now, we pick a sample of 100 students.
+ Therefore, we expect 50% of 100 students
+ will use an iPhone.
+ So what is 50% of 100?
+ Which is 50, right?
+ We expect 50 students in a sample
+ who use an iPhone, okay?
+ The next question is,
+ what is the expected number of students who do not use an iPhone?
+ Well, we can calculate this one.
+ We can take the total, 100, 100 students, right?
+ Minus the expected number of students who use an iPhone.
+ Minus 50 is also 50, right?
+ Now, both numbers are bigger than 5.
+ Therefore, the sample is sufficiently large.
+ The conclusion,
+ total from the likelihood ratio test should be valid,
+ should be correct,
+ and can be plus.
+ So what should we do?
+ Okay.
+ All right, a couple of things, okay?
+ Now, we call,
+ we also learn how to test
+ our population proportion using CTAS, is that right?
+ We learned that before, right?
+ In the previous class, also in our review class, right?
+ Well, let's compare the results
+ with the one sample CTAS.
+ Okay, now, to run the CTAS,
+ we have to calculate the C statistic, is that right?
+ The C statistic is given by
+ the sample proportion
+ minus the population proportion
+ under the null hypothesis,
+ divided by square root of
+ the population proportion
+ times 1 minus the population proportion
+ over the sample size n.
+ Remember this expression here?
+ Now, in this case, the sample proportion is 0.6.
+ The population proportion under the null hypothesis is 0.5.
+ We'll put the number into the formula,
+ I got 2, I got 2, okay?
+ Now, let's calculate the P-value in this case.
+ Now, a little bit careful this time.
+ We are testing the proportion is different from 0.5, right?
+ Different from 0.5 has two directions.
+ Could be P greater than 0.5,
+ or P less than 0.5.
+ So there are two different cases, right?
+ Therefore, the P-value is a total area
+ of the left tail and the right tail.
+ Are you okay with that?
+ Now, the left tail divided by negative 2.
+ It basically said the proportion we observe in the sample
+ can be below the population proportion
+ by two standard deviations.
+ Is that okay?
+ So the proportion we observe in the sample
+ can be lower than the population proportion
+ on the under actual by two standard deviations.
+ You know, right?
+ On the right side, the cut point is given by 2,
+ all the parts of it.
+ Let's say the proportion we observe in the sample
+ can be higher than the population proportion
+ by two standard deviations.
+ So there are two directions, right?
+ And how do we get the P-value?
+ When the C-square is 2,
+ sorry, negative 2, right?
+ The area of the left tail is 0.228.
+ When the C-square is plus 2,
+ the area of the right tail is also 0.0228.
+ Add together, or times 2,
+ is given by 0.0456.
+ 0.0456.
+ Any questions so far?
+ I hope you learned that before, right?
+ Yeah?
+ You should learn it in the first course.
+ Yeah?
+ Okay.
+ Also an overall review, right?
+ All right, now let's compare both P-value.
+ Now, if we run the radical ratio test,
+ the P-value was 0.0448.
+ If you run the Z-test,
+ the P-value was 0.0456.
+ They are pretty close, is that right?
+ They are very close, by the way.
+ Okay, this indicates a strong agreement
+ between the line-foot ratio test and the Z-test.
+ The question is why?
+ Why both tests have the similar P-value?
+ In fact, they are all the same, is that right?
+ Now, this is just a math, okay?
+ Now, in fact, the chi-square statistic,
+ used in the line-foot ratio test,
+ can be approximate by this expression here.
+ Now, I don't want to show you the math here, okay?
+ We can prove that.
+ Two times long of the line-foot ratio
+ can be approximate by square of this quantity.
+ Now, this quantity looks like the chi-square statistic
+ under the Z-test, is that right?
+ Now, look at this expression here.
+ Now, this quantity is not the chi-square statistic
+ under the Z-test, but they are pretty similar.
+ Do you guys see that?
+ What is the difference between these two expressions?
+ What is the difference between the two expressions?
+ They're similar, you're right.
+ But what's the difference?
+ What's the difference?
+ What's the difference?
+ The denominator, you're right.
+ Remember, when you want the Z-test, right?
+ The Z-statistic uses the population proportion
+ under the null hypothesis in the denominator, is that right?
+ In the line-foot ratio test, okay?
+ The denominator uses P bar as a sample proportion.
+ It's the one we get from the sample, is that right?
+ Now, these two expressions, of course, are different, right?
+ But they follow the same distribution.
+ They both follow the null distribution, okay?
+ As a result, the line-foot ratio test and the Z-test
+ produce a very similar P value.
+ That's the reason, okay?
+ Alright, that's about line-foot ratio test.
+ Any question about that?
+ Okay.
+ Now, take a break, okay?
+ Come back, we're going to do the assignment.
+ Now, remember our assignment three, right?
+ Now, in the class, I want you to complete
+ problem two and problem three.
+ Basically all the assignments.
+ Okay, actually, problem one,
+ so we made it part of the problem one, right?
+ Problem two, alright?
+ And problem three, basically all the assignments, okay?
+ Okay, if you want to do one last question,
+ sure, go ahead, okay?
+ And see how it goes.
+ Take a break, and then continue to work on the assignment.
+ Now, by the end of the class,
+ I expect you can finish problem one.
+ Remember, in the previous class, right?
+ We finished the first half of the problem one, right?
+ I give you the answer key, price, pay, right?
+ In the remaining part, you have to conduct
+ likelihood ratio test, alright?
+ Finish this one.
+ Then I wish you have time to do the second problem, right?
+ Let's see how it goes.
+ Oh, by the way, I remember, I gave you a handout, right?
+ Long time ago, right?
+ It's about testing a population proportion.
+ I'll just show you.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Thank you.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Here's the handout I gave you last time.
+ I remember.
+ Long time ago, right?
+ We'll have all the formula for likelihood function,
+ likelihood ratio test,
+ likelihood ratio, things like that, right?
+ This is your reference.
+ You can use that for the big job, particularly.
+ Hopefully, you still have it, right?
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ We are ready to do this first, the surf.
+ So what's the problem?
+ We are ready to do this one.
+ Yeah, we did part A and part D, we're done.
+ We've done part A and part D.
+ We did it last time.
+ Okay.
+ Yeah.
+ Okay, okay.
+ So we have to do part E, right?
+ That's what we covered today.
+ Okay.
+ Have you read the solution I posted online?
+ No, I didn't see it.
+ No, I posted it on Brightspace.
+ Have you checked it?
+ No, I didn't see it on Brightspace.
+ Check it now.
+ Great.
+ Go to course announcement.
+ What?
+ Course one.
+ It's right here.
+ Okay.
+ What was the problem here?
+ No, there's no problem.
+ Just I'm still understanding this.
+ Okay.
+ Shoot this one more, okay?
+ Okay.
+ Okay.
+ Everything is good?
+ Yeah.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ I want to remind you one more time, right?
+ No, I oppose the solution of problem one, part A to part B, right?
+ You can use the result and continue the rest of the problem, right?
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ No.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.

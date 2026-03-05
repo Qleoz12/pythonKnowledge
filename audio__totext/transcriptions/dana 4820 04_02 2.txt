@@ -1,0 +1,1397 @@
+ The following variables are recorded. First, the number of hours they spent studying.
+ Second is the exam outcome, either pass or fail. Pass or fail, right?
+ Now let's call binary data, which is a collectable data with two categories.
+ Make sense to you?
+ Alright, now here is a model.
+ Okay, here's a model for data.
+ Now the objective of using the data is to use the number of hours as our predictor to model the probability of passing.
+ Now I hope you know, right? I think it's common sense, right?
+ If you spend more time studying, it will increase the chance of passing the exam, is that right?
+ So we want to model this relationship.
+ How to model this relationship? We use the logistic regression model.
+ Now on the right-hand side, we have our linear function of the predictor hour.
+ It's A plus B times the predictor, right?
+ In this case, the hour. That is similar to the regression model, right?
+ The ordinary regression model.
+ Y is A plus Bx, right?
+ Alright, so on the left side, on the right side, we have the linear function of the predictor hour.
+ Now on the right side, okay, so on the left side, we have a function of probability.
+ The probability of a student passing the exam, is that right?
+ Now, I might explain many times, right?
+ If you model the probability with a linear function, it will cause a problem.
+ What's the problem?
+ Now the linear function always returns any number between negative infinity to positive infinity, which are any real number.
+ However, the probability must be between 0 and 1, right?
+ Does this make sense to you?
+ So that the left side is not aligned with the right side, is that right?
+ Therefore, on the left side, we need a function of the probability,
+ so that it will map the probability from 0 to 1 to any real number, from negative infinity to positive infinity.
+ Therefore, the left side and right side are matched.
+ Does this make sense to you?
+ That's all purpose.
+ Now, what we're going to do with this function is the law of P over 1 as P.
+ First, there's a nice interpretation.
+ The term inside the law is called odds, odds of the event.
+ In this case, P represents the probability of a passing, right?
+ This is called odds of passing.
+ Altogether, it's called odds of an event.
+ Is that clear?
+ Have a nice interpretation.
+ Also, we can rewrite the function in terms of P.
+ Therefore, we can estimate the probability using the hour.
+ Does this make sense to you?
+ Write how to solve for P.
+ The P can be written as E to the power of A plus Bx over 1 plus E to the power of A plus Bx.
+ So much so good.
+ From here, we can find the probability.
+ We can estimate the probability based on x, based on the number of hours studying.
+ Does this make sense to you?
+ Alright.
+ So we fit the logistic regression model to the data and obtain the output.
+ After fitting the logistic model to the data,
+ the first thing to do is to check whether the model is significantly useful
+ in predicting the probability of passing.
+ That's what we did last time.
+ Now, once we have determined that the number of hours is a significant predictor
+ of a student's probability of passing the exam,
+ we can use the regression equation to predict the probability.
+ Okay.
+ The whole first thing to remember, right?
+ Last thing, right?
+ We learned how to test whether the model is significantly useful
+ in predicting the probability of passing based on the hour, right?
+ This equipment will say,
+ we want to test whether the hours is a significant predictor of the probability.
+ We did that, right?
+ And we have strong evidence to show that, right?
+ Hours is a necessary use as a predictor to predict the probability of passing.
+ Is that right?
+ Once we have determined the number of hours is a significant predictor
+ of a student's probability of passing the exam,
+ then we can use the regression equation to predict the probability
+ based on the number of hours studied.
+ To do that, we need to read the coefficient table from the regression output.
+ Remember the output?
+ When you fit the output, right?
+ This is the regression output from R, right?
+ We look at the coefficient table right here.
+ The coefficient table, right?
+ Now in the coefficient table, we look at the first column called estimate, right?
+ Now in the model, there are two unknown parameters.
+ One is A is called intercept, right?
+ The other is called the smoke labeled by B, right?
+ So we have to get the estimate of A and B in order to estimate the probability.
+ Is that right?
+ Alright, according to the output, the intercept is given by negative 2.8984.
+ So that's good.
+ And the slope, now the slope is labeled by the name of the predictor.
+ The name of the predictor, right?
+ Now when I fit the model, I need to use X, but X is just the hour.
+ And the number is 0.6734, right?
+ So the regression equation is given by log of P over mass P equals to negative 2.8984 plus 0.6734 times the hour.
+ So that's good.
+ Now we are ready to estimate the probability.
+ Alright, now to estimate the probability, right?
+ We need to rewrite the equation in terms of P.
+ Remember the sheet I gave you, right?
+ The summer sheet I gave you, right?
+ We can rewrite the whole equation in terms of P.
+ That is P equals to E to A plus BX over 1 plus E to B plus BX.
+ Does that make sense?
+ Now you don't need to drive by yourself, right?
+ It's good to remember, right?
+ But you cannot remember all the sheet I gave you.
+ Do you have one?
+ Do you have one, right?
+ Alright, now we want to estimate the probability that our student will pass the exam if the student studied for zero hour.
+ Wow, man, you know.
+ You have an exam, but you don't study.
+ You spend zero hour.
+ Let's see the probability.
+ How likely the student will pass the exam?
+ We're putting zero into hour.
+ Now zero times whatever number is zero, right?
+ So the second term, the linear of the predicted term, the predicted term is gone. It's canceled.
+ That would be intercept.
+ So the problem is given by E to the power of negative 2.8984 over 1 plus E to negative 2.8984.
+ Let's do the calculation.
+ Bang.
+ 0.055.
+ What's the chance?
+ Well, it's about roughly 6%, right? 5-6%, right?
+ Is it a good chance?
+ Well, it's not too bad.
+ You don't study.
+ You don't spend any time, right?
+ You know, okay.
+ 5%, not too bad.
+ I think even lower.
+ Well, at least higher than minus 6.49.
+ Do you think so?
+ Right?
+ Not too bad.
+ I would say it's a good chance if you don't spend any time to study.
+ Right? No effort.
+ That's the probability, right?
+ Any questions so far?
+ So if a student studied for zero hours, we estimate the probability of passing the exam is 0.055, roughly 5-6%.
+ Now, the estimate probability we calculate always differ from the true value.
+ Therefore, we always use a common interval that provides a range of positive value for the probability.
+ Now, the probability we just calculate is a prediction.
+ It may not be a true probability.
+ You see what I'm saying, right?
+ It's just an estimate.
+ Therefore, we want to use a common interval to give a range of positive value,
+ a range of reasonable estimate of this probability.
+ And the common interval for the true probability is given by 40x value is calculated based on the fourth step.
+ Now, honestly, I'm thinking we should give this kind of question on your assignment or exam, right?
+ Because it's quite complicated, too.
+ I'm not sure if you did that in the other class, right?
+ Now, let's have a score, okay?
+ I don't put this question on the assignment, right?
+ I don't put this question on the assignment, all right?
+ Now, first of all, we have to calculate the estimate law of the regression equation, right?
+ First of all, we estimate the law of the event using the regression equation.
+ Second, we have to calculate the variance of the log part.
+ This is equivalent to calculate the variance of A plus B times X.
+ Have you ever done that in the other class?
+ Have you seen that before?
+ Okay.
+ Now, just a quick example, right?
+ Now, you want to, from the previous class, right?
+ You want to estimate Y based on A plus B times X, something like that, right?
+ Okay?
+ Now, of course, A and B is just the estimate from the sample data, okay?
+ A and B is the estimate based on the sample data.
+ Therefore, Y is also the estimate, right?
+ You just have to predict that Y, okay?
+ Now, how can you calculate the variance of the estimate?
+ All right?
+ Well, you need to take the variance of the whole expression.
+ Well, you need to take the variance of the whole expression, A hat plus B hat times X.
+ So, that's good.
+ Now, how do you get the variance of this expression?
+ Now, in this expression, they have two random variables.
+ One is A hat out of B hat, because they both come from sample data, right?
+ Therefore, these two estimates vary between samples.
+ So, you can select another random sample.
+ We got different estimates, right?
+ Now, how to calculate the variance of this K?
+ First, we take the variance of A hat and then plus the variance of B hat times X, second term, right?
+ You're going to learn in the previous class if you find a variance of two random variables.
+ Ever seen it before?
+ And then plus one more term.
+ It's called covariance.
+ It's two times the covariance of A hat times B hat times X.
+ Ever seen that before?
+ Ever?
+ Okay, let's forget it, okay?
+ If that's the case, I won't waste my time to do that, right?
+ I mean, in a real situation, you need to do some kind of calculation, right?
+ Anyway, let's move on.
+ All right, so let's do the exercise, okay?
+ Suppose a student studied for one hour, this time one hour, right?
+ Assuming the probability that the student will pass the exam, okay?
+ Let's do the calculation by hand.
+ Come on, let's do it now. Don't ruin my answer.
+ Let me write down the equation, right?
+ Okay.
+ Well, recall, right?
+ The estimate regression equation is given by
+ log of E over 1 minus B, right?
+ Equals to negative 2.
+ 2.8984 plus 0.6734 times the hour, right?
+ So, let's recall from the same moment the P given by
+ E to the power of negative 2.8984 plus 0.6734 times the hour
+ over 1 plus E to the negative 2.8984 plus 0.6734 times the hour.
+ So, what's so good?
+ All right, this time the hour is what? What's the hour?
+ Just one hour.
+ This is one, right?
+ Then the profit is given by
+ I should be more precise. It's the estimate profit, right?
+ It's given by E to the negative 2.8984 plus 0.6734
+ over 1 plus E to the negative 2.8984 plus 0.6734.
+ So, what's so good?
+ So, now let's do the math. What do you get?
+ Calculation, right?
+ So, hours one, the linear part is
+ I get 2.8984 plus 0.6734 times 1.
+ All right, now I need to calculate the profit, right?
+ E to the power of this number over 1 plus E to the power of this number.
+ I got 0.797. Do you get the same thing?
+ Now, here's a trick I calculate the number, right?
+ First of all, I want to calculate these parts first.
+ The predicted term, right?
+ Get the number, which is negative 2.225.
+ 2.225 away, okay?
+ So, what's so good?
+ Therefore, this number is also negative 2225, right?
+ Make sense to you?
+ And use that for the next calculation.
+ So, that is E to the power of negative 2.225
+ over 1 plus E to the power of negative 2.225.
+ In this way, you don't repeat the same calculation twice, okay?
+ So, let's get the linear part, the prediction term,
+ and use that for the next calculation.
+ So far, so good.
+ Make sense to you?
+ So, you don't need to do the same calculation two times.
+ Just one time, get a number, and then use it for the next calculation.
+ Okay, right?
+ What's the probability?
+ Well, this time, better.
+ 0.797, right?
+ What would be 10%?
+ You don't spend one hour studying, the chance is not too bad.
+ 10% chance, okay?
+ Of course, it's still low, right?
+ Come on, only one hour.
+ What do you expect?
+ At least, the chance height is at least 49.
+ So, it's the same.
+ You guys see my work?
+ Yeah?
+ Okay.
+ Oh, I guess you can't see it.
+ All right, next.
+ All right, now is the time to interpret the regression coefficient.
+ Now, we call, there are two regression coefficients, right?
+ What is called?
+ A, which is intercept.
+ The other is B, the slope, right?
+ For now, let's focus on the intercept.
+ How to interpret the intercept?
+ Now, first, I want to set the hour to zero.
+ I want to set the hour to zero.
+ Zero times whatever number is zero, right?
+ That means the second term is gone.
+ Does this make sense to you?
+ All right, so, the logistic regression model only contains the intercept A.
+ The intercept A. Is that clear?
+ So now, tell me what is the interpretation of the intercept A?
+ What is the interpretation?
+ Now, A is given by log of P over 1 minus P, which is the log-orth of passing the exam.
+ Is that right?
+ So the log-orth of our student passing the exam is predicted to be A if the student spends zero hours to study the exam, right?
+ But here's the problem, the interpretation.
+ You will go outside and talk to anyone.
+ Did they know what's the log-orth?
+ You will go outside.
+ Hey, the log-orth is given by A.
+ It's really odd, by the way.
+ You just go to talk to your client, talk to your boss.
+ Hey, the log-orth is given by A, right?
+ So usually, we don't interpret log-orths.
+ So most of the time, we want to interpret the orths, the orths of an event, not the log-orths.
+ So most of the time, we want to interpret the orths, the orths of an event, not the log-orths.
+ Okay?
+ How to get the orths of an event?
+ We can take the...
+ Now, the log-orth is given by A, is that right?
+ But I don't want log-orth.
+ I want to remove the log.
+ How do you do that?
+ We have to find the inverse function, which is the exponential function, E, right?
+ You E to both sides.
+ E to house on both sides, right?
+ Now E and log has a reciprocal relationship.
+ That means E and log will kill each other.
+ Okay?
+ Left with their trial.
+ When E meets log, it will kill each other.
+ Left with their trial.
+ Therefore, P over one last P is given by E to house A.
+ Does that make sense to you?
+ And this term is the orth of an event, right?
+ What's the event we're looking for?
+ It's passing the exam.
+ So what's so good?
+ Alright?
+ So the orth of passing the exam is given by E to house A.
+ Usually we interpret, we don't interpret A directly.
+ We interpret E to house A, which is the orth of the events of interest.
+ In this case, it's passing the exam.
+ So the orth of a student passing the exam is predicted to be E to house A.
+ Yet the student spends no hours to study.
+ Alright, we call A is estimated to be negative 2.8984, right?
+ Therefore, E to the power of negative 2.8984 is 0.055.
+ As I said, we did a calculation before, right?
+ It's going to be 5 to 6 percent.
+ Now, I can express 0.055 as 5.5 over 100.
+ Why I won't do that?
+ Now, based on the orth, based on the orth, right?
+ We can tell the probability of a student passing the exam is 0.055,
+ as likely as the probability of a student failing the exam,
+ if they spend no hours studying.
+ Is that clear?
+ Remember, the office compares two events.
+ In this case, right, it's the probability of passing and the probability of failing.
+ So much so good.
+ Now look at the ratio, right?
+ It's 0.055, right?
+ That means the probability of passing is 0.055,
+ as likely as the probability of failing the exam.
+ Now, in other words, for every 100 students who fail the exam,
+ Now, how to get 100, right?
+ Remember, we can express the ratio of these two events, right, as 5.5 over 100, right?
+ If I multiply top and bottom by a sample size n, say n here for example, right?
+ What will it give me?
+ It will give me the expected number of students who pass the exam
+ over the expected number of students who fail the exam.
+ Do you follow me?
+ I will say it one more time, okay?
+ I think we talked about this a long time ago, right?
+ Now the odd, right, of passing is given by the probability of passing over the probability of failing.
+ So much so good.
+ Based on the logistic regression model, we estimate the ratio is 5.5 over 100.
+ Make sense? Does it make sense to you?
+ Alright, if I multiply a number, say n on the top and bottom, right?
+ And refer to the sample size, any sample size you like, maybe 10.
+ We select 10 students, 100 students doesn't really matter.
+ This term becomes the expected number of students who pass the exam, is that okay?
+ And the bottom term becomes the expected number of students who fail.
+ So much so good.
+ And the ratio of two expected numbers is still 5.5 over 100, right?
+ Therefore, for every 100 students who fail the exam, we expect 5.5 of them pass the exam, given they spend zero hours to study.
+ Is that clear or not?
+ So much so good.
+ May I get back to five points?
+ Okay.
+ For every 100 students who fail the exam, we expect about 5.5 students pass the exam, given they spend zero hours to study.
+ Is that clear or not?
+ Those students never study the exam.
+ For every 100 students who fail, we only expect 5.5 of them pass.
+ We can see, right?
+ Passing is not common.
+ Failing is more common, right?
+ Than passing, because you don't spend time to study.
+ What do you expect, right?
+ So much so good.
+ Any questions so far?
+ May I move on?
+ Alright, next we need to interpret the slope coefficient for the hour.
+ Now let's interpret the slope.
+ Again, back to the original form, right?
+ The long odds of passing the exam is given by A plus B times hour, right?
+ Okay.
+ Let me answer it, okay?
+ Right here, that's the right one.
+ Alright.
+ Alright, how do we interpret?
+ Now first of all, I want to set the hour to K.
+ K is any number.
+ Can be 1 hour, can be 2 hour, can be 3 hour, can be 4 hour, can be 10 hour, can be 100 hour.
+ So K is any arbitrary hour, is that clear or not?
+ So let's set the hour to be K.
+ So now we have A plus B times K equals to log of P over 1 minus P.
+ Now I put a subscript K beside P, right?
+ In the K, P with a subscript K is a probability that a student will pass the exam if they study for K hour.
+ Set K can be 1, can be 2, can be 3, can be 100.
+ Can be any arbitrary, so also good.
+ So altogether, that is the log odds of passing the exam given by A plus B times K, right?
+ It's the log odds of passing the exam if students spend K hours to study.
+ Okay.
+ Now we want to set the hour to K plus 1.
+ If a student spends more hours, one extra hour to study on top of K, which is K plus 1, right?
+ So hour becomes K plus 1, is that right?
+ So what's so good?
+ Does it make sense to you?
+ Let's say another student also spends more hours to study.
+ How many hours? K plus 1.
+ One hour beats the previous student.
+ Let's say I study K hours.
+ You study K plus 1 hour.
+ 1 hour beats mine, okay?
+ Alright, so the log odds of passing given by A plus B times K plus 1.
+ Now all of a subscript K plus 1 here, beside P, right?
+ In the K, this is the probability that a student will pass the exam if they study for K plus 1 hour.
+ So that's so good.
+ Everything's clear?
+ Are you going to follow?
+ Any questions? Okay, good.
+ Now we'll simplify the algebra.
+ Okay, now this is B times K plus 1, right?
+ I can multiply B to each term of K plus 1.
+ First, B times K gives you BK, right?
+ And B times 1 gives you B. So what's so good?
+ Therefore, the log odds of passing the exam is given by A plus BK plus B.
+ So what's so good?
+ Okay, move to the next slide.
+ Alright, now we want to take the difference between two log odds, okay?
+ For studying K hours and K plus 1 hours.
+ We'll take a difference.
+ Alright, let's see. Any cancellation?
+ On the left-hand side, we still have the difference between two log odds, is that right?
+ On the right side, there's some cancellation.
+ Do you see any cancellation?
+ Any cancellation?
+ This term minus this term.
+ Do you see any cancellation?
+ A is cancelled, right?
+ What else?
+ Just A?
+ BK, you're right!
+ It's going to cancel.
+ Left with B. B is a slope, right?
+ Okay, here we go. B right here, right?
+ Therefore, the difference in the log odds of passing between K and K plus 1 hour is given by the slope B.
+ So far, so good.
+ Alright, now let's clean up the left-hand side.
+ How can I clean up the left-hand side?
+ Do you remember the log rule?
+ Now, one of the log rules is log of A over B is given by log of A minus log of B.
+ So we can combine these two terms as a single log.
+ Does that make sense to you?
+ Let's combine together, okay?
+ Mathematically, we can combine two log terms in a single log.
+ That is log of the odds of passing given hours K plus 1 over the log of passing given students spending K hours.
+ Is that clear or not?
+ Now, together, it's called art ratio.
+ We're going to study art ratio later, right?
+ It's called art ratio.
+ It's a ratio of two art, right?
+ The log art ratio is given by the slope B.
+ So far, so good.
+ Okay.
+ Okay.
+ Alright.
+ Now, if you don't like the log, like I said, right?
+ Log is not interminable.
+ People don't understand log.
+ They understand odds, but not odds.
+ Not log odds, right?
+ People understand the odds, but they don't understand log odds.
+ Therefore, I want to remove the log on the left side, right?
+ How to do that?
+ We do the same trick, right?
+ We take E on both sides, right?
+ E to the power of something.
+ I put E on both sides, right?
+ As I said, E and log have a reciprocal relationship.
+ That means E and log would view each other.
+ They go on, they both cancel, left with their trial.
+ Therefore, the art ratio is given by E to the power of B.
+ So far, so good.
+ Any questions so far?
+ Here's the interpretation of the slope.
+ For every additional hour spent studying for an exam,
+ we predict that the log odds of a student passing the exam increase by B, right?
+ Or we can say we predict the odds of passing the exam
+ increase by a factor of E to the power of B.
+ Are you trying to increase, right?
+ If you assume B is bigger than zero, is that clear?
+ Here's a question for you.
+ If B is less than zero, does the odds increase or decrease?
+ Now, if B is positive, it's bigger than zero, right?
+ If B is positive, it's bigger than zero, right?
+ E to B, now, it gives you a factor, right?
+ Always bigger than...
+ Hopefully by the same way, it's always bigger than one, right?
+ This is the exponential function, E to B, right?
+ When B is zero, it's this one, right?
+ Up this way.
+ What happens if B is less than zero?
+ If B is less than zero, right?
+ Now, the power is negative, right?
+ You can rewrite as E to...
+ Sorry, you can write negative absolute by B.
+ So far, so good.
+ You got negative power, right?
+ You got negative power, right?
+ That is one over E to negative B.
+ I'm sorry, B, right?
+ This number, always less than zero.
+ Sorry, less than one, right?
+ Now, if a factor is bigger than one,
+ we can say this quantity increased by a factor of this value, right?
+ If B is less than zero, the factor becomes less than one.
+ Let's do it again, zero, okay?
+ Less than one, right?
+ That means this quantity decreased, getting smaller.
+ Does this make sense to you?
+ For example, right?
+ Let's say $100.
+ You invest $100 on a stock, right, for example.
+ If your investment, okay,
+ grows or increases by a factor of, let's say, two,
+ that means your investment becomes 200, is that right?
+ Better than the original.
+ However, if the investment is increased by a number, let's say, 0.5,
+ what does this mean?
+ Your investment becomes smaller, right?
+ But how much by a factor of 0.5, which is get to $100,
+ or get to $50, that's a bad thing.
+ That's what I'm trying to say, right?
+ If your factor is bigger than one,
+ the quantity, getting bigger.
+ If a factor is less than one, the quantity becomes smaller.
+ Does this make sense to you?
+ So say right here, right?
+ If the slope is bigger than zero, right,
+ the odds of students passing is getting bigger.
+ When you spend more hours studying, does this make sense to you?
+ On the other hand, right, if the slope is less than zero,
+ the odds actually decrease, okay, by a factor of E to the power of B.
+ Does this make sense to you?
+ Any discussion?
+ Now, on the assignment, you pay attention, right, you know?
+ Look at the trend of value, is that thing positive or negative?
+ And provide correct interpretation.
+ All right, so if P is less than zero, the odds will decrease.
+ Okay, decrease, right?
+ And I said, right, when B is bigger, when B is less than zero,
+ you can write as one over E to B, right?
+ If B is less than zero, it doesn't make a number, right?
+ Okay, and this factor is way less than one.
+ That's why the quantity always decreases.
+ So what's so good?
+ May I move on?
+ All right, recall, the slope B is estimated to be 0.6734.
+ Now, let's calculate E to 0.6734.
+ I got 1.96, 1.32, okay, not exactly, but 1.32.
+ Therefore, for every additional hour spent studying for the exam,
+ we predict the odds of a student passing the exam increase
+ by a factor of 1.96, or no double.
+ You spend an additional hour to study, just one hour,
+ the odds will go up, or no double.
+ Not exactly, but no double, right?
+ Or you can say increase by a percentage.
+ How much? 96%.
+ I'm thinking about why, by the way.
+ Now, we can say, okay, the odds increase by a factor of 1.96.
+ No problem, no double, right?
+ You can say the odds increase by 96%.
+ Now, not 20%, okay?
+ You can think of why.
+ Now, most people prefer a second one,
+ because they like the percentage, right?
+ Now, the factor is 1.96, right?
+ But why does it become 96% instead of 1.96% or 100%?
+ Anyone can tell me?
+ No probability.
+ Okay.
+ I'm not sure whether it's not hard to calculate the percent of increase.
+ Now, the percent of increase or decrease, right,
+ of a quantity is given by, in a quantity, the Q, right,
+ is given by the new quantity
+ minus the old quantity divided by the old quantity.
+ Remember this one?
+ Quality can be investment,
+ can be the amount of investment, the amount of money in your pocket,
+ the exam grade, the height, the weight, whatever.
+ Now, we know the new quantity, right,
+ is given by 1.96 times the old quantity.
+ Does this make sense to you?
+ In this case, right, the quantity is the odds of passing.
+ So much so good.
+ Now, based on the slope, right,
+ you can say the odds of passing increased by 1.96, right,
+ by a factor of 1.96.
+ That means the new odds increased by,
+ it's given by 1.96 times the old quantity, is that right?
+ So 1.96 times the old quantity
+ minus the old quantity
+ over the old quantity, right?
+ That's the total time of the same, by the way.
+ Do you see a cancellation?
+ Do you see a cancellation?
+ The old quantity are all cancelled, is that right?
+ What with 1.96 minus 1 and times 100%, right?
+ Which is 96%.
+ We look at the percent change.
+ The percentage is not 1.96, it's only 96%.
+ Does this make sense to you?
+ But anyway, if you interpret as a factor of 1.96, I accept it.
+ If you say 96%, I also accept it.
+ This is up to you, right, in this class.
+ But when you go out and work,
+ most people prefer the second one.
+ They like percentage.
+ Don't see how much increase in terms of percentage,
+ except the actual number.
+ Does it make sense to you?
+ But of course, I don't mind, you know?
+ Okay.
+ Any questions so far?
+ Do you want to move on?
+ Then I'll finish the class earlier.
+ Now, let's do some examples.
+ Do damage, right?
+ This is correct.
+ Now, we call for continuous calculation.
+ Now, if a student spent for a study for zero hour,
+ the odds of passing is estimated to be 0.255.
+ Is that right?
+ We did the calculation before, right?
+ Now, that means for every 100 students who fail,
+ we expect about 5.5 students who pass.
+ All right, if students study for one hour,
+ one additional hour on top of zero, okay?
+ We expect...
+ So the odds of passing is estimated to be 0.108.
+ You can double check, right, the calculation, okay?
+ That means for every 100 students who fail,
+ we expect about 10.8 students who pass.
+ Now, look at the number of students who pass.
+ From original 5.5, jump to 10.8.
+ That's all we're talking about.
+ Does it make sense to you?
+ So far, so good?
+ Any questions so far?
+ Okay.
+ So it's all about the expected number of students
+ who pass exams for every 100 students who fail.
+ So that's all good.
+ Now, on the midterm, right, you know,
+ not now, but not next week, don't worry, okay?
+ I may ask you to feed the blank, okay?
+ Make sure you pick the right number to feed the blank.
+ Any questions so far?
+ So you have to know, understand the meaning of odds, okay?
+ All right.
+ One last thing, all right?
+ The confident for the regression coefficient.
+ Now, just recall, right?
+ Now, in the logistic model,
+ there are two parameters, right?
+ A, the intercept, and B, the slope time x, is that right?
+ Now, for the data,
+ we can estimate A and B through problem, right?
+ Okay, we can estimate the parameter
+ based on sample data, right?
+ So that's just the estimate.
+ The number we use to do calculations
+ are just the estimate, is that right?
+ We want to know the true value.
+ So imagine, right, you've got the data
+ from the entire population,
+ and use it to fit the logistic model, okay?
+ I want to know what is, what are the value of A and B
+ if you've got the data from the population?
+ Now, obviously, right, the one from sample data, okay,
+ is not same as the one from population, is that right?
+ Therefore, we prefer to use a complementable
+ to get a range of possible value, okay, for A and B.
+ Does it make sense to you?
+ I can say it one more time, right?
+ Now, let's pretend we want to get the value of A and B
+ from the population data, not the sample, right?
+ And obviously, the value not from the population data
+ but we get from, what we got from the sample.
+ Let's make example, right?
+ Let's say you use the data from population,
+ the true value of A is, let's say it's 0.3, for example,
+ let's make a number, right, negative 0.3,
+ and the true value of B is 0.8, for example, right?
+ Now, obviously, the one we got from the sample
+ is not same as the true value, right?
+ Not the same.
+ Therefore, I won't use a complementable
+ that capture the true value of A and B.
+ Does it make sense to you?
+ Okay.
+ How do we get a complementable?
+ It's straightforward.
+ We take the S a lot, from the S a lot, okay,
+ of the parameter plus or minus the Z critical value
+ times the standard error of the S a lot regression coefficient.
+ That's it.
+ And all the number can be find from the output.
+ So based both the S a lot regression coefficient
+ and the standard error can be find in the coefficient table.
+ Now, what is the coefficient table?
+ Now, let's start from intercept.
+ The S a lot is negative 2.8984, right?
+ Okay.
+ And the standard error is 0.9694.
+ It basically tells you on average,
+ the S a lot differ from the true value
+ by about 0.9694, right?
+ That's the difference on average.
+ Now, look at the slope.
+ Now, the slope is 0.6734, right?
+ And the standard error is 0.186.
+ It say the S a lot of the slope differ
+ from its true value by about 0.186 zero, right?
+ All right.
+ So let's calculate the 95% complementable for the A.
+ First, we take the S a lot, negative 2.8987,
+ plus or minus, okay,
+ the C critical value times the standard error 0.9694.
+ All right.
+ Now, this is just a standard error.
+ It's the average difference, okay?
+ But the average cannot be the marginal error, okay?
+ Standard error is not big enough to be a marginal error, right?
+ That's why we have to find the right critical value,
+ the right constant to make the error big enough.
+ Okay, now, the critical value is called C critical value, right?
+ That means it comes from the normal distribution.
+ Now, we call at 95% complementable,
+ what is the critical value?
+ Remember?
+ 1.96.
+ 1.96, good.
+ Please remember this one, 1.96, okay?
+ I only use 1.96, that's it.
+ Always remember, right?
+ At 95% complementable,
+ okay,
+ this is 1.96.
+ What does this mean?
+ Let's say draw a normal curve,
+ draw a normal curve, right?
+ Okay, and select the region in the middle,
+ and shade that.
+ This is 95%, right?
+ And the cut point C score is given by
+ negative 1.96 and 1.96.
+ So that's good.
+ Basically said, okay?
+ Basically said, right?
+ The estimate of the slope differ from the true value
+ by about two times the standard error.
+ Two times the standard error.
+ We call, right?
+ Almost 95% of data can be captured in that range, right?
+ That's what I'm saying.
+ Most of the time,
+ the estimate of the slope differ from the true value
+ by about two standard deviations.
+ Anyway, that's the calculation, right?
+ So let's do some calculation.
+ I got negative 4.798 and negative 0.9983.
+ So the true value of the intercept
+ might be negative 4.5,
+ negative 4.6,
+ negative 3,
+ negative 3.5,
+ negative 2.
+ Any number in between 4.7 and 0.998.
+ May I move on?
+ Now let's interpret the common interval
+ for the intercept.
+ Now recall,
+ the worth of a student passing the exam
+ is predicted to be e to the power of a.
+ Now not a, okay?
+ e to the power of a.
+ Yet the student spends zero hours studying,
+ is that right?
+ Now the interval we obtain is for a,
+ not for e to the power of a, is that clear or not?
+ Okay?
+ From the previous calculation,
+ we only got the interval for a.
+ Okay, so 9,
+ d plus n, c, i,
+ for a
+ is given by
+ negative
+ negative 4.7
+ 98
+ and negative
+ 0.9983, is that right?
+ But to interpret a, right?
+ We don't want more odds.
+ We want odds, is that right?
+ So what is the question?
+ What is the 95% common interval
+ for e to a?
+ That's the big point.
+ Does it make sense to you?
+ e to a, not just a.
+ It's straightforward, right?
+ We just take e to the power of the interval
+ and that's it.
+ There we go.
+ So the 95% of e to the power of a
+ is given by e to the interval.
+ So we got two numbers, right?
+ e to negative 4.798
+ and e to negative 0.9983.
+ Does it make sense?
+ We just simply apply
+ the common interval into the function.
+ That's it.
+ So we got two numbers, right?
+ 0.0082 and 0.9685.
+ So in the interpretation,
+ in the population,
+ now not just in the sample,
+ in the population of all individuals,
+ we are 95% confident
+ that the odds
+ of a student passing the exam
+ is somewhere between 0.0082
+ and 0.3685
+ if our students study for zero hours.
+ Now you can see the true model
+ is pretty low, by the way.
+ Okay?
+ There's 0.0082 and 0.3685, right?
+ The range is pretty wide as well.
+ It doesn't look like much data.
+ Okay?
+ The interval is not that precise.
+ You can see, right?
+ The range is pretty wide, right?
+ You get a big data,
+ it's different story.
+ Any questions so far?
+ Please follow the picture, okay?
+ Okay.
+ Can you move on?
+ All right, next one.
+ Let's calculate the confident interval
+ for the slope.
+ All right, let's bring the formula.
+ Would it be estimate?
+ Plus or minus the second value.
+ Time is then the error.
+ All right.
+ We call the slope is estimated
+ to be 0.6734, right?
+ The standard error is 0.1860.
+ The curricula is still 1.96.
+ So let's compare the calculation.
+ I got 0.308A and 1.03A.
+ I may move on.
+ Okay.
+ Now we call the interpretation of the slope.
+ Okay?
+ Now for each additional hour spent studying for the exam,
+ we predict, we estimate
+ the art of a student passing the exam
+ increased by a factor of E to the power of B
+ if B is less than 0,
+ or decreased by a factor of E to the power of B
+ if B is less than 0.
+ Sounds good.
+ In this case, right, you tell me
+ the value of B.
+ Now, if you pay attention, okay?
+ Now, what is the confident interval?
+ Now, we estimate the slope B
+ is somewhere between 0.308A and 1.03A.
+ That means the slope can be 0.5,
+ can be 0.6,
+ can be 0.7,
+ 0.8,
+ 0.9,
+ or even 1.
+ Any number in the interval
+ might be a true value of the slope.
+ Is that okay?
+ Now look at all the possible values.
+ What is the common feature of those numbers?
+ You're right. They're all possible.
+ You're right. Absolutely.
+ Now, this is correctly reported, right?
+ Now, as you can see,
+ every interval,
+ so every number in the interval is positive.
+ That means the slope,
+ even though we never know the true value of the slope,
+ the slope should be positive.
+ Sounds good.
+ It's just like, hey, Ken, I know your age.
+ I know your age between 0 and 100.
+ 100.
+ Obviously, it can't be bigger than zero years old.
+ It's positive.
+ Is that right?
+ Same idea, right?
+ Now, since the slope is positive,
+ we are pretty sure, right,
+ the odds should increase,
+ right, should increase,
+ when we spend more hours to study.
+ Sounds good?
+ By how much?
+ By the fraction of E to the power of B.
+ Right?
+ So let's get the interval for E to the power of B.
+ Now, we call the interval for B is given by 0.32AA
+ and 1.338, right?
+ Now, we take the E to the power of the interval.
+ We got two numbers, 1.362 and 2.823.
+ Here's the interpretation.
+ In the population, we are pretty confident.
+ How much?
+ 95% confident that the odds of a student passing the exam
+ increase by a factor.
+ Now, not just two.
+ By between 1.362 or 2.823.
+ Or you can say increase by between 36.2% and 182.3%.
+ Why?
+ Let you think about that, okay?
+ Any questions so far?
+ I think this is the end of the lecture, okay?
+ That is the time to do the assignment, right, okay?
+ What time is that?
+ It's 5.38 by loss of time, okay?
+ Now, let me quickly go and get the assignment.
+ So last day, we did the first two problems, right?
+ Pretty straightforward.
+ How to fit the logistic reversal model, right?
+ Today, we have to do more before you leave the class, okay?
+ Let me bring the beads up, okay?
+ I'm going to go and bring it.
+ I'm going to bring the beads up, okay?
+ I'm going to bring the beads up, okay?
+ Alright, now this is the assignment, okay?
+ This is the assignment, right?
+ You get that one for twice a day.
+ Now, last day, we finished question A and question B, right?
+ Today, you have to do something in front of me, and you can go home.
+ Alright, how about question C?
+ Okay, now question C, you want to evaluate the statistical significance.
+ Basically, you want to check whether the model is significantly useful in predicting the probability.
+ That can be question C, right? That's okay, okay?
+ Now, I also changed question D a little bit, right?
+ Now, question D asks, compute the estimate odds of the loan default for a borrower with annual income of $20,000, by the way, okay?
+ Just one number, right?
+ And interpret the odds.
+ So, do calculation and also interpret the result.
+ Does this make sense to you? I just add this part, right?
+ Now, for today's assignment, just complete question C.
+ You're free to go.
+ Alright, and then do the rest when you go home, that's it.
+ Does this make sense to you? Okay.
+ So, that's the question C.
+ Alright, that's the question C.
+ Now, remember last day, right, we fit the production model to the data, right?
+ But we haven't checked whether the model is significantly useful in predicting the probability of the loan default, right?
+ We haven't do that.
+ So, what we learned today, now we're doing an approach.
+ First, use the war test, okay?
+ Firstly, look at the PNA, you have the coefficient, right?
+ For the slope.
+ The other one is do likelihood ratio test.
+ You have to do some calculation, right?
+ Now, for me, question C, show to me.
+ See you next day.
+ And do the rest of the question at home.
+ And that's it.
+ Okay.
+ Alright.
+ Okay.
+ Well, I just update the assignment, right?
+ I'll update question D.
+ Alright, calculate the parts of loan default, okay?
+ The person follow up with the income, $20,000, right?
+ And interpret the odds.
+ Interpret the odds.
+ One thing I want to say before I get to the assignment, right?
+ Now, I post up with your question for the quiz.
+ But I said like the quiz will be canceled.
+ Okay, no more quiz.
+ But I do want you to practice question, okay?
+ For the midterm.
+ Here's the review, right?
+ So the two reviews.
+ One for comparing multiple proportions.
+ The other one is maximum likelihood estimation.
+ And likelihood ratio test.
+ Right, I did a review question right now.
+ And this was all solution.
+ We got to have time to write it, right?
+ Okay, I'm going to update it.
+ This is for the quiz.
+ But anyway, enjoy the midterm.
+ Enjoy the midterm, right?
+ You do have some things to do, right?
+ Okay, so no problem.
+ I don't think we have quiz.
+ The first question, I'll decide, okay?
+ Let me send to you.
+ Then, you know, you won the first quiz.
+ No problem.
+ I'll give you the first quiz if you want.
+ Okay, yeah.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ You have to show me that you have things I don't know.
+ Because I don't know how to calculate, right?
+ So, if I'm going to help you, why are you?
+ I'm going to use my tool to check it.
+ What's the critical value?
+ What's the critical value?
+ No, the critical value.
+ Maybe I'm wrong.
+ What's the critical value?
+ Oh, no.
+ I'm holding the problem.
+ Now, get back to the question, right?
+ Now, here we have, now, in this case, right, we have more than two books, right?
+ I think we have four books, is that right?
+ Four books.
+ Four.
+ Four.
+ Because, okay, this is multiple comparison, right?
+ We compare, even though I went on from two, right?
+ But there's only four books here, right?
+ You should use four books instead of two books, right?
+ If someone two books, only one person, right?
+ But you want to do more than two comparisons, right?
+ You do the A and B, right?
+ In fact, there's six possible comparisons.
+ I'll give you two, right?
+ So you should have four books, not two.
+ I'm sorry.
+ Oh, there we go, there we go.
+ I thought my hand had that color.
+ Yeah, four books here.
+ You should get back to the four books.
+ There are a bunch of them out there.
+ Which might be a little bit confusing.
+ Yeah, so in part, you have four books, right?
+ Yeah, four books, right?
+ So four books, you have four books, right?
+ So the four books, right?
+ So the four books, right?
+ So the four books, this is four, minus one is three.
+ Now, remember here, we have...
+ Even though for that particular question,
+ we want to compare the opinion
+ between two seeds, right?
+ But in fact, okay, so the whole procedure, right?
+ The whole procedure, right?
+ You can compare, there's a six different comparisons.
+ between a cruiser and a hardware.
+ A cruiser and one, one to go, and so on, right?
+ There's six different comparison, right?
+ I want to ask for two.
+ But in here, we should have six comparison, right?
+ Of course, I can ask for all six comparison,
+ no problem.
+ I won't waste my time to ask, right?
+ So if you adjust the degree of freedom, right?
+ Not just one, two, three, right?
+ Four, last one is three, right?
+ You will just get the right answer.
+ Same formula, the only difference
+ between the degree of freedom, the critical value.
+ I mean, this is all right, I agree it's all right,
+ except one thing, is the critical value.
+ Because we want to follow up
+ from the chi-square test, right?
+ In the part A, you compare four proportions
+ of hyperpigments, right?
+ So the result indicate, right,
+ at least once you have a different opinion
+ than the other, right?
+ That's why we're going through
+ the Moretz-Riol procedure, right?
+ Okay, just you can make six possible comparison.
+ That only asks for two, right?
+ Yeah, yeah, yeah, your phone is correct,
+ except the critical value.
+ Okay.
+ So I have four, right?
+ Part C.
+ Just look at the bottom,
+ there's no difference, that's good.
+ And we'll get the log-finding rule, right?
+ The log-finding rule, what's the log-finding rule?
+ What's the log-finding rule?
+ Okay, so the first four, right,
+ we conduct the board test.
+ Okay.
+ What is the precipice of the moment?
+ And conclusion.
+ What is the precipice of the moment?
+ What is the precipice of the moment?
+ It's the precipice of the moment.
+ Now, show me the precipice,
+ you got it?
+ And then we'll go to you.
+ Okay.
+ Yeah, no, no, no, but I want to know,
+ now you'll do the board test, right?
+ You'll pass with the model,
+ it's a little bit useful, right?
+ It means, I want to see whether
+ the angle is a significant projection
+ of the moment, of the long-term moment,
+ or I want to see whether the angle of time
+ of the moment is something that
+ I can relate to the moment, right?
+ That means I need to have you pass on it.
+ Pass the precipice, if you think you got it right,
+ and then see if it's possible.
+ Oh, we'll do it.
+ So that looks like, okay, lots of time,
+ lots of time, okay?
+ All right, let's try it again.
+ I'll be back, okay?
+ I'll be back in 10 minutes, okay?
+ I'll be back, okay?
+ Don't worry, I'll be happy.
+ Let you enjoy the assignment, right?
+ Now, okay, for both of you, right?
+ You have to show me the test statistic
+ and P-value and conclusion, that's all, right?
+ Remember, you want to do the testing, right?
+ On that question, right?
+ You want to test whether the annual income
+ is a significant predictor of the probability
+ of low defaulting, right?
+ Or the annual salary is significantly related
+ to the probability, right?
+ Therefore, you test the statistic, P-value,
+ final conclusion.
+ Makes sense to you.
+ Hmm.
+ Okay.
+ Oh, okay, so this is a good one, right?
+ It's good.
+ It's a good one, right?
+ It's good.
+ Oh, okay.
+ Okay.
+ Oh, okay.
+ Oh, okay.
+ Okay.
+ Oh, okay.
+ Okay.
+ Hello.
+ Okay.
+ Now, in R, now, okay, okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Do you want some more?
+ Sure?
+ Thank you.
+ Is it 1.2?
+ 1.2.
+ 1.8.
+ Be specific.
+ 0.6.
+ How many zero?
+ Six.
+ You sure?
+ If you're wrong, we'll get one more question.
+ Eight.
+ Six.
+ You're sure, right?
+ Write it down here.
+ 1.8 is eight, I know six.
+ 1.8 is six, I think it's six here.
+ And by the way, 1.2, 1.6 is two.
+ Okay, question is, is that 1.1?
+ Six.
+ Okay, that's what I wanted to know, okay.
+ That's right.
+ Okay, this is the whole test, right?
+ Yeah, the whole test.
+ So, is it concluded?
+ That we do not need to take another part of it.
+ Okay.
+ So, that's the question that we have.
+ We need to take part of it.
+ Okay.
+ Maybe a larger part?
+ No, the other one.
+ Like, what's your test?
+ That's a system.
+ Let's take between that one.
+ You go look at this.
+ That's the entity of one of them.
+ What is that?
+ What is this one?
+ That's right, so.
+ Is that the evolution?
+ That's the sort of one question.
+ So, what is the evolution?
+ Think about it.
+ Think about it.
+ Think of the evolution.
+ Think of the evolution.
+ Think about this.
+ Is that evolution?
+ Yeah.
+ That's a big one.
+ Yeah, that's a big one.
+ Remember, evolution, right?
+ This is a lot later, right?
+ So, I'm going to show you this.
+ You have the maximizer at the edge, right?
+ And then, this is the right?
+ There's the log as well.
+ Do you see the value?
+ Do you see the value?
+ Yeah.
+ We did it in time.
+ That's the log of the evolution.
+ Anyway.
+ Is your name, this is your name, right?
+ Also, let me show you.
+ I'm like the king.
+ That's my name.
+ So, we can say this is my person.
+ Yeah.
+ That person.
+ The income is significant.
+ It's not one side.
+ It's inside.
+ It's inside.
+ It's unknown.
+ What has to do with it?
+ What has to do with it?
+ What do you want?
+ What's it?
+ Subject.
+ It exists in the subject.
+ So, I'm going to say it exists in the subject.
+ It's in the subject.
+ Anyway, what's the product?
+ What's the output?
+ What's the output?
+ What's the output?
+ What's the code?
+ What's the output?
+ The what?
+ The output.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Questions?
+ Okay.
+ Okay.
+ That's one.
+ Alright.
+ Alright.
+ Good.
+ Which was your name first?
+ Which was your name first?
+ You haven't heard that in the previous class?
+ You haven't yet, no?
+ Also, you've not talked yet in the starting class, have you?
+ We'll begin with you with a question.
+ Never?
+ Alright, thank you very much, okay.
+ What was your name?
+ Your name, right?
+ Okay.
+ This is urgent.
+ What was your name?
+ Your name, right?
+ I know this is correct.
+ What was your name?
+ It's urgent.
+ What was your name?
+ Your name, right?
+ What was your name?
+ Your name, right?
+ What was your name?
+ Your name, right?
+ What was your name?
+ Your name, right?
+ What was your name?
+ Your name, right?
+ What was your name?
+ Your name, right?
+ What was your name?
+ Your name, right?
+ What was your name?
+ What was your name?
+ Your name, right?
+ What was your name?
+ What was your name?
+ What was your name?
+ Okay, this is...
+ I will see you after, right?
+ Okay, you're smart.
+ Okay, I will see you after.
+ What about this?
+ What about this?
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
+ Okay.
