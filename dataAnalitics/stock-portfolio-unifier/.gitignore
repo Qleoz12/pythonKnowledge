@@ -11,3 +11,4 @@ __pycache__/
 .env.*.local
 .vite/
 *.log
+logs/

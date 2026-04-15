@@ -4,6 +4,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { usePortfoliosStore } from '../stores/portfolios'
 import { fetchStocks } from '../services/api'
 import type { Stock } from '../types'
+import PortfolioStressAnalysis from '../components/PortfolioStressAnalysis.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -116,6 +117,8 @@ const totalDividendsReceived = computed(() => {
   if (!portfolio.value?.snapshots.length) return 0
   return portfolio.value.snapshots.reduce((sum, s) => sum + (s.total_dividends || 0), 0)
 })
+
+const showStressAnalysis = computed(() => portfolio.value?.name?.trim() === 'L')
 </script>
 
 <template>
@@ -175,6 +178,8 @@ const totalDividendsReceived = computed(() => {
           <p class="text-2xl font-bold text-green-300">{{ portfolio.avg_yield ? fmt(portfolio.avg_yield) + '%' : '—' }}</p>
         </div>
       </div>
+
+      <PortfolioStressAnalysis v-if="showStressAnalysis" />
 
       <!-- Add holding panel -->
       <div v-if="showAddHolding" class="card mb-6">

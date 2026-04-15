@@ -7,6 +7,14 @@ echo.
 
 cd /d "%~dp0"
 
+echo [0/2] Liberando puertos 8000, 5173, 4173 y ventanas previas (Backend/Frontend)...
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0scripts\free-dev-ports.ps1"
+if errorlevel 1 (
+  echo   Aviso: no se pudo ejecutar free-dev-ports.ps1; continuamos igual.
+)
+timeout /t 1 /nobreak >nul
+echo.
+
 echo [1/2] Starting Backend (FastAPI :8000)...
 start "Backend - FastAPI" cmd /k "cd backend && pip install -r requirements.txt -q && python main.py"
 

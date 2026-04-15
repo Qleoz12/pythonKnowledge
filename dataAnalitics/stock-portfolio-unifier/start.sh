@@ -7,6 +7,26 @@ echo "  Stock Portfolio Unifier - Starting..."
 echo "============================================"
 echo ""
 
+kill_port() {
+  local port="$1"
+  if command -v fuser >/dev/null 2>&1; then
+    fuser -k "${port}/tcp" 2>/dev/null || true
+    return 0
+  fi
+  if command -v lsof >/dev/null 2>&1; then
+    lsof -t -iTCP:"$port" -sTCP:LISTEN 2>/dev/null | while read -r pid; do
+      [ -n "$pid" ] && kill -9 "$pid" 2>/dev/null || true
+    done
+    return 0
+  fi
+  echo "  (skip free port $port: install fuser or lsof to auto-kill listeners)"
+}
+
+echo "[0/2] Freeing dev ports 8000, 5173, 4173..."
+for p in 8000 5173 4173; do kill_port "$p"; done
+sleep 1
+echo ""
+
 cleanup() {
     echo ""
     echo "Shutting down..."

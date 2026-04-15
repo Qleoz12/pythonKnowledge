@@ -2,12 +2,21 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(__file__))
 
-from fastapi import FastAPI
+from logger import setup_root_logging, get_logger
+setup_root_logging()
+log = get_logger("main")
+
+import time
+
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.middleware.base import BaseHTTPMiddleware
+
 from database import engine
 from models import Base
 
 Base.metadata.create_all(bind=engine)
+log.info("Database tables ready")
 
 app = FastAPI(title="Stock Portfolio Unifier", version="1.0.0")
 
@@ -21,17 +30,53 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+class APILoggingMiddleware(BaseHTTPMiddleware):
+    """Rotating api.log: timestamp, method, path, status, duration; failures include traceback."""
+
+    async def dispatch(self, request: Request, call_next):
+        api_log = get_logger("api.http")
+        start = time.perf_counter()
+        path = request.url.path
+        method = request.method
+        q = request.url.query
+        if q:
+            path = f"{path}?{q}"
+        try:
+            response = await call_next(request)
+            elapsed_ms = (time.perf_counter() - start) * 1000
+            status = response.status_code
+            line = f"{method} {path} -> {status} | {elapsed_ms:.1f}ms"
+            if status >= 500:
+                api_log.error(line)
+            elif status >= 400:
+                api_log.warning(line)
+            else:
+                api_log.info(line)
+            return response
+        except Exception as e:
+            elapsed_ms = (time.perf_counter() - start) * 1000
+            api_log.exception("%s %s FAILED after %.1fms: %s", method, path, elapsed_ms, e)
+            raise
+
+
+app.add_middleware(APILoggingMiddleware)
+
 from routers.stocks import router as stocks_router
 from routers.portfolios import router as portfolios_router
 from routers.dividends import router as dividends_router
 from routers.analytics import router as analytics_router
 from routers.charts import router as charts_router
+from routers.arbitrage import router as arbitrage_router
+from routers.fair_value import router as fair_value_router
 
 app.include_router(stocks_router)
 app.include_router(portfolios_router)
 app.include_router(dividends_router)
 app.include_router(analytics_router)
 app.include_router(charts_router)
+app.include_router(arbitrage_router)
+app.include_router(fair_value_router)
 
 
 @app.get("/api/health")
@@ -101,4 +146,4 @@ def export_stocks_csv():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=False)

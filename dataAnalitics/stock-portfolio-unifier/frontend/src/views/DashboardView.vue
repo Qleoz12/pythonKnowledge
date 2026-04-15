@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import type { DashboardStats } from '../types'
-import { fetchDashboard, fetchTopDividendYields, fetchSectors, runETL, fetchEnrichStatus, enrichBatch } from '../services/api'
+import type { DashboardStats, SectorStat } from '../types'
+import { fetchDashboard, fetchTopDividendYields, fetchSectorStats, runETL, fetchEnrichStatus, enrichBatch } from '../services/api'
 
 const router = useRouter()
 const stats = ref<DashboardStats | null>(null)
 const topYields = ref<any[]>([])
-const sectors = ref<string[]>([])
+const sectorStats = ref<SectorStat[]>([])
 const loading = ref(true)
 const etlRunning = ref(false)
 const etlResult = ref<string>('')
@@ -58,11 +58,11 @@ onMounted(async () => {
     const [s, ty, sec] = await Promise.all([
       fetchDashboard(),
       fetchTopDividendYields({ limit: 10 }),
-      fetchSectors().catch(() => [] as string[]),
+      fetchSectorStats().catch(() => [] as SectorStat[]),
     ])
     stats.value = s
     topYields.value = ty
-    sectors.value = sec
+    sectorStats.value = sec
     fetchEnrichStatus().then(es => enrichStatus.value = es).catch(() => {})
   } catch (e) {
     console.error('Failed to load dashboard:', e)
@@ -311,29 +311,36 @@ function fmt(n: number | null | undefined, decimals = 2): string {
         </div>
       </div>
       <!-- Sector Browser -->
-      <div v-if="sectors.length > 0" class="mb-8">
+      <div v-if="sectorStats.length > 0" class="mb-8">
         <div class="flex items-center justify-between mb-4">
           <div>
             <h2 class="text-lg font-semibold text-white">Browse by Sector</h2>
-            <p class="text-sm text-gray-400 mt-0.5">{{ sectors.length }} sectors · Click to explore stocks</p>
+            <p class="text-sm text-gray-400 mt-0.5">{{ sectorStats.length }} sectors · Click to explore stocks</p>
           </div>
         </div>
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
           <button
-            v-for="sector in sectors"
-            :key="sector"
-            @click="goToSector(sector)"
-            class="flex items-center gap-3 p-3 bg-gray-900 border border-gray-800 rounded-xl hover:border-primary-700 hover:bg-gray-800/80 transition-all group cursor-pointer text-left"
+            v-for="ss in sectorStats"
+            :key="ss.sector"
+            @click="goToSector(ss.sector)"
+            class="flex items-start gap-3 p-3 bg-gray-900 border border-gray-800 rounded-xl hover:border-primary-700 hover:bg-gray-800/80 transition-all group cursor-pointer text-left"
           >
-            <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
-              :class="sectorColors[sector] || defaultColor">
+            <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
+              :class="sectorColors[ss.sector] || defaultColor">
               <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" :d="sectorIcons[sector] || defaultIcon" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" :d="sectorIcons[ss.sector] || defaultIcon" />
               </svg>
             </div>
-            <span class="text-sm font-medium text-gray-300 group-hover:text-primary-400 transition-colors leading-tight truncate">
-              {{ sector }}
-            </span>
+            <div class="min-w-0 flex-1">
+              <span class="text-sm font-medium text-gray-300 group-hover:text-primary-400 transition-colors leading-tight truncate block">
+                {{ ss.sector }}
+              </span>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="text-[10px] text-gray-500 font-medium">{{ ss.count }} stocks</span>
+                <span v-if="ss.missing_prices > 0" class="text-[10px] text-amber-500 font-medium">{{ ss.missing_prices }} pending</span>
+                <span v-else class="text-[10px] text-green-500 font-medium">up to date</span>
+              </div>
+            </div>
           </button>
         </div>
       </div>

@@ -8,6 +8,9 @@ import sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 from database import get_db
 from models import Stock, StockOHLCV, ChartDrawing
+from logger import get_logger
+
+log = get_logger("charts")
 
 router = APIRouter(prefix="/api/stocks", tags=["charts"])
 
@@ -27,10 +30,26 @@ def _ensure_ohlcv_cache(stock: Stock, db: Session):
 
     today = date.today()
 
-    if last_cached and (today - last_cached).days <= 1:
+    meta = (
+        db.query(
+            func.count(StockOHLCV.id),
+            func.min(StockOHLCV.date),
+            func.max(StockOHLCV.date),
+        )
+        .filter(StockOHLCV.stock_id == stock.id)
+        .one()
+    )
+    row_count, min_d, max_d = int(meta[0] or 0), meta[1], meta[2]
+    span_days = (max_d - min_d).days if min_d and max_d else 0
+    # Evita "una sola vela": antes se salía si el último día era reciente aunque hubiera <~3 meses de historia.
+    adequate = row_count >= 60 and span_days >= 120
+
+    if last_cached and (today - last_cached).days <= 1 and adequate:
         return
 
-    if last_cached:
+    if not adequate:
+        start = today - timedelta(days=1825)
+    elif last_cached:
         start = last_cached + timedelta(days=1)
     else:
         start = today - timedelta(days=1825)
@@ -42,9 +61,10 @@ def _ensure_ohlcv_cache(stock: Stock, db: Session):
             end=(today + timedelta(days=1)).isoformat(),
             progress=False,
             timeout=20,
+            auto_adjust=False,
         )
     except Exception as e:
-        print(f"  [OHLCV] yfinance error for {stock.ticker_yf}: {e}")
+        log.warning("OHLCV yfinance error for %s: %s", stock.ticker_yf, e)
         return
 
     if hist is None or hist.empty:
@@ -84,7 +104,7 @@ def _ensure_ohlcv_cache(stock: Stock, db: Session):
             rows_added += 1
 
     db.commit()
-    print(f"  [OHLCV] {stock.ticker_yf}: cached {rows_added} new rows (from {start})")
+    log.info("OHLCV %s: cached %d new rows (from %s)", stock.ticker_yf, rows_added, start)
 
 
 @router.get("/{stock_id}/ohlcv")

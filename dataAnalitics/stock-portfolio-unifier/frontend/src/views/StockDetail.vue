@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { onMounted, ref, computed, watch } from 'vue'
+import { onMounted, ref, computed, watch, nextTick } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useStocksStore } from '../stores/stocks'
 import { usePortfoliosStore } from '../stores/portfolios'
-import { refreshStock } from '../services/api'
+import { refreshStock, deleteStock } from '../services/api'
 import StockChart from '../components/StockChart.vue'
+import PriceFairValuePanel from '../components/PriceFairValuePanel.vue'
+import PriceNormalizationPanel from '../components/PriceNormalizationPanel.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -17,6 +19,10 @@ const addShares = ref(1)
 const addPrice = ref(0)
 const refreshing = ref(false)
 const refreshMsg = ref('')
+const deleting = ref(false)
+
+/** Exposed `load` from PriceNormalizationPanel — Yahoo fundamentals block */
+const priceNormPanel = ref<{ load: () => Promise<void> } | null>(null)
 
 const stock = computed(() => stocksStore.currentStock)
 
@@ -32,6 +38,23 @@ async function loadStockData(id: number) {
   ])
   if (stock.value?.last_close) {
     addPrice.value = stock.value.last_close
+  }
+  await nextTick()
+  await runAutoPipelineFromScoreTrend()
+}
+
+/** From Score vs trend: refresh DB row from Yahoo, then load live Yahoo fundamentals panel. */
+async function runAutoPipelineFromScoreTrend() {
+  if (route.query.fromScoreTrend !== '1' || !stock.value) return
+  const id = stock.value.id
+  try {
+    await triggerRefresh()
+    await nextTick()
+    await priceNormPanel.value?.load()
+  } finally {
+    if (String(route.params.id) === String(id)) {
+      await router.replace({ name: 'StockDetail', params: { id: String(id) } })
+    }
   }
 }
 
@@ -69,9 +92,13 @@ function fmt(n: number | null | undefined, decimals = 2): string {
   return n.toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals })
 }
 
-function rangePct(price: number | null, high: number | null, low: number | null): number {
+function rawRangePct(price: number | null, high: number | null, low: number | null): number {
   if (!price || !high || !low || high === low) return 0
   return Math.round(((price - low) / (high - low)) * 100)
+}
+
+function rangePct(price: number | null, high: number | null, low: number | null): number {
+  return Math.max(0, Math.min(100, rawRangePct(price, high, low)))
 }
 
 function distanceFromLow(price: number | null, low: number | null): number | null {
@@ -86,7 +113,7 @@ function distanceFromHigh(price: number | null, high: number | null): number | n
 
 function proximitySignal(pct: number): { label: string; color: string; bgColor: string } {
   if (pct <= 5) return { label: 'Very Near', color: 'text-red-400', bgColor: 'bg-red-900/30 border-red-800' }
-  if (pct <= 15) return { label: 'Near', color: 'text-yellow-400', bgColor: 'bg-yellow-900/30 border-yellow-800' }
+  if (pct <= 10) return { label: 'Near', color: 'text-yellow-400', bgColor: 'bg-yellow-900/30 border-yellow-800' }
   return { label: 'Far', color: 'text-gray-400', bgColor: 'bg-gray-800 border-gray-700' }
 }
 
@@ -110,7 +137,9 @@ const priceAnalysis = computed(() => {
   ]
 
   return ranges.map(r => {
-    const pct = rangePct(price, r.high, r.low)
+    const raw = rawRangePct(price, r.high, r.low)
+    const stale = raw < 0 || raw > 100
+    const pct = Math.max(0, Math.min(100, raw))
     const fromLow = distanceFromLow(price, r.low)
     const fromHigh = distanceFromHigh(price, r.high)
     const lowSignal = fromLow !== null ? proximitySignal(Math.abs(fromLow)) : null
@@ -119,13 +148,14 @@ const priceAnalysis = computed(() => {
     return {
       ...r,
       pct,
+      stale,
       fromLow,
       fromHigh,
       lowSignal,
       highSignal,
       barColor: rangeBarColor(pct),
-      isNearLow: pct <= 15,
-      isNearHigh: pct >= 85,
+      isNearLow: !stale && pct <= 15,
+      isNearHigh: !stale && pct >= 85,
     }
   })
 })
@@ -183,10 +213,123 @@ const externalLinks = computed(() => {
   ]
 })
 
+function fmtBig(n: number | null | undefined): string {
+  if (n === null || n === undefined) return '—'
+  const abs = Math.abs(n)
+  const sign = n < 0 ? '-' : ''
+  if (abs >= 1e12) return sign + (abs / 1e12).toFixed(1) + 'T'
+  if (abs >= 1e9) return sign + (abs / 1e9).toFixed(1) + 'B'
+  if (abs >= 1e6) return sign + (abs / 1e6).toFixed(1) + 'M'
+  if (abs >= 1e3) return sign + (abs / 1e3).toFixed(1) + 'K'
+  return sign + abs.toFixed(0)
+}
+
+function scoreColor(score: number | null): string {
+  if (score === null) return 'text-gray-500'
+  if (score >= 70) return 'text-green-400'
+  if (score >= 45) return 'text-yellow-400'
+  if (score >= 25) return 'text-orange-400'
+  return 'text-red-400'
+}
+
+function scoreLabel(score: number | null): string {
+  if (score === null) return 'N/A'
+  if (score >= 70) return 'Strong'
+  if (score >= 45) return 'Moderate'
+  if (score >= 25) return 'Weak'
+  return 'Poor'
+}
+
+function scoreBg(score: number | null): string {
+  if (score === null) return 'bg-gray-800 border-gray-700'
+  if (score >= 70) return 'bg-green-900/30 border-green-800'
+  if (score >= 45) return 'bg-yellow-900/30 border-yellow-800'
+  if (score >= 25) return 'bg-orange-900/30 border-orange-800'
+  return 'bg-red-900/30 border-red-800'
+}
+
+const healthIndicators = computed(() => {
+  if (!stock.value) return []
+  const s = stock.value
+  const indicators = []
+
+  indicators.push({
+    name: 'Net Income Margin',
+    value: s.net_income_margin,
+    display: s.net_income_margin !== null ? fmt(s.net_income_margin, 1) + '%' : '—',
+    good: s.net_income_margin !== null && s.net_income_margin > 0,
+    desc: 'Revenue kept as profit after all expenses',
+    weight: '25%',
+  })
+
+  indicators.push({
+    name: 'Return on Assets',
+    value: s.return_on_assets,
+    display: s.return_on_assets !== null ? fmt(s.return_on_assets, 1) + '%' : '—',
+    good: s.return_on_assets !== null && s.return_on_assets > 0,
+    desc: 'Efficiency using company assets to generate profit',
+    weight: '20%',
+  })
+
+  indicators.push({
+    name: 'Free Cash Flow',
+    value: s.free_cash_flow,
+    display: s.free_cash_flow !== null ? fmtBig(s.free_cash_flow) : '—',
+    good: s.free_cash_flow !== null && s.free_cash_flow > 0,
+    desc: 'Cash generated after capital expenditures',
+    weight: '25%',
+  })
+
+  indicators.push({
+    name: 'Debt / Equity',
+    value: s.debt_to_equity,
+    display: s.debt_to_equity !== null ? fmt(s.debt_to_equity, 0) + '%' : '—',
+    good: s.debt_to_equity !== null && s.debt_to_equity < 100,
+    desc: 'Total debt relative to shareholder equity',
+    weight: '15%',
+  })
+
+  const price = s.last_close
+  const belowEmaCount = price ? [s.ema_20, s.ema_52, s.ema_200].filter(e => e && price < e).length : 0
+  indicators.push({
+    name: 'EMA Position',
+    value: belowEmaCount,
+    display: price ? `Below ${belowEmaCount}/3 EMAs` : '—',
+    good: belowEmaCount >= 2,
+    desc: 'Price below EMAs signals potential value entry',
+    weight: '15%',
+  })
+
+  return indicators
+})
+
 async function addToPortfolio() {
   if (!selectedPortfolioId.value || !stock.value) return
   await portfoliosStore.addStock(selectedPortfolioId.value, stock.value.id, addShares.value, addPrice.value)
   showAddToPortfolio.value = false
+}
+
+async function removeStockFromDatabase() {
+  if (!stock.value || deleting.value) return
+  const s = stock.value
+  const pf = s.portfolios?.length
+    ? ` It will be removed from ${s.portfolios.length} portfolio(s).`
+    : ''
+  const ok = window.confirm(
+    `Remove ${s.ticker_yf} (${s.symbol}) from the database?${pf} Dividends, fair value revisions, chart data, and cached prices for this ticker will be deleted. This cannot be undone.`,
+  )
+  if (!ok) return
+  deleting.value = true
+  try {
+    await deleteStock(s.id)
+    stocksStore.currentStock = null
+    await portfoliosStore.loadPortfolios()
+    router.push('/stocks')
+  } catch (e: any) {
+    refreshMsg.value = `Delete failed: ${e.response?.data?.detail || e.message}`
+  } finally {
+    deleting.value = false
+  }
 }
 </script>
 
@@ -274,6 +417,15 @@ async function addToPortfolio() {
             <button @click="showAddToPortfolio = !showAddToPortfolio" class="btn-primary text-sm">
               + Add to Portfolio
             </button>
+            <button
+              type="button"
+              @click="removeStockFromDatabase"
+              :disabled="deleting"
+              class="text-xs px-3 py-1.5 rounded-lg border border-red-800 bg-red-950/40 text-red-300 hover:bg-red-900/50 transition-colors disabled:opacity-50"
+              title="Remove this ticker from the database"
+            >
+              {{ deleting ? 'Removing…' : 'Remove from database' }}
+            </button>
           </div>
         </div>
       </div>
@@ -301,12 +453,18 @@ async function addToPortfolio() {
         </div>
       </div>
 
-      <!-- Price Chart -->
+      <!-- OHLC: solo velas/EMA (sin FVE) -->
       <StockChart
         v-if="stock.last_close"
         :stock-id="stock.id"
         :ticker-yf="stock.ticker_yf"
         class="mb-8"
+      />
+
+      <PriceFairValuePanel
+        v-if="stock.last_close"
+        :stock-id="stock.id"
+        :ticker-yf="stock.ticker_yf"
       />
 
       <!-- Key metrics -->
@@ -346,6 +504,86 @@ async function addToPortfolio() {
         </div>
       </div>
 
+      <!-- Financial Health Score -->
+      <div class="card mb-8" v-if="stock.health_score !== null || healthIndicators.some(i => i.value !== null)">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h3 class="text-lg font-semibold text-white">Financial Health Score</h3>
+            <p class="text-sm text-gray-400">Based on financial statements analysis</p>
+          </div>
+          <div class="text-right">
+            <div class="flex items-center gap-3">
+              <div class="text-3xl font-bold font-mono" :class="scoreColor(stock.health_score)">
+                {{ stock.health_score !== null ? stock.health_score : '—' }}
+              </div>
+              <div>
+                <span class="text-xs px-2 py-0.5 rounded border font-semibold" :class="scoreBg(stock.health_score) + ' ' + scoreColor(stock.health_score)">
+                  {{ scoreLabel(stock.health_score) }}
+                </span>
+                <p class="text-[10px] text-gray-500 mt-1">/ 100</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-4 h-2 bg-gray-800 rounded-full overflow-hidden">
+          <div class="h-full rounded-full transition-all duration-500"
+            :class="(stock.health_score ?? 0) >= 70 ? 'bg-green-500' : (stock.health_score ?? 0) >= 45 ? 'bg-yellow-500' : (stock.health_score ?? 0) >= 25 ? 'bg-orange-500' : 'bg-red-500'"
+            :style="{ width: Math.min(100, stock.health_score ?? 0) + '%' }">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-4">
+          <div v-if="stock.revenue !== null" class="p-3 bg-gray-800/50 rounded-lg">
+            <p class="text-xs text-gray-500">Revenue</p>
+            <p class="text-sm font-mono font-medium text-white">{{ fmtBig(stock.revenue) }}</p>
+          </div>
+          <div v-if="stock.net_income !== null" class="p-3 bg-gray-800/50 rounded-lg">
+            <p class="text-xs text-gray-500">Net Income</p>
+            <p class="text-sm font-mono font-medium" :class="(stock.net_income ?? 0) >= 0 ? 'text-green-400' : 'text-red-400'">{{ fmtBig(stock.net_income) }}</p>
+          </div>
+          <div v-if="stock.operating_cash_flow !== null" class="p-3 bg-gray-800/50 rounded-lg">
+            <p class="text-xs text-gray-500">Operating Cash Flow</p>
+            <p class="text-sm font-mono font-medium" :class="(stock.operating_cash_flow ?? 0) >= 0 ? 'text-green-400' : 'text-red-400'">{{ fmtBig(stock.operating_cash_flow) }}</p>
+          </div>
+          <div v-if="stock.free_cash_flow !== null" class="p-3 bg-gray-800/50 rounded-lg">
+            <p class="text-xs text-gray-500">Free Cash Flow</p>
+            <p class="text-sm font-mono font-medium" :class="(stock.free_cash_flow ?? 0) >= 0 ? 'text-green-400' : 'text-red-400'">{{ fmtBig(stock.free_cash_flow) }}</p>
+          </div>
+          <div v-if="stock.total_debt !== null" class="p-3 bg-gray-800/50 rounded-lg">
+            <p class="text-xs text-gray-500">Total Debt</p>
+            <p class="text-sm font-mono font-medium text-white">{{ fmtBig(stock.total_debt) }}</p>
+          </div>
+          <div v-if="stock.fcf_yield !== null" class="p-3 bg-gray-800/50 rounded-lg">
+            <p class="text-xs text-gray-500">FCF Yield</p>
+            <p class="text-sm font-mono font-medium" :class="(stock.fcf_yield ?? 0) >= 0 ? 'text-green-400' : 'text-red-400'">{{ fmt(stock.fcf_yield, 1) }}%</p>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 pt-4">
+          <p class="text-xs text-gray-500 mb-3">Score Breakdown</p>
+          <div class="space-y-2">
+            <div v-for="ind in healthIndicators" :key="ind.name" class="flex items-center gap-3">
+              <div class="w-3 h-3 rounded-full flex-shrink-0" :class="ind.value === null ? 'bg-gray-700' : ind.good ? 'bg-green-500' : 'bg-red-500'"></div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs text-gray-300">{{ ind.name }}</span>
+                  <span class="text-xs font-mono" :class="ind.value === null ? 'text-gray-600' : ind.good ? 'text-green-400' : 'text-red-400'">
+                    {{ ind.display }}
+                  </span>
+                </div>
+                <p class="text-[10px] text-gray-600">{{ ind.desc }} · Weight: {{ ind.weight }}</p>
+              </div>
+            </div>
+          </div>
+          <router-link to="/score" class="text-xs text-primary-400 hover:text-primary-300 mt-3 inline-block">
+            How is this score calculated?
+          </router-link>
+        </div>
+      </div>
+
+      <PriceNormalizationPanel ref="priceNormPanel" :stock-id="stock.id" />
+
       <!-- Price Range Analysis (min/max) -->
       <div class="card mb-8" v-if="priceAnalysis">
         <h3 class="text-lg font-semibold text-white mb-2">Price Range Analysis</h3>
@@ -353,6 +591,10 @@ async function addToPortfolio() {
 
         <div class="space-y-6">
           <div v-for="range in priceAnalysis" :key="range.label">
+            <div v-if="range.stale" class="flex items-center gap-2 mb-2 px-3 py-1.5 bg-amber-900/20 border border-amber-800/40 rounded-lg">
+              <span class="text-[10px] font-semibold text-amber-400">STALE DATA</span>
+              <span class="text-[10px] text-amber-500/80">Range values look wrong for this price. Click Refresh to fix.</span>
+            </div>
             <div class="flex items-center justify-between mb-2">
               <div class="flex items-center gap-3">
                 <span class="text-sm font-medium text-white">{{ range.label }}</span>
@@ -365,8 +607,8 @@ async function addToPortfolio() {
                   NEAR HIGH
                 </span>
               </div>
-              <span class="text-sm font-mono font-bold" :class="range.pct <= 30 ? 'text-red-400' : range.pct >= 70 ? 'text-green-400' : 'text-yellow-400'">
-                {{ range.pct }}% of range
+              <span class="text-sm font-mono font-bold" :class="range.stale ? 'text-amber-400' : range.pct <= 30 ? 'text-red-400' : range.pct >= 70 ? 'text-green-400' : 'text-yellow-400'">
+                {{ range.stale ? 'N/A' : range.pct + '% of range' }}
               </span>
             </div>
 

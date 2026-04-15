@@ -52,7 +52,8 @@ def _pct(price, high, low):
 
 @router.get("/week-proximity", response_model=list[WeekProximityItem])
 def week_proximity(
-    period: str = Query("52"), direction: str = Query("low"), threshold: float = Query(5.0),
+    period: str = Query("52"), direction: str = Query("low"), threshold: float = Query(10.0),
+    filter_mode: str = Query("distance", description="'distance' = % from low/high, 'range' = position within range"),
     exchange: Optional[str] = Query(None), quanfury_only: bool = Query(False),
     min_div_yield: Optional[float] = Query(None), limit: int = Query(100, ge=1, le=500),
     db: Session = Depends(get_db),
@@ -69,17 +70,26 @@ def week_proximity(
     lc = {"52": StockFeature.week_52_low, "100": StockFeature.week_100_low, "200": StockFeature.week_200_low}
     h, l = hc.get(period, StockFeature.week_52_high), lc.get(period, StockFeature.week_52_low)
 
-    if direction == "high":
-        q = q.filter(h.isnot(None), StockFeature.last_close >= h * (1 - threshold / 100)).order_by(StockFeature.last_close.desc())
+    q = q.filter(h.isnot(None), l.isnot(None), h != l)
+
+    if filter_mode == "range":
+        range_expr = (StockFeature.last_close - l) / (h - l) * 100
+        if direction == "high":
+            q = q.filter(range_expr >= (100 - threshold)).order_by(range_expr.desc())
+        else:
+            q = q.filter(range_expr <= threshold).order_by(range_expr.asc())
     else:
-        q = q.filter(l.isnot(None), StockFeature.last_close <= l * (1 + threshold / 100)).order_by(StockFeature.last_close.asc())
+        if direction == "high":
+            q = q.filter(StockFeature.last_close >= h * (1 - threshold / 100)).order_by(StockFeature.last_close.desc())
+        else:
+            q = q.filter(StockFeature.last_close <= l * (1 + threshold / 100)).order_by(StockFeature.last_close.asc())
 
     return [WeekProximityItem(
         id=s.id, ticker_yf=s.ticker_yf, company_name=s.company_name, exchange_code=e.code if e else None,
         sector=s.sector, currency=s.currency, last_close=f.last_close, is_quanfury=s.is_quanfury_available,
         week_52_high=f.week_52_high, week_52_low=f.week_52_low, week_52_pct=_pct(f.last_close, f.week_52_high, f.week_52_low),
-        near_52w_high=bool(f.week_52_high and f.last_close and f.last_close >= f.week_52_high * 0.95),
-        near_52w_low=bool(f.week_52_low and f.last_close and f.last_close <= f.week_52_low * 1.05),
+        near_52w_high=bool(f.week_52_high and f.last_close and f.last_close >= f.week_52_high * 0.90),
+        near_52w_low=bool(f.week_52_low and f.last_close and f.last_close <= f.week_52_low * 1.10),
         week_100_high=f.week_100_high, week_100_low=f.week_100_low, week_100_pct=_pct(f.last_close, f.week_100_high, f.week_100_low),
         week_200_high=f.week_200_high, week_200_low=f.week_200_low, week_200_pct=_pct(f.last_close, f.week_200_high, f.week_200_low),
         div_yield_ttm=f.div_yield_ttm, rsi_14=f.rsi_14,
@@ -93,8 +103,8 @@ def dashboard_stats(db: Session = Depends(get_db)):
     with_divs = db.query(Stock).join(StockFeature).filter(StockFeature.dividend_ttm.isnot(None), StockFeature.dividend_ttm > 0).count()
     qf = db.query(Stock).filter(Stock.is_quanfury_available == True).count()
     avg_y = db.query(func.avg(StockFeature.div_yield_ttm)).filter(StockFeature.div_yield_ttm.isnot(None), StockFeature.div_yield_ttm > 0).scalar()
-    nh = db.query(Stock).join(StockFeature).filter(StockFeature.last_close.isnot(None), StockFeature.week_52_high.isnot(None), StockFeature.last_close >= StockFeature.week_52_high * 0.95).count()
-    nl = db.query(Stock).join(StockFeature).filter(StockFeature.last_close.isnot(None), StockFeature.week_52_low.isnot(None), StockFeature.last_close <= StockFeature.week_52_low * 1.05).count()
+    nh = db.query(Stock).join(StockFeature).filter(StockFeature.last_close.isnot(None), StockFeature.week_52_high.isnot(None), StockFeature.last_close >= StockFeature.week_52_high * 0.90).count()
+    nl = db.query(Stock).join(StockFeature).filter(StockFeature.last_close.isnot(None), StockFeature.week_52_low.isnot(None), StockFeature.last_close <= StockFeature.week_52_low * 1.10).count()
     return DashboardStats(total_stocks=total, stocks_by_exchange=by_exc, stocks_with_dividends=with_divs,
                            quanfury_available=qf, avg_div_yield=round(avg_y, 2) if avg_y else None,
                            near_52w_high_count=nh, near_52w_low_count=nl)

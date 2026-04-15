@@ -5,6 +5,9 @@ import json
 from datetime import datetime
 from database import engine, SessionLocal
 from models import Base, Stock, QuanfuryDividend
+from logger import get_logger
+
+log = get_logger("etl.quanfury")
 
 from config import DATA_DIR
 QF_DIV_PATH = os.path.join(DATA_DIR, "quanfury_div.json")
@@ -13,12 +16,12 @@ QF_STOCKS_PATH = os.path.join(DATA_DIR, "trading-os", "quantfury", "stocks.json"
 
 def load_quanfury_dividends(db):
     if not os.path.exists(QF_DIV_PATH):
-        print(f"  [SKIP] {QF_DIV_PATH} not found")
+        log.warning("SKIP %s not found", QF_DIV_PATH)
         return 0
     with open(QF_DIV_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
     items = data.get("data", [])
-    print(f"  [READ] quanfury_div.json: {len(items)} records")
+    log.info("READ quanfury_div.json: %d records", len(items))
 
     db.query(QuanfuryDividend).delete()
     db.commit()
@@ -46,17 +49,17 @@ def load_quanfury_dividends(db):
     if batch:
         db.add_all(batch)
         db.commit()
-    print(f"  [DONE] {count} Quanfury dividends loaded")
+    log.info("DONE %d Quanfury dividends loaded", count)
     return count
 
 
 def mark_quanfury_stocks(db):
     if not os.path.exists(QF_STOCKS_PATH):
-        print(f"  [SKIP] {QF_STOCKS_PATH} not found")
+        log.warning("SKIP %s not found", QF_STOCKS_PATH)
         return 0
     with open(QF_STOCKS_PATH, "r", encoding="utf-8") as f:
         qf_stocks = json.load(f)
-    print(f"  [READ] quantfury/stocks.json: {len(qf_stocks)} instruments")
+    log.info("READ quantfury/stocks.json: %d instruments", len(qf_stocks))
 
     qf_by_ticker = {}
     for item in qf_stocks:
@@ -80,7 +83,7 @@ def mark_quanfury_stocks(db):
                 stock.industry = qf_item["industry"]
 
     db.commit()
-    print(f"  [DONE] {matched} stocks marked as Quanfury-available, {sectors_filled} sectors backfilled")
+    log.info("DONE %d stocks marked Quanfury-available, %d sectors backfilled", matched, sectors_filled)
     return matched
 
 
@@ -88,9 +91,9 @@ def run():
     Base.metadata.create_all(bind=engine)
     db = SessionLocal()
     try:
-        print("Loading Quanfury dividends...")
+        log.info("Loading Quanfury dividends...")
         load_quanfury_dividends(db)
-        print("\nMarking Quanfury-available stocks...")
+        log.info("Marking Quanfury-available stocks...")
         mark_quanfury_stocks(db)
     finally:
         db.close()

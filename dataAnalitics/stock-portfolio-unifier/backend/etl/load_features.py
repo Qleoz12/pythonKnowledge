@@ -5,6 +5,9 @@ import pandas as pd
 from sqlalchemy.orm import Session
 from database import engine, SessionLocal
 from models import Base, Exchange, Stock, StockFeature
+from logger import get_logger
+
+log = get_logger("etl.features")
 
 from config import DATA_DIR
 CACHE_DIR = os.path.join(DATA_DIR, "cache_yf")
@@ -28,11 +31,11 @@ def safe_float(val):
 def load_features_file(db: Session, filename: str, exchange_info: dict):
     filepath = os.path.join(CACHE_DIR, filename)
     if not os.path.exists(filepath):
-        print(f"  [SKIP] {filepath} not found")
+        log.warning("SKIP %s not found", filepath)
         return 0
 
     df = pd.read_csv(filepath)
-    print(f"  [READ] {filename}: {len(df)} rows, columns: {list(df.columns)}")
+    log.info("READ %s: %d rows, columns: %s", filename, len(df), list(df.columns))
 
     exchange = db.query(Exchange).filter_by(code=exchange_info["code"]).first()
     if not exchange:
@@ -94,7 +97,7 @@ def load_features_file(db: Session, filename: str, exchange_info: dict):
         count += 1
 
     db.commit()
-    print(f"  [DONE] {filename}: {count} stocks loaded")
+    log.info("DONE %s: %d stocks loaded", filename, count)
     return count
 
 
@@ -104,9 +107,9 @@ def run():
     try:
         total = 0
         for filename, exchange_info in EXCHANGE_MAP.items():
-            print(f"\nLoading {filename}...")
+            log.info("Loading %s...", filename)
             total += load_features_file(db, filename, exchange_info)
-        print(f"\n=== Total stocks loaded: {total} ===")
+        log.info("=== Total stocks loaded: %d ===", total)
     finally:
         db.close()
 

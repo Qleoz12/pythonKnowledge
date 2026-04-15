@@ -70,6 +70,14 @@
     @apply badge bg-yellow-900/50 text-yellow-400 border border-yellow-800;
   }
 
+  .badge-amber {
+    @apply badge bg-amber-900/50 text-amber-300 border border-amber-800;
+  }
+
+  .badge-manual {
+    @apply badge bg-sky-900/50 text-sky-300 border border-sky-800;
+  }
+
   .badge-purple {
     @apply badge bg-purple-900/50 text-purple-400 border border-purple-800;
   }

@@ -34,6 +34,15 @@ class Stock(Base):
     exchange_rel = relationship("Exchange", back_populates="stocks")
     features = relationship("StockFeature", back_populates="stock", uselist=False, cascade="all, delete-orphan")
     dividend_events = relationship("DividendEvent", back_populates="stock", cascade="all, delete-orphan")
+    dividend_forward_events = relationship(
+        "DividendForwardEvent", back_populates="stock", cascade="all, delete-orphan"
+    )
+    manual_calendar_dividends = relationship(
+        "ManualCalendarDividend", back_populates="stock", cascade="all, delete-orphan"
+    )
+    fair_value_revisions = relationship(
+        "FairValueRevision", back_populates="stock", cascade="all, delete-orphan"
+    )
     holdings = relationship("PortfolioHolding", back_populates="stock")
 
     __table_args__ = (
@@ -70,6 +79,18 @@ class StockFeature(Base):
     week_100_low = Column(Float)
     week_200_high = Column(Float)
     week_200_low = Column(Float)
+
+    net_income_margin = Column(Float)
+    return_on_assets = Column(Float)
+    free_cash_flow = Column(Float)
+    operating_cash_flow = Column(Float)
+    fcf_yield = Column(Float)
+    revenue = Column(Float)
+    net_income = Column(Float)
+    total_debt = Column(Float)
+    debt_to_equity = Column(Float)
+    health_score = Column(Float)
+
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     stock = relationship("Stock", back_populates="features")
 
@@ -102,6 +123,59 @@ class QuanfuryDividend(Base):
     )
 
 
+class ManualCalendarDividend(Base):
+    """User-entered dividend for a specific calendar date (fills gaps vs Yahoo/CSV)."""
+
+    __tablename__ = "manual_calendar_dividends"
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    div_date = Column(Date, nullable=False)
+    ticker_yf = Column(String(32), nullable=False)
+    div_amount = Column(Float, nullable=False)
+    currency = Column(String(10), default="USD")
+    company_name = Column(String(255), default="")
+    stock_id = Column(Integer, ForeignKey("stocks.id"), nullable=True)
+    note = Column(Text, default="")
+    created_at = Column(DateTime, default=datetime.utcnow)
+    stock = relationship("Stock", back_populates="manual_calendar_dividends")
+    __table_args__ = (
+        UniqueConstraint("div_date", "ticker_yf", name="uq_manual_cal_date_ticker"),
+        Index("idx_manual_cal_date", "div_date"),
+        Index("idx_manual_cal_ticker", "ticker_yf"),
+    )
+
+
+class DividendCalendarNote(Base):
+    """Free-form reminder for a calendar day (e.g. review dividends on broker X)."""
+
+    __tablename__ = "dividend_calendar_notes"
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    note_date = Column(Date, nullable=False)
+    body = Column(Text, nullable=False)
+    created_at = Column(DateTime, default=datetime.utcnow)
+    __table_args__ = (
+        Index("idx_div_cal_note_date", "note_date"),
+    )
+
+
+class DividendForwardEvent(Base):
+    """Projected or broker-reported forward dividend dates (not replaced by CSV ETL)."""
+
+    __tablename__ = "dividend_forward_events"
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    stock_id = Column(Integer, ForeignKey("stocks.id"), nullable=False)
+    div_date = Column(Date, nullable=False)
+    div_amount = Column(Float, nullable=False)
+    projection_source = Column(String(32), nullable=False)
+    prior_year_div_date = Column(Date, nullable=True)
+    created_at = Column(DateTime, default=datetime.utcnow)
+    stock = relationship("Stock", back_populates="dividend_forward_events")
+    __table_args__ = (
+        UniqueConstraint("stock_id", "div_date", name="uq_div_fwd_stock_date"),
+        Index("idx_div_fwd_date", "div_date"),
+        Index("idx_div_fwd_stock", "stock_id"),
+    )
+
+
 class Portfolio(Base):
     __tablename__ = "portfolios"
     id = Column(Integer, primary_key=True, autoincrement=True)
@@ -127,6 +201,24 @@ class PortfolioHolding(Base):
     __table_args__ = (
         UniqueConstraint("portfolio_id", "stock_id", name="uq_portfolio_stock"),
         Index("idx_holdings_portfolio", "portfolio_id"),
+    )
+
+
+class FairValueRevision(Base):
+    """Manual or imported fair value estimate (FVE) revisions per stock; effective_date starts the step."""
+    __tablename__ = "fair_value_revisions"
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    stock_id = Column(Integer, ForeignKey("stocks.id", ondelete="CASCADE"), nullable=False)
+    effective_date = Column(Date, nullable=False)
+    fair_value = Column(Float, nullable=False)
+    uncertainty = Column(String(50), nullable=True)
+    source = Column(String(50), nullable=False, default="manual")
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+    stock = relationship("Stock", back_populates="fair_value_revisions")
+    __table_args__ = (
+        UniqueConstraint("stock_id", "effective_date", "source", name="uq_fve_stock_effective_source"),
+        Index("idx_fve_stock_effective", "stock_id", "effective_date"),
     )
 
 
@@ -177,4 +269,44 @@ class PortfolioSnapshot(Base):
     __table_args__ = (
         UniqueConstraint("portfolio_id", "month", "year", name="uq_snapshot_period"),
         Index("idx_snapshots_portfolio", "portfolio_id"),
+    )
+
+
+class ArbitrageSnapshot(Base):
+    """Cached arbitrage rates fetched from external APIs."""
+    __tablename__ = "arbitrage_snapshots"
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    source = Column(String(50), nullable=False)
+    pair = Column(String(20), nullable=False)
+    bid = Column(Float)
+    ask = Column(Float)
+    mid = Column(Float)
+    volume_24h = Column(Float)
+    raw_json = Column(Text, default="")
+    fetched_at = Column(DateTime, default=datetime.utcnow)
+    __table_args__ = (
+        Index("idx_arb_source_pair", "source", "pair"),
+        Index("idx_arb_fetched_at", "fetched_at"),
+    )
+
+
+class ArbitrageOperation(Base):
+    """Manual trade log for arbitrage cycles."""
+    __tablename__ = "arbitrage_operations"
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    pair = Column(String(20), nullable=False)
+    buy_source = Column(String(50), nullable=False)
+    sell_source = Column(String(50), nullable=False)
+    buy_price = Column(Float, nullable=False)
+    sell_price = Column(Float, nullable=False)
+    amount_usdt = Column(Float, nullable=False)
+    fee_total = Column(Float, default=0)
+    net_profit = Column(Float, default=0)
+    net_profit_pct = Column(Float, default=0)
+    status = Column(String(20), default="open")
+    notes = Column(Text, default="")
+    created_at = Column(DateTime, default=datetime.utcnow)
+    __table_args__ = (
+        Index("idx_arb_op_pair", "pair"),
+        Index("idx_arb_op_status", "status"),
     )

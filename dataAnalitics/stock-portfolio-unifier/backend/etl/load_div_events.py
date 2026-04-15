@@ -5,6 +5,9 @@ import pandas as pd
 from datetime import datetime
 from database import engine, SessionLocal
 from models import Base, Stock, DividendEvent
+from logger import get_logger
+
+log = get_logger("etl.div_events")
 
 from config import DATA_DIR
 CACHE_DIR = os.path.join(DATA_DIR, "cache_yf")
@@ -23,11 +26,11 @@ def parse_date(val):
 def load_div_events_file(db, filename, ticker_cache):
     filepath = os.path.join(CACHE_DIR, filename)
     if not os.path.exists(filepath):
-        print(f"  [SKIP] {filepath} not found")
+        log.warning("SKIP %s not found", filepath)
         return 0
 
     df = pd.read_csv(filepath)
-    print(f"  [READ] {filename}: {len(df)} rows")
+    log.info("READ %s: %d rows", filename, len(df))
 
     count, skipped, batch = 0, 0, []
     for _, row in df.iterrows():
@@ -55,7 +58,7 @@ def load_div_events_file(db, filename, ticker_cache):
     if batch:
         db.add_all(batch)
         db.commit()
-    print(f"  [DONE] {filename}: {count} events, {skipped} skipped")
+    log.info("DONE %s: %d events, %d skipped", filename, count, skipped)
     return count
 
 
@@ -64,15 +67,15 @@ def run():
     db = SessionLocal()
     try:
         ticker_cache = {s.ticker_yf: s.id for s in db.query(Stock.id, Stock.ticker_yf).all()}
-        print(f"  {len(ticker_cache)} stocks in cache")
+        log.info("%d stocks in cache", len(ticker_cache))
         db.query(DividendEvent).delete()
         db.commit()
 
         total = 0
         for f in DIV_FILES:
-            print(f"\nLoading {f}...")
+            log.info("Loading %s...", f)
             total += load_div_events_file(db, f, ticker_cache)
-        print(f"\n=== Total events: {total} ===")
+        log.info("=== Total events: %d ===", total)
     finally:
         db.close()
 

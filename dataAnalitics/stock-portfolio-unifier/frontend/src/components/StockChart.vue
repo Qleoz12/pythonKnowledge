@@ -30,6 +30,7 @@ const drawings = ref<Array<{
   date1: string | null; date2: string | null; color: string; label: string
 }>>([])
 const ohlcvData = ref<Array<{ date: string; open: number; high: number; low: number; close: number; volume: number }>>([])
+const barCount = ref(0)
 
 const periods = ['1m', '3m', '6m', '1y', '2y', '5y']
 
@@ -158,6 +159,7 @@ function buildOption() {
     ],
     dataZoom: [
       { type: 'inside', xAxisIndex: [0, 1], start: 60, end: 100 },
+      { type: 'inside', yAxisIndex: [0], zoomOnMouseWheel: 'shift', moveOnMouseWheel: false },
       {
         type: 'slider',
         xAxisIndex: [0, 1],
@@ -248,6 +250,7 @@ async function loadData() {
       fetchDrawings(props.stockId),
     ])
     ohlcvData.value = ohlcvResult.data
+    barCount.value = ohlcvResult.count ?? ohlcvResult.data.length
     drawings.value = drawingsResult
     updateChart()
   } catch (e: any) {
@@ -384,6 +387,8 @@ const cursorClass = computed(() => {
   if (drawMode.value === 'delete') return 'cursor-pointer'
   return ''
 })
+
+const sparseHistory = computed(() => barCount.value > 0 && barCount.value < 25)
 </script>
 
 <template>
@@ -448,6 +453,13 @@ const cursorClass = computed(() => {
 
     <!-- Chart -->
     <div v-if="error" class="text-red-400 text-sm py-8 text-center">{{ error }}</div>
+    <div
+      v-if="sparseHistory && !loading"
+      class="mb-2 text-xs text-amber-200/90 bg-amber-950/35 border border-amber-800/50 rounded-lg px-3 py-2"
+    >
+      Pocas velas en caché ({{ barCount }} en este rango). El gráfico puede verse como una barra plana o sin EMAs útiles.
+      Tocá <strong class="text-amber-100">Refresh</strong> en la cabecera de la acción para volver a descargar histórico desde Yahoo.
+    </div>
     <div v-if="loading && ohlcvData.length === 0" class="text-gray-500 text-sm py-16 text-center">Loading chart data...</div>
     <div
       ref="chartRef"

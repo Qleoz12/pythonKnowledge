@@ -12,7 +12,12 @@ const routes = [
     component: () => import('./views/StockExplorer.vue'),
   },
   {
-    path: '/stocks/:id',
+    path: '/stocks/score-trend',
+    name: 'ScoreTrend',
+    component: () => import('./views/ScoreTrendView.vue'),
+  },
+  {
+    path: '/stocks/:id(\\d+)',
     name: 'StockDetail',
     component: () => import('./views/StockDetail.vue'),
     props: true,
@@ -37,6 +42,26 @@ const routes = [
     path: '/analytics',
     name: 'Analytics',
     component: () => import('./views/AnalyticsView.vue'),
+  },
+  {
+    path: '/goals',
+    name: 'FinancialGoals',
+    component: () => import('./views/FinancialGoals.vue'),
+  },
+  {
+    path: '/score',
+    name: 'ScoreMethodology',
+    component: () => import('./views/ScoreMethodology.vue'),
+  },
+  {
+    path: '/arbitrage',
+    name: 'ArbitrageDashboard',
+    component: () => import('./views/ArbitrageDashboard.vue'),
+  },
+  {
+    path: '/p2p',
+    name: 'P2PBook',
+    component: () => import('./views/P2PBook.vue'),
   },
 ]
 

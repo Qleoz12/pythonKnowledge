@@ -2,17 +2,23 @@
 import { onMounted, watch, computed, ref } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useStocksStore } from '../stores/stocks'
-import { enrichFiltered } from '../services/api'
+import { enrichFiltered, createStock, deleteStock } from '../services/api'
+import { maybeAutoRefreshStaleFeatures } from '../utils/featuresRefresh'
+import { parseQualifiedEquityInput } from '../utils/qualifiedSearch'
 
 const store = useStocksStore()
 const router = useRouter()
 const route = useRoute()
 
+const addingStock = ref(false)
+const addStockMsg = ref('')
 const refreshing = ref(false)
 const refreshProgress = ref('')
 const refreshTotal = ref(0)
 const refreshDone = ref(0)
 const refreshStopped = ref(false)
+const forceRefresh = ref(false)
+const deletingId = ref<number | null>(null)
 
 onMounted(async () => {
   if (route.query.sector) {
@@ -26,6 +32,12 @@ onMounted(async () => {
   }
   await store.loadMeta()
   await store.loadStocks()
+  try {
+    const auto = await maybeAutoRefreshStaleFeatures(() => store.loadStocks(), { hours: 24, batchSize: 1000 })
+    if (auto.error) console.warn('auto feature refresh:', auto.error)
+  } catch {
+    /* ignore */
+  }
 })
 
 watch(() => route.query, (q) => {
@@ -49,6 +61,24 @@ function onSearchInput() {
 
 function goToStock(id: number) {
   router.push(`/stocks/${id}`)
+}
+
+async function deleteStockRow(stock: { id: number; ticker_yf: string; symbol: string }, e: Event) {
+  e.stopPropagation()
+  if (deletingId.value != null) return
+  const ok = window.confirm(
+    `Remove ${stock.ticker_yf} (${stock.symbol}) from the database? Holdings, dividends, and cached data will be deleted. This cannot be undone.`,
+  )
+  if (!ok) return
+  deletingId.value = stock.id
+  try {
+    await deleteStock(stock.id)
+    await store.loadStocks()
+  } catch (err: any) {
+    window.alert(err.response?.data?.detail || err.message || 'Delete failed')
+  } finally {
+    deletingId.value = null
+  }
 }
 
 function fmt(n: number | null | undefined, decimals = 2): string {
@@ -79,27 +109,39 @@ const stocksMissingData = computed(() => {
   return store.stocks.filter(s => !s.last_close).length
 })
 
-async function refreshAllFiltered() {
+async function refreshAllFiltered(force = false) {
   if (refreshing.value) {
     refreshStopped.value = true
     return
   }
 
+  forceRefresh.value = force
   refreshing.value = true
   refreshStopped.value = false
   refreshDone.value = 0
-  refreshProgress.value = 'Starting...'
+  refreshProgress.value = force ? 'Force refreshing all...' : 'Starting...'
 
   const BATCH = 10
   const params: any = { batch_size: BATCH }
   if (store.filters.sector) params.sector = store.filters.sector
-  if (store.filters.exchange) params.exchange = store.filters.exchange
-  if (store.filters.search) params.search = store.filters.search
+  const pq = parseQualifiedEquityInput(store.filters.search)
+  if (pq.exchange != null) {
+    params.search = pq.displaySymbol
+    params.exchange = pq.exchange
+  } else {
+    if (store.filters.search) params.search = store.filters.search
+    if (store.filters.exchange) params.exchange = store.filters.exchange
+  }
   if (store.filters.quanfury_only) params.quanfury_only = true
+  if (store.filters.near_52w_high) params.near_52w_high = true
+  if (store.filters.near_52w_low) params.near_52w_low = true
+  if (force) params.force = true
 
   try {
     let iteration = 0
+    let offset = 0
     while (!refreshStopped.value) {
+      if (force) params.offset = offset
       const result = await enrichFiltered(params)
       iteration++
 
@@ -107,25 +149,64 @@ async function refreshAllFiltered() {
         refreshTotal.value = result.total_pending + result.enriched
       }
       refreshDone.value += result.enriched
+      if (force) offset += BATCH
 
-      const tickers = result.details.map(d => d.ticker).join(', ')
-      refreshProgress.value = `Batch ${iteration}: ${result.enriched} enriched (${tickers})`
+      const tickers = result.details.map((d: any) => d.ticker).join(', ')
+      refreshProgress.value = `Batch ${iteration}: ${result.enriched} refreshed (${tickers})`
 
       await store.loadStocks()
 
       if (result.done || result.enriched === 0) {
-        refreshProgress.value = `Done! ${refreshDone.value} stocks enriched.`
+        refreshProgress.value = `Done! ${refreshDone.value} stocks refreshed.`
         break
       }
     }
 
     if (refreshStopped.value) {
-      refreshProgress.value = `Stopped. ${refreshDone.value} stocks enriched so far.`
+      refreshProgress.value = `Stopped. ${refreshDone.value} stocks refreshed so far.`
     }
   } catch (e: any) {
     refreshProgress.value = `Error: ${e.message}`
   } finally {
     refreshing.value = false
+    forceRefresh.value = false
+  }
+}
+
+const parsedSearch = computed(() => parseQualifiedEquityInput(store.filters.search))
+
+/** Ticker Yahoo (p. ej. WING, WING.TO, BRK-B) para alta en BD */
+const addTickerKey = computed(() => parsedSearch.value.yahooTicker)
+
+const searchLabelForEmpty = computed(() => {
+  const p = parsedSearch.value
+  if (!store.filters.search.trim()) return ''
+  if (p.exchange) return `${p.displaySymbol} (${p.exchange})`
+  return store.filters.search.trim()
+})
+
+async function addSearchedStock() {
+  const ticker = addTickerKey.value
+  if (!ticker || addingStock.value) return
+  addingStock.value = true
+  addStockMsg.value = ''
+  try {
+    const p = parsedSearch.value
+    const result = await createStock({
+      ticker,
+      exchange: p.exchange || '',
+      enrich: true,
+    })
+    addStockMsg.value = `Added ${result.ticker_yf || ticker}`
+    if (result.id) {
+      router.push(`/stocks/${result.id}`)
+    } else {
+      await store.loadStocks()
+    }
+  } catch (e: any) {
+    addStockMsg.value = `Error: ${e.response?.data?.detail || e.message}`
+  } finally {
+    addingStock.value = false
   }
 }
 
@@ -157,9 +238,16 @@ const pageNumbers = computed(() => {
             class="text-gray-500 hover:text-white ml-2 text-xs">(clear)</button>
         </p>
       </div>
-      <div v-if="hasActiveFilter && stocksMissingData > 0" class="flex items-center gap-3">
-        <span class="text-xs text-amber-400">{{ stocksMissingData }} without data</span>
-        <button @click="refreshAllFiltered" class="btn-primary text-sm flex items-center gap-2">
+      <div v-if="hasActiveFilter" class="flex items-center gap-3">
+        <span v-if="stocksMissingData > 0" class="text-xs text-amber-400">{{ stocksMissingData }} without data</span>
+        <button @click="refreshAllFiltered(false)" class="btn-secondary text-sm flex items-center gap-2"
+          :disabled="refreshing && !forceRefresh" v-if="stocksMissingData > 0 && !refreshing">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+          Fill Missing
+        </button>
+        <button @click="refreshing ? (refreshStopped = true) : refreshAllFiltered(true)" class="btn-primary text-sm flex items-center gap-2">
           <svg v-if="refreshing" class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
@@ -167,7 +255,7 @@ const pageNumbers = computed(() => {
           <svg v-else class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
           </svg>
-          {{ refreshing ? 'Stop' : 'Refresh All' }}
+          {{ refreshing ? 'Stop' : 'Force Refresh' }}
         </button>
       </div>
     </div>
@@ -198,7 +286,7 @@ const pageNumbers = computed(() => {
             v-model="store.filters.search"
             @input="onSearchInput"
             type="text"
-            placeholder="Search ticker or company..."
+            placeholder="Ticker, company, or SYM:BOLSA (e.g. WING:NASDAQ, SHOP:TSX)…"
             class="input-field"
           />
         </div>
@@ -226,6 +314,14 @@ const pageNumbers = computed(() => {
           <span class="text-sm text-gray-400">{{ store.total.toLocaleString() }} stocks</span>
         </div>
       </div>
+
+      <p class="text-[11px] text-gray-600 mt-2 px-1">
+        Tip: <span class="font-mono text-gray-500">TICKER : EXCHANGE</span> (spaces optional) or
+        <span class="font-mono text-gray-500">TICKER@EXCHANGE</span> narrows by listing; ticker match is
+        <span class="text-gray-500">prefix</span> on symbol/Yahoo ticker so
+        <span class="font-mono text-gray-500">LX</span> does not match <span class="font-mono text-gray-500">NFLX</span>.
+        Add uses the Yahoo ticker (e.g. <span class="font-mono text-gray-500">SHOP:TSX</span> → <span class="font-mono text-gray-500">SHOP.TO</span>).
+      </p>
 
       <div class="flex items-center gap-4 mt-3 flex-wrap">
         <label class="flex items-center gap-2 text-sm text-gray-400 cursor-pointer">
@@ -277,14 +373,31 @@ const pageNumbers = computed(() => {
             </th>
             <th class="px-4 py-3 text-gray-400 font-medium text-right hidden lg:table-cell">52W Range</th>
             <th class="px-4 py-3 text-gray-400 font-medium text-center">QF</th>
+            <th class="px-4 py-3 text-gray-400 font-medium text-center w-12" title="Remove from database"></th>
           </tr>
         </thead>
         <tbody>
           <tr v-if="store.loading" class="border-b border-gray-800/50">
-            <td colspan="9" class="px-4 py-8 text-center text-gray-500">Loading...</td>
+            <td colspan="10" class="px-4 py-8 text-center text-gray-500">Loading...</td>
           </tr>
           <tr v-else-if="store.stocks.length === 0" class="border-b border-gray-800/50">
-            <td colspan="9" class="px-4 py-8 text-center text-gray-500">No stocks found</td>
+            <td colspan="10" class="px-4 py-8 text-center">
+              <p class="text-gray-500 mb-2">No stocks found for "{{ searchLabelForEmpty || store.filters.search }}"</p>
+              <p v-if="addTickerKey" class="text-gray-500 text-sm mb-3">
+                Yahoo ticker <span class="font-mono text-white">{{ addTickerKey }}</span>
+                <span v-if="parsedSearch.exchange" class="text-gray-600"> ({{ parsedSearch.exchange }})</span>
+                — not in database.
+              </p>
+              <button v-if="addTickerKey" @click="addSearchedStock" :disabled="addingStock"
+                class="btn-primary text-sm inline-flex items-center gap-2">
+                <svg v-if="addingStock" class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
+                </svg>
+                Add {{ addTickerKey }}<span v-if="parsedSearch.exchange" class="font-normal"> ({{ parsedSearch.exchange }})</span> to database
+              </button>
+              <p v-if="addStockMsg" class="text-sm mt-2" :class="addStockMsg.startsWith('Error') ? 'text-red-400' : 'text-green-400'">{{ addStockMsg }}</p>
+            </td>
           </tr>
           <tr
             v-for="stock in store.stocks"
@@ -323,6 +436,24 @@ const pageNumbers = computed(() => {
             </td>
             <td class="px-4 py-3 text-center">
               <span v-if="stock.is_quanfury_available" class="badge-purple text-[10px]">QF</span>
+            </td>
+            <td class="px-2 py-3 text-center" @click.stop>
+              <button
+                type="button"
+                class="p-1.5 rounded-lg text-gray-500 hover:text-red-400 hover:bg-red-950/40 transition-colors disabled:opacity-40"
+                :disabled="deletingId === stock.id"
+                title="Remove from database"
+                @click="deleteStockRow(stock, $event)"
+              >
+                <svg v-if="deletingId === stock.id" class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                </svg>
+                <svg v-else class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                </svg>
+              </button>
             </td>
           </tr>
         </tbody>

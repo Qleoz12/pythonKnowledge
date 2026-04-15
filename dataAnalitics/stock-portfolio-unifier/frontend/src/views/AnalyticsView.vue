@@ -11,7 +11,8 @@ const loading = ref(true)
 
 const period = ref('52')
 const direction = ref('low')
-const threshold = ref(5)
+const threshold = ref(10)
+const filterMode = ref('distance')
 const exchange = ref('')
 const quanfuryOnly = ref(false)
 const minYield = ref<number | null>(null)
@@ -25,6 +26,7 @@ async function loadData() {
       period: period.value,
       direction: direction.value,
       threshold: threshold.value,
+      filter_mode: filterMode.value,
       limit: 100,
     }
     if (exchange.value) params.exchange = exchange.value
@@ -63,7 +65,7 @@ function fmt(n: number | null | undefined, decimals = 2): string {
 
     <!-- Filters -->
     <div class="card mb-6">
-      <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
         <div>
           <label class="text-xs text-gray-400">Period</label>
           <select v-model="period" class="input-field mt-1">
@@ -80,7 +82,16 @@ function fmt(n: number | null | undefined, decimals = 2): string {
           </select>
         </div>
         <div>
-          <label class="text-xs text-gray-400">Threshold %</label>
+          <label class="text-xs text-gray-400">Filter Mode</label>
+          <select v-model="filterMode" class="input-field mt-1">
+            <option value="distance">% from Low/High</option>
+            <option value="range">Range Position</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-xs text-gray-400">
+            {{ filterMode === 'range' ? 'Range %' : 'Threshold %' }}
+          </label>
           <input v-model.number="threshold" type="number" min="1" max="50" step="1" class="input-field mt-1" />
         </div>
         <div>

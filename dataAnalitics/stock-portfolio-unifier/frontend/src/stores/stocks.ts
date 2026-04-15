@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import { ref, reactive } from 'vue'
 import type { Stock, StockDetail, PaginatedStocks, StockFilters, Exchange } from '../types'
 import { fetchStocks, fetchStock, fetchExchanges, fetchSectors } from '../services/api'
+import { parseQualifiedEquityInput } from '../utils/qualifiedSearch'
 
 export const useStocksStore = defineStore('stocks', () => {
   const stocks = ref<Stock[]>([])
@@ -31,7 +32,13 @@ export const useStocksStore = defineStore('stocks', () => {
   async function loadStocks() {
     loading.value = true
     try {
-      const result = await fetchStocks(filters)
+      const p = parseQualifiedEquityInput(filters.search)
+      const payload: StockFilters = {
+        ...filters,
+        search: p.exchange != null ? p.displaySymbol : filters.search.trim(),
+        exchange: p.exchange || filters.exchange,
+      }
+      const result = await fetchStocks(payload)
       stocks.value = result.items
       total.value = result.total
       pages.value = result.pages

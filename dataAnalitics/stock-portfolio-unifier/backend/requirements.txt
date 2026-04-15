@@ -6,3 +6,4 @@ openpyxl
 yfinance
 python-dateutil
 pydantic
+httpx
