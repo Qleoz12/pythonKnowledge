@@ -44,6 +44,11 @@ const routes = [
     component: () => import('./views/AnalyticsView.vue'),
   },
   {
+    path: '/correlations',
+    name: 'Correlations',
+    component: () => import('./views/CorrelationsView.vue'),
+  },
+  {
     path: '/goals',
     name: 'FinancialGoals',
     component: () => import('./views/FinancialGoals.vue'),
